@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head') %> 
+<body>
+    <header class="main-header">
+        <img src="img/1.png" alt="logotipo" class="logo">
+
+       
+
+        <div id="mob-search">
+        <div class="search-sug" id="search-sug">
+        </div>
+        <div class="search">
+        <form name="newFormMob" onsubmit="if (!window.__cfRLUnblockHandlers) return false; searchModMob()" method="GET" data-cf-modified-1517ea0d33e7160c0c25394c-="">
+        <input type="text" class="search" autocomplete="off" id="searchidmob" placeholder="Buscar...">
+        <img src="img/descarga.png" alt="serch">
+        <input type="hidden" value="cat">
+        </form>
+        </div>
+        
+        <ul>
+            <li>Iniciar Sesión</li>
+            <li>Regístrate</li>
+        </ul>
+        
+
+        <img src="img/activo-1.png" alt="logotipo" class="logo">
+        
+        <span class="fa fa-bars"></span>
+        <div id="header">
+            <ul class="nav">
+                <li><a href="">PRODUCTOS</a>
+                    <ul>
+                        <li><a href="">Computadoras</a></li>
+                        <li><a href="">Componentes</a></li>
+                        <li><a href="">Notebooks</a></li>
+                        <li><a href="">Monitores</a></li>
+                        <li><a href="">Sonido y Video</a></li>
+                        <li><a href="">Accesorios</a></li>
+                        <li><a href="">Conectividad</a></li> 
+                        </li>
+                    </ul>
+                </li>
+               
+        </div>
+</header>
+
+<main> <!-- Cuerpo principal del sitio -->
+    <section class="form-container">
+        <h1>ACCEDER</h1>
+        <form class="access-form" action="#" method="get">
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" value="" required>
+            </div>
+            <div class="field-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="passsword" name="password" placeholder="password" value="" required>
+            </div>
+            <div class="field-group remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me" value="">
+                <label for="remember-me">Recordarme</label>
+            </div>
+            <p class="form-text alert-hide">
+                La combinación ingresada de email y contraseña no es válida.
+            </p>
+            <button type="submit" name="send">Log In</button>
+        </form>
+    </section>
+</main>
+
+<main> <!-- Cuerpo principal del sitio -->
+    <section class="form-container2">
+        <h1>REGISTRARSE</h1>
+        <form class="access-form" action="#" method="get">
+            <div class="field-group">
+                <label for="username">Username</label>
+                <input type="username" id="username" name="username" placeholder="Username" value="" required>
+            </div>
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" value="" required>
+            </div>
+            <div class="field-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="passsword" name="password" placeholder="password" value="" required>
+            </div>
+            <div class="field-group">
+                <label for="password">Repetir Contraseña</label>
+                <input type="password" id="passsword" name="password" placeholder="password" value="" required>
+            </div>
+            <p class="form-text alert-hide">
+                El email ya fue utilizado con anterioridad.
+            </p>
+            <p class="form-text alert-hide">
+                La contraseña debe tener un minimo de cuatro letras y una mayuscula.
+            </p>
+            <button type="submit" name="send">Registrarse</button>
+        </form>
+    </section>
+</main>
+
+ 
+<footer>
+    <h3> P2 TEC ©️ 2020 / CONTACTO </h3>
+</footer>
+    
+</body>
+</html>
