@@ -6,7 +6,10 @@
 .main-header{
     background-color: black;
     color: white;
+
 }  
+
+
 .bodys{
     background-color: aqua;
 }
@@ -72,4 +75,5 @@ ul, ol {
 .productosDestacados{
     text-align: center;
 }
+
 
