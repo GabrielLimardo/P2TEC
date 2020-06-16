@@ -1,0 +1,420 @@
+
+    [
+      {
+        "id": 1,
+        "name": "DISCO ESTADO SOLIDO SSD 2 TB",
+        "descripcion": "Disco Solido Ssd 2 Tb Western Digital Blue",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 26729.865999999998,
+        "image":"1 (14).jpg"
+      },
+      {
+        "id": 2,
+        "name": "DISCO ESTADO SOLIDO SSD 480 GB",
+        "descripcion": "Disco Solido Ssd 480 Gb Kingston A400",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 7471.597999999999,
+        "image":"1 (5).jpg"
+      },
+      {
+        "id": 3,
+        "name": "Disco Solido Ssd 480 Gb ",
+        "descripcion": "Disco Solido Ssd 480 Gb Patriot Burst PBU480GS25SSDR",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 7261.209999999999,
+        "image":"1 (21).jpg"
+      },
+      {
+        "id": 4,
+        "name": "Disco Solido Ssd 480 Gb ",
+        "descripcion": "Disco Solido Ssd 480 Gb Western Digital Green",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 7027.523999999999,
+        "image":"1 (14).jpg"
+      },
+      {
+        "id": 5,
+        "name": "Disco Solido Ssd 500 Gb ",
+        "descripcion": "Disco Solido Ssd 500 Gb Western Digital Blue",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 7769.529999999999,
+        "image":"1 (5).jpg"
+      },
+      {
+        "id": 6,
+        "name": "Disco Solido Ssd 960 Gb ",
+        "descripcion": "Disco Solido Ssd 960 Gb Kingston A400",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 13367.403999999999,
+        "image":"1 (7).jpg"
+      },
+      {
+        "id": 7,
+        "name": "Disco Solido Ssd 960 Gb ",
+        "descripcion": "Disco Solido Ssd 960 Gb Patriot Burst PBU960GS25SSDR",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 12789.189999999999,
+        "image":"1 (21).jpg"
+      },
+      {
+        "id": 8,
+        "name": "Disco Solido Ssd M2 2 Tb",
+        "descripcion": "Disco Solido Ssd M2 2 Tb Western Digital Blue",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 26393.103999999996,
+        "image":"1 (15).jpg"
+      },
+      {
+        "id": 9,
+        "name": "Disco Solido Ssd M2 480 GB",
+        "descripcion": "Disco Solido Ssd M2 480 Gb Adata ASU650NS38-480GT-C",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 6664.639999999999,
+        "image":"1 (17).jpg"
+      },
+      {
+        "id": 10,
+        "name": "Disco Solido Ssd M2 500 Gb ",
+        "descripcion": "Disco Solido Ssd M2 500 Gb Western Digital Blue",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 8037.809999999999,
+        "image":"1 (9).jpg"
+      },
+      {
+        "id": 11,
+        "name": "Disco Solido Ssd M2 Nvme 240 Gb ",
+        "descripcion": "Disco Solido Ssd M2 Nvme 240 Gb Corsair MP510",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 6793.132,
+        "image":"1 (8).jpg"
+      },
+      {
+        "id": 12,
+        "name": "Disco Solido Ssd M2 Nvme 250 Gb ",
+        "descripcion": "Disco Solido Ssd M2 Nvme 250 Gb Western Digital Black",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 7486.424,
+        "image":"1 (4).jpg"
+      },
+      {
+        "id": 13,
+        "name": "Disco Solido Ssd M2 Nvme 256Gb ",
+        "descripcion": "Disco Solido Ssd M2 Nvme 256Gb Patriot VPR100 RGB",
+        "category": "DISCO ESTADO SOLIDO SSD",
+        "price": 8764.284,
+        "image":"1 (22).jpg"
+      },
+      {
+        "id": 14,
+        "name": "STREAMING  Y VIDEO  CAPTURADORA GAMING ",
+        "descripcion": "Elgato Capturadora Game Streaming HD 60 PRO - 10GC109901002",
+        "category": "STREAMING  Y VIDEO  CAPTURADORA GAMING ",
+        "price": 16619.946,
+        "image":"1 (1).png"
+      },
+      {
+        "id": 15,
+        "name": "STREAMING  Y VIDEO  CAPTURADORA GAMING ",
+        "descripcion": "Elgato Stream Deck Mini 6 Botones Lcd Customizables-10GAI9901",
+        "category": "STREAMING  Y VIDEO  CAPTURADORA GAMING ",
+        "price": 8561.661999999998,
+        "image":"1 (10).jpg"
+      },
+      {
+        "id": 16,
+        "name": "FUENTES DE ALIMENTACION",
+        "descripcion": "Fuente Cooler Master MWE 500w 80 Plus Bronze",
+        "category": "FUENTES DE ALIMENTACION",
+        "price": 7514.663999999999,
+        "image":"1 (26).jpg"
+      },
+      {
+        "id": 17,
+        "name": "Impresora Multifuncion Hp 315",
+        "descripcion": "Impresora Multifuncion Hp 315 Sistema Continuo Original Escaner Color",
+        "category": "IMPRESORA",
+        "price": 17772.844,
+        "image":"1 (24).jpg"
+      },
+      {
+        "id": 18,
+        "name": "Impresora Multifuncion Hp 415 ",
+        "descripcion": "Impresora Multifuncion Hp 415 Sistema Continuo Original Escaner Color Wifi",
+        "category": "IMPRESORA",
+        "price": 23564.867999999995,
+        "image":"1 (39).jpg"
+      },
+      {
+        "id": 19,
+        "name": "MEMORIA",
+        "descripcion": "Memoria Corsair Vengeance Lpx 16Gb Ddr4 3000Mhz Negro (2x8GB)",
+        "category": "MEMORIA",
+        "price": 11788.787999999999,
+        "image":"1 (28).jpg"
+      },
+      {
+        "id": 20,
+        "name": "MEMORIA",
+        "descripcion": "Memoria Ddr4 16Gb 2400Mhz CL17 (KVR24N17D8/16) Kingston",
+        "category": "MEMORIA",
+        "price": 8274.32,
+        "image":"1 (12).jpg"
+      },
+      {
+        "id": 21,
+        "name": "MEMORIA",
+        "descripcion": "Memoria HyperX Fury DDR4 2666 CL 16 16Gb (HX426C16FB3/16) Kingston ",
+        "category": "MEMORIA",
+        "price": 9049.508,
+        "image":"1 (20).jpg"
+      },
+      {
+        "id": 22,
+        "name": "MEMORIA DE NOTEBOOK",
+        "descripcion": "Memoria Mushkin Essentials SODIMM Ddr4 16Gb 2666mhz",
+        "category": "MEMORIA DE NOTEBOOK",
+        "price": 7973.563999999999,
+        "image":"1 (29).jpg"
+      },
+      {
+        "id": 23,
+        "name": "MICROPROCESADOR AM4",
+        "descripcion": "Microprocesador AMD A8 9600 2MB 3.40 GHz Socket AM4",
+        "category": "MICROPROCESADOR AM4",
+        "price": 6729.591999999999,
+        "image":"1 (43).jpg"
+      },
+      {
+        "id": 24,
+        "name": "MICROPROCESADOR AM4",
+        "descripcion": "Microprocesador AMD Athlon 3000G Vega 3 5MB 3.40GHz Socket AM4",
+        "category": "MICROPROCESADOR AM4",
+        "price": 6818.548,
+        "image":"1 (43).jpg"
+      },
+      {
+        "id": 25,
+        "name": "MICROPROCESADOR AM4",
+        "descripcion": "Microprocesador AMD Ryzen 3 3200G 4MB 3.60GHz Socket AM4 - 3° Gen",
+        "category": "MICROPROCESADOR AM4",
+        "price": 12728.473999999998,
+        "image":"1 (2).png"
+      },
+      {
+        "id": 26,
+        "name": "MICROPROCESADOR AM4",
+        "descripcion": "Microprocesador AMD Ryzen 5 3600 3MB 3.60 GHz Socket AM4 - 3° Gen + Xbox Pass de Regalo!",
+        "category": "MICROPROCESADOR AM4",
+        "price": 28645.949999999997,
+        "image":"1 (33).jpg"
+      },
+      {
+        "id": 27,
+        "name": "MICROPROCESADOR AM4",
+        "descripcion": "Microprocesador AMD Ryzen 7 3700X 36MB 4.40GHz Socket AM4 - 3° Gen + Xbox Pass de Regalo!",
+        "category": "MICROPROCESADOR AM4",
+        "price": 43188.138,
+        "image":"1 (34).jpg"
+      },
+      {
+        "id": 28,
+        "name": "MICROPROCESADOR AM4",
+        "descripcion": "Microprocesador AMD Ryzen 7 3800x 36MB 3.90GHz Socket AM4  - 3° Gen + Xbox Pass de Regalo!",
+        "category": "MICROPROCESADOR AM4",
+        "price": 46074.265999999996,
+        "image":"1 (34).jpg"
+      },
+      {
+        "id": 29,
+        "name": "MICROPROCESADOR I3",
+        "descripcion": "Microprocesador Intel I3-8100 6MB 3.60 GHz Socket 1151 - 8° Gen",
+        "category": "MICROPROCESADOR I3",
+        "price": 13826.303999999998,
+        "image":"1 (30).jpg"
+      },
+      {
+        "id": 30,
+        "name": "MICROPROCESADOR I3",
+        "descripcion": "Microprocesador Intel I3-9100 6MB 4.20 GHz Socket 1151 - 9° Gen",
+        "category": "MICROPROCESADOR I3",
+        "price": 14280.967999999999,
+        "image":"1 (30).jpg"
+      },
+      {
+        "id": 31,
+        "name": "MICROPROCESADOR I5",
+        "descripcion": "Microprocesador Intel I5-9400 9MB 2.90 GHz Socket 1151 - 9° Gen",
+        "category": "MICROPROCESADOR I5",
+        "price": 21537.942,
+        "image":"1 (1).jpg"
+      },
+      {
+        "id": 32,
+        "name": "MICROPROCESADOR i7",
+        "descripcion": "Microprocesador Intel I7-9700F 12MB 3.00 GHz Socket 1151 - 9° Gen",
+        "category": "MICROPROCESADOR i7",
+        "price": 40686.77999999999,
+        "image":"1 (27).jpg"
+      },
+      {
+        "id": 33,
+        "name": "MICROPROCESADOR i7",
+        "descripcion": "Microprocesador Intel I7-9700K 12MB 3.60 GHz Socket 1151 - 9° Gen SIN COOLER",
+        "category": "MICROPROCESADOR i7",
+        "price": 44898.776,
+        "image":"1 (27).jpg"
+      },
+      {
+        "id": 34,
+        "name": "MICROPROCESADOR i7",
+        "descripcion": "Microprocesador Intel I7-9700KF 12MB 3.60 GHz Socket 1151 - 9° Gen SIN COOLER",
+        "category": "MICROPROCESADOR i7",
+        "price": 40996.714,
+        "image":"1 (27).jpg"
+      },
+      {
+        "id": 35,
+        "name": "MICROPROCESADOR I9",
+        "descripcion": "Microprocesador Intel I9-9900K 16MB 5.00 GHz Socket 1151 - 9° Gen SIN COOLER",
+        "category": "MICROPROCESADOR I9",
+        "price": 56820.292,
+        "image":"1 (32).jpg"
+      },
+      {
+        "ID": 36,
+        "name": "MICROPROCESADOR CELERON-PENTIUM",
+        "descripcion": "Microprocesador Intel Pentium G5400 4MB 3.70 GHz Socket 1151 - 8° Gen",
+        "category": "MICROPROCESADOR CELERON-PENTIUM",
+        "price": 7161.663999999999,
+        "image":"1 (36).jpg"
+      },
+      {
+        "id": 37,
+        "name": "Monitor Led AOC 15.6",
+        "descripcion": "Monitor Led AOC 15.6 Wide E1670SWU-E USB (incluye imp interno)",
+        "category": "MONITOR LCD/LED",
+        "price": 7504.779999999999,
+        "image":"1 (37).jpg"
+      },
+      {
+        "id": 38,
+        "name": "Monitor Samsung 22",
+        "descripcion": "Monitor Samsung 22 Full HD S22F350FH - c/Hdmi",
+        "category": "MONITOR LCD/LED",
+        "price": 15094.279999999999,
+        "image":"1 (38).jpg"
+      },
+      {
+        "id": 39,
+        "name": "Notebook Hp I5 ",
+        "descripcion": "Notebook Hp I5 250 G7 8265U 8GB 1TB 15.6",
+        "category": "NOTEBOOKS",
+        "price": 111096.86599999998,
+        "image":"1 (23).jpg"
+      },
+      {
+        "id": 40,
+        "name": "Notebook Hp I7 ",
+        "descripcion": "Notebook Hp I7 10510U 8Gb !tb Windows 10 15,6 + GeForece MX 130",
+        "category": "NOTEBOOKS",
+        "price": 163224.376,
+        "image":"1 (40).jpg"
+      },
+      {
+        "id": 41,
+        "name": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "descripcion": "Pantalla Intelaid IT-TPS86 de Proyección con tripode 86\"- Blanco Mate - 4:3 1.72 x 1.3Mts.",
+        "category": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "price": 7768.824,
+        "image":"1 (41).jpg"
+      },
+      {
+        "id": 42,
+        "name": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "descripcion": "Pantalla de Proyección Intelaid 150\" Electrica con Control Remoto visión de 160º",
+        "category": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "price": 18938.449999999997,
+        "image":"1 (41).jpg"
+      },
+      {
+        "id": 43,
+        "name": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "descripcion": "Pantalla de Proyección Intelaid IT-SPS100 SELF-LOCK - Blanco Mate - 4:3 (2.00 x 1.5Mts.)",
+        "category": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "price": 7349.459999999999,
+        "image":"1 (41).jpg"
+      },
+      {
+        "id": 44,
+        "name": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "descripcion": "Pantalla de Proyección Intelaid IT-SPS120 SELF-LOCK - 120\"\" - Blanco Mate - 4:3 (2.40 x 1.8Mts.)",
+        "category": "PROYECTORES - PANTALLA ELÉCTRICA-ACCESORIOS",
+        "price": 12105.782,
+        "image":"1 (41).jpg"
+      },
+      {
+        "id": 45,
+        "name": "ACCESS POINT",
+        "descripcion": "Sistema Wi-Fi Mesh Tenda Nova MW3 2-pack AC1200",
+        "category": "ACCESS POINT",
+        "price": 6954.099999999999,
+        "image":"1 (18).jpg"
+      },
+      {
+        "id": 46,
+        "name": "SOPORTE TV/MONITOR /PROYECTOR",
+        "descripcion": "Soporte Intelaid Triple Monitor 13 a 27 Vesa 100 x 100 8Kg",
+        "category": "SOPORTE TV/MONITOR /PROYECTOR",
+        "price": 6390.7119999999995,
+        "image":"1 (16).jpg"
+      },
+      {
+        "id": 47,
+        "name": "CONECTIVIDAD SWITCHS 16 PUERTOS",
+        "descripcion": "Switch 16-port Tp-Link 10/1000 (TL-SG1016)R19",
+        "category": "CONECTIVIDAD SWITCHS 16 PUERTOS",
+        "price": 6669.581999999999,
+        "image":"1 (13).jpg"
+      },
+      {
+        "id": 48,
+        "name": "CONECTIVIDAD SWITCHS",
+        "descripcion": "Switch 16-port Tp-Link 10/1000 + 2 Slots SFP Combo 10/1000 (TL-SG2216)",
+        "category": "CONECTIVIDAD SWITCHS",
+        "price": 11092.671999999999,
+        "image":"1 (44).jpg"
+      },
+      {
+        "id": 49,
+        "name": "CONECTIVIDAD SWITCHS 24 PUERTOS",
+        "descripcion": "Switch 24 Ports 10/100/1000 TEG1024D Tenda",
+        "category": "CONECTIVIDAD SWITCHS 24 PUERTOS",
+        "price": 7394.643999999999,
+        "image":"1 (42).jpg"
+      },
+      {
+        "id": 50,
+        "name": "TABLETAS DIGITALIZADORAS",
+        "descripcion": "Tableta Digitalizadora Wacom Intuos Small Negra + 3 Soft Gratis",
+        "category": "TABLETAS DIGITALIZADORAS",
+        "price": 7147.543999999999,
+        "image":"1 (11).jpg"
+      },
+      {
+        "id": 51,
+        "name": "TECLADO GAMER",
+        "descripcion": "Teclado Gamer Corsair K70 RGB MK.2 Mechanical Gaming CHERRY® MX Blue",
+        "category": "TECLADO GAMER",
+        "price": 15357.617999999999,
+        "image": "1 (45).jpg"
+      },
+      {
+        "id": 52,
+        "name": "Pc Armada Gamer Amd Ryzen 5 3400g 1tb 8g Ddr4 Radeon Rx Vega",
+        "descripcion": "ESPECIFICACIONES TÉCNICAS - Micro : Microprocesador AMD Ryzen 5 3400G Socket AM4 Bulk - Mother : Mother A320 Asus o Gigabyte - Disco : 1 Tb - Memoria : 8 Gb Ddr4 - Gabinete : Kit con Fuente de 500W - Perifericos : Teclado , Mouse y parlantes",
+        "category": "PC ",
+        "price": 52499,
+        "image": "1 (42).jpg"
+      }
+    ]
+  

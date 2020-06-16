@@ -16,6 +16,6 @@ app.listen(3000, function(){
 })
 
 app.use('/', homeRoutes);
-app.use("/lista", listaRoutes);
+app.use("/producto", listaRoutes);
 app.use("/formulario", formularioRoutes);
 app.use("/carrito", carritoRoutes);
