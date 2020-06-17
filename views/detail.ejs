@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partial/head') %> 
+    <%- include('./partial/head') %> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>producto
+    </title>
+</head>
 <body>
     <header class="main-header">
-        <img src="/public/img/1.png" alt="logotipo" class="logo">
+        <img src="img/1.png" alt="logotipo" class="logo">
 
         
 
@@ -24,7 +33,7 @@
         </ul>
         
 
-        <img src="img/carrito.png" alt="logotipo" class="logo">
+        <img src="img/activo-1.png" alt="logotipo" class="logo">
 
         <span class="fa fa-bars"></span>
         <div id="header">
@@ -46,70 +55,34 @@
 </header>
 <div class="detalleproducto">
     <div class="especificado">
+        <div class="division">
+    <div class="cerraruno">
     <i class="fas fa-times-circle"></i>
-    <img src="img/1.png" alt="logotipo" class="logo">
-    <img src="img/computadora (2).png" alt="imagen">
     </div>
-    <h2 class=titl> PC ARMADA GAMER RYZEN </h2>
-    <ul>
-        <li> MICRO: AMD RYZEN 7 3700X x8 nucleos 16 hilos con cooler BOX </li>
-        <li> VIDEO: RADEON RX 5500 XT 4GB GDD5 BOX </li>
-        <li> MOTHER: MSI B450M PROM M2 DDR4 - USB 3.0 </li>
-        <li>DISCO ESTADO SOLIDO: SSD480 SATA3 </li>
-        <li>MEMORIA RAM: 16GB 2666MHZ DDR4</li>
-        <li>GABINETE: ATX SENTEY G8 Power KIT </li>
-        <li>FUENTE: THERMALTAKE 500W REALES</li>
-        <li>SISTEMA OPERATIVO: WINDOWS 10 TRIAL 64 Bits</li>
-    </ul>
-    <i class="fab fa-cc-visa"></i>
-    <i class="fab fa-cc-mastercard"></i>
-    <i class="fab fa-cc-amex"></i>
-    <img src="img/mercadopago.png" alt="mercadopago">
-<h4>COTIZA TU ENVIO</h4>
-<H4>COPIAR ENLACE</H4>
+    <div class="ImageContainer">
+    <img src="/img/<%= product.image %>" alt="imagen">
+</div>   
 </div>
-
-<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Detalle del producto: <%= product.name %> </h2>
-			</div>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<div class="col-12 col-lg-8">
-					<img src="/img/<%= product.image %> " alt="imagen de producto">
-					<p class="product-detail-description">
-						<%= product.description %>
-					</p>
-				</div>
-				<div class="col-12 col-lg-4">
-					<article class="product-detail-info">
-						<h2 class="product-detail-title"><%= product.name %></h2>
-						
-
-						<ul class="actions-list">
-							<li>
-								<i class="fas fa-credit-card"></i>
-								<p>Pagá en 12 cuotas sin interes</p>
-							</li>
-							<li>
-								<i class="fas fa-store"></i>
-								<p>Retiro gratis en locales del vendedor</p>
-							</li>
-						</ul>
-
-						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
-						<hr>
-
-						
-					</article>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
+    <div class="descrip">
+    <h2 class=titl> <%=product.name %>  </h2>
+    <ul>
+        <li> <%=product.descripcion %>  </li>
+       
+    </ul>
+    <div class="metododepago">
+        <div class="restodemetodos">
+    <i class="fab fa-cc-visa fa-5x "></i>
+    <i class="fab fa-cc-mastercard fa-5x "></i>
+    <i class="fab fa-cc-amex fa-5x "></i>
+</div>
+</div>
+<div class="voton">
+    <h4>AÑADIR AL CARRITO</h4>
+</div>
+</div>
+<br>
+</div>
+</div>
 
 <footer>
     <h3> P2 TEC ©️ 2020 / CONTACTO </h3>

@@ -80,3 +80,211 @@ ul, ol {
 h3{
     background-color: #000;
 }
+
+
+/* ESTO ES CSS DE PRODUCTO */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+.detalleproducto{
+    background-color: aqua;
+}
+.division{
+    max-width: 100%;
+    margin-left: 5% auto;
+    margin-right: 5% auto;
+    align-items: center;
+}
+
+img{
+    display:block;
+    margin:auto;
+    border-radius: 10px;
+    }
+.cerraruno{
+    padding-left: 50px;
+}
+.especificado{
+ 
+ flex-direction: columns;
+ align-items: center;
+}
+.descrip{
+    text-align: center;
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+ul{
+    list-style: none;
+}
+.voton{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    background-color: rgb(33, 235, 31);
+    border-radius: 6px;
+    border: 1px solid black;
+}
+
+footer {
+background-color: black;
+color: white;
+text-align: center;
+}
+
+@media (min-width: 768px) {
+.especificado{
+ display: flex;
+ flex-direction: row
+    }
+.descrip{
+margin-bottom: 20% ;
+margin-top: 20%  ;
+margin-right: 1%;
+margin-left: 0%;
+padding-top: 5%;
+padding-bottom: 5%;
+    }
+
+}
+@media (min-width: 1366px) {
+ .especificado{
+        display: flex;
+        flex-direction: row;
+       
+}
+.cerraruno{
+    margin-left: 20% ;
+    padding-left: 0%;
+}
+
+.descrip{
+padding: 10%;   
+}
+
+.detalleproducto{
+    position: absolute;
+   
+}
+.imagecontainer{
+    margin: 50% ;
+}
+}
+
+/* ESTO ES CSS DE CARRITO */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.main-header{
+    background-color: black;
+    color: white;
+}  
+.bodys{
+    background-color: aqua;
+    padding-top: 5%;
+}
+.detalleproducto{
+    background-color: aqua;
+}
+.producto1{
+    background-color: white;
+    border-radius: 10%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.producto2{
+    background-color: white;
+    border-radius: 10%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.producto3{
+    background-color: white;
+    border-radius: 10%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+img{
+    border-radius: 10%;
+    width: 40%;
+}
+.subtotal{
+    border-radius: 20%;
+    border-radius: 10%;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+   
+}
+ul{
+list-style: none; 
+}
+.sub{
+   border: 10%;
+   border-radius: 30%;
+   border-bottom-right-radius: 5%;
+   border-bottom-left-radius: 5%;
+   background-color: red;
+   margin-top: 5%;
+   margin-left: 15%;
+   margin-right: 15%;
+}
+.Realizar{
+    border: 10%;
+    border-color: black;
+    border-radius: 30%;
+    background-color: red;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+   
+ }
+ .totalcarrito{
+    border: 10%;
+    border-color: black;
+    border-bottom-right-radius: 5%;
+border-bottom-left-radius: 5%;
+    background-color: red;
+    margin: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+ }
+ .Continuar{
+    border: 10%;
+    border-radius: 30%;
+    background-color: red;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+ }
+.img24{
+    display: flex;
+    align-content: center;
+  
+    border-radius: 10px;
+    width: 250%;
+    
+    }
+
+
+@media (min-width: 1366px) {
+    
+}
