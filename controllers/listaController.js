@@ -3,46 +3,48 @@ const productModel = jsonModel('products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const controller = {
-	// Root - Show all products
-	root: (req, res) => {
-		return res.render("index");
-	},
+const listaController = {
+    // Root - Show all products
+    root: (req, res) => {
+        const products = productModel.leerJson()
 
-	// Detail - Detail from one product
-	detail: (req, res) => {
+        return res.render("lista", {data: products});
+    },
 
-		const product = productModel.findById(req.params.productId);
+    // Detail - Detail from one product
+    detail: (req, res) => {
 
-		return res.render('detail', {product})
+        const product = productModel.findById(req.params.productId);
 
-	},
+        return res.render('detail', { product })
 
-	// Create - Form to create
-	create: (req, res) => {
-		// Do the magic
-	},
-	
-	// Create -  Method to store
-	store: (req, res) => {
-		// Do the magic
-	},
+    },
 
-	// Update - Form to edit
-	edit: (req, res) => {
+    // Create - Form to create
+    create: (req, res) => {
+        // Do the magic
+    },
 
-	
-	},
-	// Update - Method to update
-	update: (req, res) => {
-		// Do the magic
-	
-	},
+    // Create -  Method to store
+    store: (req, res) => {
+        // Do the magic
+    },
 
-	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		
-	}
+    // Update - Form to edit
+    edit: (req, res) => {
+
+
+    },
+    // Update - Method to update
+    update: (req, res) => {
+        // Do the magic
+
+    },
+
+    // Delete - Delete one product from DB
+    destroy: (req, res) => {
+
+    }
 };
 
-module.exports = controller;
+module.exports = listaController;

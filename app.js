@@ -11,11 +11,11 @@ app.use(express.static(__dirname + '/public'));
 
 
 
-app.listen(3000, function(){
+app.listen(3000, function() {
     console.log('Running on 3000');
 })
 
 app.use('/', homeRoutes);
-app.use("/producto", listaRoutes);
+app.use("/lista", listaRoutes);
 app.use("/formulario", formularioRoutes);
 app.use("/carrito", carritoRoutes);

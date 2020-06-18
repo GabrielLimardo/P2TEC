@@ -1,98 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-	<%- include('./partial/head') %> 
-	<body>
-		<header class="main-header">
-			<img src="img/1.png" alt="logotipo" class="logo">
-	
-			
-	
-			<div id="mob-search">
-			<div class="search-sug" id="search-sug">
-			</div>
-			<div class="search">
-			<form name="newFormMob" onsubmit="if (!window.__cfRLUnblockHandlers) return false; searchModMob()" method="GET" data-cf-modified-1517ea0d33e7160c0c25394c-="">
-			<input type="text" class="search" autocomplete="off" id="searchidmob" placeholder="Buscar...">
-			<img src="img/descarga.png" alt="serch">
-			<input type="hidden" value="cat">
-			</form>
-			</div>
-			
-			<nav>
-			<ul>
-				<li>Iniciar Sesión</li>
-				<li>Regístrate</li>
-			</ul>
-			</nav>
-	
-			<img src="img/carrito.png" alt="logotipo" class="logo">
-			
-			<span class="fa fa-bars"></span>
-			<div id="header">
-				<ul class="nav">
-					<li><a href="">PRODUCTOS</a>
-						<ul>
-							<li><a href="">Computadoras</a></li>
-							<li><a href="">Componentes</a></li>
-							<li><a href="">Notebooks</a></li>
-							<li><a href="">Monitores</a></li>
-							<li><a href="">Sonido y Video</a></li>
-							<li><a href="">Accesorios</a></li>
-							<li><a href="">Conectividad</a></li> 
-							</li>
-						</ul>
-					</li>
-				   
-			</div>
-	</header>
-	 <div class="main.body">
-		 
-		<img src="img/MEJORESJUEGOS.jpg" alt="juegos">
-		<img src="img/pcoficina.jpg" alt="">
-		<img src="img/PC-Streaming-4_800.jpg" alt="">
-		<img src="img/PC-Diseño-8_800.jpg" alt="">
-		<img src="img/notebook.jpg" alt="">
-		<img src="img/horario.png"" alt="">
-		<img src="img/unknown (1).png" alt="">
-		 
-	
-		 <h2 class="productosdesctados">PRODUCTOS DESTACADOS</h2>
-		 <div class="productosDestacados">
-		 <img src="img/Imagen 30.png" alt="">
-		 <img src="img/Imagen 31.png"" alt="">
-		 <img src="img/Imagen 32.png" alt="">
-		 <img src="img/Imagen 34.png" alt="">
-		 <img src="img/Imagen 24.png" alt="">
-		</div>
-	 </div>
+<%- include('./partial/head') %>
 
-<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Basado en tu última visita</h2>
-			</div>
-			<!-- Show the "visited" products -->
-			<% visited.forEach(product => { %>
-				<div class="col-12 col-sm-6 col-lg-3">
-					<section class="product-box">
-						<a href="producto/detail/<%= product.id %> ">
-							<figure class="product-box_image">
-								<img src="/img/<%= product.image %> " alt="imagen de producto">
-							</figure>
-							<article class="product-box_data">
-								<h2><%= product.price %> </h2>
-								<p><%= product.name %> </p>
-								<i class="fas fa-truck"></i>
-							</article>
-						</a>
-					</section>
-				</div>
-			<% }) %>
-		</div>
-	</div>
+    <body>
+        <header class="main-header">
+            <img src="img/1.png" alt="logotipo" class="logo">
 
-	<footer>
-		<h3> P2 TEC ©️ 2020 / CONTACTO </h3>
-	</footer>
-		
-	</body>
+
+
+            <div id="mob-search">
+                <div class="search-sug" id="search-sug">
+                </div>
+                <div class="search">
+                    <form name="newFormMob" onsubmit="if (!window.__cfRLUnblockHandlers) return false; searchModMob()" method="GET" data-cf-modified-1517ea0d33e7160c0c25394c-="">
+                        <input type="text" class="search" autocomplete="off" id="searchidmob" placeholder="Buscar...">
+                        <img src="img/descarga.png" alt="serch">
+                        <input type="hidden" value="cat">
+                    </form>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>Iniciar Sesión</li>
+                        <li>Regístrate</li>
+                    </ul>
+                </nav>
+
+                <img src="img/carrito.png" alt="logotipo" class="logo">
+
+                <span class="fa fa-bars"></span>
+                <div id="header">
+                    <ul class="nav">
+                        <li><a href="./lista">PRODUCTOS</a>
+                            <ul>
+                                <li><a href="">Computadoras</a></li>
+                                <li><a href="">Componentes</a></li>
+                                <li><a href="">Notebooks</a></li>
+                                <li><a href="">Monitores</a></li>
+                                <li><a href="">Sonido y Video</a></li>
+                                <li><a href="">Accesorios</a></li>
+                                <li><a href="">Conectividad</a></li>
+                        </li>
+                        </ul>
+                        </li>
+
+                </div>
+        </header>
+        <div class="main.body">
+
+            <img src="img/MEJORESJUEGOS.jpg" alt="juegos">
+            <img src="img/pcoficina.jpg" alt="">
+            <img src="img/PC-Streaming-4_800.jpg" alt="">
+            <img src="img/PC-Diseño-8_800.jpg" alt="">
+            <img src="img/notebook.jpg" alt="">
+            <img src="img/horario.png" " alt=" ">
+		<img src="img/unknown (1).png " alt=" ">
+		 
+	
+		 <h2 class="productosdesctados ">PRODUCTOS DESTACADOS</h2>
+		 <div class="productosDestacados ">
+		 <img src="img/Imagen 30.png " alt=" ">
+		 <img src="img/Imagen 31.png "" alt="">
+            <img src="img/Imagen 32.png" alt="">
+            <img src="img/Imagen 34.png" alt="">
+            <img src="img/Imagen 24.png" alt="">
+        </div>
+        </div>
+
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="products-title">Basado en tu última visita</h2>
+                </div>
+                <!-- Show the "visited" products -->
+                <% visited.forEach(product => { %>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <section class="product-box">
+                            <a href="producto/detail/<%= product.id %> ">
+                                <figure class="product-box_image">
+                                    <img src="/img/<%= product.image %> " alt="imagen de producto">
+                                </figure>
+                                <article class="product-box_data">
+                                    <h2>
+                                        <%= product.price %>
+                                    </h2>
+                                    <p>
+                                        <%= product.name %>
+                                    </p>
+                                    <i class="fas fa-truck"></i>
+                                </article>
+                            </a>
+                        </section>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+
+        <footer>
+            <h3> P2 TEC ©️ 2020 / CONTACTO </h3>
+        </footer>
+
+    </body>
