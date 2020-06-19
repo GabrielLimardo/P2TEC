@@ -59,21 +59,22 @@ function round(val) {
             </div>
         </div>
     </header>
-    <div class="row wrap nostyle">
-        <% data.forEach(p => { %>
-        <a href="/lista/detail/<%- p.id %>">
-            <div class="producto producto-<%- p.id %>">
-                <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
-                <div class="descripciones">
-                    <h3 class="nombreDeProducto"><%- p.name %></h3>
-                    <p class="detalleProducto"><%- p.descripcion %></p>
-                    <h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+    <div class="bodys">
+        <div class="row wrap nostyle">
+            <% data.forEach(p => { %>
+            <a href="/lista/detail/<%- p.id %>">
+                <div class="producto producto-<%- p.id %>">
+                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    <div class="descripciones">
+                        <h3 class="nombreProducto"><%- p.name %></h3>
+                        <p class="detalleProducto"><%- p.descripcion %></p>
+                        <h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+                    </div>
                 </div>
-            </div>
-        </a>
-        <% }) %>
+            </a>
+            <% }) %>
+        </div>
     </div>
-
     <footer>
         <div class="textoFooter"> P2 TEC ©️ 2020 / CONTACTO </div>
     </footer>

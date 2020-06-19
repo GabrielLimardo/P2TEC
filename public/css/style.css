@@ -10,20 +10,29 @@
 }
 
 .bodys {
-    background-color: aqua;
+    background-color: #c6dae7;
 }
 
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
 /*CSS DE LISTA*/
+
 .encabezado {
     display: flex;
     flex-wrap: nowrap;
 }
-.nostyle a:link,
-    a:visited,
-    a:hover,
-    a:active {
-    text-decoration: none; 
-    color: black;}
+
+.nostyle a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+}
 
 .logo {
     width: 150px;
@@ -79,7 +88,7 @@ img.carrito {
     margin-left: 10px;
 }
 
-.nombreDeProducto {
+.nombreProducto {
     background-color: #fff;
     font: bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -105,6 +114,7 @@ img.carrito {
 }
 
 .producto {
+    background-color: white;
     border: solid 1.5px gray;
     border-radius: 20px;
     margin: 20px;
@@ -141,10 +151,6 @@ img.carrito {
     text-align: center;
 }
 
-.detalleproducto {
-    background-color: aqua;
-}
-
 footer {
     background-color: black;
     color: white;
@@ -163,8 +169,7 @@ footer {
     display: block;
 }
 
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
@@ -219,47 +224,71 @@ h3 {
     background-color: #000;
 }
 
-
+/* ESTO ES CSS DE PRODUCTO */
+/* ESTO ES CSS DE PRODUCTO */
 /* ESTO ES CSS DE PRODUCTO */
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.detalleproducto {
-    background-color: aqua;
+.bodyProducto {
+    background-color: #c6dae7;
 }
 
 .division {
-    max-width: 100%;
-    margin-left: 5% auto;
-    margin-right: 5% auto;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin: 20px auto;
 }
 
-img {
+
+.imageContainer {
+    position: relative;
+    background-color: white;
+    border: 2px solid #707070;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    margin: 0px;
+    border-radius: 50px;
+}
+
+img.fotoProductoDetalle {
     display: block;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 50px;
+    max-height: 400px;
+    max-width: 400px;
 }
 
 .cerraruno {
     padding-left: 50px;
+    position: relative;
+    top: -240px;
+
 }
 
 .especificado {
-    flex-direction: columns;
+    flex-direction: column;
     align-items: center;
 }
 
 .descrip {
+    padding: 10px;
     text-align: center;
+    width: 450px;
+    max-height: 300px;
     background-color: white;
-    border-radius: 6px;
-    margin-left: 10%;
-    margin-right: 10%;
+    border-radius: 0px 20px 20px 0px;
+    border: 2px solid #707070;
+    border-left: 0px;
+    margin: 0;
+}
+
+.fontsize-medium{
+    font-size: medium;
+}
+
+.fontsize-xlarge{
+    font-size: x-large;
 }
 
 ul {
@@ -268,13 +297,16 @@ ul {
 
 .voton {
     text-decoration: none;
+    margin: 0 auto;
+    width: 75%;
     padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: black;
-    background-color: rgb(33, 235, 31);
+    background-image: linear-gradient(#45a7c5, #1D83A2, #0C485A);
     border-radius: 6px;
-    border: 1px solid black;
+    border: 2px solid #707070;
 }
 
 footer {
@@ -283,7 +315,7 @@ footer {
     text-align: center;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .especificado {
         display: flex;
         flex-direction: row
@@ -298,7 +330,7 @@ footer {
     }
 }
 
-@media (min-width: 1366px) {
+/*@media (min-width: 1366px) {
     .especificado {
         display: flex;
         flex-direction: row;
@@ -318,29 +350,7 @@ footer {
     }
 }
 
-
 /* ESTO ES CSS DE CARRITO */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.main-header {
-    background-color: black;
-    color: white;
-}
-
-.bodys {
-    background-color: aqua;
-    padding-top: 5%;
-}
-
-.detalleproducto {
-    background-color: aqua;
-}
-
 .producto1 {
     background-color: white;
     border-radius: 10%;
@@ -366,11 +376,6 @@ footer {
     margin-top: 1%;
     margin-left: 20%;
     margin-right: 20%;
-}
-
-img {
-    border-radius: 10%;
-    width: 40%;
 }
 
 .subtotal {
@@ -435,5 +440,3 @@ ul {
     border-radius: 10px;
     width: 250%;
 }
-
-@media (min-width: 1366px) {}
