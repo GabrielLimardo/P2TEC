@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+}
+
+.logo {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+input {
+    width: 95%;
+}
+
+.log {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a.navLink:hover {
+    background-color: gray;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+@media (min-width: 576px) {
+    .info {
+        display: flex;
+    }
+
+    .logo {
+        border-radius: 50%;
+        /* margin: 0 auto;  Centrar imagen*/
+    }
+
+    .contenido {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .log {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    form {
+        /* height: 255px; */
+        width: 69%;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    input {
+        width: 75%;
+        height: 30px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+
+    .info {
+        display: flex;
+    }
+
+    .contenido {
+        display: flex;
+        width: 100%;
+    }
+
+    .log {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+        padding-left: 10px;
+    }
+
+    .white {
+        color: white
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    nav#navegacion {
+        text-align: left;
+        margin-top: -30px;
+    }
+
+    nav#navegacion ul li {
+
+        display: inline;
+
+    }
+
+    nav#navegacion ul li a {
+
+        text-decoration: none;
+        color: #088A85;
+        font-size: 16px;
+        font-family: 'Gloria Hallelujah', cursive;
+
+    }
+
+    nav#navegacion ul li a:hover {
+
+        color: #A4A4A4;
+
+    }
+
+    .sub-menu {
+
+        display: none;
+    }
+
+    #navegacion li:hover .sub-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #D8D8D8;
+        width: 10%;
+    }
+}

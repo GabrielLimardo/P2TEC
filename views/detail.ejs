@@ -13,57 +13,7 @@
 </head>
 
 <body class="bodyProducto">
-    <header class="main-header">
-        <div class="encabezado">
-            <img src="/img/1.png" alt="logotipo" class="logo" />
-            <div id="mob-search">
-                <div class="search-sug" id="search-sug"></div>
-
-                <div class="search">
-                    <form name="newFormMob" onsubmit="if (!window.__cfRLUnblockHandlers) return false; searchModMob()"
-                        method="GET" data-cf-modified-1517ea0d33e7160c0c25394c-="">
-                        <input type="text" class="searchbar" autocomplete="off" id="searchidmob"
-                            placeholder="    Buscar...">
-                        <div id="iconoBuscador">
-                            <img src="img/descarga.png" alt="search">
-                        </div>
-                        <input type="hidden" value="cat">
-                    </form>
-                </div>
-            </div>
-
-            <div class="encabezado-login">
-                <div class="login">Iniciar Sesión</div>
-                <div class="row no-wrap">
-                    <img src="/img/carrito.png" alt="logotipo" class="carrito">
-                    <div class="subtotalCarrito"><a href=""> (0) $0,00</a></div>
-                </div>
-            </div>
-            <div class="encabezado-register">
-                <div class="register">Regístrate</div>
-            </div>
-        </div>
-        <div class="menu">
-            <div class="menu-container">
-                <span class="fa fa-bars"></span>
-                <div id="header">
-                    <ul class="nav">
-                        <li><a href="">PRODUCTOS</a>
-                            <ul>
-                                <li><a href="">Computadoras</a></li>
-                                <li><a href="">Componentes</a></li>
-                                <li><a href="">Notebooks</a></li>
-                                <li><a href="">Monitores</a></li>
-                                <li><a href="">Sonido y Video</a></li>
-                                <li><a href="">Accesorios</a></li>
-                                <li><a href="">Conectividad</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+    <%- include('./partial/header') %>
     <div class="especificado">
         <div class="division row no-wrap">
             <div class="cerraruno">

@@ -29,7 +29,7 @@
     flex-wrap: nowrap;
 }
 
-.nostyle a:link, a:visited, a:hover, a:active {
+.nostyle a:link, .nostyle a:visited, .nostyle a:hover, .nostyle a:active {
     text-decoration: none;
     color: black;
 }
