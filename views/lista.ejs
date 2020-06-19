@@ -5,7 +5,8 @@
 function round(val) {
   return Math.round(val*100)/100;
 } 
-%> 
+%>
+
 <body>
     <header class="main-header">
         <div class="encabezado">
@@ -58,16 +59,18 @@ function round(val) {
             </div>
         </div>
     </header>
-    <div class="row wrap">
+    <div class="row wrap nostyle">
         <% data.forEach(p => { %>
-            <div class="producto 1">
-                <img src="<%- "/img/" + p.image %>"  alt="" class="fotoProducto">
+        <a href="/lista/detail/<%- p.id %>">
+            <div class="producto producto-<%- p.id %>">
+                <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
                 <div class="descripciones">
                     <h3 class="nombreDeProducto"><%- p.name %></h3>
                     <p class="detalleProducto"><%- p.descripcion %></p>
                     <h2 class="precioProducto">ARS <%- round(p.price) %></h2>
                 </div>
-            </div>      
+            </div>
+        </a>
         <% }) %>
     </div>
 

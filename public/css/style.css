@@ -9,10 +9,21 @@
     color: white;
 }
 
+.bodys {
+    background-color: aqua;
+}
+
+/*CSS DE LISTA*/
 .encabezado {
     display: flex;
     flex-wrap: nowrap;
 }
+.nostyle a:link,
+    a:visited,
+    a:hover,
+    a:active {
+    text-decoration: none; 
+    color: black;}
 
 .logo {
     width: 150px;
@@ -93,16 +104,13 @@ img.carrito {
     margin-top: 20px;
 }
 
-.bodys {
-    background-color: aqua;
-}
-
 .producto {
     border: solid 1.5px gray;
     border-radius: 20px;
     margin: 20px;
     padding: 3px;
     width: 234px;
+    min-height: 328px;
 }
 
 .fotoProducto {

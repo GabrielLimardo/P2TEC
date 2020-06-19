@@ -16,7 +16,7 @@ const listaController = {
 
         const product = productModel.findById(req.params.productId);
 
-        return res.render('detail', { product })
+        return res.render('detail', { product: product })
 
     },
 
