@@ -1,119 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partial/head') %> 
+<%- include('./partial/head') %>
+<% 
+function round(val) {
+  return Math.round(val*100)/100;
+} 
+%>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/nuev.css">
     <title>carrito</title>
 </head>
+
 <body>
-    <header class="main-header">
+    <div class="bodys">
+        <header class="main-header">
             <img src="img/1.png" alt="logotipo" class="logo">
 
             <div id="mob-search">
-            <div class="search-sug" id="search-sug">
-            </div>
-            <div class="search">
-            <form name="newFormMob" onsubmit="if (!window.__cfRLUnblockHandlers) return false; searchModMob()" method="GET" data-cf-modified-1517ea0d33e7160c0c25394c-="">
-            <input type="text" class="search" autocomplete="off" id="searchidmob" placeholder="Buscar...">
-            <img src="img/descarga.png" alt="serch">
-            <input type="hidden" value="cat">
-            </form>
-            </div>
-            
-            <ul>
-                <li>Iniciar Sesión</li>
-                <li>Regístrate</li>
-            </ul>
-            
+                <div class="search-sug" id="search-sug">
+                </div>
+                <div class="search">
+                    <form name="newFormMob" onsubmit="if (!window.__cfRLUnblockHandlers) return false; searchModMob()"
+                        method="GET" data-cf-modified-1517ea0d33e7160c0c25394c-="">
+                        <input type="text" class="search" autocomplete="off" id="searchidmob" placeholder="Buscar...">
+                        <img src="img/descarga.png" alt="serch">
+                        <input type="hidden" value="cat">
+                    </form>
+                </div>
 
-            <img src="img/activo-1.png" alt="logotipo" class="logo">
-            
-            <span class="fa fa-bars"></span>
-            <div id="header">
-                <ul class="nav">
-                    <li><a href="">PRODUCTOS</a>
-                        <ul>
-                            <li><a href="">Computadoras</a></li>
-                            <li><a href="">Componentes</a></li>
-                            <li><a href="">Notebooks</a></li>
-                            <li><a href="">Monitores</a></li>
-                            <li><a href="">Sonido y Video</a></li>
-                            <li><a href="">Accesorios</a></li>
-                            <li><a href="">Conectividad</a></li> 
-                            </li>
-                        </ul>
+                <ul>
+                    <li>Iniciar Sesión</li>
+                    <li>Regístrate</li>
+                </ul>
+
+
+                <img src="img/activo-1.png" alt="logotipo" class="logo">
+
+                <span class="fa fa-bars"></span>
+                <div id="header">
+                    <ul class="nav">
+                        <li><a href="">PRODUCTOS</a>
+                            <ul>
+                                <li><a href="">Computadoras</a></li>
+                                <li><a href="">Componentes</a></li>
+                                <li><a href="">Notebooks</a></li>
+                                <li><a href="">Monitores</a></li>
+                                <li><a href="">Sonido y Video</a></li>
+                                <li><a href="">Accesorios</a></li>
+                                <li><a href="">Conectividad</a></li>
+                        </li>
+                    </ul>
                     </li>
-                   
-            </div>
-    </header>
-    <div class=bodys>
 
-        <div class="producto1">
-            <div class="img1">
-        <img src="img/1 (1).jpg" alt="serch">
-        </div>
-        <h3 class="Productos">Placa de Video RTX 2070 Super Evo Dual OC
-            8GB GDDR6</h3>
-            <p class="subtitulo"> Asus </p>
-            <p>Envío Gratuito</p>
-            <ul class="guardar">
-                <li>Guardar para después</li>
-                <li>Eliminar</li>
-            </ul>
-            <!-- Falta el numero para aumear la cantidad de productos del carrito -->
-        <h3 class="costo">$15010.00</h3>
-        </div>
-        
-      
+                </div>
+        </header>
+        <div class="carritoContainer row no-wrap">
+            <div class="productList">
+                <div class="cartHeaders row no-wrap">
+                    <div class="carritoHeader">Tu Carrito</div>
+                    <div class="precioHeader">Precio</div>
+                    <div class="cantidadHeader">Cantidad</div>
+                </div>
+                <% data.forEach(p => { %>
+                <div class="cartProduct row no-wrap">
+                    <img src="<%- "/img/" + p.image %>" alt="image" class="cartProductImage">
+                    <div class="cartProductDetail">
+                        <div class="cartDetailName"><%- p.name %> </div>
+                        <div class="cartDetailCategory"><%- p.category %></div>
+                        <div class="envioGratis">Envío Gratuito</div>
+                        <div class="clickeables row no-wrap">
+                            <div>Guardar para después</div> | <div>Eliminar</div>
+                        </div>
 
-        <div class="producto2">
-            <div class="img4">
-        <img src="img/1 (4).jpg" alt="serch">
-    </div>
-        <h3 class="Productos">Gabinete PC Gamer Carbide Series Spec-04</h3>
-            <p class="subtitulo"> Corsair </p>
-            <p>Envío Gratuito</p>
-            <ul class="guardar">
-                <li>Guardar para después</li>
-                <li>Eliminar</li>
-            </ul>
-            <!-- Falta el numero para aumear la cantidad de productos del carrito -->
-        <h3 class="costo">$4490.00</h3>
-        </div>  
-            
-        <div class="producto3">
-            <div class="img3">
-        <img src="img/1 (3).jpg" alt="serch">
-        </div>
-        <h3 class="Productos">Mouse Gaming G903 Lightspeed RBG</h3>
-            <p class="subtitulo"> Logitech </p>
-            <p>Envío Gratuito</p>
-            <ul class="guardar">
-                <li>Guardar para después</li>
-                <li>Eliminar</li>
-            </ul>
-            <!-- Falta el numero para aumear la cantidad de productos del carrito -->
-        <h3 class="costo">$3420.00</h3>
-        <br>
-       
-        </div>
-        <div class="subtotal">
-            <h3 class="sub"> Subtotal (3 artículos):</h3> 
-            <h3 class="totalcarrito">ARS 22920.00</h3>
-            <h3 class="Realizar">Realizar el pago</h3>
-            <h3 class="Continuar">Continuar Comprando</h3>
+
+                    </div>
+                    <div class="cartProductPrice">
+                        ARS <%- round(p.price) %>
+                    </div>
+                    <div class="cartProductQuantity">
+                        1
+                    </div>
+                </div>
+                <% }); %>
             </div>
-        <br>
-            <div class="img24">
-        <img src="img/Imagen 24.png" alt="serch">
-    </div>
+            <div class="cartSummary">Summary will be here</div>
+        </div>
     </div>
     <footer>
         <h3> P2 TEC ©️ 2020 / CONTACTO </h3>
     </footer>
 </body>
+
 </html>
