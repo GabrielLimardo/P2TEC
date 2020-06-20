@@ -35,20 +35,20 @@ function round(val) {
 			<div class="col-12">
 				<h2 class="products-title">PRODUCTOS RECOMENDADOS : <%- conect[0].category %> </h2>
 				<!-- Show the "visited" products -->
-				<div class="row wrap nostyle">
-					<% conect.forEach(p => { %>
-					<div>
-						<a href="/lista/detail/<%- p.id %>">
-							<div class="producto producto-<%- p.id %>">
-								<img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
-								<div class="descripciones">
-									<h3 class="nombreProducto"><%- p.name %></h3>
-									<p class="detalleProducto"><%- p.descripcion %></p>
-									<h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+				<div class="row wrap nostyle contProdRec">
+					<% conect.forEach(p => { %>					
+						<div>
+							<a href="/lista/detail/<%- p.id %>">
+								<div class="producto producto-<%- p.id %>">
+									<img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+									<div class="descripciones">
+										<h3 class="nombreProducto"><%- p.name %></h3>
+										<p class="detalleProducto"><%- p.descripcion %></p>
+										<h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+									</div>
 								</div>
-							</div>
-						</a>
-					</div>
+							</a>
+						</div>
 					<% }) %>
 				</div>
 			</div>

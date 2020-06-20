@@ -75,7 +75,10 @@ img.carrito {
 .no-wrap {
     flex-wrap: nowrap;
 }
-
+.contProdRec{
+    display: flex;
+    justify-content: space-evenly;
+}
 .wrap {
     flex-wrap: wrap;
 }
@@ -124,21 +127,23 @@ img.carrito {
     border-radius: 20px;
     margin: 20px;
     padding: 3px;
-    width: 234px;
-    min-height: 328px;
+    width: 285px;
+    height: 328px;
 }
 
 .fotoProducto {
     margin: 2px 7px;
     width: 210px;
     height: 210px;
+    margin: 0 auto;
+    display: block;
 }
 
 .descripciones {
     text-align: center;
 }
 
-.producto {
+/* .producto {
     border: solid 1.5px gray;
     border-radius: 20px;
     margin: 20px;
@@ -150,7 +155,7 @@ img.carrito {
     margin: 2px 7px;
     width: 210px;
     height: 210px;
-}
+} */
 
 .descripciones {
     text-align: center;
