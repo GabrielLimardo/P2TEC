@@ -821,3 +821,23 @@ body{
 
        
 }
+
+.mj {
+    width: 95%;
+}
+.imgC {
+    width: 40% !important;
+    margin-left: 75px;
+    margin-top: 30px;
+    padding-left: 0px;
+}
+.imgbuilder a {
+    margin: 0 auto;
+}
+.imgcontent{
+    width: 100%;
+    margin: 0 auto;
+}
+img {
+    display: inline-block;
+}
