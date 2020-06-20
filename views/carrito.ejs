@@ -33,7 +33,7 @@ function round(val) {
                         <div class="cartDetailCategory"><%- p.category %></div>
                         <div class="envioGratis">Envío Gratuito</div>
                         <div class="clickeables row no-wrap">
-                            <div>Guardar para después</div> | <div>Eliminar</div>
+                            <div class="saveForLater">Guardar para después</div> | <div class="deleteProduct">Eliminar</div>
                         </div>
 
 
@@ -47,7 +47,14 @@ function round(val) {
                 </div>
                 <% }); %>
             </div>
-            <div class="cartSummary">Summary will be here</div>
+            <div class="cartSummary">
+                <div class="cartSummaryHeader row no-wrap">Subtotal: <div class="bold redText">sum</div></div>
+                
+                <div class="cartSummaryButtons nostyle">
+                    <div class="startCheckout cartButton">Realizar el pago</div>
+                    <a href="/lista"><div class="backToShop cartButton">Seguir comprando</div></a>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
