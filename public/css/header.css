@@ -35,12 +35,18 @@ a.navLink:hover {
     border-radius: 5px;
     padding: 3px;
 }
+.busca{
+    display: none;
+}
 
 @media (min-width: 576px) {
     .info {
         display: flex;
     }
 
+    .busca{
+        display: none;
+    }
     .logo {
         border-radius: 50%;
         /* margin: 0 auto;  Centrar imagen*/
