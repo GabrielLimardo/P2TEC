@@ -14,6 +14,19 @@ header {
     margin: 0 auto;
 }
 
+
+.hede {
+    background-color: black;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 2%;
+    background-image: linear-gradient(0deg, #000000 80%, #f2295b 100%);
+    height: 40px;
+    padding-top: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 input {
     width: 95%;
 }
@@ -129,21 +142,17 @@ a.navLink:hover {
     nav#navegacion ul li a {
 
         text-decoration: none;
-        color: #088A85;
         font-size: 16px;
-        font-family: 'Gloria Hallelujah', cursive;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     }
 
     nav#navegacion ul li a:hover {
-
         color: #A4A4A4;
-
     }
 
     .sub-menu {
-
-        display: none;
+        display: inline;
     }
 
     #navegacion li:hover .sub-menu {
