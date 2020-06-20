@@ -3,15 +3,11 @@ const productModel = jsonModel('products');
 
 const controller = {
 	root: (req, res) => {
-		const visited = productModel.filterBySomething(product => {
-			return product.category == 'Discos y SSDs';
-		})
-
-		const inSale = productModel.filterBySomething(product => {
-			return product.category == 'Streaming';
-		})
-
-		return res.render('index', { visited, inSale });
+		
+			const conect = productModel.filterBySomething(product => {
+				return product.category == 'Conectividad';
+			})
+			return res.render('index', { conect });
 	},
 	search: (req, res) => {
 		// Do the magic
