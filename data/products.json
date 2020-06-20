@@ -342,6 +342,7 @@
         "price": 15094,
         "image":"1 (38).jpg"
       },
+    
       {
         "id": 39,
         "name": "Notebook Hp I5 ",
@@ -351,6 +352,7 @@
         "price": 111096,
         "image":"1 (23).jpg"
       },
+  
       {
         "id": 40,
         "name": "Notebook Hp I7 ",
@@ -467,6 +469,24 @@
         "category": "Pc",
         "price": 52499,
         "image": "1 (42).jpg"
+      },
+      {
+        "id": 53,
+        "name": "Notebook Alienware I7 ",
+        "descripcion": "17r5 Intel Core I7-8750h X6 2.2ghz 16gb 1.1tb 17 ",
+        "brand": "Alienware",
+        "category": "Notebooks",
+        "price": 240000,
+        "image":"alien.jpg"
+      },
+      {
+        "id": 54,
+        "name": "Monitor Gamer Curvo 34'",
+        "descripcion": "Monitor Ultrawide Ips Gsync Wfhd 144hz 1ms H",
+        "brand": "Samsung",
+        "category": "Monitores",
+        "price": 15094,
+        "image":"monitorcurvo.jpg"
       }
     ]
   
