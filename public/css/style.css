@@ -387,8 +387,14 @@ main {
     border-radius: 5%;
     min-height: 500px;
     margin: 0 auto;
-}
-
+    
+} 
+ /* ULTIMO QUE TOQUE */
+.form-container2 button{
+    margin-bottom: 10px;
+} */
+ /* ULTIMO QUE TOQUE */
+ 
 .loginForm {
     margin-bottom: 70px;
     padding-top: 20px;
@@ -446,14 +452,17 @@ input[type=checkbox] {
     .form-container2 {
         background-color: black;
         color: white;
-        width: 80%!important;
+        width: 90%!important;
+        
     }
+    /* ULTIMO QUE TOQUE */
     .form-container button {
-        width: 100%;
+        width: 80%;
     }
     .form-container2 button {
-        width: 100%;
+        width: 80%;
     }
+     /* ULTIMO QUE TOQUE */
 } 
 
 /* ESTO ES CSS DE CARRITO */
