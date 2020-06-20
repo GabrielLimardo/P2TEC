@@ -11,7 +11,7 @@ function round(val) {
     <%- include('./partial/header') %>
     <div class="bodys">
         <div class="row wrap nostyle">
-            <%  Perisfericos.forEach(p => { %>
+            <%  data.forEach(p => { %>
             <a href="/lista/detail/<%- p.id %>">
                 <div class="producto producto-<%- p.id %>">
                     <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">

@@ -27,9 +27,9 @@ const listaController = {
         const micro = productModel.filterBySomething(product => {
             return product.category == 'Microprocesadores';
         })
-        const Componentes = [fuente, memoria, micro];
+        const Componentes = fuente.concat(memoria).concat(micro);
          
-        return res.render('lista', { Componentes });
+        return res.render('lista', { data: Componentes });
 
     },
     Notebooks: (req, res) => {
@@ -37,7 +37,7 @@ const listaController = {
         const Notebooks = productModel.filterBySomething(product => {
             return product.category == 'Notebooks';
         })
-        return res.render('lista', { Notebooks });
+        return res.render('lista', { data: Notebooks });
 
     },
     Monitores: (req, res) => {
@@ -45,7 +45,7 @@ const listaController = {
         const Monitores = productModel.filterBySomething(product => {
             return product.category == 'Monitores';
         })
-        return res.render('lista', { Monitores });
+        return res.render('lista', { data: Monitores });
 
     },
     Perisfericos: (req, res) => {
@@ -56,9 +56,9 @@ const listaController = {
         const Streaming = productModel.filterBySomething(product => {
             return product.category == 'Conectividad';
         })
-        const Perisfericos = [conect, Streaming]
+        const Perisfericos = conect.concat(Streaming);
 
-        return res.render('lista', { Perisfericos });
+        return res.render('lista', { data: Perisfericos });
 
     },
 
