@@ -66,6 +66,30 @@ const listaController = {
         return res.render('lista', { data: Perisfericos });
 
     },
+    PcOffice: (req, res) => {
+
+        const pcOffi = productModel.filterBySomething(product => {
+            return product.category == 'pc office';
+        })
+        return res.render('lista', { data: pcOffi });
+
+    },
+    PcStreamer: (req, res) => {
+
+        const pcStr = productModel.filterBySomething(product => {
+            return product.category == 'pc streming';
+        })
+        return res.render('lista', { data: pcStr });
+
+    },
+    PcDiseno: (req, res) => {
+
+        const PcDise = productModel.filterBySomething(product => {
+            return product.category == 'pcdiseno';
+        })
+        return res.render('lista', { data: PcDise });
+
+    }
 
 
 

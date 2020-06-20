@@ -487,6 +487,81 @@
         "category": "Monitores",
         "price": 15094,
         "image":"monitorcurvo.jpg"
-      }
+      },
+      {
+        "id": "55",
+        "name": "PC Home Office",
+        "descripcion": "Intel Core I3 8100 - H310 - 8GB - 240GB SSD",
+        "brand": "PC Home Office",
+        "category": "pc office",
+        "price": "40261",
+        "image": "PC-Oficina-2_800.jpg"
+    },
+    {
+        "id": "56",
+        "name": "PC Home Office",
+        "descripcion": " Intel Core I3 9100F - H310 - 8GB - GT 210 - 240GB SSD",
+        "brand": "PC Home Office",
+        "category": "pc office",
+        "price": "39660",
+        "image": "PC-Oficina-2_800.jpg"
+    },
+    {
+        "id": "57",
+        "name": "PC Home Office",
+        "descripcion": "Intel Pentium G5400 - H310 - 8GB - 240GB SSD",
+        "brand": "PC Home Office",
+        "category": "pc office",
+        "price": "32343",
+        "image": "PC-Oficina-2_800.jpg"
+    },
+    {
+        "id": "58",
+        "name": "PC Streaming",
+        "descripcion": "Intel I5 9400 - B365 - 8GB - GTX 1650 S - 1TB",
+        "category": "pc streming",
+        "price": "82768",
+        "image": "PC-Streaming-5_800.jpg"
+    },
+    {
+        "id": "59",
+        "name": "PC Streaming",
+        "descripcion": "Intel I5 9400 - B365 - 16GB - GTX 1660 Ti - 240GB SSD - 1TB",
+        "category": "pc streming",
+        "price": "108012",
+        "image": "PC-Streaming-5_800.jpg"
+    },
+    {
+        "id": "60",
+        "name": "PC Streaming",
+        "descripcion": "AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T",
+        "category": "pc streming",
+        "price": "110554",
+        "image": "PC-Streaming-5_800.jpg"
+    },
+    {
+        "id": "61",
+        "name": "PC Diseño",
+        "descripcion": "INTEL I7 9700F - B365 - 16GB - RTX 2060 S - 240GB SSD - 1TB",
+        "category": "pcdiseno",
+        "price": "144338",
+        "image": "PC-Diseño-6_800.jpg"
+    },
+    {
+        "id": "62",
+        "name": "PC Diseño",
+        "descripcion": "AMD R5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1TB",
+        "category": "pcdiseno",
+        "price": "110554",
+        "image": "PC-Diseño-6_800.jpg"
+    },
+    {
+        "id": "63",
+        "name": "PC Diseño",
+        "descripcion": " AMD R5 3600 - B450 - 8GB - GTX 1660 Ti - 240GB SSD - 1TB",
+        "category": "pcdiseno",
+        "price": "107693",
+        "image": "PC-Diseño-6_800.jpg"
+    }
     ]
   
