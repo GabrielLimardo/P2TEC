@@ -34,10 +34,10 @@ function round(val) {
 			<div class="row">
 				<div class="col-12">
 
-					<h2 class="products-title">PRODUCTOS DESTACADOS</h2>
+					<h2 class="products-title">PRODUCTOS RECOMENDADOS</h2>
 					<!-- Show the "visited" products -->
 					<div class="row wrap nostyle">
-						<% visited.forEach(p => { %>
+						<% conect.forEach(p => { %>
 						<a href="/lista/detail/<%- p.id %>">
 							<div class="producto producto-<%- p.id %>">
 								<img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
@@ -53,4 +53,5 @@ function round(val) {
 				</div>
 			</div>
 
+			<%- include('partial/footer') %>
 </body>
