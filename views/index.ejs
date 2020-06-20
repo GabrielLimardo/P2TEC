@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partial/head') %>
-
-<body>
-    <%- include('./partial/header') %>
-    <div class="main.body">
-
-        <img src="img/MEJORESJUEGOS.jpg" alt="juegos">
-        <img src="img/pcoficina.jpg" alt="">
-        <img src="img/PC-Streaming-4_800.jpg" alt="">
-        <img src="img/PC-Diseño-8_800.jpg" alt="">
-        <img src="img/notebook.jpg" alt="">
-        <img src="img/horario.png" " alt=" ">
-		<img src=" img/unknown (1).png " alt=" ">
-		 
+	<%- include('./partial/head', {title: 'Inicio'}) %> 
+	<body>
+		<!-- Header -->
+	<%- include('./partial/header') %>
+	<!-- /Header -->
+	 <div class="main.body">
+		 <div class="imagenus">
+		<img src="img/MEJORESJUEGOS.jpg" alt="juegos">
+		<img src="img/pcoficina.jpg" alt="">
+		<img src="img/PC-Streaming-4_800.jpg" alt="">
+		<img src="img/PC-Diseño-8_800.jpg" alt="">
+		<img src="img/notebook.jpg" alt="">
+		<img src="img/horario.png"" alt="">
+		<img src="img/unknown (1).png" alt="">
+		</div>
 	
-		 <h2 class=" productosdesctados ">PRODUCTOS DESTACADOS</h2>
-		 <div class=" productosDestacados ">
-		 <img src=" img/Imagen 30.png " alt=" ">
-		 <img src=" img/Imagen 31.png "" alt="">
-        <img src="img/Imagen 32.png" alt="">
-        <img src="img/Imagen 34.png" alt="">
-        <img src="img/Imagen 24.png" alt="">
-    </div>
-    </div>
 
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="products-title">Basado en tu última visita</h2>
-            </div>
-            <!-- Show the "visited" products -->
-            <% visited.forEach(product => { %>
-            <div class="col-12 col-sm-6 col-lg-3">
-                <section class="product-box">
-                    <a href="producto/detail/<%= product.id %> ">
-                        <figure class="product-box_image">
-                            <img src="/img/<%= product.image %> " alt="imagen de producto">
-                        </figure>
-                        <article class="product-box_data">
-                            <h2>
-                                <%= product.price %>
-                            </h2>
-                            <p>
-                                <%= product.name %>
-                            </p>
-                            <i class="fas fa-truck"></i>
-                        </article>
-                    </a>
-                </section>
-            </div>
-            <% }) %>
-        </div>
-    </div>
+		<br>
+		<br>
+			<div class="container products-wrapper">
+				<div class="row">
+					<div class="col-12">
+						
+						<h2 class="products-title">PRODUCTOS DESTACADOS</h2>
+					</div>
+					<!-- Show the "visited" products -->
+					<% visited.forEach(product => { %>
+						<div class="col-12 col-sm-6 col-lg-3">
+							<section class="product-box">
+								<a href="producto/detail/<%= product.id %> ">
+									<figure class="product-box_image">
+										<img src="/img/<%= product.image %> " alt="imagen de producto">
+									</figure>
+									<article class="product-box_data">
+										<h2><%= product.price %> </h2>
+										<p><%= product.name %> </p>
+									</article>
+								</a>
+							</section>
+						</div>
+					<% }) %>
+				</div>
+			</div>
 
-    <footer>
-        <h3> P2 TEC ©️ 2020 / CONTACTO </h3>
-    </footer>
+
 
 </body>
