@@ -27,6 +27,7 @@ const listaController = {
         const micro = productModel.filterBySomething(product => {
             return product.category == 'Microprocesadores';
         })
+       
         const Componentes = fuente.concat(memoria).concat(micro);
          
         return res.render('lista', { data: Componentes });
@@ -54,9 +55,13 @@ const listaController = {
             return product.category == 'Conectividad';
         })
         const Streaming = productModel.filterBySomething(product => {
-            return product.category == 'Conectividad';
+            return product.category == 'Streaming';
         })
-        const Perisfericos = conect.concat(Streaming);
+        const teclado = productModel.filterBySomething(product => {
+            return product.category == 'Teclados';
+        })
+        const Perisfericos = conect.concat(Streaming).concat(teclado);
+    
 
         return res.render('lista', { data: Perisfericos });
 
