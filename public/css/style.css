@@ -419,7 +419,8 @@ img {
     border-bottom-left-radius: 1%;
 }
 
-.cerraruno {
+.cerraruno a{
+    color: black;
     padding-left: 50px;
     position: relative;
     top: -240px;
@@ -482,41 +483,6 @@ footer {
 .Realizar {
     background-color: #00aae4;
     border-radius: 50%;
-}
-
-/*@media (min-width: 768px) {
-    .especificado {
-        display: flex;
-        flex-direction: row
-    }
-    .descrip {
-        margin-bottom: 20%;
-        margin-top: 20%;
-        margin-right: 1%;
-        margin-left: 0%;
-        padding-top: 5%;
-        padding-bottom: 5%;
-    }
-}
-
-/*@media (min-width: 1366px) {
-    .especificado {
-        display: flex;
-        flex-direction: row;
-    }
-    .cerraruno {
-        margin-left: 20%;
-        padding-left: 0%;
-    }
-    .descrip {
-        padding: 10%;
-    }
-    .detalleproducto {
-        position: absolute;
-    }
-    .imagecontainer {
-        margin: 50%;
-    }
 }
 
 /* formulario */

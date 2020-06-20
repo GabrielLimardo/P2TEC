@@ -11,12 +11,9 @@ const listaController = {
     },
 
     detail: (req, res) => {
+        const product = productModel.findById(req.params.productId);
 
-        const conect = productModel.filterBySomething(product => {
-            return product.category == 'Conectividad';
-        })
-
-        return res.render('index', { conect });
+        return res.render('detail', {product: product});
 
     },
     Componentes: (req, res) => {
