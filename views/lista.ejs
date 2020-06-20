@@ -6,10 +6,10 @@ function round(val) {
   return Math.round(val*100)/100;
 } 
 %>
-
+<link rel="stylesheet" href="/css/lista.css">
 <body>
     <%- include('./partial/header') %>
-    <div class="bodys">
+    <div class="centradoLista">
         <div class="row wrap nostyle">
             <%  data.forEach(p => { %>
             <a href="/lista/detail/<%- p.id %>">
