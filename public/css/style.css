@@ -500,6 +500,7 @@ main {
 .container {
     display: flex;
     flex-wrap: no-wrap;
+    justify-content: center;
 }
 
 .form-container {
@@ -827,6 +828,9 @@ ul {
     border-radius: 10%;
     width: 100%;
     padding: 1%;
+}
+.col-12 {
+    justify-content: center;
 }
 
 .col-12 h2 {
