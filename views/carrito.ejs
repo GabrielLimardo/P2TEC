@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partial/head') %>
+<%- include('./partial/head', {title: 'Carrito'}) %>
 <% 
 function round(val) {
   return Math.round(val*100)/100;
-} 
+}
 %>
 
 <head>
@@ -30,10 +30,12 @@ function round(val) {
                     <img src="<%- "/img/" + p.image %>" alt="image" class="cartProductImage">
                     <div class="cartProductDetail">
                         <div class="cartDetailName"><%- p.name %> </div>
-                        <div class="cartDetailCategory"><%- p.category %></div>
+                        <div class="cartDetailBrand"><%- p.brand %></div>
                         <div class="envioGratis">Envío Gratuito</div>
                         <div class="clickeables row no-wrap">
-                            <div class="saveForLater">Guardar para después</div> | <div class="deleteProduct">Eliminar</div>
+                            <div class="saveForLater">Guardar para después</div>
+                            |
+                            <div class="deleteProduct">Eliminar</div>
                         </div>
 
 
@@ -48,11 +50,13 @@ function round(val) {
                 <% }); %>
             </div>
             <div class="cartSummary">
-                <div class="cartSummaryHeader row no-wrap">Subtotal: <div class="bold redText">sum</div></div>
-                
-                <div class="cartSummaryButtons nostyle">
+                <div class="row no-wrap cartSummaryHeader">
+                    <div class="bold">Subtotal (<%- data.length %>)</div><div class="totalPrice bold redText">ARS <%-
+                        round(data.map(p => p.price).reduce((a, b) => a + b)) %> </div>
+                </div>
+                <div class="cartSummaryButtons">
                     <div class="startCheckout cartButton">Realizar el pago</div>
-                    <a href="/lista"><div class="backToShop cartButton">Seguir comprando</div></a>
+                    <div class="backToShop cartButton">Continuar comprando</div>
                 </div>
             </div>
         </div>

@@ -1,61 +1,56 @@
 <!DOCTYPE html>
+<% 
+function round(val) {
+  return Math.round(val*100)/100;
+} 
+%>
+
 <html lang="en">
-<%- include('./partial/head') %>
+<%- include('./partial/head', {title: 'Inicio'}) %>
 
 <body>
-    <%- include('./partial/header') %>
-    <div class="main.body">
-
-        <img src="img/MEJORESJUEGOS.jpg" alt="juegos">
-        <img src="img/pcoficina.jpg" alt="">
-        <img src="img/PC-Streaming-4_800.jpg" alt="">
-        <img src="img/PC-Diseño-8_800.jpg" alt="">
-        <img src="img/notebook.jpg" alt="">
-        <img src="img/horario.png" " alt=" ">
-		<img src=" img/unknown (1).png " alt=" ">
-		 
-	
-		 <h2 class=" productosdesctados ">PRODUCTOS DESTACADOS</h2>
-		 <div class=" productosDestacados ">
-		 <img src=" img/Imagen 30.png " alt=" ">
-		 <img src=" img/Imagen 31.png "" alt="">
-        <img src="img/Imagen 32.png" alt="">
-        <img src="img/Imagen 34.png" alt="">
-        <img src="img/Imagen 24.png" alt="">
-    </div>
-    </div>
-
-    <div class="container products-wrapper">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="products-title">Basado en tu última visita</h2>
+	<!-- Header -->
+	<%- include('./partial/header') %>
+	<!-- /Header -->
+	<div class="main.body">
+        <div class="imagenus">
+            <a href="#"><img src="img/MEJORESJUEGOS.jpg" alt="juegos" class="mj"></a>
+        </div>
+        <div class="imgbuilder">
+            <div class="imgcontent">
+                <a href="#"><img src="img/pcoficina.jpg" alt="" class="imgC"></a>
+                <a href="#"><img src="img/PC-Streaming-4_800.jpg" alt="" class="imgC"></a>
+                <a href="#"><img src="img/PC-Diseño-8_800.jpg" alt="" class="imgC"></a>
+                <a href="#"><img src="img/notebook.jpg" alt="" class="imgC"></a>
+                <a href="#"><img src="img/horario.png"" alt="" class=" imgC"></a>
+                <a href="#"><img src="img/unknown (1).png" alt="" class="imgC"></a>
             </div>
-            <!-- Show the "visited" products -->
-            <% visited.forEach(product => { %>
-            <div class="col-12 col-sm-6 col-lg-3">
-                <section class="product-box">
-                    <a href="producto/detail/<%= product.id %> ">
-                        <figure class="product-box_image">
-                            <img src="/img/<%= product.image %> " alt="imagen de producto">
-                        </figure>
-                        <article class="product-box_data">
-                            <h2>
-                                <%= product.price %>
-                            </h2>
-                            <p>
-                                <%= product.name %>
-                            </p>
-                            <i class="fas fa-truck"></i>
-                        </article>
-                    </a>
-                </section>
-            </div>
-            <% }) %>
         </div>
     </div>
 
-    <footer>
-        <h3> P2 TEC ©️ 2020 / CONTACTO </h3>
-    </footer>
+		<br>
+		<br>
+		<div class="container products-wrapper">
+			<div class="row">
+				<div class="col-12">
+
+					<h2 class="products-title">PRODUCTOS DESTACADOS</h2>
+					<!-- Show the "visited" products -->
+					<div class="row wrap nostyle">
+						<% visited.forEach(p => { %>
+						<a href="/lista/detail/<%- p.id %>">
+							<div class="producto producto-<%- p.id %>">
+								<img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+								<div class="descripciones">
+									<h3 class="nombreProducto"><%- p.name %></h3>
+									<p class="detalleProducto"><%- p.descripcion %></p>
+									<h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+								</div>
+							</div>
+						</a>
+						<% }) %>
+					</div>
+				</div>
+			</div>
 
 </body>

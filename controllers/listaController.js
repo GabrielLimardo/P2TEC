@@ -45,6 +45,7 @@ const listaController = {
     destroy: (req, res) => {
 
     }
+
 };
 
 module.exports = listaController;

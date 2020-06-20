@@ -4,11 +4,11 @@ const productModel = jsonModel('products');
 const controller = {
 	root: (req, res) => {
 		const visited = productModel.filterBySomething(product => {
-			return product.category == 'DISCO ESTADO SOLIDO SSD';
+			return product.category == 'Discos y SSDs';
 		})
 
 		const inSale = productModel.filterBySomething(product => {
-			return product.category == 'STREAMING  Y VIDEO  CAPTURADORA GAMING';
+			return product.category == 'Streaming';
 		})
 
 		return res.render('index', { visited, inSale });
@@ -19,7 +19,7 @@ const controller = {
 		const busqueda = req.query.keywords;
 
 		const products = productModel.filterBySomething(product => {
-			return product.name == busqueda;
+			return product.name.toLowerCase().indexOf(busqueda) === -1;
 		})
 
 		return res.render('results', {products, busqueda})

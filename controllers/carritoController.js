@@ -11,8 +11,9 @@ const carritoController = {
             products.push(productsModel.findById(id))            
         });
 
-        return res.render('carrito', {data:  products});          
-    }  
+        return res.render('carrito', {data:  products, removeFromCart: this.removeFromCart});          
+    },
+
 }
 
 module.exports = carritoController;
