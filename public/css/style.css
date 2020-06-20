@@ -597,6 +597,65 @@ footer {
     height: 200px;
 }
 
+.cartSummaryHeader {
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #707070;
+}
+
+.cartSummaryButtons {
+    justify-content: center;
+    align-items: center;
+}
+
+.cartButton {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    background: rgb(125,125,125);
+    background: linear-gradient(0deg,
+            rgba(125,125,125,1) 0%,
+            rgba(255,255,255,1) 100%);
+}
+
+.cartButton:hover {
+    border: 1px solid #909090;
+    background: rgb(175,175,175);
+    background: linear-gradient(0deg,
+            rgba(175,175,175,1) 0%,
+            rgba(255,255,255,1) 100%);
+}
+
+.cartButton:active {
+    border: 1px solid #3877c9;
+    background: rgb(74, 101, 177);
+    background: linear-gradient(0deg,
+            rgba(74, 101, 177,1) 0%,
+            rgb(36, 66, 146) 100%);
+}
+
+.startCheckout {
+    background: rgb(97, 133, 231);
+    background: linear-gradient(0deg,
+            rgba(97, 133, 231, 1) 0%,
+            rgba(87, 119, 207,1) 100%);
+}
+
+.startCheckout:hover {
+    background: rgb(104, 142, 248);
+    background: linear-gradient(0deg,
+            rgba(104, 142, 248, 1) 0%,
+            rgba(87, 119, 207,1) 100%);
+}
+
+.backToShop{
+    
+}
+
 .cartHeaders {
     border-bottom: 2px solid #707070;
     padding-bottom: 10px;
@@ -629,6 +688,17 @@ footer {
     width: 15%;
     height: 80%;
 }
+
+.cartDetailName {
+    font-weight: bold;
+    color: #42C3EB;
+}
+
+.cartDetailBrand {
+    font-weight: bold;
+    color: #000;
+}
+
 .cartProductDetail {
     width: 55%;
 .img1 img{
@@ -651,15 +721,37 @@ footer {
     margin-right: 20%;
 }
 .cartProductPrice {
+    font-weight: bold;
+    color: #8A0000;
     width: 15%;
     text-align: center;
 }
+
+.saveForLater {
+    color: #3CB4D8;
+    margin-right: 3px;
+}
+
+.deleteProduct{
+    color: #3CB4D8;
+    margin-left: 3px;
+}
+
 .cartProductQuantity {
     width: 15%;
     text-align: center;
 }
-.clickeables {
-    color: #3CB4D8;
+
+.totalPrice {
+    margin-left: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.redText {
+    color: #8A0000;
 }
 /*EXTRAS*/
 /*EXTRAS*/

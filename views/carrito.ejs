@@ -4,7 +4,7 @@
 <% 
 function round(val) {
   return Math.round(val*100)/100;
-} 
+}
 %>
 
 <head>
@@ -30,10 +30,12 @@ function round(val) {
                     <img src="<%- "/img/" + p.image %>" alt="image" class="cartProductImage">
                     <div class="cartProductDetail">
                         <div class="cartDetailName"><%- p.name %> </div>
-                        <div class="cartDetailCategory"><%- p.category %></div>
+                        <div class="cartDetailBrand"><%- p.brand %></div>
                         <div class="envioGratis">Envío Gratuito</div>
                         <div class="clickeables row no-wrap">
-                            <div>Guardar para después</div> | <div>Eliminar</div>
+                            <div class="saveForLater">Guardar para después</div>
+                            |
+                            <div class="deleteProduct">Eliminar</div>
                         </div>
 
 
@@ -47,7 +49,16 @@ function round(val) {
                 </div>
                 <% }); %>
             </div>
-            <div class="cartSummary">Summary will be here</div>
+            <div class="cartSummary">
+                <div class="row no-wrap cartSummaryHeader">
+                    <div class="bold">Subtotal (<%- data.length %>)</div><div class="totalPrice bold redText">ARS <%-
+                        round(data.map(p => p.price).reduce((a, b) => a + b)) %> </div>
+                </div>
+                <div class="cartSummaryButtons">
+                    <div class="startCheckout cartButton">Realizar el pago</div>
+                    <div class="backToShop cartButton">Continuar comprando</div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>

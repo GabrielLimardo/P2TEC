@@ -10,11 +10,13 @@ module.exports = (archivo) => {
          const data = JSON.parse(dataJson);
          return data;
       },
+
       escribirJson: function (data) {
          data = JSON.stringify(data, null, ' ')
 
          fs.writeFileSync(this.path, data);
       },
+
       guardarUno: function (newData) {
          // Leer todo el json
          let allData = this.leerJson();
@@ -23,6 +25,7 @@ module.exports = (archivo) => {
          // Guarar la data
          this.escribirJson(allData)
       },
+
       findById: function (id) {
          const data = this.leerJson();
          const obj = data.find(function(elemento){
