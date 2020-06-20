@@ -33,8 +33,7 @@ function round(val) {
 		<div class="container products-wrapper">
 			<div class="row">
 				<div class="col-12">
-
-					<h2 class="products-title">PRODUCTOS RECOMENDADOS :  <%- p.category %> </h2>
+					<h2 class="products-title">PRODUCTOS RECOMENDADOS :  <%- conect[0].category %> </h2>
 					<!-- Show the "visited" products -->
 					<div class="row wrap nostyle">
 						<% conect.forEach(p => { %>
@@ -52,6 +51,7 @@ function round(val) {
 					</div>
 				</div>
 			</div>
+		</div>
 
 			<%- include('partial/footer') %>
 </body>
