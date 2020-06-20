@@ -15,6 +15,7 @@ const listaController = {
         const conect = productModel.filterBySomething(product => {
             return product.category == 'Conectividad';
         })
+
         return res.render('index', { conect });
 
     },
@@ -29,7 +30,9 @@ const listaController = {
         const micro = productModel.filterBySomething(product => {
             return product.category == 'Microprocesadores';
         })
-        return res.render('lista', { fuente, memoria, micro });
+        const Componentes = [fuente, memoria, micro];
+         
+        return res.render('lista', { Componentes });
 
     },
     Notebooks: (req, res) => {
@@ -56,7 +59,9 @@ const listaController = {
         const Streaming = productModel.filterBySomething(product => {
             return product.category == 'Conectividad';
         })
-        return res.render('lista', { conect, Streaming });
+        const Perisfericos = [conect, Streaming]
+
+        return res.render('lista', { Perisfericos });
 
     },
 
