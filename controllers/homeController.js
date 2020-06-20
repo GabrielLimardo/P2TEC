@@ -15,7 +15,7 @@ const controller = {
 		const busqueda = req.query.keywords;
 
 		const products = productModel.filterBySomething(product => {
-			return product.name.toLowerCase().indexOf(busqueda.toLowerCase()) === -1;
+			return product.name.toLowerCase().indexOf(busqueda.toLowerCase()) !== -1;
 		})
 
 		return res.render('results', {products, busqueda})
