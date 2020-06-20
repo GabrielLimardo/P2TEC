@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partial/head', {title: product.name }) %>
-
+<% 
+function round(val) {
+  return Math.round(val*100)/100;
+}
+%>
+<link rel="stylesheet" href="/css/detail.css">
 <body class="bodyProducto">
     <%- include('./partial/header') %>
     <div class="especificado">
@@ -20,8 +25,8 @@
                 <h2 class="nombreProducto fontsize-xlarge"> <%=product.name %> </h2>
                 <ul>
                     <li class="detalleProducto fontsize-medium"> <%=product.descripcion %> </li>
-
                 </ul>
+                <div class="precioProducto">ARS <%- round(product.price) %></div>
                 <div class="metododepago">
                     <div class="restodemetodos">
                         <i class="fab fa-cc-visa fa-2x "></i>

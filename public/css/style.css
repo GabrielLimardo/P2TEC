@@ -246,7 +246,8 @@ img.carrito {
 .precioProducto {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #3BA3C0;
-    font: bold;
+    font-weight: bold;
+    font-size: xx-large
 }
 
 .textoFooter {
