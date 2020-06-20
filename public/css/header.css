@@ -54,7 +54,9 @@ a {
 }
 
 @media (min-width: 900px) {
-
+    .busca{
+        display: block;
+    }
     form {
         width: 100%;
         display: flex;
@@ -65,8 +67,10 @@ a {
     input {
         width: 75%;
         height: 30px;
+        margin-top: 60px;
         border-radius: 5px;
         margin-right: 5px;
+        padding-left: 10px;
     }
 
     .info {
@@ -87,7 +91,8 @@ a {
     }
 
     .white {
-        color: white
+        color: white;
+        margin-top: 65px;
     }
 
     a {
