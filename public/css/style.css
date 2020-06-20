@@ -48,16 +48,6 @@ contenido input {
     justify-content: space-around;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-}
-
-a:hover {
-    background-color: gray;
-    border-radius: 5px;
-    padding: 3px;
-}
 .hede{
     background-color: black;
     border-bottom-right-radius: 5%;
@@ -118,17 +108,7 @@ padding-top: 5px;
         display: flex;
         justify-content: space-around;
     }
-    
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        background-color: gray;
-        border-radius: 5px;
-        padding: 3px;
-    }
+
     .hede{
         background-color: black;
         border-bottom-right-radius: 5%;
@@ -203,12 +183,7 @@ padding-top: 5px;
         text-decoration: none;
         font-size: 20px;
     }
-    
-    a:hover {
-        background-color: gray;
-        border-radius: 5px;
-        padding: 5px;
-    }
+
     .logo {
         width: 20%;
         border-radius: 50%;
