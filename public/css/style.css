@@ -34,7 +34,10 @@
     flex-wrap: nowrap;
 }
 
-.nostyle a:link, .nostyle a:visited, .nostyle a:hover, .nostyle a:active {
+.nostyle a:link,
+.nostyle a:visited,
+.nostyle a:hover,
+.nostyle a:active {
     text-decoration: none;
     color: black;
 }
@@ -76,10 +79,12 @@ img.carrito {
 .no-wrap {
     flex-wrap: nowrap;
 }
-.contProdRec{
+
+.contProdRec {
     display: flex;
     justify-content: space-evenly;
 }
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -180,7 +185,8 @@ footer {
     display: block;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -287,7 +293,7 @@ img {
     border-bottom-left-radius: 1%;
 }
 
-.cerraruno a{
+.cerraruno a {
     color: black;
     padding-left: 50px;
     position: relative;
@@ -360,62 +366,95 @@ body {
 }
 
 main {
-    display: flex;
-    width: 50%;
+    width: 100%;
     padding: 30px;
 }
 
-.container {
-    display: flex;
-    flex-wrap: no-wrap;
-    justify-content: center;
+.access-form input {
+    margin-top: 30px;
+}
+
+.access-form label {
+    margin-top: 30px;
 }
 
 .form-container {
     text-align: center;
     background-color: black;
     color: white;
-    width: 50%;
+    width: 100%;
     height: 80%;
     border-radius: 5%;
     min-height: 500px;
     margin: 0 auto;
 }
 
+.loginForm {
+    margin-bottom: 70px;
+    padding-top: 20px;
+}
+
 .form-container input {
-    width: 100%;
+    width: 75%;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=checkbox] {
+    width: 58%;
+}
+
+.form-container button {
+    width: 50%;
+}
+.form-container2 button {
+    width: 50%;
+}
+
+.form-container2 input {
+    width: 50%;
 }
 
 .form-container2 {
     text-align: center;
     background-color: black;
     color: white;
-    width: 50%;
+    width: 100%;
     height: 80%;
     border-radius: 5%;
     min-height: 500px;
+    margin: 0 auto;
 }
 
-@media (min-width: 500px) {
+ @media (min-width: 678px) {
     .container {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
+    }
+    .loginForm{
+        margin-bottom: 0px;
     }
     .form-container {
         background-color: black;
         color: white;
-        width: 100%;
+        width: 80%;
         height: 85%;
-        margin: 30px;
     }
     .form-container2 {
         background-color: black;
         color: white;
-        width: 90%;
-        margin: 30px;
+        width: 80%!important;
     }
-}
+    .form-container button {
+        width: 100%;
+    }
+    .form-container2 button {
+        width: 100%;
+    }
+} 
 
 /* ESTO ES CSS DE CARRITO */
 
@@ -517,7 +556,10 @@ main {
     border-bottom: 2px solid #707070;
 }
 
-.cartProduct .cartProductImage, .cartProductDetail, .cartProductPrice, .cartProductQuantity {
+.cartProduct .cartProductImage,
+.cartProductDetail,
+.cartProductPrice,
+.cartProductQuantity {
     margin: 10px;
 }
 
@@ -697,6 +739,7 @@ ul {
     width: 100%;
     padding: 1%;
 }
+
 .col-12 {
     justify-content: center;
 }

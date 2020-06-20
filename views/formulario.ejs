@@ -10,7 +10,7 @@
         <main>
             <!-- Cuerpo principal del sitio -->
             <div class="form-container">
-                <h1>ACCEDER</h1>
+                <h1 class="loginForm">ACCEDER</h1>
                 <form class="access-form" action="#" method="get">
                     <div class="field-group">
                         <label for="email">Email</label>
@@ -19,11 +19,12 @@
                         <br>
                         <label for="password">Contraseña</label>
                         <br>
-                        <input type="password" id="passsword" name="password" placeholder="password" value="" required>
+                        <input type="password" id="passsword" name="password" placeholder="Password" value="" required>
                         <br>
-                        <input type="checkbox" id="remember-me" name="remember-me" value="">
-                        <br>
-                        <label for="remember-me">Recordarme</label>
+                        <div class="check">
+                            <label for="remember-me">Recordarme</label>
+                            <input type="checkbox" id="remember-me" name="remember-me" value="">
+                        </div>
                         <br>
                         <button type="submit" name="send">Log In</button>
                     </div>
@@ -35,23 +36,29 @@
         <main>
             <!-- Cuerpo principal del sitio -->
             <section class="form-container2">
-                <h1>REGISTRARSE</h1>
+                <h1 class="loginForm">REGISTRARSE</h1>
                 <form class="access-form" action="#" method="get">
-                    <div class="field-group">
+                    <div class="field-group"><br>
                         <label for="username">Username</label>
                         <br>
                         <input type="username" id="username" name="username" placeholder="Username" value="" required>
                         <br>
+                        <br>
                         <label for="email">Email</label>
                         <br>
                         <input type="email" id="email" name="email" placeholder="Email" value="" required>
-
+                        <br>
+                        <br>
                         <label for="password">Contraseña</label>
                         <br>
                         <input type="password" id="passsword" name="password" placeholder="password" value="" required>
-                        <label for="password">RepetirContraseña</label>
                         <br>
-                        <input type="password" id="passsword" name="password" placeholder="password" value="" required>
+                        <br>
+                        <label for="password">Repetir Contraseña</label>
+                        <br>
+                        <input type="password" id="passsword" name="password" placeholder="Password" value="" required>
+                        <br>
+                        <br>
                         <button type="submit" name="send">Registrarse</button>
                     </div>
 
@@ -61,7 +68,7 @@
     </div>
 
     <%- include('partial/footer') %>
-   
+
 
 </body>
 
