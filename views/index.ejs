@@ -13,30 +13,31 @@ function round(val) {
 	<%- include('./partial/header') %>
 	<!-- /Header -->
 	<div class="main.body">
-        <div class="imagenus">
-            <a href="#"><img src="img/MEJORESJUEGOS.jpg" alt="juegos" class="mj"></a>
-        </div>
-        <div class="imgbuilder">
-            <div class="imgcontent">
-                <a href="#"><img src="img/pcoficina.jpg" alt="" class="imgC"></a>
-                <a href="#"><img src="img/PC-Streaming-4_800.jpg" alt="" class="imgC"></a>
-                <a href="#"><img src="img/PC-Diseño-8_800.jpg" alt="" class="imgC"></a>
-                <a href="#"><img src="img/notebook.jpg" alt="" class="imgC"></a>
-                <a href="#"><img src="img/horario.png"" alt="" class=" imgC"></a>
-                <a href="#"><img src="img/unknown (1).png" alt="" class="imgC"></a>
-            </div>
-        </div>
-    </div>
+		<div class="imagenus">
+			<a href="#"><img src="img/MEJORESJUEGOS.jpg" alt="juegos" class="mj"></a>
+		</div>
+		<div class="imgbuilder">
+			<div class="imgcontent">
+				<a href="#"><img src="img/pcoficina.jpg" alt="" class="imgC"></a>
+				<a href="#"><img src="img/PC-Streaming-4_800.jpg" alt="" class="imgC"></a>
+				<a href="#"><img src="img/PC-Diseño-8_800.jpg" alt="" class="imgC"></a>
+				<a href="#"><img src="img/notebook.jpg" alt="" class="imgC"></a>
+				<a href="#"><img src="img/horario.png"" alt="" class=" imgC"></a>
+				<a href="#"><img src="img/unknown (1).png" alt="" class="imgC"></a>
+			</div>
+		</div>
+	</div>
 
-		<br>
-		<br>
-		<div class="container products-wrapper">
-			<div class="row">
-				<div class="col-12">
-					<h2 class="products-title">PRODUCTOS RECOMENDADOS :  <%- conect[0].category %> </h2>
-					<!-- Show the "visited" products -->
-					<div class="row wrap nostyle">
-						<% conect.forEach(p => { %>
+	<br>
+	<br>
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">PRODUCTOS RECOMENDADOS : <%- conect[0].category %> </h2>
+				<!-- Show the "visited" products -->
+				<div class="row wrap nostyle">
+					<% conect.forEach(p => { %>
+					<div>
 						<a href="/lista/detail/<%- p.id %>">
 							<div class="producto producto-<%- p.id %>">
 								<img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
@@ -47,11 +48,12 @@ function round(val) {
 								</div>
 							</div>
 						</a>
-						<% }) %>
 					</div>
+					<% }) %>
 				</div>
 			</div>
 		</div>
+	</div>
 
-			<%- include('partial/footer') %>
+	<%- include('partial/footer') %>
 </body>
