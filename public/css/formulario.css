@@ -39,7 +39,7 @@
     height: 250px;
     border-radius: 5px;
     border: 1px solid #707070;
-    max-height: 500px;
+    min-height: 250px;
     margin: 0 auto;
     
 } 
@@ -138,6 +138,17 @@
 
 .registerButton:hover {
     background: linear-gradient(0deg, rgba(213, 188, 15, 1) 0%, rgba(217, 195, 48, 1) 50%, rgba(250, 225, 51, 1) 100%);
+}
+
+.logoFormulario {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.logoFormulario img {
+    height: 150px;
+    margin: 0 auto;
 }
 
  @media (max-width: 678px) {
