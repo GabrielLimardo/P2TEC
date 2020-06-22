@@ -370,100 +370,7 @@ main {
     padding: 30px;
 }
 
-.access-form input {
-    margin-top: 30px;
-}
 
-.access-form label {
-    margin-top: 30px;
-}
-
-.form-container {
-    text-align: center;
-    background-color: black;
-    color: white;
-    width: 100%;
-    height: 80%;
-    border-radius: 5%;
-    min-height: 500px;
-    margin: 0 auto;
-    
-} 
- /* ULTIMO QUE TOQUE */
-.form-container2 button{
-    margin-bottom: 10px;
-} */
- /* ULTIMO QUE TOQUE */
- 
-.loginForm {
-    margin-bottom: 70px;
-    padding-top: 20px;
-}
-
-.form-container input {
-    width: 75%;
-}
-
-.check {
-    display: flex;
-    justify-content: center;
-}
-
-input[type=checkbox] {
-    width: 58%;
-}
-
-.form-container button {
-    width: 50%;
-}
-.form-container2 button {
-    width: 50%;
-}
-
-.form-container2 input {
-    width: 50%;
-}
-
-.form-container2 {
-    text-align: center;
-    background-color: black;
-    color: white;
-    width: 100%;
-    height: 80%;
-    border-radius: 5%;
-    min-height: 500px;
-    margin: 0 auto;
-}
-
- @media (min-width: 678px) {
-    .container {
-        display: flex;
-        align-items: center;
-    }
-    .loginForm{
-        margin-bottom: 0px;
-    }
-    .form-container {
-        background-color: black;
-        color: white;
-        width: 80%;
-        height: 85%;
-    }
-    .form-container2 {
-        background-color: black;
-        color: white;
-        width: 90%!important;
-        
-    }
-    /* ULTIMO QUE TOQUE */
-    .form-container button {
-        width: 80%;
-    }
-    .form-container2 button {
-        width: 80%;
-    }
-     /* ULTIMO QUE TOQUE */
-} 
 
 /* ESTO ES CSS DE CARRITO */
 
@@ -484,6 +391,7 @@ input[type=checkbox] {
     border: 2px solid #707070;
     padding: 15px;
     width: 70%;
+    margin-bottom: 20px;
 }
 
 .cartSummary {
