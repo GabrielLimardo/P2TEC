@@ -739,14 +739,17 @@ ul {
 
 .imagenus img {
     border-radius: 10%;
-    width: 95%;
+    width: 100%;
     padding: 1%;
 }
 
 .product-box img {
-    border-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 10%;
     width: 100%;
-    padding: 1%;
+    padding: 0%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
 }
 
 .col-12 {
@@ -808,4 +811,13 @@ a:link {
 
 img {
     display: inline-block;
+}
+
+@media (min-width: 1300px) {
+    .imagenus img {
+        width: 100%;
+        padding: 0%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 }
