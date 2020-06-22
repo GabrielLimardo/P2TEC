@@ -7,6 +7,7 @@ function round(val) {
 }
 %>
 <link rel="stylesheet" href="/css/carrito.css">
+
 <body>
     <div class="bodys">
         <%- include('./partial/header') %>
@@ -43,12 +44,15 @@ function round(val) {
             </div>
             <div class="cartSummary">
                 <div class="row no-wrap cartSummaryHeader">
-                    <div class="bold">Subtotal (<%- data.length %>)</div><div class="totalPrice bold redText">ARS <%-
+                    <div class="bold">Subtotal (<%- data.length %>)</div>
+                    <div class="totalPrice bold redText">ARS <%-
                         round(data.map(p => p.price).reduce((a, b) => a + b)) %> </div>
                 </div>
                 <div class="cartSummaryButtons">
                     <div class="startCheckout cartButton">Realizar el pago</div>
-                    <div class="backToShop cartButton">Continuar comprando</div>
+                    <a href="/lista">
+                        <div class="backToShop cartButton">Continuar comprando</div>
+                    </a>
                 </div>
             </div>
         </div>
