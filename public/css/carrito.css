@@ -1,3 +1,8 @@
+.cartSummaryButtons a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color: black;
+}
 @media (max-width: 700px) {
     .busca {
         display: block;
