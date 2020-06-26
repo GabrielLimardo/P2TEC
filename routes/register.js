@@ -11,9 +11,6 @@ const { dirname } = require('path');
 
 // Multer config
 let storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.resolve(__dirname, '../../public/images/avatar')) //Atentos con la ruta de guardado de archivos
-    },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now()+path.extname(file.originalname))
     }
@@ -23,7 +20,7 @@ let upload = multer({ storage: storage })
 
 
 router.get('/', registerController.create); 
-router.post('/', upload.single('image'), [
+router.post('/', [
     body('email')
         .notEmpty()
         .withMessage('El campo email es obligatorio'),
@@ -31,8 +28,14 @@ router.post('/', upload.single('image'), [
         .notEmpty()
         .withMessage('El campo contraseña es obligatorio')
         .bail()
-        .isLength({ min: 4 })
-        .withMessage('El campo contraseña debe tener al menos 4 caracteres'),
+        .isLength({ min: 2 })
+        .withMessage('El campo contraseña debe tener al menos 4 caracteres')
+        .custom((value, { req }) => {
+            return value == req.body.retypepassword;
+        }).withMessage('Las contraseñas no coincide'),
+    body('retypepassword')
+        .notEmpty()
+        .withMessage('El campo contraseña es obligatorio')
 
 ] ,registerController.store); 
 

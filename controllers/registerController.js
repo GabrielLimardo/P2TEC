@@ -3,32 +3,27 @@ const usersModel = jsonModel('users');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const controller = {
         create: function(req, res){
             return res.render('formulario');
         },
         store: function(req, res){
+            // return res.send(req.body)
             let errors = validationResult(req);
-            console.log(errors);
-            //return res.send(errors);
             if(errors.isEmpty()){                 
                 // let user = {
                 //     id: "",
                 //     username:req.body.username,
                 //     email: req.body.email,
                 //     password: bcryptjs.hashSync(req.body.password, 10),
-                //     image:"???",
                 // }
                 // return res.send(req.file);
-                delete req.body.retype;
+                delete req.body.retypepassword;
                 req.body.password = bcryptjs.hashSync(req.body.password, 10);
 
                 let user = {
                     id: "",
                     ...req.body,
-                    image: req.file.filename
                 }
                 usersModel.guardarUno(user);
 
@@ -42,7 +37,7 @@ const controller = {
             
         }
 
-}
+ }
 
 
 module.exports = controller;
