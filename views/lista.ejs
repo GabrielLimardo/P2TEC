@@ -9,8 +9,7 @@ function round(val) {
 <link rel="stylesheet" href="/css/lista.css">
 <body>
     <%- include('./partial/header') %>
-    <div class="centradoLista">
-        <div class="row wrap nostyle">
+        <div class="centradoLista row wrap nostyle">
             <%  data.forEach(p => { %>
             <a href="/lista/detail/<%- p.id %>">
                 <div class="producto producto-<%- p.id %>">
@@ -24,7 +23,6 @@ function round(val) {
             </a>
             <% }) %>
         </div>
-    </div>
     <%- include('partial/footer') %>
 
 </body>

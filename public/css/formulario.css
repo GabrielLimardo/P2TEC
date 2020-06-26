@@ -1,0 +1,190 @@
+.container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.loginCompleto {
+    margin: 0 auto;
+}
+
+.loginTitulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.field-group {
+    width: 90%;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.emailInput {
+    margin-top: 5px;
+}
+.password {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.passwordInput {
+    margin-top: 5px;
+}
+
+.form-container {
+    text-align: left;
+    background-color: #FCFAFA;
+    max-width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    min-height: 250px;
+} 
+
+.logoFormulario {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
+.form-container2 button{
+    margin-bottom: 10px;
+}
+ 
+.loginForm {
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #5F5D5D;
+    font-size: 15px;
+}
+
+.form-container input {
+    width: 90%;
+}
+
+.check {
+    width: 120px;
+}
+.rememberMe {
+    margin-top: 9px;
+    font-size: 12px;
+}
+
+.rememberMeCheckbox {
+    margin-top: 10px;
+    height: 15px;
+}
+
+.iniciarSesion {
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 530;
+    background: linear-gradient(0deg, rgba(8, 117, 155, 1) 0%, rgba(55, 142, 167, 1) 50%, rgba(58, 170, 203, 1) 100%);
+}
+
+.iniciarSesion:hover {
+    background: linear-gradient(0deg, rgba(24, 138, 172, 1) 0%, rgba(60, 160, 190, 1) 50%, rgba(89, 204, 238, 1) 100%);
+}
+
+.form-container button {
+    width: 120px;
+    height: 22px;
+    border: 1px solid #707070;
+}
+
+.registerCompleto {
+    margin: 0 auto;
+}
+
+.registerTitulo {
+    max-width: 500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.form-container2 button {
+    width: 120px;
+    height: 22px;
+    border: 1px solid #707070;
+}
+
+.form-container2 input {
+    width: 90%;
+}
+
+.form-container2 {
+    text-align: left;
+    background-color: #FCFAFA;
+    max-width: 500px;
+    height: 80%;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+.registerForm {
+    margin-bottom: 5px;
+    margin-left: 0px;
+    color: #5F5D5D;
+    font-size: 15px;
+}
+
+.usernameInput {
+    margin-top: 5px;
+}
+
+.registerButton {
+    margin-top: 10px;
+    border-radius: 5px;
+    font-weight: 530;
+    background: linear-gradient(0deg, rgba(192, 169, 12, 1) 0%, rgba(208, 182, 12, 1) 50%, rgba(255, 223, 6, 1) 100%);
+}
+
+.registerButton:hover {
+    background: linear-gradient(0deg, rgba(213, 188, 15, 1) 0%, rgba(217, 195, 48, 1) 50%, rgba(250, 225, 51, 1) 100%);
+}
+
+.logoFormulario img {
+    height: 150px;
+    margin: 0 auto;
+}
+
+}
+
+ @media (max-width: 678px) {
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    .loginForm{
+        margin-left: 100px;
+        margin-bottom: 0px;
+    }
+    .form-container {
+        width: 80%;
+        height: 85%;
+    }
+    .form-container2 {
+        width: 90%!important;
+        
+    }
+    /* ULTIMO QUE TOQUE */
+    .form-container button {
+        width: 80%;
+    }
+    .form-container2 button {
+        width: 80%;
+    }
+     /* ULTIMO QUE TOQUE */
+} 
