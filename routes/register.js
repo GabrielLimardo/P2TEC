@@ -32,7 +32,7 @@ router.post('/', [
         .withMessage('El campo contraseña debe tener al menos 4 caracteres')
         .custom((value, { req }) => {
             return value == req.body.retypepassword;
-        }).withMessage('Las contraseñas no coincide'),
+        }).withMessage('LAS CONTRASEÑAS NO COINCIDEN'),
     body('retypepassword')
         .notEmpty()
         .withMessage('El campo contraseña es obligatorio')

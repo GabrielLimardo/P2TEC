@@ -15,6 +15,7 @@
     margin-bottom: 10px;
 }
 
+
 .field-group {
     width: 90%;
 }
@@ -160,6 +161,8 @@
     margin: 0 auto;
 }
 
+.password p{
+    color: red;
 }
 
  @media (max-width: 678px) {
