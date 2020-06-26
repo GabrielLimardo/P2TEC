@@ -7,7 +7,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
         create: function(req, res){
-            return res.render('users/register');
+            return res.render('formulario');
         },
         store: function(req, res){
             let errors = validationResult(req);
@@ -37,7 +37,7 @@ const controller = {
                 //Mandamos los mensajes de error al usuario
                 console.log(errors.errors);
                 // return res.send(errors.mapped()); //Debug
-                return res.render('users/register', { errors : errors.mapped() })
+                return res.render('formulario', { errors : errors.mapped() })
             }
             
         }

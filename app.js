@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const homeRoutes = require('./routes/home');
 const listaRoutes = require("./routes/lista.js");
-const formularioRoutes = require('./routes/formulario.js');
 const carritoRoutes = require("./routes/carrito.js");
 const registerRouter = require("./routes/register");
 
@@ -20,6 +19,5 @@ app.listen(3000, function() {
 
 app.use('/', homeRoutes);
 app.use("/lista", listaRoutes);
-app.use("/formulario", formularioRoutes);
 app.use("/carrito", carritoRoutes);
 app.use('/register', registerRouter);
