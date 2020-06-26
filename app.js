@@ -4,7 +4,7 @@ const homeRoutes = require('./routes/home');
 const listaRoutes = require("./routes/lista.js");
 const formularioRoutes = require('./routes/formulario.js');
 const carritoRoutes = require("./routes/carrito.js");
-
+const registerRouter = require("./routes/register");
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -22,3 +22,4 @@ app.use('/', homeRoutes);
 app.use("/lista", listaRoutes);
 app.use("/formulario", formularioRoutes);
 app.use("/carrito", carritoRoutes);
+app.use('/register', registerRouter);
