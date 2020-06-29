@@ -11,13 +11,6 @@ const controller = {
             // return res.send(req.body)
             let errors = validationResult(req);
             if(errors.isEmpty()){                 
-                // let user = {
-                //     id: "",
-                //     username:req.body.username,
-                //     email: req.body.email,
-                //     password: bcryptjs.hashSync(req.body.password, 10),
-                // }
-                // return res.send(req.file);
                 delete req.body.retypepassword;
                 req.body.password = bcryptjs.hashSync(req.body.password, 10);
 

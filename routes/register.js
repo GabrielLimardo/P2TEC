@@ -36,6 +36,7 @@ router.post('/', [
     body('retypepassword')
         .notEmpty()
         .withMessage('El campo contraseña es obligatorio')
+   
 
 ] ,registerController.store); 
 
