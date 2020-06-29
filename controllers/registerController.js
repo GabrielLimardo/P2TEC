@@ -5,7 +5,7 @@ const { validationResult } = require('express-validator');
 
 const controller = {
         create: function(req, res){
-            return res.render('formulario');
+            return res.render('registro');
         },
         login: function (req, res) {
             return res.render('login')
@@ -22,6 +22,7 @@ const controller = {
                 // delete user.password
                     // crear la session y mandar al usuario encontrado
                 // redirect al home
+                
             } else {
                 return res.sender('login', { errors : errors.mapped() })
             }
@@ -42,9 +43,9 @@ const controller = {
                 return res.redirect('/');
             } else {
                 //Mandamos los mensajes de error al usuario
-                console.log(errors.errors);
+               
                 // return res.send(errors.mapped()); //Debug
-                return res.render('formulario', { errors : errors.mapped() })
+                return res.render('registro', { errors : errors.mapped() })
             }
             
         }
