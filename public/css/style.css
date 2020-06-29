@@ -4,6 +4,9 @@
     padding: 0;
 }
 
+.encierro{
+    padding-top: 20%;
+}
 
 /* esto  */
 
@@ -74,6 +77,8 @@ img.carrito {
 .row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
 }
 
 .no-wrap {
@@ -649,6 +654,7 @@ ul {
     border-radius: 10%;
     width: 100%;
     padding: 1%;
+    max-height: 800px;
 }
 
 .product-box img {
@@ -715,6 +721,8 @@ a:link {
 .imgcontent {
     width: 100%;
     margin: 0 auto;
+    text-align: center;
+
 }
 
 img {

@@ -6,6 +6,12 @@
 
 header {
     background-color: black;
+    
+}
+/* sisacaerrorsacaresto */
+.tatodoencerrado{
+    position:fixed;
+    width: 100%;
 }
 
 .logo {
@@ -134,4 +140,4 @@ a {
         background-color: #D8D8D8;
         width: 10%;
     }
-} */
+} 
