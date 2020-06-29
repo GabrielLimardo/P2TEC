@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <% if (typeof errors != 'undefined') { %>
+    <p style="color:red">ERROR</p>
+    <ul>
+        <% for (let i=0; i< errors.length; i++) { %>
+        <li>
+            <%= errors[i].msg %>
+        </li>
+        <% } %>
+    </ul>
+    <% } %>
+    <form action="/users/login" method="POST">
+        <label for="">Email</label>
+        <input type="email" name="email"><br>
+        <label for="">Password</label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="login">
+    </form>
+</body>
+
+</html>

@@ -4,12 +4,14 @@ const homeRoutes = require('./routes/home');
 const listaRoutes = require("./routes/lista.js");
 const carritoRoutes = require("./routes/carrito.js");
 const registerRouter = require("./routes/register");
+const session = require("express-session");
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json());
+app.use(session({secret: "Secreto"}));
 
 
 

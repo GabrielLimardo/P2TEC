@@ -3,7 +3,9 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
-const { body } = require('express-validator');
+const { body, check } = require('express-validator');
+const jsonModel = require('../models/jsonModel');
+const usersModel = jsonModel('users');
 
 // ************ Controller Require ************
 const registerController = require('../controllers/registerController');
@@ -28,8 +30,8 @@ router.post('/', [
         .notEmpty()
         .withMessage('El campo contraseña es obligatorio')
         .bail()
-        .isLength({ min: 2 })
-        .withMessage('El campo contraseña debe tener al menos 4 caracteres')
+        .isLength({ min: 8 })
+        .withMessage('El campo contraseña debe tener al menos 8 caracteres')
         .custom((value, { req }) => {
             return value == req.body.retypepassword;
         }).withMessage('LAS CONTRASEÑAS NO COINCIDEN'),
@@ -38,6 +40,38 @@ router.post('/', [
         .withMessage('El campo contraseña es obligatorio')
 
 ] ,registerController.store); 
+
+router.get("/login", registerController.login);
+router.post("/login", [
+    check('email').isEmail().withMessage('Email invalido')
+    check('password').isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
+    body("email").custom(function(value){
+        const register = usersModel.leerJson()
+        for (let i = 0; i < register.length; i++) {
+            if(register[i].email == value){
+                return false
+            };
+            
+        }
+        return true
+
+    }).withMessage('Usuario o contraseña inválidos.'),
+
+    // custom: email y contrasenia coinciden
+    /* body('email').custom((value, { req }) => { */
+        //Leer JSON
+
+       /*  return email == compareSync(req.body.password - user.password); */
+        //if (users[i].email = value) {
+        //    return false
+        // } else {
+        //    return true
+        //}
+   
+        // jsonModel de usuarios buscar un usuario por emai (value, o en el obj req) compareSync req.body.password - user.password
+        // si no es correcto devuelve un msj de error "email o contrasenia invalidas"
+] ,registerController.processLogin);
+
 
 
 module.exports = router;
