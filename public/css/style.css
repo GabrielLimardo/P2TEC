@@ -387,10 +387,11 @@ main {
 /* ESTO ES CSS DE CARRITO */
 
 .carritoContainer {
-    background-color: #c6dae7;
-    margin-left: 20px;
+    background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Cubes-Grey-Seamless-Pattern-For-Website-Background.jpg");
+    background-repeat: repeat;
+    padding-left: 20px;
     width: 100%;
-    margin-top: 20px;
+    padding-top: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
