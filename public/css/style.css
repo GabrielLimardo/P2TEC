@@ -357,7 +357,7 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    margin-top: 400px;
+    margin-top: 100px;
 
 }
 
@@ -732,6 +732,65 @@ a:link {
 
 img {
     display: inline-block;
+}
+/* .imga {
+    width: 100% !important;
+    height: 250px;
+    margin-top: 20px;
+} */
+.registrationator{
+    background-color: white;
+    width: 30% !important;
+    text-align: center;
+    border-radius: 10%;
+    border: #000;
+    border-style: solid;
+    border-width: 1px; 
+    padding-top: 5px;
+}
+.registrationator p{
+    font-family:Arial;
+    padding-top: 5px;
+}
+.registrationator h2{
+    font-family:Arial;
+    padding-top: 10px;
+}
+.registracionreglas{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centrameesto{
+    text-align: center;
+}
+.loginCompleto{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.cybersale{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.imgA{
+    width: 400px;
+    border-radius: 20px;
+    border: #000;
+    border-width:30px;
+}
+.imgB{
+    width: 100%;
+    border-radius: 20px;
+    border: #000;
+    border-width:30px;
+    max-height: 200px;
 }
 @media (min-width: 700px) {
     .imagenus img {
