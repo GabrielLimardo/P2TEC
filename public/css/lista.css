@@ -1,3 +1,15 @@
 .centradoLista {
     justify-content: center;
+    margin-top: 20%; 
+    }
+
+
+@media (min-width: 500px) {
+    .centradoLista {
+        justify-content: center;
+        margin-top: 0px; 
+    }
+    
+         
+    
 }

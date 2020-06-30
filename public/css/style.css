@@ -5,7 +5,7 @@
 }
 
 .encierro{
-    padding-top: 20%;
+    padding-top: 200px;
 }
 
 /* esto  */
@@ -16,7 +16,7 @@
 }
 
 .bodys {
-    background-color: #c6dae7;
+    background-color: rgb(246,246,246);
 }
 
 .vertical-center {
@@ -357,6 +357,8 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
+    margin-top: 400px;
+
 }
 
 .Realizar {
@@ -367,7 +369,8 @@ footer {
 /* formulario */
 
 body {
-    background-color: #c6dae7;
+    background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Cubes-Grey-Seamless-Pattern-For-Website-Background.jpg");
+    background-repeat: repeat;
 }
 
 main {
@@ -655,6 +658,7 @@ ul {
     width: 100%;
     padding: 1%;
     max-height: 800px;
+    margin-top: 45%;
 }
 
 .product-box img {
@@ -709,7 +713,7 @@ a:link {
 }
 
 .imgC {
-    width: 40% !important;
+    width: 30% !important;
     margin-left: 40px;
     margin-top: 30px;
 }
@@ -728,12 +732,18 @@ a:link {
 img {
     display: inline-block;
 }
-
+@media (min-width: 700px) {
+    .imagenus img {
+        margin-top: 190px;  
+    }
+}
 @media (min-width: 1300px) {
     .imagenus img {
         width: 100%;
         padding: 0%;
+        margin-top: 190px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        height: 500px;
     }
 }

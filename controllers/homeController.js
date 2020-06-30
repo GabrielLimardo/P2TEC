@@ -4,10 +4,10 @@ const productModel = jsonModel('products');
 const controller = {
 	root: (req, res) => {
 		
-			const conect = productModel.filterBySomething(product => {
-				return product.category == 'Conectividad';
+			const destac = productModel.filterBySomething(product => {
+				return product.especial == 'DESTACADO';
 			})
-			return res.render('index', { conect });
+			return res.render('index', { destac });
 	},
 	search: (req, res) => {
 		// Do the magic

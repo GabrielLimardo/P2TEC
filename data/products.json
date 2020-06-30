@@ -7,7 +7,8 @@
         "brand":"Western Digital",
         "category": "Discos y SSDs",
         "price": 26729,
-        "image":"1 (14).jpg"
+        "image":"1 (14).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 2,
@@ -16,7 +17,8 @@
         "brand":"Kingston",
         "category": "Discos y SSDs",
         "price": 7471,
-        "image":"1 (5).jpg"
+        "image":"1 (5).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 3,
@@ -25,7 +27,8 @@
         "brand":"Patriot",
         "category": "Discos y SSDs",
         "price": 7261,
-        "image":"1 (21).jpg"
+        "image":"1 (21).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 4,
@@ -34,7 +37,8 @@
         "brand":"Western Digital",
         "category": "Discos y SSDs",
         "price": 7027,
-        "image":"1 (14).jpg"
+        "image":"1 (14).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 5,
@@ -43,7 +47,8 @@
         "brand":"Western Digital",
         "category": "Discos y SSDs",
         "price": 7769,
-        "image":"1 (5).jpg"
+        "image":"1 (5).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 6,
@@ -52,7 +57,8 @@
         "brand":"Kingston",
         "category": "Discos y SSDs",
         "price": 13367,
-        "image":"1 (7).jpg"
+        "image":"1 (7).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 7,
@@ -61,7 +67,8 @@
         "brand":"Patriot",
         "category": "Discos y SSDs",
         "price": 12789,
-        "image":"1 (21).jpg"
+        "image":"1 (21).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 8,
@@ -70,7 +77,8 @@
         "brand":"Western Digital",
         "category": "Discos y SSDs",
         "price": 26393,
-        "image":"1 (15).jpg"
+        "image":"1 (15).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 9,
@@ -79,7 +87,8 @@
         "brand":"Adata",
         "category": "Discos y SSDs",
         "price": 6664,
-        "image":"1 (17).jpg"
+        "image":"1 (17).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 10,
@@ -88,7 +97,8 @@
         "brand":"Western Digital",
         "category": "Discos y SSDs",
         "price": 8037,
-        "image":"1 (9).jpg"
+        "image":"1 (9).jpg",
+        "especial":"DESTACADO"
       },
       {
         "id": 11,
@@ -97,7 +107,8 @@
         "brand":"Corsair",
         "category": "Discos y SSDs",
         "price": 6793,
-        "image":"1 (8).jpg"
+        "image":"1 (8).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 12,
@@ -106,7 +117,8 @@
         "brand":"Western Digital",
         "category": "Discos y SSDs",
         "price": 7486,
-        "image":"1 (4).jpg"
+        "image":"1 (4).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 13,
@@ -115,7 +127,8 @@
         "brand":"Patriot",
         "category": "Discos y SSDs",
         "price": 8764,
-        "image":"1 (22).jpg"
+        "image":"1 (22).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 14,
@@ -124,7 +137,8 @@
         "brand":"Elgato",
         "category": "Streaming",
         "price": 16619,
-        "image":"1 (1).png"
+        "image":"1 (1).png",
+        "especial":"NODESTACADO"
       },
       {
         "id": 15,
@@ -133,7 +147,8 @@
         "brand":"Elgato",
         "category": "Streaming",
         "price": 8561,
-        "image":"1 (10).jpg"
+        "image":"1 (10).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 16,
@@ -142,7 +157,8 @@
         "brand":"CoolerMaster",
         "category": "Fuentes de alimentacion",
         "price": 7514,
-        "image":"1 (26).jpg"
+        "image":"1 (26).jpg",
+        "especial":"DESTACADO"
       },
       {
         "id": 17,
@@ -151,7 +167,8 @@
         "brand":"HP",
         "category": "Impresoras",
         "price": 17772,
-        "image":"1 (24).jpg"
+        "image":"1 (24).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 18,
@@ -160,7 +177,8 @@
         "brand":"HP",
         "category": "Impresoras",
         "price": 23564,
-        "image":"1 (39).jpg"
+        "image":"1 (39).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 19,
@@ -169,7 +187,8 @@
         "brand":"Corsair",
         "category": "Memorias RAM",
         "price": 11788,
-        "image":"1 (28).jpg"
+        "image":"1 (28).jpg",
+        "especial":"DESTACADO"
       },
       {
         "id": 20,
@@ -178,7 +197,8 @@
         "brand":"Kingston",
         "category": "Memorias RAM",
         "price": 8274,
-        "image":"1 (12).jpg"
+        "image":"1 (12).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 21,
@@ -187,7 +207,8 @@
         "brand":"Kingston",
         "category": "Memorias RAM",
         "price": 9049,
-        "image":"1 (20).jpg"
+        "image":"1 (20).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 22,
@@ -196,7 +217,8 @@
         "brand":"Mushkin",
         "category": "Memorias RAM",
         "price": 7973,
-        "image":"1 (29).jpg"
+        "image":"1 (29).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 23,
@@ -205,7 +227,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 6729,
-        "image":"1 (43).jpg"
+        "image":"1 (43).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 24,
@@ -214,7 +237,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 6818,
-        "image":"1 (43).jpg"
+        "image":"1 (43).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 25,
@@ -223,7 +247,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 12728,
-        "image":"1 (2).png"
+        "image":"1 (2).png",
+        "especial":"NODESTACADO"
       },
       {
         "id": 26,
@@ -232,7 +257,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 28645,
-        "image":"1 (33).jpg"
+        "image":"1 (33).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 27,
@@ -241,7 +267,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 43188,
-        "image":"1 (34).jpg"
+        "image":"1 (34).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 28,
@@ -250,7 +277,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 46074,
-        "image":"1 (34).jpg"
+        "image":"1 (34).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 29,
@@ -259,7 +287,8 @@
         "brand": "AMD",
         "category": "Microprocesadores",
         "price": 13826,
-        "image":"1 (30).jpg"
+        "image":"1 (30).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 30,
@@ -268,7 +297,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 14280,
-        "image":"1 (30).jpg"
+        "image":"1 (30).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 31,
@@ -277,7 +307,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 21537,
-        "image":"1 (1).jpg"
+        "image":"1 (1).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 32,
@@ -286,7 +317,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 40686,
-        "image":"1 (27).jpg"
+        "image":"1 (27).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 33,
@@ -295,7 +327,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 44898,
-        "image":"1 (27).jpg"
+        "image":"1 (27).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 34,
@@ -304,7 +337,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 40996,
-        "image":"1 (27).jpg"
+        "image":"1 (27).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 35,
@@ -313,7 +347,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 56820,
-        "image":"1 (32).jpg"
+        "image":"1 (32).jpg",
+        "especial":"DESTACADO"
       },
       {
         "ID": 36,
@@ -322,7 +357,8 @@
         "brand": "Intel",
         "category": "Microprocesadores",
         "price": 7161,
-        "image":"1 (36).jpg"
+        "image":"1 (36).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 37,
@@ -331,7 +367,8 @@
         "brand": "AOC",
         "category": "Monitores",
         "price": 7504,
-        "image":"1 (37).jpg"
+        "image":"1 (37).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 38,
@@ -340,7 +377,8 @@
         "brand": "Samsung",
         "category": "Monitores",
         "price": 15094,
-        "image":"1 (38).jpg"
+        "image":"1 (38).jpg",
+        "especial":"NODESTACADO"
       },
     
       {
@@ -350,7 +388,8 @@
         "brand": "HP",
         "category": "Notebooks",
         "price": 111096,
-        "image":"1 (23).jpg"
+        "image":"1 (23).jpg",
+        "especial":"NODESTACADO"
       },
   
       {
@@ -360,7 +399,8 @@
         "brand": "HP",
         "category": "Notebooks",
         "price": 163224,
-        "image":"1 (40).jpg"
+        "image":"1 (40).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 41,
@@ -369,7 +409,8 @@
         "brand": "Intelaid",
         "category": "Proyectores",
         "price": 7768,
-        "image":"1 (41).jpg"
+        "image":"1 (41).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 42,
@@ -378,7 +419,8 @@
         "brand": "Intelaid",
         "category": "Proyectores",
         "price": 18938,
-        "image":"1 (41).jpg"
+        "image":"1 (41).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 43,
@@ -387,7 +429,8 @@
         "brand": "Intelaid",
         "category": "Proyectores",
         "price": 7349,
-        "image":"1 (41).jpg"
+        "image":"1 (41).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 44,
@@ -396,7 +439,8 @@
         "brand": "Intelaid",
         "category": "Proyectores",
         "price": 12105,
-        "image":"1 (41).jpg"
+        "image":"1 (41).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 45,
@@ -405,7 +449,8 @@
         "brand": "Tenda",
         "category": "Conectividad",
         "price": 6954,
-        "image":"1 (18).jpg"
+        "image":"1 (18).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 46,
@@ -414,7 +459,8 @@
         "brand": "Intelaid",
         "category": "Soportes",
         "price": 6390,
-        "image":"1 (16).jpg"
+        "image":"1 (16).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 47,
@@ -423,7 +469,8 @@
         "brand": "Tp-Link",
         "category": "Conectividad",
         "price": 6669,
-        "image":"1 (13).jpg"
+        "image":"1 (13).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 48,
@@ -432,7 +479,8 @@
         "brand": "Tp-Link",
         "category": "Conectividad",
         "price": 11092,
-        "image":"1 (44).jpg"
+        "image":"1 (44).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 49,
@@ -441,7 +489,8 @@
         "brand": "Tenda",
         "category": "Conectividad",
         "price": 7394,
-        "image":"conectividad.jpg"
+        "image":"conectividad.jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 50,
@@ -450,7 +499,8 @@
         "brand": "Wacom",
         "category": "Tabletas",
         "price": 7147,
-        "image":"1 (11).jpg"
+        "image":"1 (11).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 51,
@@ -459,7 +509,8 @@
         "brand": "Corsair",
         "category": "Teclados",
         "price": 15357,
-        "image": "1 (45).jpg"
+        "image": "1 (45).jpg",
+        "especial":"DESTACADO"
       },
       {
         "id": 52,
@@ -468,7 +519,8 @@
         "brand": "AMD",
         "category": "Pc",
         "price": 52499,
-        "image": "1 (42).jpg"
+        "image": "1 (42).jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 53,
@@ -477,7 +529,8 @@
         "brand": "Alienware",
         "category": "Notebooks",
         "price": 240000,
-        "image":"alien.jpg"
+        "image":"alien.jpg",
+        "especial":"NODESTACADO"
       },
       {
         "id": 54,
@@ -486,7 +539,8 @@
         "brand": "Samsung",
         "category": "Monitores",
         "price": 15094,
-        "image":"monitorcurvo.jpg"
+        "image":"monitorcurvo.jpg",
+        "especial":"DESTACADO"
       },
       {
         "id": "55",
@@ -495,7 +549,8 @@
         "brand": "PC Home Office",
         "category": "pc office",
         "price": "40261",
-        "image": "PC-Oficina-2_800.jpg"
+        "image": "PC-Oficina-2_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "56",
@@ -504,7 +559,8 @@
         "brand": "PC Home Office",
         "category": "pc office",
         "price": "39660",
-        "image": "PC-Oficina-2_800.jpg"
+        "image": "PC-Oficina-2_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "57",
@@ -513,7 +569,8 @@
         "brand": "PC Home Office",
         "category": "pc office",
         "price": "32343",
-        "image": "PC-Oficina-2_800.jpg"
+        "image": "PC-Oficina-2_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "58",
@@ -521,7 +578,8 @@
         "descripcion": "Intel I5 9400 - B365 - 8GB - GTX 1650 S - 1TB",
         "category": "pc streming",
         "price": "82768",
-        "image": "PC-Streaming-5_800.jpg"
+        "image": "PC-Streaming-5_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "59",
@@ -529,7 +587,8 @@
         "descripcion": "Intel I5 9400 - B365 - 16GB - GTX 1660 Ti - 240GB SSD - 1TB",
         "category": "pc streming",
         "price": "108012",
-        "image": "PC-Streaming-5_800.jpg"
+        "image": "PC-Streaming-5_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "60",
@@ -537,7 +596,8 @@
         "descripcion": "AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T",
         "category": "pc streming",
         "price": "110554",
-        "image": "PC-Streaming-5_800.jpg"
+        "image": "PC-Streaming-5_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "61",
@@ -545,7 +605,8 @@
         "descripcion": "INTEL I7 9700F - B365 - 16GB - RTX 2060 S - 240GB SSD - 1TB",
         "category": "pcdiseno",
         "price": "144338",
-        "image": "PC-Diseño-6_800.jpg"
+        "image": "PC-Diseño-6_800.jpg",
+        "especial":"NODESTACADO"
     },
     {
         "id": "62",
@@ -553,7 +614,8 @@
         "descripcion": "AMD R5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1TB",
         "category": "pcdiseno",
         "price": "110554",
-        "image": "PC-Diseño-6_800.jpg"
+        "image": "PC-Diseño-6_800.jpg" ,
+        "especial":"NODESTACADO"
     },
     {
         "id": "63",
@@ -561,7 +623,8 @@
         "descripcion": " AMD R5 3600 - B450 - 8GB - GTX 1660 Ti - 240GB SSD - 1TB",
         "category": "pcdiseno",
         "price": "107693",
-        "image": "PC-Diseño-6_800.jpg"
+        "image": "PC-Diseño-6_800.jpg",
+        "especial":"NODESTACADO"
     }
     ]
   

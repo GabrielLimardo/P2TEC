@@ -14,7 +14,7 @@ function round(val) {
 	<!-- /Header -->
 	<div class="main.body">
 		<div class="imagenus">
-			<a href="#"><img src="img/MEJORESJUEGOS.jpg" alt="juegos" class="mj"></a>
+			<a href="#"><img src="img/nuevobanner.jpg" alt="juegos" class="mj"></a>
 		</div>
 		<div class="imgbuilder">
 			<div class="imgcontent">
@@ -22,8 +22,8 @@ function round(val) {
 				<a href="/lista/PcStreamer"><img src="img/PC-Streaming-4_800.jpg" alt="" class="imgC"></a>
 				<a href="/lista/PcDiseno"><img src="img/PC-Diseño-8_800.jpg" alt="" class="imgC"></a>
 				<a href="/lista/Notebooks"><img src="img/notebook.jpg" alt="" class="imgC"></a>
-				<a href="/"><img src="img/horario.png"" alt="" class=" imgC"></a>
-				<a href="/"><img src="img/unknown (1).png" alt="" class="imgC"></a>
+				<a href="/"><img src="img/DEFINITIVO.jpg"" alt="" class=" imgC"></a>
+				<a href="/"><img src="img/ULTIMO.jpg" alt="" class="imgC"></a>
 			</div>
 		</div>
 	</div>
@@ -33,10 +33,10 @@ function round(val) {
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">PRODUCTOS RECOMENDADOS : <%- conect[0].category %> </h2>
+				<h2 class="products-title">PRODUCTOS RECOMENDADOS : <%- destac[0].especial %> </h2>
 				<!-- Show the "visited" products -->
 				<div class="row wrap nostyle contProdRec">
-					<% conect.forEach(p => { %>					
+					<% destac.forEach(p => { %>					
 						<div>
 							<a href="/lista/detail/<%- p.id %>">
 								<div class="producto producto-<%- p.id %>">
