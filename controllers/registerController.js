@@ -1,55 +1,76 @@
-const jsonModel = require('../models/jsonModel');
-const usersModel = jsonModel('users');
-const bcryptjs = require('bcryptjs');
-const { validationResult } = require('express-validator');
+const json = require("../models/jsonModel");
+const User = json("users");
 
-const controller = {
-        create: function(req, res){
-            return res.render('registro');
-        },
-        login: function (req, res) {
-            return res.render('login')
-        },
-        processLogin: function(req, res) {
-            let errors = validationResult(req);
+const bcrypt = require("bcryptjs");
+const { validationResult } = require("express-validator");
 
-            
-            if(errors.isEmpty()) {
-                // Existe un usuario y la contrasenia esta correcta
+module.exports = {
+  register: function (req, res) {
+    return res.render("registro");
+  },
+  processRegister: function (req, res) {
+    const errors = validationResult(req);
 
-                // con jsonModel buscar al usuario (req.body.email)
-                // limiar al usuario
-                // delete user.password
-                    // crear la session y mandar al usuario encontrado
-                // redirect al home
-                
-            } else {
-                return res.sender('login', { errors : errors.mapped() })
-            }
-        },
-        store: function(req, res){
-            // return res.send(req.body)
-            let errors = validationResult(req);
-            if(errors.isEmpty()){                 
-                delete req.body.retypepassword;
-                req.body.password = bcryptjs.hashSync(req.body.password, 10);
+    if (errors.isEmpty()) {
+      delete req.body.retype;
+      req.body.password = bcrypt.hashSync(req.body.password, 10);
 
-                let user = {
-                    id: "",
-                    ...req.body,
-                }
-                usersModel.guardarUno(user);
+      User.create({
+        ...req.body,
+        image: req.file.filename
+      })
 
-                return res.redirect('/');
-            } else {
-                //Mandamos los mensajes de error al usuario
-               
-                // return res.send(errors.mapped()); //Debug
-                return res.render('registro', { errors : errors.mapped() })
-            }
-            
-        }
- }
+      return res.redirect('/login');
+    } else {
+      return res.render("registro", { errors: errors.mapped(), old: req.body });
+    }
+  },
+  login: function (req, res) {
+    return res.render("login");
+  },
+  processLogin: function (req, res) {
+    
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()){
+      // LOGUEO AL USUARIO ETC
+    
+      let user = User.findBySomething(user => user.email == req.body.email);
+
+      delete user.password;
+
+      req.session.user = user; // YA ESTÁ EN SESION
+
+      if (req.body.remember) {
+        // Creo la cookie
+
+        res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 });
+
+      }
+
+      return res.redirect('/');
+
+    } else {
+        
+      // return res.send(errors);
+
+      return res.render("login", { errors: errors.mapped(), old: req.body});
+    }
 
 
-module.exports = controller;
+
+  },
+  logout: function(req, res) {
+    // Desloguear al usuario
+
+    req.session.destroy();
+
+    if(req.cookies.email){
+      res.clearCookie('email');
+    }
+
+    return res.redirect('/')
+
+  }
+
+};

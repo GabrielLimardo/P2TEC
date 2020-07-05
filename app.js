@@ -1,17 +1,22 @@
 const express = require('express');
 const app = express();
+var cookieParser = require('cookie-parser');
+const log = require('./middlewares/log');
 const homeRoutes = require('./routes/home');
 const listaRoutes = require("./routes/lista.js");
 const carritoRoutes = require("./routes/carrito.js");
 const registerRouter = require("./routes/register");
 const session = require("express-session");
 
+
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
+app.use(session({secret: 'miapp'}));
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json());
-app.use(session({secret: "Secreto"}));
+app.use(cookieParser());
+
 
 
 

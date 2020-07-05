@@ -1,70 +1,45 @@
-// ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
-const path = require('path');
-const { body, check } = require('express-validator');
-const jsonModel = require('../models/jsonModel');
-const usersModel = jsonModel('users');
-const bcryptjs = require('bcryptjs');
+const multer = require("multer");
+const path = require("path");
 
-// ************ Controller Require ************
 const registerController = require('../controllers/registerController');
-const { dirname } = require('path');
 
-// Multer config
-let storage = multer.diskStorage({
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now()+path.extname(file.originalname))
-    }
+const validator = require('../middlewares/validator');
+
+// ************  Multer Config  ***************
+
+var storage = multer.diskStorage({
+   destination: function (req, file, cb) {
+         cb(null, path.resolve(__dirname, '../../public/img/users'))
+   },
+   filename: function (req, file, cb) {
+         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+   }
 })
 
-let upload = multer({ storage: storage })
+var upload = multer({
+   storage: storage,
 
+   // Validate image
+   fileFilter: (req, file, cb) => {
+      
+      const acceptedExtensions = ['.jpg', '.jpeg', '.png'];
 
-router.get('/', registerController.create); 
-router.post('/', [
-    body('email')
-        .notEmpty()
-        .withMessage('El campo email es obligatorio'),
-    body('password')
-        .notEmpty()
-        .withMessage('El campo contraseña es obligatorio')
-        .bail()
-        .isLength({ min: 4 })
-        .withMessage('El campo contraseña debe tener al menos 4 caracteres')
-        .custom((value, { req }) => {
-            return value == req.body.retypepassword;
-        }).withMessage('LAS CONTRASEÑAS NO COINCIDEN'),
-    body('retypepassword')
-        .notEmpty()
-        .withMessage('El campo contraseña es obligatorio')
-   
+      const ext = path.extname(file.originalname);
 
-] ,registerController.store); 
+      if (!acceptedExtensions.includes(ext)){
+            req.file = file;
+      }
+         
+      cb(null, acceptedExtensions.includes(ext));
+   }
+});
 
+router.get('/', registerController.register);
+router.post("/", upload.single('image'), validator.register, registerController.processRegister);
 router.get("/login", registerController.login);
-router.post("/login", [
-    check('email').isEmail().withMessage('Email invalido'),
-    check('password').isLength({min: 4}).withMessage('La contraseña debe tener al menos 4 caracteres'),
-    body("email").custom(function(value, {req}){
-        const user = usersModel.findBySomething(user => user.email == value);
-        
-        if(user){
-            var result = bcrypt.compareSync(req.body.password, user.password);
-            if (result) {
-                  return true
-            } else {
-                return false
-     
-            }
-        } else {
-            return false
-        }
-        
-    }).withMessage('Usuario o contraseña inválidos.'),
-
-   
-] ,registerController.processLogin);
+router.post("/login", validator.login, registerController.processLogin);
+router.post('/logout', registerController.logout);
 
 module.exports = router;
