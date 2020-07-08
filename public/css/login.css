@@ -109,8 +109,21 @@
     border: 1px solid #707070;
 }
 
-.cybersale {
+.tituloPublicidad {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    height: 26.4px;
+    font-size: 20px;
+    max-width: 500px;
     margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.cybersale {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 20px;
     margin-left: 20px;
     max-width: 400px;
 }
@@ -120,6 +133,23 @@
     margin: 0 auto;
 }
 
+.centradorCybersale {
+    height: 150px;
+    margin: 0 auto;
+}
+
+.publicidad {
+    margin: auto;
+    height: 250px;
+}
+
+.imgA{
+    width: 400px;
+    border-radius: 5px;
+    border: #000;
+    border-width:30px;
+    height: 100%;
+}
  @media (max-width: 678px) {
     .container {
         display: flex;

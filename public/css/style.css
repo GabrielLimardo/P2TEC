@@ -807,20 +807,7 @@ img {
     align-items: center;
     width: 40%;
 }
-.cybersale{
-    display: flex;
-    padding-top: 20px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 
-}
-.imgA{
-    width: 400px;
-    border-radius: 20px;
-    border: #000;
-    border-width:30px;
-}
 .imgB{
     width: 100%;
     border-radius: 20px;
