@@ -672,15 +672,6 @@ ul {
     border-top-right-radius: 0%;
 }
 
-.col-12 {
-    justify-content: center;
-}
-
-.col-12 h2 {
-    text-align: center;
-    padding: 1%;
-}
-
 .product-box_data p {
     text-align: center;
     padding: 1%;
@@ -774,29 +765,7 @@ img {
     height: 250px;
     margin-top: 20px;
 } */
-.registrationator{
-    background-color: white;
-    width: 30% !important;
-    text-align: center;
-    border-radius: 5px;
-    border: #000;
-    border-style: solid;
-    border-width: 1px; 
-    padding-top: 5px;
-}
-.registrationator p{
-    font-family:Arial;
-    padding-top: 5px;
-}
-.registrationator h2{
-    font-family:Arial;
-    padding-top: 10px;
-}
-.registracionreglas{
-    display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .centrameesto{
     text-align: center;
 }

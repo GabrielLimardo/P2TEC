@@ -7,67 +7,85 @@
     <!-- Header -->
     <%- include('./partial/header') %>
     <!-- /Header -->
-    <div class="encierro"> 
-    <div class="container row no-wrap">
-        <main>
-            <div class="registerCompleto">
-                <div class="registerTitulo">Registrarse</div>
-                <section class="form-container2">
-                    <form class="registerForm" action="/register" method="POST">
-                        <div class="field-group"><br>
-                            <div class="username">
-                                <label for="username">Nombre de usuario *</label>
-                                <input class="usernameInput" type="username" id="username" name="username"
-                                    placeholder="Nombre de usuario" value="" required><%= typeof errors == 'undefined' ? null : errors.username ? errors.username.msg : null %></p>
-                            </div>
-                            <div class="email">
-                                <label for="email">Email *</label>
-                                <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
-                                    value="" required>
+    <div class="encierro">
+        <div class="container row no-wrap">
+            <main class="row no-wrap">
+                <div class="registerCompleto">
+                    <div class="registerTitulo">Registrarse</div>
+                    <section class="form-container2">
+                        <form class="registerForm" action="/register" method="POST">
+                            <div class="field-group"><br>
+                                <div class="username">
+                                    <label for="username">Nombre de usuario *</label>
+                                    <input class="usernameInput" type="username" id="username" name="username"
+                                        placeholder="Nombre de usuario" value=""
+                                        required><%= typeof errors == 'undefined' ? null : errors.username ? errors.username.msg : null %>
+                                    </p>
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email *</label>
+                                    <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
+                                        value="" required>
                                     <p class="error">
                                         <% if (typeof errors != 'undefined' ) { %>
-                                            <% if (errors.email) { %>
-                                                <%= errors.email.msg %>
-                                             <% } %>
+                                        <% if (errors.email) { %>
+                                        <%= errors.email.msg %>
+                                        <% } %>
                                         <% } %>
                                     </p>
-                            </div>
-                            <div class="password">
-                                <label for="password">Contraseña *</label>
-                                <input class="passwordInput" type="password" id="passsword" name="password"
-                                    placeholder="Contraseña" value="" >
-                                    <p class="error" required><%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %></p>
-                                    </p>
-                            </div>
-                            <div class="password">
-                                <label for="password">Repetir Contraseña *</label>
-                                <input class="passwordInput" type="password" id="passsword" name="retypepassword"
-                                    placeholder="Repetir contraseña" value="" >
-                                    <p class="error" required>
-                                        <%= typeof errors == 'undefined' ? null : errors.retype ? errors.retype.msg : null %></p>
-                            </div>
-                            <div class="col-12 row">
-                                <label for="image" class="form-label col-12">Avatar:</label>
-                                <input type="file" id="image" name="image" class="form-file col-12">
-                                <div class="col-12">
-                                    <p class="error"><%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %></p>
                                 </div>
-                            <button class="registerButton" type="submit" >Registrarse</button>
-                        </div>
-                    </form>
-                </section>
-            </div>
-        </main>
+                                <div class="password">
+                                    <label for="password">Contraseña *</label>
+                                    <input class="passwordInput" type="password" id="passsword" name="password"
+                                        placeholder="Contraseña" value="">
+                                    <p class="error" required>
+                                        <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                    </p>
+                                    </p>
+                                </div>
+                                <div class="password">
+                                    <label for="password">Repetir Contraseña *</label>
+                                    <input class="passwordInput" type="password" id="passsword" name="retypepassword"
+                                        placeholder="Repetir contraseña" value="">
+                                    <p class="error" required>
+                                        <%= typeof errors == 'undefined' ? null : errors.retype ? errors.retype.msg : null %>
+                                    </p>
+                                </div>
+                                <div class="avatarCarga row">
+                                    <label for="image" class="form-label">Avatar:</label>
+                                    <input type="file" id="image" name="image" class="avatarBotton">
+                                    <div>
+                                        <p class="error">
+                                            <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <button class="registerButton" type="submit">Registrarse</button>
+                        </form>
+                    </section>
+                </div>
+                <div class="registracionreglas">
+                    <div class="registrationator">
+                        <h2>¿Por qué registrarse?</h2>
+                        <p>Con tu registro podrás realizar compras online en nuestro sitio web. Los datos que dejes aquí
+                            los
+                            utilizaremos para contactarnos y enviarte los productos que hayas comprado. Tambien los
+                            utilizaremos
+                            para la confección de los comprobantes fiscales que deben acompañar a dichos productos. No
+                            utilizaremos
+                            tus datos para ningún otro fin, ni para enviarte información que no hayas solicitado. Para
+                            más
+                            información mira nuestras políticas de privacidad.</p>
+                        <h2>Recordá:</h2>
+                        <p>Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante
+                            cualquier
+                            inconveniente vamos a estar comunicándonos con vos por teléfono o vía email.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
-</div>
-<div class="registracionreglas">
-<div class="registrationator">
-    <h2>¿Por qué registrarse?</h2>
-    <p>Con tu registro podrás realizar compras online en nuestro sitio web. Los datos que dejes aquí los utilizaremos para contactarnos y enviarte los productos que hayas comprado. Tambien los utilizaremos para la confección de los comprobantes fiscales que deben acompañar a dichos productos. No utilizaremos tus datos para ningún otro fin, ni para enviarte información que no hayas solicitado. Para más información mira nuestras políticas de privacidad.</p>
-    <h2>Recordá:</h2>
-    <p>Es muy importante que coloques todos tus datos reales a la hora de registrar tu cuenta. Ante cualquier inconveniente vamos a estar comunicándonos con vos por teléfono o vía email.</p>
-</div>
-</div>
+
 
     <%- include('partial/footer') %>
 

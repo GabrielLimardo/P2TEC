@@ -1,5 +1,7 @@
 .registerCompleto {
     margin: 0 auto;
+    min-width: 400px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .registerTitulo {
@@ -25,7 +27,7 @@
     text-align: left;
     background-color: #FCFAFA;
     max-width: 500px;
-    height: 80%;
+    height: 100%;
     border-radius: 5px;
     border: 1px solid #707070;
     min-height: 400px;
@@ -41,6 +43,36 @@
 
 .usernameInput {
     margin-top: 5px;
+}
+
+.email {
+    margin-top: 10px;
+}
+
+.emailInput {
+    margin-top: 5px;
+}
+
+.password {
+    margin-top: 10px;
+}
+
+.passwordInput {
+    margin-top: 5px;
+}
+
+.avatarCarga {
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.avatarBotton {
+    margin-top: 0px;
+}
+
+.col-12 h2 {
+    text-align: center;
+    padding: 1%;
 }
 
 .registerButton {
@@ -61,4 +93,28 @@
 
 .password p{
     color: red;
+}
+
+.registrationator{
+    background-color: white;
+    width: 30% !important;
+    text-align: center;
+    border-radius: 5px;
+    border: #000;
+    border-style: solid;
+    border-width: 1px; 
+    padding-top: 5px;
+}
+.registrationator p{
+    font-family:Arial;
+    padding-top: 5px;
+}
+.registrationator h2{
+    font-family:Arial;
+    padding-top: 10px;
+}
+.registracionreglas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
