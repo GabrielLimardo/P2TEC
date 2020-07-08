@@ -4,6 +4,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.registerContainer {
+    justify-content: center;
+}
+
 .registerTitulo {
     max-width: 500px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,7 +31,7 @@
     text-align: left;
     background-color: #FCFAFA;
     max-width: 500px;
-    height: 100%;
+    height: 80%;
     border-radius: 5px;
     border: 1px solid #707070;
     min-height: 400px;
@@ -95,9 +99,17 @@
     color: red;
 }
 
+.registradorContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.centradoRegistrador {
+    height: 26.4px;
+}
+
 .registrationator{
     background-color: white;
-    width: 30% !important;
     text-align: center;
     border-radius: 5px;
     border: #000;
@@ -107,7 +119,7 @@
 }
 .registrationator p{
     font-family:Arial;
-    padding-top: 5px;
+    padding: 10px;
 }
 .registrationator h2{
     font-family:Arial;
@@ -116,5 +128,5 @@
 .registracionreglas{
     display: flex;
     justify-content: center;
-    align-items: center;
+    max-width: 400px;
 }
