@@ -89,8 +89,63 @@ const listaController = {
         })
         return res.render('lista', { data: PcDise });
 
-    }
+    },
+    create: (req, res) => {
+		// Do the magic
+		
+		return res.render('product-create-form')
+	},
+	
+	// Create -  Method to store
+	store: (req, res) => {
+		//modelo le pregunto por 
+		let products = productModel.leerJson()
+		
+		
+		let newId = productModel.createId(products);
 
+		let newProduct = {
+			// id: newId,
+			...req.body,
+		}
+
+		products = [...products, newProduct]
+
+		
+
+		productModel.guardarUno(products);
+
+		return res.redirect('/')
+		
+	},
+
+	// Update - Form to edit
+	edit: (req, res) => {
+	//modelo le pregunto por un id, parametro del id
+		const product = productModel.findById(req.params.productId)
+	//una vez que se hizo el json modelo encontrando el producto 
+		return res.render('product-edit-form', {product, toThousand})
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		//vamos a sobre product model aplicar el edit de model y que tenga como parametros 
+		productModel.edit(req.body, req.params.productId)
+		
+		return res.redirect('/lista/detail/' + req.params.productId);
+	},
+
+	// Delete - Delete one product from DB
+	destroy : (req, res) => {
+		let products = productModel.leerJson(jsonModel)
+
+		products.forEach((elem, index)=> {
+			if(elem.id ==req.params.productId){
+				products.splice(index, 1)
+			}
+		});
+		productModel.escribirJson(products, jsonModel);
+		return res.redirect("/")
+	}
 
 
 
