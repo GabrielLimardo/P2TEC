@@ -799,3 +799,9 @@ img {
         height: 500px;
     }
 }
+.contenedorprincpaldecreate{
+    padding-top: 300px;
+}
+.editar-eliminar a{
+    color: #000;
+}
