@@ -727,6 +727,9 @@ a:link {
         padding-top: 250px;
        
     }
+    .cartHeaders {
+        font-size: 13px;
+    }
 
 }
 @media (max-width: 1300px) {
