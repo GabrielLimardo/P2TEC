@@ -717,21 +717,36 @@ a:link {
     .imgC {
         width: 90% !important;
         margin-left: 20px;
-        margin-right: 20px;
+        margin-right: 30px;
         margin-top: 30px;
-}
+    }
+    .imagenus img{
+    padding-top: 100px;
+    }
+    .carritoContainer {
+        padding-top: 250px;
+       
+    }
+
 }
 @media (max-width: 1300px) {
     .imgC {
         width: 60% ;
         margin-left: 10px;
-        margin-right: 10px;
+        margin-right: 30px;
         margin-top: 30px;
+}
+
+}
+@media (max-width: 900px) {
+.carritoContainer {
+    padding-top: 150px;
+   
 }
 }
 .imgC {
     width: 30% ;
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: 30px;
 }
     
