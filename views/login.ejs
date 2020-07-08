@@ -6,56 +6,55 @@
 <body>
     <!-- Header -->
     <%- include('./partial/header') %>
-    <div class="encierro"> 
-    <div class="container row no-wrap">
-    <main>
-        <div class ="centrameesto">
-        <h2>Acceder</h2>
-        </div>
-        <div class="loginCompleto">
-            <div class="loginTitulo"></div>
-            <div class="form-container">
-                <form class="loginForm" action="/register" method="POST">
-                    <div class="field-group">
-                        <div class="email">
-                            <label for="email">Nombre de usuario o correo electrónico</label>
-                            <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
-                                value="" required>
-                                <p class="error">
-                                    <%= typeof errors == 'undefined' ? null : errors.email ? errors.email.msg : null %> 
-                                </p>
-                               
-                        </div>
-                        <div class="password">
-                            <label for="password">Contraseña</label>
-                            <input class="passwordInput" type="password" id="passsword" name="password"
-                                placeholder="Contraseña" value=""  required>
-                                <p class="error">
-                                    <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %> 
-                                </p>
-                        </div>
-                        <div class="check row no-wrap">
-                            <label class="rememberMe" for="remember-me">Recordarme</label>
-                            <input class="rememberMeCheckbox" type="checkbox" id="remember-me" name="remember-me"
-                                value="">
-                        </div>
-                        <button class="iniciarSesion" type="submit">Iniciar Sesión</button>
+    <div class="encierro">
+        <div class="container row no-wrap">
+            <main class="login-publi row no-wrap">
+                <div class="loginCompleto">
+                    <div class="loginTitulo">Acceder</div>
+                    <div class="form-container">
+                        <form class="loginForm" action="/register" method="POST">
+                            <div class="field-group">
+                                <div class="email">
+                                    <label for="email">Nombre de usuario o correo electrónico</label>
+                                    <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
+                                        value="" required>
+                                    <p class="error">
+                                        <%= typeof errors == 'undefined' ? null : errors.email ? errors.email.msg : null %>
+                                    </p>
+                                </div>
+                                <div class="password">
+                                    <label for="password">Contraseña</label>
+                                    <input class="passwordInput" type="password" id="passsword" name="password"
+                                        placeholder="Contraseña" value="" required>
+                                    <p class="error">
+                                        <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                    </p>
+                                </div>
+                                <div class="check row no-wrap">
+                                    <label class="rememberMe" for="remember-me">Recordarme</label>
+                                    <input class="rememberMeCheckbox" type="checkbox" id="remember-me"
+                                        name="remember-me" value="">
+                                </div>
+                                <button class="iniciarSesion" type="submit">Iniciar Sesión</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-            <div class="logoFormulario">
-                <img src="/img/numero.png" alt="logopP2Tec">
-            </div>
+                    <div class="logoFormulario">
+                        <img src="/img/numero.png" alt="logopP2Tec">
+                    </div>
+
+                </div>
+                <div class="cybersale">
+                    <a href="/lista"><img src="/img/CYBERSALE.jpg" alt="" class="imgA"></a>
+                </div>
+
+            </main>
         </div>
-    </main>
-</div>
-</div>
+    </div>
 
-<div class="cybersale">
-    <a href="/lista"><img src="/img/CYBERSALE.jpg" alt="" class="imgA"></a>
-</div>
 
-<%- include('partial/footer') %>
+
+    <%- include('partial/footer') %>
 
 
 </body>

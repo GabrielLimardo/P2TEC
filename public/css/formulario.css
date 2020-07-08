@@ -1,11 +1,17 @@
 .container{
+    padding: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .loginCompleto {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
+.login-publi {
+    justify-content: center;
+}
 
 .loginTitulo {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +48,8 @@
 .form-container {
     text-align: left;
     background-color: #FCFAFA;
-    max-width: 500px;
+    min-width: 400px;
+    max-width: 600px;
     height: 250px;
     border-radius: 5px;
     border: 1px solid #707070;
@@ -100,6 +107,13 @@
     height: 22px;
     border: 1px solid #707070;
 }
+
+.cybersale {
+    max-width: 400px;
+}
+
+
+/* CSS Registro*/
 
 .registerCompleto {
     margin: 0 auto;
