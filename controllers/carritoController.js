@@ -10,8 +10,8 @@ const carritoController = {
         arrayIds.forEach(id => {
             products.push(productsModel.findById(id))            
         });
-
-        return res.render('carrito', {data:  products, removeFromCart: this.removeFromCart});          
+        const user = req.session.user;
+        return res.render('carrito', {data:  products, removeFromCart: this.removeFromCart, user});          
     },
 
 }

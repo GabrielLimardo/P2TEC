@@ -6,14 +6,14 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const listaController = {
     root: (req, res) => {
         const products = productModel.leerJson()
-
-        return res.render("lista", {data: products});
+        const user = req.session.user;
+        return res.render("lista", {data: products, user});
     },
 
     detail: (req, res) => {
         const product = productModel.findById(req.params.productId);
-
-        return res.render('detail', {product: product});
+        const user = req.session.user;
+        return res.render('detail', {product: product, user});
 
     },
     Componentes: (req, res) => {
@@ -29,8 +29,8 @@ const listaController = {
         })
        
         const Componentes = fuente.concat(memoria).concat(micro);
-         
-        return res.render('lista', { data: Componentes });
+        const user = req.session.user;
+        return res.render('lista', { data: Componentes, user});
 
     },
     Notebooks: (req, res) => {
@@ -38,7 +38,8 @@ const listaController = {
         const Notebooks = productModel.filterBySomething(product => {
             return product.category == 'Notebooks';
         })
-        return res.render('lista', { data: Notebooks });
+        const user = req.session.user;
+        return res.render('lista', { data: Notebooks, user});
 
     },
     Monitores: (req, res) => {
@@ -46,7 +47,8 @@ const listaController = {
         const Monitores = productModel.filterBySomething(product => {
             return product.category == 'Monitores';
         })
-        return res.render('lista', { data: Monitores });
+        const user = req.session.user;
+        return res.render('lista', { data: Monitores, user});
 
     },
     Perisfericos: (req, res) => {
@@ -62,8 +64,8 @@ const listaController = {
         })
         const Perisfericos = conect.concat(Streaming).concat(teclado);
     
-
-        return res.render('lista', { data: Perisfericos });
+        const user = req.session.user;
+        return res.render('lista', { data: Perisfericos, user});
 
     },
     PcOffice: (req, res) => {
@@ -71,7 +73,8 @@ const listaController = {
         const pcOffi = productModel.filterBySomething(product => {
             return product.category == 'pc office';
         })
-        return res.render('lista', { data: pcOffi });
+        const user = req.session.user;
+        return res.render('lista', { data: pcOffi, user});
 
     },
     PcStreamer: (req, res) => {
@@ -79,7 +82,8 @@ const listaController = {
         const pcStr = productModel.filterBySomething(product => {
             return product.category == 'pc streming';
         })
-        return res.render('lista', { data: pcStr });
+        const user = req.session.user;
+        return res.render('lista', { data: pcStr, user});
 
     },
     PcDiseno: (req, res) => {
@@ -87,13 +91,14 @@ const listaController = {
         const PcDise = productModel.filterBySomething(product => {
             return product.category == 'pcdiseno';
         })
-        return res.render('lista', { data: PcDise });
+        const user = req.session.user;
+        return res.render('lista', { data: PcDise, user});
 
     },
     create: (req, res) => {
 		// Do the magic
-		
-		return res.render('product-create-form')
+        const user = req.session.user;
+		return res.render('product-create-form', {user})
 	},
 	
 	// Create -  Method to store
@@ -121,10 +126,11 @@ const listaController = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
+        const user = req.session.user;
 	//modelo le pregunto por un id, parametro del id
 		const product = productModel.findById(req.params.productId)
 	//una vez que se hizo el json modelo encontrando el producto 
-		return res.render('product-edit-form', {product, toThousand})
+		return res.render('product-edit-form', {product, toThousand, user})
 	},
 	// Update - Method to update
 	update: (req, res) => {
