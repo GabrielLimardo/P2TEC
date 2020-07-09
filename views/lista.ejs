@@ -8,7 +8,7 @@ function round(val) {
 %>
 <link rel="stylesheet" href="/css/lista.css">
 <body>
-    <%- include('./partial/header') %>
+    <%- include('./partial/header', {user}) %>
     <div class="encierro"> 
         <div class="centradoLista row wrap nostyle">
             <%  data.forEach(p => { %>

@@ -10,26 +10,25 @@ module.exports = {
   },
   processRegister: function (req, res) {
     const errors = validationResult(req);
-
     if (errors.isEmpty()) {
       delete req.body.retype;
       req.body.password = bcrypt.hashSync(req.body.password, 10);
 
-      User.create({
+      User.guardarUno({
         ...req.body,
-        image: req.file.filename
+        image: req.image
       })
 
-      return res.redirect('/login');
+      return res.redirect('./register/login');
     } else {
-      return res.render("registro", { errors: errors.mapped(), old: req.body });
+      const user = req.session.user;
+      return res.render("registro", { errors: errors.mapped(), old: req.body, user});
     }
   },
   login: function (req, res) {
     return res.render("login");
   },
   processLogin: function (req, res) {
-    
     const errors = validationResult(req);
 
     if(errors.isEmpty()){

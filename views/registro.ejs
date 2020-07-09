@@ -44,8 +44,8 @@
                                     </p>
                                 </div>
                                 <div class="password">
-                                    <label for="password">Repetir Contraseña *</label>
-                                    <input class="passwordInput" type="password" id="passsword" name="retypepassword"
+                                    <label for="retype">Repetir Contraseña *</label>
+                                    <input class="passwordInput" type="password" id="retype" name="retype"
                                         placeholder="Repetir contraseña" value="">
                                     <p class="error" required>
                                         <%= typeof errors == 'undefined' ? null : errors.retype ? errors.retype.msg : null %>
@@ -56,7 +56,7 @@
                                     <input type="file" id="image" name="image" class="avatarBotton">
                                     <div>
                                         <p class="error">
-                                            <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                            <%= typeof errors == 'undefined' ? null : errors.image ? errors.image.msg : null %>
                                         </p>
                                     </div>
                                 </div>

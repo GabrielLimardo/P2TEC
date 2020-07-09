@@ -12,7 +12,7 @@ module.exports = {
     //Username
     body("username")
       .notEmpty()
-      .withMessage("Campo obligatorio")
+      .withMessage("El campo username obligatorio")
       .bail()
       .custom((value, { req }) => {
         const user = User.findBySomething((user) => user.username == value);
@@ -23,7 +23,7 @@ module.exports = {
     // Email
     body("email")
       .notEmpty()
-      .withMessage("Campo obligatorio")
+      .withMessage("El campo email es obligatorio")
       .bail()
       .isEmail()
       .withMessage("Debes ingresar un email válido")
@@ -37,15 +37,13 @@ module.exports = {
     // Image
     body("image")
       .custom((value, { req }) => {
-        if (req.file) {
-          return true;
-        } else {
-          return false;
-        }
+        return true
+        req.file
       })
       .withMessage("Imagen obligatoria")
       .bail()
       .custom((value, { req }) => {
+        return true
         if (req.file) {
           const acceptedExtensions = [".jpg", ".jpeg", ".png"];
 
@@ -64,14 +62,14 @@ module.exports = {
     // Password
     body("password")
       .notEmpty()
-      .withMessage("Campo obligatorio")
+      .withMessage("El campo contraseña es obligatorio")
       .bail()
       .isLength({ min: 3 })
       .withMessage("La contraseña debe tener al menos 3 carácteres"),
     // Retype password
     body("retype")
       .notEmpty()
-      .withMessage("Campo obligatorio")
+      .withMessage("El campo reescribir contraseña es obligatorio")
       .bail()
       .custom((value, { req }) => req.body.password === value)
       .withMessage("Las contraseñas no coinciden"),
@@ -79,7 +77,7 @@ module.exports = {
   login: [
     body("email")
       .notEmpty()
-      .withMessage("Campo obligatorio")
+      .withMessage("El campo  email es obligatorio")
       .bail()
       .custom((value, { req }) => {
         const user = User.findBySomething((user) => user.email == value);

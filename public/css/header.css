@@ -108,6 +108,10 @@ a {
         font-size: 20px;
     }
 
+    .logout {
+        cursor: pointer;
+    }
+    
     nav#navegacion {
         text-align: left;
         margin-top: -30px;
