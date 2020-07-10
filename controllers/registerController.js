@@ -16,7 +16,7 @@ module.exports = {
 
       User.guardarUno({
         ...req.body,
-        image: req.image
+        image: req.file.filename
       })
 
       return res.redirect('./register/login');

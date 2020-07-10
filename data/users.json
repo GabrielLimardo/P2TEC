@@ -27,5 +27,16 @@
   "username": "ali",
   "email": "aligadeca@yahoo.com.ar",
   "password": "$2a$10$CgjGELM1hrHh.I9/wwnPwO/uJxrd7zYadTK4OTZv8A25wsFhtrGWO"
+ },
+ {
+  "username": "asdasd",
+  "email": "fghfgh@fghfgh.com",
+  "password": "$2a$10$PLK952pVodC2EaZjv3VMruP0vC1wu7hRORAh2TsUDjqvCISgKI7AS"
+ },
+ {
+  "username": "gon",
+  "email": "g@g.com",
+  "password": "$2a$10$LXvG1NZln2Fn4nvP3uUx4eq7ek60Tw.60/eGc.AN4WErwO7cvTXOW",
+  "image": "image-1594420457854.png"
  }
 ]

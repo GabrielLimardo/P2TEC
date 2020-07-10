@@ -37,13 +37,11 @@ module.exports = {
     // Image
     body("image")
       .custom((value, { req }) => {
-        return true
-        req.file
+       return req.file
       })
       .withMessage("Imagen obligatoria")
       .bail()
       .custom((value, { req }) => {
-        return true
         if (req.file) {
           const acceptedExtensions = [".jpg", ".jpeg", ".png"];
 
@@ -56,7 +54,7 @@ module.exports = {
           }
         } else {
           return true;
-        }
+        }        
       })
       .withMessage("Extension invalida"),
     // Password
