@@ -95,14 +95,14 @@ const listaController = {
         return res.render('lista', { data: PcDise, user});
 
     },
-    create: (req, res) => {
+    create: (req, res) => { //te llava a la pagina de creacion
 		// Do the magic
         const user = req.session.user;
 		return res.render('product-create-form', {user})
 	},
 	
 	// Create -  Method to store
-	store: (req, res) => {
+	store: (req, res) => { //esta es para crear un producto nuevo
 		//modelo le pregunto por 
 		let products = productModel.leerJson()
 		
@@ -125,7 +125,7 @@ const listaController = {
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
+	edit: (req, res) => { //te lleva a la edicion
         const user = req.session.user;
 	//modelo le pregunto por un id, parametro del id
 		const product = productModel.findById(req.params.productId)
@@ -133,7 +133,7 @@ const listaController = {
 		return res.render('product-edit-form', {product, toThousand, user})
 	},
 	// Update - Method to update
-	update: (req, res) => {
+	update: (req, res) => { //lo actualiza
 		//vamos a sobre product model aplicar el edit de model y que tenga como parametros 
 		productModel.edit(req.body, req.params.productId)
 		
@@ -141,7 +141,7 @@ const listaController = {
 	},
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
+	destroy : (req, res) => { //elimina
 		let products = productModel.leerJson(jsonModel)
 
 		products.forEach((elem, index)=> {
