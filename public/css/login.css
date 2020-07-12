@@ -56,6 +56,21 @@
     border: 1px solid #707070;
     min-height: 250px;
 } 
+.form-container i {
+    align-items: center;
+    background-color: grey;
+    border-radius: 60px;
+} 
+.form-container i {
+    align-items: center;
+    background-color: grey;
+    border-radius: 60px;
+} 
+.form-container2 i{
+    align-items: center;
+    background-color: grey;
+    border-radius: 60px;
+}
 
 .logoFormulario {
     height: 150px;
