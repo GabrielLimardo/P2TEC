@@ -22,6 +22,10 @@ const controller = {
 
 
 	},
+	perfil: (req, res) => {
+		
+		return res.render('perfil');
+},
 };
 
 module.exports = controller;

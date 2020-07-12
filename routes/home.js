@@ -4,6 +4,7 @@ const homeController = require("../controllers/homeController")
 
 router.get("/", homeController.root);
 router.get('/search', homeController.search);
+router.get("/perfil", homeController.perfil);
 
 router.get("/prueba", function (req, res) {
     if (req.session.numeroVisitas == undefined) {
