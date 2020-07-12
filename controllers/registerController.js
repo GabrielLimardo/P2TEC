@@ -5,13 +5,13 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
 module.exports = {
-  register: function (req, res) {
+  register: function (req, res) { //llega a registro 
     return res.render("registro");
   },
-  processRegister: function (req, res) {
-    const errors = validationResult(req);
-    if (errors.isEmpty()) {
-      delete req.body.retype;
+  processRegister: function (req, res) {  // hace el registro
+    const errors = validationResult(req); //constante que tiene la funcion validationResult de express-validator y toma como parametro el req
+    if (errors.isEmpty()) {  //
+      delete req.body.retype;  //borra la repeticion de contraseña
       req.body.password = bcrypt.hashSync(req.body.password, 10);
 
       User.guardarUno({
@@ -62,13 +62,13 @@ module.exports = {
   logout: function(req, res) {
     // Desloguear al usuario
 
-    req.session.destroy();
+    req.session.destroy(); //lo que esta en seccion usa la funcion destroy
 
-    if(req.cookies.email){
-      res.clearCookie('email');
+    if(req.cookies.email){ //si hay algo en cookies 
+      res.clearCookie('email'); //lo elimina
     }
 
-    return res.redirect('/')
+    return res.redirect('/') 
 
   }
 
