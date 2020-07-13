@@ -3,48 +3,47 @@
     font-size: medium;
     color: black;
 }
+
 @media (max-width: 700px) {
-    .busca {
-        display: block;
-    }
-    
+
     .logo img {
         width: auto !important;
     }
-    
-    
+
+
     .white {
         color: white
     }
-    
+
     a {
         color: white;
         text-decoration: none;
         font-size: 20px;
     }
-    
+
     .logo {
-        width: 20%;
         border-radius: 50%;
-    
     }
-    
+
     .logo img {
-        height: 150%;
         display: block;
+        margin: 0 auto;
     }
-    .carritoContainer{
+
+    .carritoContainer {
         display: flex;
         flex-direction: column;
     }
-    .productList{
+
+    .productList {
         width: 80%;
         margin-left: 25px;
     }
-    .cartSummary{
+
+    .cartSummary {
         margin-top: 20px;
         margin-bottom: 20px;
         width: 80%;
     }
-    
+
 }

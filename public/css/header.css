@@ -40,7 +40,8 @@ ul#sub-menu li {
 }
 
 input {
-    width: 95%;
+    width: 90%;
+    margin: 0 5%;
 }
 
 .log {
