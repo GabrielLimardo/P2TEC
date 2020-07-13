@@ -654,6 +654,9 @@ ul {
 @media (min-width: 1366px) {}
 
 /* index */
+.products-title{
+    text-align: center;
+}
 
 .imagenus img {
     border-radius: 10%;
@@ -804,4 +807,46 @@ img {
 }
 .editar-eliminar a{
     color: #000;
+}
+
+/* Perfil */
+
+hr{
+    border: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+.userData{
+    background-color: white;
+    width: 60%;
+    margin: 0 auto;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.userData h3{
+    background-color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.userAccount{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.userPData h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.userAccount i{
+    color: blue;
+}
+
+.userPData{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }

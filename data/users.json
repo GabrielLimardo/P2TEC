@@ -16,5 +16,11 @@
   "email": "belen@gmail.com",
   "password": "$2a$10$Waghojd0bUqUENpdc.cR2eqeRUEjIas8o8ih2tuwAtLc7zGEZo34u",
   "image": "image-1594501329500.jpg"
- }
+ },
+ {
+    "username": "shadow",
+    "email": "tutivasquez@hotmail.com",
+    "password": "$2y$10$z5Bvxf5Ahv66Qa8lwclBZe.pxhiVlh8o2RZptOmbZlTk.JruEYHjq",
+    "image": "image-1594501329500.jpg"
+   }
 ]
