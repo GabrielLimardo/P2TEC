@@ -7,7 +7,7 @@
 	<%- include('./partial/header', {user}) %>
 	<!-- /Header -->
 
-	<div class="container products-wrapper">
+	<div class="productoparaeditar">
 		<div class="row">
 			<div class="col-12">
 				<h2 class="products-title">Estás editando: <i><%= product.name %> </i></h2>
@@ -31,9 +31,26 @@
 							<% if (product.category == 'Notebooks') { %>
 								<option value="Notebooks" selected>Notebooks</option>
 								<option value="Monitores">Monitores</option>
+								<option value="Memorias RAM">Memorias RAM</option>
+								<option value="Microprocesadores">Microprocesadores</option>
+					
+							<option value="Proyectores">Proyectores</option>
+							<option value="Conectividad">Conectividad</option>
+							<option value="Soportes">Soportes</option>
+							<option value="Tabletas">Tabletas</option>
+							<option value="Teclados">Teclados</option>
+	
 							<% } else { %>
 								<option value="Notebooks">Notebooks</option>
 								<option value="Monitores" selected>Monitores</option>
+								<option value="Memorias RAM">Memorias RAM</option>
+								<option value="Microprocesadores">Microprocesadores</option>
+			
+							<option value="Proyectores">Proyectores</option>
+							<option value="Conectividad">Conectividad</option>
+							<option value="Soportes">Soportes</option>
+							<option value="Tabletas">Tabletas</option>
+							<option value="Teclados">Teclados</option>
 							<% } %>
 						</select>
 					</div>
