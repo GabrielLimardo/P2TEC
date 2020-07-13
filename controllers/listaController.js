@@ -130,7 +130,7 @@ const listaController = {
 	//modelo le pregunto por un id, parametro del id
 		const product = productModel.findById(req.params.productId)
 	//una vez que se hizo el json modelo encontrando el producto 
-		return res.render('product-edit-form', {product, toThousand, user})
+		return res.render('product-edit-form', {product, user})
 	},
 	// Update - Method to update
 	update: (req, res) => { //lo actualiza

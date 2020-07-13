@@ -47,13 +47,11 @@ module.exports = (archivo) => {
       edit: function(newData, id){
          
          let data = this.leerJson();
-         
          // editar
          let newProduct = {
             id: id,
             ...newData
          }
-         
          data = data.map(product => {
             
             if(product.id == id){
@@ -68,12 +66,17 @@ module.exports = (archivo) => {
             }
             
          })
-         
-         // actualizar
-
          this.escribirJson(data);
-
-      }
+        },
+         createId: (arr) => {
+         let contador = 1;
+         arr.forEach( (x) => {
+            if (x.id == contador) { 
+                contador++
+             } 
+         });
+         return contador
+         }
 
    }
 

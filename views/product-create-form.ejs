@@ -28,14 +28,34 @@
 						<label for="category" class="form-label">Categoría:></label>
 						<select name="category" id="category" class="form-input">
 							<option value="">Elegí</option>
-							<option value="in-sale">En oferta</option>
-							<option value="visited">Últimos agregados</option>
+							<option value="Notebooks">Notebooks</option>
+							<option value="Memorias RAM">Memorias RAM</option>
+							<option value="Microprocesadores">Microprocesadores</option>
+							<option value="Monitores">Monitores</option>
+							<option value="Proyectores">Proyectores</option>
+							<option value="Conectividad">Conectividad</option>
+							<option value="Soportes">Soportes</option>
+							<option value="Tabletas">Tabletas</option>
+							<option value="Teclados">Teclados</option>
+						</select>
+					</div>
+					<div class="col-99">
+						<label for="especial" class="form-label">Destacarlo:></label>
+						<select name="especial" id="especial" class="form-input">
+							<option value="">Elegí</option>
+							<option value="NODESTACADO">NO</option>
+							<option value="DESTACADO">SI</option>
+
 						</select>
 					</div>
 					<div class="col-12">
 						<label for="description" class="form-label">Descipción: </label>
 						<textarea name="description" id="description" class="form-input"></textarea>
 					</div>
+					<div class="cargadeimagenproducto">
+						<label for="image" class="form-label">imagen:</label>
+						<input type="file" id="image" name="image" class="image">
+						<div>
 					<div class="col-12">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>
