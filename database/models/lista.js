@@ -1,9 +1,9 @@
 module.exports = (sequelize, dataTypes ) => {
     const alias = "";
     const cols = {
-        id: {
+        // id: {
             
-        },
+        // },
         title: {
             type:dataTypes.STRING,
         },

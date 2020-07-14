@@ -40,14 +40,14 @@ module.exports = {
 
       req.session.user = user; // YA ESTÁ EN SESION
 
-      if (req.body.remember) {
+      if (req.body.remember) { //si toco el campo remember que se encuentra en body 
         // Creo la cookie
 
-        res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 });
+        res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 }); // guardo solamente el email, donde tenga el email y el tiempo que quedara guardado
 
       }
 
-      return res.redirect('/');
+      return res.redirect('/'); //redirecciona 
 
     } else {
         
