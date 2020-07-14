@@ -1,3 +1,6 @@
+let db  = require("../database/models");
+let sequelize = db.sequelize;
+
 const jsonModel = require('../models/jsonModel');
 const productModel = jsonModel('products');
 
