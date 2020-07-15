@@ -4,7 +4,12 @@ module.exports={
     "password": null,
     "database": "database_development",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define":{
+      "underscored": true,
+      "timestamps" : false, //no hace busqueda de create y data_id
+      // "paranoid" : true, //si encuentra deleted-at fecha de borrado
+    }
   },
   "test": {
     "username": "root",
