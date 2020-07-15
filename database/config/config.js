@@ -5,10 +5,8 @@ module.exports={
     "database": "p2tec",
     "host": "127.0.0.1",
     "dialect": "mysql",
-    "define":{
-      "underscored": true,
-      "timestamps" : false, //no hace busqueda de create y data_id
-      // "paranoid" : true, //si encuentra deleted-at fecha de borrado
+    "define":{ //no hace busqueda de create y data_id
+      "paranoid" : true, //si encuentra deleted-at fecha de borrado
     }
   },
   "test": {

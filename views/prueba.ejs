@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head', {title: "Productos"}) %>
+<% 
+function round(val) {
+  return Math.round(val*100)/100;
+} 
+%>
+<link rel="stylesheet" href="/css/lista.css">
+<body>
+    <%- include('./partial/header') %>
+    <div class="encierro"> 
+        <div class="centradoLista row wrap nostyle">
+            <%  data.forEach(p => { %>
+            <a href="/lista/detail/<%- p.id %>">
+                <div class="producto producto-<%- p.id %>">
+                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    <div class="descripciones">
+                        <h3 class="nombreProducto"><%- p.name %></h3>
+                        <p class="detalleProducto"><%- p.descripcion %></p>
+                        <h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+                    </div>
+                </div>
+            </a>
+            <% }) %>
+        </div>
+    </div>
+    <div class="cybersale">
+        <a href="/lista"><img src="/img/gamingday.jpg" alt="" class="imgB"></a>
+    </div>
+    
+    <%- include('partial/footer') %>
+
+</body>
+
+</html>
