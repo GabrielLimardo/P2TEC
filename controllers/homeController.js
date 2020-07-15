@@ -23,8 +23,8 @@ const controller = {
 
 	},
 	perfil: (req, res) => {
-		
-		return res.render('perfil');
+		const user = req.session.user;
+		return res.render('perfil', {user});
 },
 };
 

@@ -130,3 +130,10 @@
     justify-content: center;
     max-width: 400px;
 }
+
+@media (max-width: 678px) {
+    .registerContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,4 +1,4 @@
-.container{
+.loginContainer{
     padding: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -166,25 +166,38 @@
     height: 100%;
 }
  @media (max-width: 678px) {
-    .container {
+     .encierro {
+         padding-top: 250px;
+     }
+
+     .loginContainer {
+         justify-content: center;
+     }
+
+    .login-publi {
         display: flex;
-        align-items: center;
+        flex-direction: column;
     }
-    .loginForm{
-        margin-left: 100px;
-        margin-bottom: 0px;
+
+    .loginCompleto{
+        margin: 0 auto;
+    }
+
+    .field-group {
+    margin-left: 20px;
+}
+
+    .cybersale {
+        margin: 0 auto;
     }
     .form-container {
         width: 80%;
         height: 85%;
     }
-    .form-container2 {
-        width: 90%!important;
-        
-    }
+
     /* ULTIMO QUE TOQUE */
     .form-container button {
-        width: 80%;
+        width: 120px;
     }
     .form-container2 button {
         width: 80%;
