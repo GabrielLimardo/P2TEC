@@ -1,18 +1,16 @@
 module.exports = (sequelize, dataTypes ) => {
-    const alias = "";
+    const alias = "products";
     const cols = {
-        // id: {
-            
-        // },
-        title: {
-            type:dataTypes.STRING,
-        },
-        
-    }
+        name: dataTypes.STRING,
+        categoryId: dataTypes.INTEGER,
+}
     const config = {
         timestamps : true,
     }
     const Products = sequelize.define(alias, cols, config);
+    Products.associate = function(models){
+        Products.belongsTo(models.categories)
+    }
 
     return Products;
 }

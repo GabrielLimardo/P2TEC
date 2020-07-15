@@ -821,7 +821,7 @@ hr{
     margin: 0 auto;
     padding-left: 20px;
     margin-bottom: 40px;
-    margin-top: 40px;
+
 }
 .userData h3{
     background-color: white;
@@ -857,4 +857,7 @@ hr{
 
 .productoparaeditar{
 padding-top: 200px;
+}
+.perfilData{
+    padding-top: 250px;
 }

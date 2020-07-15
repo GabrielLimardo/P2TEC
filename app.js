@@ -5,7 +5,8 @@ const log = require('./middlewares/log');
 const homeRoutes = require('./routes/home');
 const listaRoutes = require("./routes/lista.js");
 const carritoRoutes = require("./routes/carrito.js");
-const registerRouter = require("./routes/register");
+const registerRoutes = require("./routes/register");
+const pruebaRoutes = require("./routes/prueba");
 const session = require("express-session");
 
 
@@ -29,4 +30,5 @@ app.listen(3000, function() {
 app.use('/', homeRoutes);
 app.use("/lista", listaRoutes);
 app.use("/carrito", carritoRoutes);
-app.use('/register', registerRouter);
+app.use('/register', registerRoutes);
+app.use("/prueba", pruebaRoutes);
