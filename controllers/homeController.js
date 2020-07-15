@@ -1,5 +1,8 @@
 const jsonModel = require('../models/jsonModel');
 const productModel = jsonModel('products');
+const db = require("../database/models/index");
+const sequelize = require('sequelize');
+const Op = sequelize.Op;
 
 const controller = {
 	root: (req, res) => {
@@ -10,15 +13,20 @@ const controller = {
 			return res.render('index', { destac, user});
 	},
 	search: (req, res) => {
-		// Do the magic
 
 		const busqueda = req.query.keywords;
 
-		const products = productModel.filterBySomething(product => {
-			return product.name.toLowerCase().indexOf(busqueda.toLowerCase()) !== -1;
-		})
-		const user = req.session.user;
-		return res.render('results', {products, busqueda, user})
+		db.Product.findAll({
+			where: {
+			  name: {
+				[Op.like]: "%"+busqueda+"%",
+			  },
+			},
+		  }).then(function(products){
+			const user = req.session.user;
+			return res.render('results', {products, busqueda, user})
+        })
+        .catch(e => console.log(e))
 
 
 	},
