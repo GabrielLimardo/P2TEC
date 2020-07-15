@@ -21,7 +21,7 @@ const listaController = {
     },
 
     detail: (req, res) => {
-        const product = productModel.findById(req.params.productId);
+        const product = db.Product.findById(req.params.productId);
         const user = req.session.user;
         return res.render('detail', {product: product, user});
 
