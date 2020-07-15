@@ -8,9 +8,16 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const listaController = {
     root: (req, res) => {
-        const products = productModel.leerJson()
         const user = req.session.user;
-        return res.render("lista", {data: products, user});
+        db.Product.findAll({
+            include: ['category']
+        })
+        .then(function(results){
+            const ProductosAll = results;
+            return res.render("prueba",{data:ProductosAll, user})
+        })
+        .catch(e => console.log(e))
+       
     },
 
     detail: (req, res) => {
