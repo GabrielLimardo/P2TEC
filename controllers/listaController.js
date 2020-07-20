@@ -2,6 +2,7 @@ let db  = require("../database/models");
 let sequelize = db.sequelize;
 
 const jsonModel = require('../models/jsonModel');
+const products = require("../database/models/products");
 const productModel = jsonModel('products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -21,10 +22,12 @@ const listaController = {
     },
 
     detail: (req, res) => {
-        const product = db.Product.findById(req.params.productId);
-        const user = req.session.user;
-        return res.render('detail', {product: product, user});
-
+        Product.findByPk(req.params.id)
+        .then(products => res.render("detail", { products }))
+        .catch(e => console.log(e));
+        // const product = db.Product.findById(req.params.productId);
+        // const user = req.session.user;
+        // return res.render('detail', {product: product, user});
     },
     Componentes: (req, res) => {
 
