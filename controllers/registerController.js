@@ -4,6 +4,8 @@ const User = json("users");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
+// ACTIVAR SQL// const {user} = require("../database/models");
+
 module.exports = {
   register: function (req, res) { //llega a registro 
     return res.render("registro");
@@ -13,7 +15,7 @@ module.exports = {
     if (errors.isEmpty()) {  //
       delete req.body.retype;  //borra la repeticion de contraseña
       req.body.password = bcrypt.hashSync(req.body.password, 10);
-
+      
       User.guardarUno({
         ...req.body,
         image: req.file.filename

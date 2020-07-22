@@ -17,6 +17,16 @@ module.exports = {
       .custom((value, { req }) => {
         const user = User.findBySomething((user) => user.username == value);
 
+        //ACTIVAR SQL // .custom((value) => {
+          // const respuesta = user.findone({
+          //   where: { 
+          //     username:value
+          //   }
+          // })
+          // .then((user) => { if (user){ return promise.reject() }; // lo que devuelve el return es un objeto de node
+          // })
+        // } //promesa tipo de dato que tiene metodos para resolverlo
+
         return !user;
       })
       .withMessage("Usuario registrado"),
@@ -86,6 +96,7 @@ module.exports = {
           return false;
         }
       })
+    
       .withMessage("Email o contraseña inválidos"),
     body("password").notEmpty().withMessage("Campo obligatorio"),
   ],
