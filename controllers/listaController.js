@@ -8,22 +8,23 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const listaController = {
     root: (req, res) => {
-        const user = req.session.user;
+     
         db.Product.findAll({
             include: ['category']
         })
         .then(function(results){
             const ProductosAll = results;
-            return res.render("prueba",{data:ProductosAll, user})
+            return res.render("prueba",{data:ProductosAll})
         })
         .catch(e => console.log(e))
        
     },
 
     detail: (req, res) => {
+        const user = req.session.user;
         db.Product.findByPk(req.params.productId)
         .then(product => {
-            return res.render("detail", { product })
+            return res.render("detail", { product, user })
         })
         .catch(e => console.log(e));
     },
