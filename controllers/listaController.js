@@ -26,19 +26,6 @@ const listaController = {
             return res.render("detail", { product })
         })
         .catch(e => console.log(e));
-        // const product = db.Product.findById(req.params.productId);
-        // const user = req.session.user;
-        // return res.render('detail', {product: product, user});
-    //     detail(req, res){
-    //         db.Product.findOne({
-    //             where: {
-    //             id: req.params.id
-    //         }
-    //     })
-    //     .then(product => res.render("detail",{ product }))
-    //     .catch(e => console.log(e));
-    // },
-        
     },
     Componentes: (req, res) => {
 
