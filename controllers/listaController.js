@@ -30,82 +30,105 @@ const listaController = {
     },
     Componentes: (req, res) => {
 
-        const fuente = productModel.filterBySomething(product => {
-            return product.category == 'Fuentes de alimentacion';
-        })
-        const memoria = productModel.filterBySomething(product => {
-            return product.category == 'Memorias RAM';
-        })
-        const micro = productModel.filterBySomething(product => {
-            return product.category == 'Microprocesadores';
-        })
-       
-        const Componentes = fuente.concat(memoria).concat(micro);
         const user = req.session.user;
-        return res.render('lista', { data: Componentes, user});
-
+        db.Product.findAll({
+            where: {
+                categoryId: "1"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
     },
     Notebooks: (req, res) => {
 
-        const Notebooks = productModel.filterBySomething(product => {
-            return product.category == 'Notebooks';
-        })
         const user = req.session.user;
-        return res.render('lista', { data: Notebooks, user});
+        db.Product.findAll({
+            where: {
+                categoryId: "2"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
 
     },
     Monitores: (req, res) => {
 
-        const Monitores = productModel.filterBySomething(product => {
-            return product.category == 'Monitores';
-        })
         const user = req.session.user;
-        return res.render('lista', { data: Monitores, user});
+        db.Product.findAll({
+            where: {
+                categoryId: "3"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
 
     },
     Perisfericos: (req, res) => {
 
-        const conect = productModel.filterBySomething(product => {
-            return product.category == 'Conectividad';
-        })
-        const Streaming = productModel.filterBySomething(product => {
-            return product.category == 'Streaming';
-        })
-        const teclado = productModel.filterBySomething(product => {
-            return product.category == 'Teclados';
-        })
-        const Perisfericos = conect.concat(Streaming).concat(teclado);
-    
         const user = req.session.user;
-        return res.render('lista', { data: Perisfericos, user});
+        db.Product.findAll({
+            where: {
+                categoryId: "4"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
 
     },
     PcOffice: (req, res) => {
 
-        const pcOffi = productModel.filterBySomething(product => {
-            return product.category == 'pc office';
-        })
         const user = req.session.user;
-        return res.render('lista', { data: pcOffi, user});
+        db.Product.findAll({
+            where: {
+                categoryId: "6"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
 
     },
     PcStreamer: (req, res) => {
 
-        const pcStr = productModel.filterBySomething(product => {
-            return product.category == 'pc streming';
-        })
         const user = req.session.user;
-        return res.render('lista', { data: pcStr, user});
+        db.Product.findAll({
+            where: {
+                categoryId: "5"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
 
     },
     PcDiseno: (req, res) => {
-
-        const PcDise = productModel.filterBySomething(product => {
-            return product.category == 'pcdiseno';
-        })
         const user = req.session.user;
-        return res.render('lista', { data: PcDise, user});
-
+        db.Product.findAll({
+            where: {
+                categoryId: "7"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("prueba",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
     },
     create: (req, res) => { //te llava a la pagina de creacion
 		// Do the magic

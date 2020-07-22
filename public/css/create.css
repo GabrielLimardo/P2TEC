@@ -1,0 +1,14 @@
+.contenedorprincpaldecreate{
+    padding-top: 350px;
+    border: 1px;
+    text-align: center;
+    display: flex;
+   flex-direction: column;
+}
+.col-12{
+    background-color: grey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+}

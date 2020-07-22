@@ -15,8 +15,8 @@ name VARCHAR(100),
 price INT,
 categoryId INT UNSIGNED, 
 image VARCHAR(30),
- descripcion VARCHAR(100), 
- createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+descripcion VARCHAR(100), 
+createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
 updatedAt DATETIME ON UPDATE CURRENT_TIMESTAMP,
 deletedAt DATETIME);
 
@@ -40,6 +40,7 @@ INSERT INTO categories(name) VALUES ('Monitores');
 INSERT INTO categories(name) VALUES ('Perifericos');
 INSERT INTO categories(name) VALUES ('PC Streaming'); 
 INSERT INTO categories(name) VALUES ('PC Home Office'); 
+INSERT INTO categories(name) VALUES ("PC Diseño"); 
 
 
 
@@ -64,6 +65,10 @@ INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('PC Stre
 INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('PC Streaming', 110554, 5 ,"PC-Streaming-5_800.jpg", "AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T");
 INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('Notebook Hp I5', 111096, 2 ,"1 (23).jpg", "Notebook Hp I5 250 G7 8265U 8GB 1TB 15.6");
 INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('Notebook Hp I7', 163224, 2 ,"1 (40).jpg", "Notebook Hp I7 10510U 8Gb !tb Windows 10 15,6 + GeForece MX 130");
+INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('PC Diseño', 110554, 7 ,"PC-Diseño-6_800.jpg", "AMD R5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1TB");
+INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('PC Diseño', 144338, 7,"PC-Diseño-6_800.jpg", "INTEL I7 9700F - B365 - 16GB - RTX 2060 S - 240GB SSD - 1TB");
+INSERT INTO products(name,price, categoryId, image,descripcion) VALUES ('PC Diseño', 107693, 7 ,"PC-Diseño-6_800.jpg", "AMD R5 3600 - B450 - 8GB - GTX 1660 Ti - 240GB SSD - 1TB");
+
 
 
 
