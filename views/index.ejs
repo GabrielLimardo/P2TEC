@@ -33,10 +33,10 @@ function round(val) {
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">PRODUCTOS RECOMENDADOS : <%- destac[0].especial %> </h2>
+				<h2 class="products-title">PRODUCTOS RECOMENDADOS :</h2>
 				<!-- Show the "visited" products -->
 				<div class="row wrap nostyle contProdRec">
-					<% destac.forEach(p => { %>					
+					<% data.forEach(p => { %>					
 						<div>
 							<a href="/lista/detail/<%- p.id %>">
 								<div class="producto producto-<%- p.id %>">

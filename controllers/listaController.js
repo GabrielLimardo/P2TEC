@@ -8,13 +8,13 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const listaController = {
     root: (req, res) => {
-     
+        const user = req.session.user;
         db.Product.findAll({
             include: ['category']
         })
         .then(function(results){
             const ProductosAll = results;
-            return res.render("prueba",{data:ProductosAll})
+            return res.render("lista",{data:ProductosAll, user})
         })
         .catch(e => console.log(e))
        
@@ -38,7 +38,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
     },
@@ -52,7 +52,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
 
@@ -67,7 +67,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
 
@@ -82,7 +82,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
 
@@ -97,7 +97,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
 
@@ -112,7 +112,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
 
@@ -126,7 +126,7 @@ const listaController = {
         })
         .then(resultados => {
             
-            return res.render("prueba",{data:resultados, user})
+            return res.render("lista",{data:resultados, user})
         })
         .catch(e => console.log(e))
     },

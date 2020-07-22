@@ -1,16 +1,22 @@
 const jsonModel = require('../models/jsonModel');
 const productModel = jsonModel('products');
-const db = require("../database/models/index");
-const sequelize = require('sequelize');
-const Op = sequelize.Op;
+let db  = require("../database/models");
+let sequelize = db.sequelize;
+
 
 const controller = {
 	root: (req, res) => {
-			const destac = productModel.filterBySomething(product => {
-				return product.especial == 'DESTACADO';
-			})
-			const user = req.session.user;
-			return res.render('index', { destac, user});
+		const user = req.session.user;
+        db.Product.findAll({
+            where: {
+                categoryId: "4"
+            }
+        })
+        .then(resultados => {
+            
+            return res.render("index",{data:resultados, user})
+        })
+        .catch(e => console.log(e))
 	},
 	search: (req, res) => {
 
