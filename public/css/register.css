@@ -36,6 +36,8 @@
     border: 1px solid #707070;
     min-height: 400px;
     margin: 0 auto;
+    margin-right: 50px;
+    margin-top: 50px;
 }
 
 .registerForm {
@@ -102,6 +104,8 @@
 .registradorContainer {
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .centradoRegistrador {
@@ -130,10 +134,18 @@
     justify-content: center;
     max-width: 400px;
 }
+main.registerContainer.row.no-wrap {
+    padding-bottom: 350px;
 
-@media (max-width: 678px) {
+}
+
+@media (max-width: 457px) {
     .registerContainer {
         display: flex;
         flex-direction: column;
     }
+}
+
+@media (max-width: 1035px) {
+   
 }
