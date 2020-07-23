@@ -3,6 +3,10 @@
    
     
 }
+.emailInput {
+    margin-top: 5px;
+    background-color:#d7f2fa;
+}
 .rowproduct-detail{
     background-color: #FCFAFA;
     text-align: center;
@@ -45,6 +49,6 @@ div.cargadeimagenproducto{
         padding-bottom: 10px;
     }
    
-    
+   
     
 }

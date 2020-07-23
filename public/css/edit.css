@@ -1,0 +1,37 @@
+
+
+.rowproduct-detail{
+    background-color: #FCFAFA;
+    text-align: center;
+    flex-direction: column;
+    padding: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-width: 10px ;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #707070;
+   
+}
+
+div.productoparaeditar{
+  padding-top: 280px;
+ 
+}
+imput{
+    margin-top: 5px !important;
+}
+
+div.col-12{
+    margin-top: 10px;
+}
+
+div.col-12.col-md-6{
+margin-top: 10px;
+}
+
+.emailInput {
+    margin-top: 5px;
+    background-color: #d7f2fa;
+}
+
