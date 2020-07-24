@@ -29,11 +29,9 @@
 						<label for="category" class="form-label">Categoría:></label>
 						<select name="category" id="category" class="form-input">
 							<option value="">Elegí</option>
-							<option value="Componentes">Componentes</option>
-							<option value="Notebooks">Notebooks</option>
-							<option value="Monitores">Monitores</option>
-							<option value="Perisfericos">Perisfericos</option>
-							
+							<% categories.forEach(function(category) {  %>  
+							<option value="<%=category.id%>"> <%=category.name%> </option>
+							<%})%>  
 						
 						</select>
 					</div>
@@ -45,6 +43,11 @@
 						<label for="image" class="form-label">imagen:</label>
 						<input type="file" id="image" name="image" class="image">
 						<div>
+							<p class="error">
+								<%= typeof errors == 'undefined' ? null : errors.image ? errors.image.msg : null %>
+							</p>
+						</div>
+					<div>
 					<div class="col2">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
 					</div>

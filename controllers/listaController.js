@@ -2,6 +2,7 @@ let db  = require("../database/models");
 let sequelize = db.sequelize;
 
 const jsonModel = require('../models/jsonModel');
+const { promiseImpl } = require("ejs");
 const productModel = jsonModel('products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -131,42 +132,43 @@ const listaController = {
         .catch(e => console.log(e))
     },
     create: (req, res) => { //te llava a la pagina de creacion
-		// Do the magic
-        const user = req.session.user;
-		return res.render('product-create-form', {user})
+        // Do the magic
+        db.Category.findAll()
+        .then((categories) => {
+            const user = req.session.user;
+            return res.render('product-create-form', {user, categories});
+        })  
+        .catch(e => console.log(e));
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => { //esta es para crear un producto nuevo
-		//modelo le pregunto por 
-		let products = productModel.leerJson()
-		
-		
-		let newId = productModel.createId(products);
-
-		let newProduct = {
-			// id: newId,
-			...req.body,
-		}
-
-		products = [...products, newProduct]
-
-		
-
-		productModel.guardarUno(products);
-
-		return res.redirect('/')
-		
+        //modelo le pregunto por 
+        db.Product.create({
+            nombre: req.body.nombre,
+            price:req.body.price,
+            descripcion:req.body.descripcion,
+            category: req.body.categoryId
+        })  
+        .then(() => {
+          return res.redirect('/');
+        })
 	},
 
 	// Update - Form to edit
 	edit: (req, res) => { //te lleva a la edicion
         const user = req.session.user;
 	//modelo le pregunto por un id, parametro del id
-		const product = productModel.findById(req.params.productId)
+		const product = productModel.findById(req.params.productId);
 	//una vez que se hizo el json modelo encontrando el producto 
-		return res.render('product-edit-form', {product, user})
-	},
+    	return res.render('product-edit-form', {product, user});
+    // db.Category.findAll()
+    // .then((categories, ) => {
+    //     const user = req.session.user;
+    //     return res.render('product-edit-form', {user, categories});
+    // })  
+    // .catch(e => console.log(e));
+	 },
 	// Update - Method to update
 	update: (req, res) => { //lo actualiza
 		//vamos a sobre product model aplicar el edit de model y que tenga como parametros 

@@ -1,15 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Disco Solido Ssd 2 TB",
-  "descripcion": "Disco Solido Ssd 2 Tb Western Digital Blue",
-  "brand": "Western Digital",  
-  "category": "Discos y SSDs",
-  "price": 26729,
-  "image": "1 (14).jpg",
-  "especial": "NODESTACADO"
- },
- {
   "id": 2,
   "name": "Disco Solido Ssd 480 GB",
   "descripcion": "Disco Solido Ssd 480 Gb Kingston A400",
@@ -70,14 +60,12 @@
   "especial": "NODESTACADO"
  },
  {
-  "id": 8,
+  "id": "8",
   "name": "Disco Solido Ssd M2 2 Tb",
-  "descripcion": "Disco Solido Ssd M2 2 Tb Western Digital Blue",
-  "brand": "Western Digital",
-  "category": "Discos y SSDs",
-  "price": 26393,
-  "image": "1 (15).jpg",
-  "especial": "NODESTACADO"
+  "price": "263930",
+  "category": "Monitores",
+  "description": "",
+  "image": "1 (15).jpg"
  },
  {
   "id": 9,

@@ -45,7 +45,9 @@ module.exports = {
       if (req.body.remember) { //si toco el campo remember que se encuentra en body 
         // Creo la cookie
 
-        res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 }); // guardo solamente el email, donde tenga el email y el tiempo que quedara guardado
+        res.cookie('email', user.email, { 
+          maxAge: 1000 * 60 * 60 * 24 
+        }); // guardo solamente el email, donde tenga el email y el tiempo que quedara guardado
 
       }
 
