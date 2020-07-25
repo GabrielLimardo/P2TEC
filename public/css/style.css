@@ -43,6 +43,7 @@
 .nostyle a:active {
     text-decoration: none;
     color: black;
+    width: 20%;
 }
 
 .logo {
