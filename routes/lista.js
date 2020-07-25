@@ -44,7 +44,7 @@ router.get('/edit/:productId', listaController.edit); /* GET - Form to create */
 router.post('/edit/:productId', listaController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/ 
-router.post('/delete/:productId', listaController.destroy);
+router.post('/delete/:id', listaController.destroy);
 
 router.get('/Componentes', listaController.Componentes);
 router.get('/Notebooks', listaController.Notebooks);

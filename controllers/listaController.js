@@ -184,15 +184,23 @@ const listaController = {
 
     // Delete - Delete one product from DB
     destroy: (req, res) => { //elimina
-        let products = productModel.leerJson(jsonModel)
+        // let products = productModel.leerJson(jsonModel)
 
-        products.forEach((elem, index) => {
-            if (elem.id == req.params.productId) {
-                products.splice(index, 1)
+        // products.forEach((elem, index) => {
+        //     if (elem.id == req.params.productId) {
+        //         products.splice(index, 1)
+        //     }
+        // });
+        // productModel.escribirJson(products, jsonModel);
+        // return res.redirect("/")
+
+        db.Product.destroy({
+            where: {
+                id: req.params.id
             }
-        });
-        productModel.escribirJson(products, jsonModel);
-        return res.redirect("/")
+        })
+        res.redirect("/lista");
+       
     }
 
 

@@ -488,26 +488,6 @@
   "especial": "NODESTACADO"
  },
  {
-  "id": 51,
-  "name": "TECLADO GAMER",
-  "descripcion": "Teclado Gamer Corsair K70 RGB MK.2 Mechanical Gaming CHERRY® MX Blue",
-  "brand": "Corsair",
-  "category": "Teclados",
-  "price": 15357,
-  "image": "1 (45).jpg",
-  "especial": "DESTACADO"
- },
- {
-  "id": 52,
-  "name": "Pc Armada Gamer ",
-  "descripcion": "ESPECIFICACIONES TÉCNICAS - Amd Ryzen 5 3400g 1tb 8g Ddr4 Radeon Rx Vega",
-  "brand": "AMD",
-  "category": "Pc",
-  "price": 52499,
-  "image": "1 (42).jpg",
-  "especial": "NODESTACADO"
- },
- {
   "id": 53,
   "name": "Notebook Alienware I7 ",
   "descripcion": "17r5 Intel Core I7-8750h X6 2.2ghz 16gb 1.1tb 17 ",
