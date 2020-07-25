@@ -141,10 +141,10 @@ const listaController = {
                 })
                 .catch(e => console.log(e));
         } else {
-            return res.render('not-found', {user});
+            return res.render('not-found', { user });
         }
     },
-    store: (req, res) => { 
+    store: (req, res) => {
         db.Product.create({
             name: req.body.name,
             price: req.body.price,
@@ -156,7 +156,7 @@ const listaController = {
                 return res.redirect('/');
             })
     },
-    edit: (req, res) => { 
+    edit: (req, res) => {
         const user = req.session.user;
         if (typeof user !== 'undefined' && user.rol === 1) {
             // Do the magic
@@ -165,33 +165,33 @@ const listaController = {
                     return res.render('product-edit-form', { user, categories });
                 })
                 .catch(e => console.log(e));
-            // db.Product.findByPk(req.params.id)
-            // .then(function(product){
-            //     res.render("product-edit-form", {product:product, user });
-            // })
+            db.Product.findByPk(req.params.id)
+                .then(function (product) {
+                    res.render("product-edit-form", { product: product, user });
+                })
         } else {
-            return res.render('not-found', {user});
+            return res.render('not-found', { user });
         }
-     
-       
+
+
     },
     update: (req, res) => { //lo actualiza
-        
+
         db.Product.update({
             name: req.body.name,
             price: req.body.price,
             descripcion: req.body.descripcion,
             category: req.body.categoryId,
             image: req.body.image
-        }, 
-        {
-            where: {
-                id: req.params.id
-            }
-        })
+        },
+            {
+                where: {
+                    id: req.params.id
+                }
+            })
         res.redirect("/lista/detail/" + req.params.id)
     },
-    destroy: (req, res) => { 
+    destroy: (req, res) => {
         db.Product.destroy({
             where: {
                 id: req.params.id
