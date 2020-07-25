@@ -60,8 +60,10 @@
         height: 90%;
     }
 }
-.deleteee{
+.delete {
     background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
     border: none;
     font-size: 20px;
 }

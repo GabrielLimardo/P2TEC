@@ -41,7 +41,7 @@ function round(val) {
                     </div>
                     <% if (typeof user !== 'undefined' && user.rol === 1) {%>
                     <div class="editar-eliminar">
-                        <a href="/lista/edit/<%= product.id %>" class="action-button edit">EDIT</a>
+                        <a href="/lista/edit/<%= product.id %>" class="editButton">EDIT</a>
                         <a>
                             <form action="/lista/delete/<%= product.id %>" method="POST" style="display: inline-flex">
                                 <button class="delete" type="submit" class="action-button delete">DELETE</button>
@@ -52,7 +52,6 @@ function round(val) {
                 </div>
             </div>
         </div>
-
     </div>
     <%- include('partial/footer') %>
 </body>
