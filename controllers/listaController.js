@@ -1,4 +1,4 @@
-let db  = require("../database/models");
+let db = require("../database/models");
 let sequelize = db.sequelize;
 
 const jsonModel = require('../models/jsonModel');
@@ -13,21 +13,21 @@ const listaController = {
         db.Product.findAll({
             include: ['category']
         })
-        .then(function(results){
-            const ProductosAll = results;
-            return res.render("lista",{data:ProductosAll, user})
-        })
-        .catch(e => console.log(e))
-       
+            .then(function (results) {
+                const ProductosAll = results;
+                return res.render("lista", { data: ProductosAll, user })
+            })
+            .catch(e => console.log(e))
+
     },
 
     detail: (req, res) => {
         const user = req.session.user;
         db.Product.findByPk(req.params.productId)
-        .then(product => {
-            return res.render("detail", { product, user })
-        })
-        .catch(e => console.log(e));
+            .then(product => {
+                return res.render("detail", { product, user })
+            })
+            .catch(e => console.log(e));
     },
     Componentes: (req, res) => {
 
@@ -37,11 +37,11 @@ const listaController = {
                 categoryId: "1"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
     },
     Notebooks: (req, res) => {
 
@@ -51,11 +51,11 @@ const listaController = {
                 categoryId: "2"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
 
     },
     Monitores: (req, res) => {
@@ -66,11 +66,11 @@ const listaController = {
                 categoryId: "3"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
 
     },
     Perisfericos: (req, res) => {
@@ -81,11 +81,11 @@ const listaController = {
                 categoryId: "4"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
 
     },
     PcOffice: (req, res) => {
@@ -96,11 +96,11 @@ const listaController = {
                 categoryId: "6"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
 
     },
     PcStreamer: (req, res) => {
@@ -111,11 +111,11 @@ const listaController = {
                 categoryId: "5"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
 
     },
     PcDiseno: (req, res) => {
@@ -125,70 +125,74 @@ const listaController = {
                 categoryId: "7"
             }
         })
-        .then(resultados => {
-            
-            return res.render("lista",{data:resultados, user})
-        })
-        .catch(e => console.log(e))
+            .then(resultados => {
+
+                return res.render("lista", { data: resultados, user })
+            })
+            .catch(e => console.log(e))
     },
     create: (req, res) => { //te llava a la pagina de creacion
-        // Do the magic
-        db.Category.findAll()
-        .then((categories) => {
-            const user = req.session.user;
-            return res.render('product-create-form', {user, categories});
-        })  
-        .catch(e => console.log(e));
-	},
-	
-	// Create -  Method to store
-	store: (req, res) => { //esta es para crear un producto nuevo
+        const user = req.session.user;
+        if (typeof user !== 'undefined' && user.rol === 1) {
+            // Do the magic
+            db.Category.findAll()
+                .then((categories) => {
+                    return res.render('product-create-form', { user, categories });
+                })
+                .catch(e => console.log(e));
+        } else {
+            return res.render('not-found', {user});
+        }
+    },
+
+    // Create -  Method to store
+    store: (req, res) => { //esta es para crear un producto nuevo
         //modelo le pregunto por 
         db.Product.create({
             nombre: req.body.nombre,
-            price:req.body.price,
-            descripcion:req.body.descripcion,
+            price: req.body.price,
+            descripcion: req.body.descripcion,
             category: req.body.categoryId
-        })  
-        .then(() => {
-          return res.redirect('/');
         })
-	},
+            .then(() => {
+                return res.redirect('/');
+            })
+    },
 
-	// Update - Form to edit
-	edit: (req, res) => { //te lleva a la edicion
+    // Update - Form to edit
+    edit: (req, res) => { //te lleva a la edicion
         const user = req.session.user;
-	//modelo le pregunto por un id, parametro del id
-		const product = productModel.findById(req.params.productId);
-	//una vez que se hizo el json modelo encontrando el producto 
-    	return res.render('product-edit-form', {product, user});
-    // db.Category.findAll()
-    // .then((categories, ) => {
-    //     const user = req.session.user;
-    //     return res.render('product-edit-form', {user, categories});
-    // })  
-    // .catch(e => console.log(e));
-	 },
-	// Update - Method to update
-	update: (req, res) => { //lo actualiza
-		//vamos a sobre product model aplicar el edit de model y que tenga como parametros 
-		productModel.edit(req.body, req.params.productId)
-		
-		return res.redirect('/lista/detail/' + req.params.productId);
-	},
+        //modelo le pregunto por un id, parametro del id
+        const product = productModel.findById(req.params.productId);
+        //una vez que se hizo el json modelo encontrando el producto 
+        return res.render('product-edit-form', { product, user });
+        // db.Category.findAll()
+        // .then((categories, ) => {
+        //     const user = req.session.user;
+        //     return res.render('product-edit-form', {user, categories});
+        // })  
+        // .catch(e => console.log(e));
+    },
+    // Update - Method to update
+    update: (req, res) => { //lo actualiza
+        //vamos a sobre product model aplicar el edit de model y que tenga como parametros 
+        productModel.edit(req.body, req.params.productId)
 
-	// Delete - Delete one product from DB
-	destroy : (req, res) => { //elimina
-		let products = productModel.leerJson(jsonModel)
+        return res.redirect('/lista/detail/' + req.params.productId);
+    },
 
-		products.forEach((elem, index)=> {
-			if(elem.id ==req.params.productId){
-				products.splice(index, 1)
-			}
-		});
-		productModel.escribirJson(products, jsonModel);
-		return res.redirect("/")
-	}
+    // Delete - Delete one product from DB
+    destroy: (req, res) => { //elimina
+        let products = productModel.leerJson(jsonModel)
+
+        products.forEach((elem, index) => {
+            if (elem.id == req.params.productId) {
+                products.splice(index, 1)
+            }
+        });
+        productModel.escribirJson(products, jsonModel);
+        return res.redirect("/")
+    }
 
 
 

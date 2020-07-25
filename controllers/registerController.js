@@ -18,7 +18,8 @@ module.exports = {
       
       User.guardarUno({
         ...req.body,
-        image: req.file.filename
+        image: req.file.filename,
+        rol: 0
       })
 
       return res.redirect('./register/login');
