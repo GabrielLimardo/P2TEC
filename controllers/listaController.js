@@ -144,10 +144,7 @@ const listaController = {
             return res.render('not-found', {user});
         }
     },
-
-    // Create -  Method to store
-    store: (req, res) => { //esta es para crear un producto nuevo
-        //modelo le pregunto por 
+    store: (req, res) => { 
         db.Product.create({
             name: req.body.name,
             price: req.body.price,
@@ -159,52 +156,38 @@ const listaController = {
                 return res.redirect('/');
             })
     },
-
-    // Update - Form to edit
-    edit: (req, res) => { //te lleva a la edicion
+    edit: (req, res) => { 
         const user = req.session.user;
-        //modelo le pregunto por un id, parametro del id
-        const product = productModel.findById(req.params.productId);
-        //una vez que se hizo el json modelo encontrando el producto 
-        return res.render('product-edit-form', { product, user });
-        // db.Category.findAll()
-        // .then((categories, ) => {
-        //     const user = req.session.user;
-        //     return res.render('product-edit-form', {user, categories});
-        // })  
-        // .catch(e => console.log(e));
+     
+        db.Product.findByPk(req.params.id)
+        .then(function(product){
+            res.render("product-edit-form", {product:product, user });
+        })
     },
-    // Update - Method to update
     update: (req, res) => { //lo actualiza
-        //vamos a sobre product model aplicar el edit de model y que tenga como parametros 
-        productModel.edit(req.body, req.params.productId)
-
-        return res.redirect('/lista/detail/' + req.params.productId);
+        
+        db.Product.update({
+            nombre: req.body.nombre,
+            price: req.body.price,
+            descripcion: req.body.descripcion,
+            category: req.body.categoryId,
+            image: req.body.image
+        }, 
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/lista/detail/" + req.params.id)
     },
-
-    // Delete - Delete one product from DB
-    destroy: (req, res) => { //elimina
-        // let products = productModel.leerJson(jsonModel)
-
-        // products.forEach((elem, index) => {
-        //     if (elem.id == req.params.productId) {
-        //         products.splice(index, 1)
-        //     }
-        // });
-        // productModel.escribirJson(products, jsonModel);
-        // return res.redirect("/")
-
+    destroy: (req, res) => { 
         db.Product.destroy({
             where: {
                 id: req.params.id
             }
         })
         res.redirect("/lista");
-       
     }
-
-
-
 };
 
 module.exports = listaController;

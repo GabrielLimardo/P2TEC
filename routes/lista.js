@@ -40,8 +40,8 @@ router.get('/create/', listaController.create); /* GET - Form to create */
 router.post('/create/', upload.single('image'), validator.register, listaController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
-router.get('/edit/:productId', listaController.edit); /* GET - Form to create */
-router.post('/edit/:productId', listaController.update); /* PUT - Update in DB */
+router.get('/edit/:id', listaController.edit); /* GET - Form to create */
+router.post('/edit/:id', listaController.update); /* PUT - Update in DB */
 
 /*** DELETE ONE PRODUCT***/ 
 router.post('/delete/:id', listaController.destroy);
