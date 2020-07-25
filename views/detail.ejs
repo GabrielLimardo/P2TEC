@@ -7,49 +7,52 @@ function round(val) {
 }
 %>
 <link rel="stylesheet" href="/css/detail.css">
+
 <body class="bodyProducto">
     <%- include('./partial/header', {user}) %>
-    <div class="encierro"> 
-    <div class="especificado">
-        <div class="division row no-wrap">
-            <div class="cerraruno">
-                <a href="/lista">
-                    <i class="fas fa-times-circle fa-2x"></i>
-                </a>
-            </div>
-            <div class="imageContainer">
-                <div class="vertical-center">
-                    <img src="/img/<%= product.image %>" alt="imagen" class="fotoProductoDetalle">
-                </div>
-            </div>
-            <div class="descrip">
-                <h2 class="nombreProducto fontsize-xlarge"> <%=product.name %> </h2>
-                <ul>
-                    <li class="detalleProducto fontsize-medium"> <%=product.descripcion %> </li>
-                </ul>
-                <div class="precioProducto">ARS <%- round(product.price) %></div>
-                <div class="metododepago">
-                    <div class="restodemetodos">
-                        <i class="fab fa-cc-visa fa-2x "></i>
-                        <i class="fab fa-cc-mastercard fa-2x "></i>
-                        <i class="fab fa-cc-amex fa-2x "></i>
-                    </div>
-                </div>
-                <div class="voton">
-                    <h4>AÑADIR AL CARRITO</h4>
-                </div>
-                <div class="editar-eliminar">
-                    <a href="/lista/edit/<%= product.id %>" class="action-button edit">EDIT</a>
-                    <a><form action="/lista/delete/<%= product.id %>" method="POST" style="display: inline-flex">
-							<button   class= "deleteee" type="submit" class="action-button delete">DELETE</button>
-                        </form>
+    <div class="encierro">
+        <div class="especificado">
+            <div class="division row no-wrap">
+                <div class="cerraruno">
+                    <a href="/lista">
+                        <i class="fas fa-times-circle fa-2x"></i>
                     </a>
                 </div>
-                
+                <div class="imageContainer">
+                    <div class="vertical-center">
+                        <img src="/img/<%= product.image %>" alt="imagen" class="fotoProductoDetalle">
+                    </div>
+                </div>
+                <div class="descrip">
+                    <h2 class="nombreProducto fontsize-xlarge"> <%=product.name %> </h2>
+                    <ul>
+                        <li class="detalleProducto fontsize-medium"> <%=product.descripcion %> </li>
+                    </ul>
+                    <div class="precioProducto">ARS <%- round(product.price) %></div>
+                    <div class="metododepago">
+                        <div class="restodemetodos">
+                            <i class="fab fa-cc-visa fa-2x "></i>
+                            <i class="fab fa-cc-mastercard fa-2x "></i>
+                            <i class="fab fa-cc-amex fa-2x "></i>
+                        </div>
+                    </div>
+                    <div class="voton">
+                        <h4>AÑADIR AL CARRITO</h4>
+                    </div>
+                    <% if (typeof user !== 'undefined' && user.rol === 1) {%>
+                    <div class="editar-eliminar">
+                        <a href="/lista/edit/<%= product.id %>" class="action-button edit">EDIT</a>
+                        <a>
+                            <form action="/lista/delete/<%= product.id %>" method="POST" style="display: inline-flex">
+                                <button class="deleteee" type="submit" class="action-button delete">DELETE</button>
+                            </form>
+                        </a>
+                    </div>
+                    <% } %>
+                </div>
             </div>
         </div>
-    </div>
-        
+
     </div>
     <%- include('partial/footer') %>
 </body>
