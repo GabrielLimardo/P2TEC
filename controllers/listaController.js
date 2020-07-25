@@ -149,10 +149,10 @@ const listaController = {
     store: (req, res) => { //esta es para crear un producto nuevo
         //modelo le pregunto por 
         db.Product.create({
-            nombre: req.body.nombre,
+            name: req.body.name,
             price: req.body.price,
             descripcion: req.body.descripcion,
-            category: req.body.categoryId,
+            categoryId: req.body.categoryId,
             image: req.body.image
         })
             .then(() => {
