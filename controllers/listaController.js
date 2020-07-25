@@ -158,16 +158,27 @@ const listaController = {
     },
     edit: (req, res) => { 
         const user = req.session.user;
+        if (typeof user !== 'undefined' && user.rol === 1) {
+            // Do the magic
+            db.Category.findAll()
+                .then((categories) => {
+                    return res.render('product-edit-form', { user, categories });
+                })
+                .catch(e => console.log(e));
+            // db.Product.findByPk(req.params.id)
+            // .then(function(product){
+            //     res.render("product-edit-form", {product:product, user });
+            // })
+        } else {
+            return res.render('not-found', {user});
+        }
      
-        db.Product.findByPk(req.params.id)
-        .then(function(product){
-            res.render("product-edit-form", {product:product, user });
-        })
+       
     },
     update: (req, res) => { //lo actualiza
         
         db.Product.update({
-            nombre: req.body.nombre,
+            name: req.body.name,
             price: req.body.price,
             descripcion: req.body.descripcion,
             category: req.body.categoryId,

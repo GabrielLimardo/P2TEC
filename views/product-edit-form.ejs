@@ -25,38 +25,17 @@
 						<input class="emailInput" type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input" value="<%= product.price %>">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="category" class="form-label">Categoría:</label>
-						<select name="category" id="category" class="form-input">
-							<option value="" disabled>Elegí</option>
-							<% if (product.category == 'Notebooks') { %>
-								<option value="Notebooks" selected>Notebooks</option>
-								<option value="Monitores">Monitores</option>
-								<option value="Memorias RAM">Memorias RAM</option>
-								<option value="Microprocesadores">Microprocesadores</option>
-					
-							<option value="Proyectores">Proyectores</option>
-							<option value="Conectividad">Conectividad</option>
-							<option value="Soportes">Soportes</option>
-							<option value="Tabletas">Tabletas</option>
-							<option value="Teclados">Teclados</option>
-	
-							<% } else { %>
-								<option value="Notebooks">Notebooks</option>
-								<option value="Monitores" selected>Monitores</option>
-								<option value="Memorias RAM">Memorias RAM</option>
-								<option value="Microprocesadores">Microprocesadores</option>
-			
-							<option value="Proyectores">Proyectores</option>
-							<option value="Conectividad">Conectividad</option>
-							<option value="Soportes">Soportes</option>
-							<option value="Tabletas">Tabletas</option>
-							<option value="Teclados">Teclados</option>
-							<% } %>
+						<label for="categoryId" class="form-label">Categoría:</label>
+						<select name="categoryId" id="categoryId" class="form-input">
+							<option value="">Elegí</option>
+							<% categories.forEach(function(category) {  %>  
+							<option value="<%=category.id%>"> <%=category.name%> </option>
+							<%})%>   
 						</select>
 					</div>
 					<div class="col-12">
-						<label for="description" class="form-label">Descipción:</label>
-						<textarea name="description" id="description" class="form-input"><%= product.descripcion %></textarea>
+						<label for="descripcion" class="form-label">Descipción:</label>
+						<textarea name="descripcion" id="descripcion" class="form-input"><%= product.descripcion %></textarea>
 					</div>
 					<div class="col-12">
 						<button type="submit" class="buy-now-button">Guardar producto</button>
