@@ -1,15 +1,50 @@
 .centradoLista {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 20%; 
     }
 
+.notFoundBox {
+    margin: 0 auto;
+    max-width: 325px;
+}
 
-@media (min-width: 500px) {
+.not-found {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.sub-not-found {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
     .centradoLista {
         justify-content: center;
         margin-top: 0px; 
     }
+    .encierro {
+        padding-top: 280px;
+    }
+         
     
+}
+
+@media (max-width: 545px) {
+    .encierro {
+        padding-top: 290px;
+    }
+         
+    
+}
+
+@media (max-width: 325px) {
+    .encierro {
+        padding-top: 305px;
+    }
          
     
 }
