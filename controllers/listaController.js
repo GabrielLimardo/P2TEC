@@ -152,7 +152,8 @@ const listaController = {
             nombre: req.body.nombre,
             price: req.body.price,
             descripcion: req.body.descripcion,
-            category: req.body.categoryId
+            category: req.body.categoryId,
+            image: req.body.image
         })
             .then(() => {
                 return res.redirect('/');

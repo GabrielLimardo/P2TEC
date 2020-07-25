@@ -19,15 +19,15 @@
 				<div class="rowproduct-detail">
 					<div class="col-12 col-md-6">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input  class="emailInput" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+						<input  class="name" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
 						<label for="price" class="form-label">Precio del producto:</label>
 						<input  class="emailInput" type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
 					</div>
 					<div class="col-12 col-md-6">
-						<label for="category" class="form-label">Categoría:></label>
-						<select name="category" id="category" class="form-input">
+						<label for="categoryId" class="form-label">Categoría:></label>
+						<select name="categoryId" id="categoryId" class="price">
 							<option value="">Elegí</option>
 							<% categories.forEach(function(category) {  %>  
 							<option value="<%=category.id%>"> <%=category.name%> </option>
@@ -36,8 +36,8 @@
 						</select>
 					</div>
 					<div class="col2">
-						<label for="description" class="form-label">Descipción: </label>
-						<textarea name="description" id="description" class="form-input"></textarea>
+						<label for="descripcion" class="form-label">Descipción: </label>
+						<textarea name="descripcion" id="descripcion" class="form-input"></textarea>
 					</div>
 					<div class="cargadeimagenproducto">
 						<label for="image" class="form-label">imagen:</label>
