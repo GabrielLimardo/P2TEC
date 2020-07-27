@@ -12,7 +12,7 @@ function round(val) {
 
 <body>
     <!-- Header -->
-    <%- include('./partial/header')%> 
+    <%- include('./partial/header', {user})%> 
     <!-- /Header -->
     <div class="perfilData">
         <div class="userData">
@@ -20,6 +20,10 @@ function round(val) {
                 <h3>Datos de la cuenta</h3>    
                 <hr>            
                 <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
+            </div>
+            <div class="userPData">
+                <h4> Foto de Perfil </h4>
+                <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePic">
             </div>
 
             <% if(typeof user == 'undefined') { %>
@@ -38,8 +42,16 @@ function round(val) {
                 <h4> Password</h4>
                 <h4>**********</h4>
             </div>
+            <div class="userPData">
+                <h4> Email </h4>
+                <h4><%= user.email %> </h4>
+            </div>
+            <div class="userPData">
+                <h4> Rol </h4>
+                <h4><%= user.rol %> </h4>
+            </div>
         </div>
-        <div class="userData">
+        <!-- <div class="userData">
             <div class="userAccount">
                 <h3>Datos de la cuenta</h3>
                 <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
@@ -60,8 +72,8 @@ function round(val) {
                 <h4>Telefono</h4>
                 <h4>1135004591</h4>
             </div>
-        </div>
-        <div class="userData">
+        </div> -->
+        <!-- <div class="userData">
             <div class="userAccount">
                 <h3>Datos de envio</h3>
                 <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
@@ -113,6 +125,6 @@ function round(val) {
                 <h4>Riobamba 820</h4>
             </div>
         </div>
-    </div>
+    </div> -->
     <%- include('partial/footer') %>
 </body>

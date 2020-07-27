@@ -40,6 +40,7 @@
                 <a class="navLink" href="/register/login">Iniciar Sesion</a>
                 <a class="navLink" href="/register">Registrate</a>
                 <% } else { %>
+                    <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePicHead">
                 <a class="navLink" href="/perfil"><%= user.username  %> </a>
                 <a class="logout" onclick="logout()">Cerrar Sesión</a>
                 <% } %>

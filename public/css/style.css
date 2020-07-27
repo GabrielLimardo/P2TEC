@@ -877,6 +877,12 @@ hr{
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.profilePic{
+    width: 15%;
+    border-radius: 50%;
+    height: 130px;
+    border: 5px solid rgba(55, 142, 167, 1);
+}
 @media(min-width: 890px){
     .editar-eliminar{
         display: flex;
