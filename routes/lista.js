@@ -37,7 +37,7 @@ var storage = multer.diskStorage({
 router.get("/", listaController.root);
 router.get('/detail/:productId/', listaController.detail);
 router.get('/create', listaController.create); /* GET - Form to create */
-router.post('/create', upload.any('image'), validator.register, listaController.store); /* POST - Store in DB */
+router.post('/create', upload.single('image'), validator.register, listaController.store); /* POST - Store in DB */
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', listaController.edit); /* GET - Form to create */

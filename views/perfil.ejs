@@ -22,10 +22,18 @@ function round(val) {
                 <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
             </div>
 
+            <% if(typeof user == 'undefined') { %>
             <div class="userPData">
                 <h4> Usuario </h4>
-                <h4> shadow </h4>
+                <h4> NO LOGIN </h4>
             </div>
+            <% } else { %>
+            <div class="userPData">
+                    <h4> Usuario </h4>
+                    <h4> <%= user.username  %> </h4>
+                </div>
+            <% } %>
+            
             <div class="userPData">
                 <h4> Password</h4>
                 <h4>**********</h4>

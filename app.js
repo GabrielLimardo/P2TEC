@@ -7,6 +7,7 @@ const listaRoutes = require("./routes/lista.js");
 const carritoRoutes = require("./routes/carrito.js");
 const registerRoutes = require("./routes/register");
 const pruebaRoutes = require("./routes/prueba");
+const perfilRoutes = require("./routes/perfil");
 const session = require("express-session");
 
 
@@ -32,3 +33,4 @@ app.use("/lista", listaRoutes);
 app.use("/carrito", carritoRoutes);
 app.use('/register', registerRoutes);
 app.use("/prueba", pruebaRoutes);
+app.use("/perfil", perfilRoutes);
