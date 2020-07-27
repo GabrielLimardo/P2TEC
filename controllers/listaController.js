@@ -144,7 +144,7 @@ const listaController = {
             return res.render('not-found', { user });
         }
     },
-    store: (req, res) => {
+    store: (req, res, next) => {
         db.Product.create({
             name: req.body.name,
             price: req.body.price,

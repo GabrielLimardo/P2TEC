@@ -21,10 +21,17 @@
   "rol": 1
  },
  {
-    "username": "shadow",
-    "email": "tutivasquez@hotmail.com",
-    "password": "$2y$10$z5Bvxf5Ahv66Qa8lwclBZe.pxhiVlh8o2RZptOmbZlTk.JruEYHjq",
-    "image": "image-1594501329500.jpg",
-    "rol": 1
-   }
+  "username": "shadow",
+  "email": "tutivasquez@hotmail.com",
+  "password": "$2y$10$z5Bvxf5Ahv66Qa8lwclBZe.pxhiVlh8o2RZptOmbZlTk.JruEYHjq",
+  "image": "image-1594501329500.jpg",
+  "rol": 1
+ },
+ {
+  "username": "nuevo",
+  "email": "nuevo@gmaIl.com",
+  "password": "$2a$10$l.9kHtIceS8INSoz5jnBte1DhK42cwj5OkoP7fEFvSfTX1XxkNjCy",
+  "image": "image-1595859395899.jpg",
+  "rol": 0
+ }
 ]
