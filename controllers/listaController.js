@@ -162,18 +162,16 @@ const listaController = {
             // Do the magic
             db.Category.findAll()
                 .then((categories) => {
-                    return res.render('product-edit-form', { user, categories });
+                    return db.Product.findByPk(req.params.id)
+                    .then(function (product) {
+                        return res.render("product-edit-form", { product: product, user, categories });
+                    }).catch(e => console.log(e));
                 })
-                .catch(e => console.log(e));
-            db.Product.findByPk(req.params.id)
-                .then(function (product) {
-                    res.render("product-edit-form", { product: product, user });
-                })
+                
+
         } else {
             return res.render('not-found', { user });
         }
-
-
     },
     update: (req, res) => { //lo actualiza
 
