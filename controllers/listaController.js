@@ -144,13 +144,15 @@ const listaController = {
             return res.render('not-found', { user });
         }
     },
+
     store: (req, res, next) => {
         db.Product.create({
             name: req.body.name,
             price: req.body.price,
             descripcion: req.body.descripcion,
             categoryId: req.body.categoryId,
-            image: req.body.image
+            image: req.file.filename
+            
         })
             .then(() => {
                 return res.redirect('/');
