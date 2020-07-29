@@ -166,3 +166,12 @@ html {
     }
   }
   
+
+  @media (min-width: 900px){
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+}
