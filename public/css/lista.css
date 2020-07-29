@@ -19,6 +19,15 @@
     text-align: center;
 }
 
+div.cybersale {
+    justify-content: center;
+    align-items: center;
+}
+
+a.imgB {
+    justify-content: center;
+}
+
 @media (max-width: 900px) {
     .centradoLista {
         justify-content: center;

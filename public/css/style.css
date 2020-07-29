@@ -371,8 +371,7 @@ footer {
 /* formulario */
 
 body {
-    background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Cubes-Grey-Seamless-Pattern-For-Website-Background.jpg");
-    background-repeat: repeat;
+    background: linear-gradient(#141e30, #243b55);
 }
 
 main {
@@ -782,7 +781,7 @@ img {
 }
 
 .imgB{
-    width: 100%;
+    width: 50%;
     border-radius: 20px;
     border: #000;
     border-width:30px;
