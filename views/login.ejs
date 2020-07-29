@@ -10,13 +10,14 @@
         <div class="loginContainer row no-wrap">
             <main class="login-publi row no-wrap">
                 <div class="loginCompleto">
-                    <div class="loginTitulo">Acceder</div>
+                   
                     
                     <div class="form-container">
+                        <div class="loginTitulo">LOGIN</div>
                         <form class="loginForm" action="/register/login" method="POST">
+                           
                             <div class="field-group">
-                                <div class="email">
-                                    <label for="email">Nombre de usuario o correo electrónico</label>
+                                <div class="email"> 
                                     <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
                                         value="" required>
                                     <p class="error">
@@ -24,25 +25,25 @@
                                     </p>
                                 </div>
                                 <div class="password">
-                                    <label for="password">Contraseña</label>
                                     <input class="passwordInput" type="password" id="passsword" name="password"
                                         placeholder="Contraseña" value="" required>
                                     <p class="error">
                                         <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
                                     </p>
                                 </div>
-                                <div class="check row no-wrap">
-                                    <label class="rememberMe" for="remember-me">Recordarme</label>
+                                <div class="remember">
+                                    <label class="rememberMe" for="remember-me">REMEMBER</label>
                                     <input class="rememberMeCheckbox" type="checkbox" id="remember-me"
                                         name="remember-me" value="">
                                 </div>
                                 <button class="iniciarSesion" type="submit">Iniciar Sesión</button>
                             </div>
                         </form>
+                        <div class="logoFormulario">
+                            <img src="/img/numero.png" alt="logopP2Tec">
+                        </div>
                     </div>
-                    <div class="logoFormulario">
-                        <img src="/img/numero.png" alt="logopP2Tec">
-                    </div>
+                    
                 </div>
 
             </main>

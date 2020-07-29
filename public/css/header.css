@@ -39,7 +39,7 @@ ul#sub-menu li {
     margin-left: 30px;
 }
 
-input {
+input.buscadore {
     width: 90%;
     margin: 0 5%;
 }
@@ -79,7 +79,7 @@ a {
         justify-content: center;
     }
 
-    input {
+    input.buscadore {
         width: 75%;
         height: 30px;
         margin-top: 60px;
