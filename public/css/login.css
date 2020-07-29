@@ -77,17 +77,17 @@ input:-internal-autofill-selected {
 } 
 .form-container i {
     align-items: center;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.7);
     border-radius: 60px;
 } 
 .form-container i {
     align-items: center;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.7);
     border-radius: 60px;
 } 
 .form-container2 i{
     align-items: center;
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0,0,0,.7);
     border-radius: 60px;
     text-align: center;
 }
