@@ -33,12 +33,16 @@ footer{
     width: 100%;
 }
 
-.loginForm input {
-    background: transparent;
+.loginForm input,
+input:-internal-autofill-selected {
+    background-color: transparent !important;
     box-shadow: none;
     border: none;
     border-bottom: 1px solid #ccc;
+    -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+    color: #fff !important;
 }
+
 
 .email {
     display: flex;
@@ -208,3 +212,5 @@ input.passwordInput {
 .loginForm {
     background-color: #000;
 }
+
+
