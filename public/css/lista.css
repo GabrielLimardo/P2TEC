@@ -20,12 +20,7 @@
 }
 
 div.cybersale {
-    justify-content: center;
-    align-items: center;
-}
-
-a.imgB {
-    justify-content: center;
+    text-align: center;
 }
 
 @media (max-width: 900px) {
