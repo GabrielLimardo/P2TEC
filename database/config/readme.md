@@ -1,5 +1,6 @@
-//Use to set configs. Delete this line and save file as `config.js`. Set your local data conections.
+Use to set configs. Delete this line and save file as `config.js`. Set your local data conections.
 
+```
 module.exports={
   "development": {
     "username": "root",
@@ -26,3 +27,4 @@ module.exports={
     "dialect": "mysql"
   }
 }
+```
