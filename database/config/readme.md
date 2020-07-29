@@ -1,11 +1,10 @@
-Use to set configs. Delete this line and save file as `config.js`. Set your local data conections.
+//Use to set configs. Delete this line and save file as `config.js`. Set your local data conections.
 
-```
 module.exports={
   "development": {
     "username": "root",
-    "password": "yourPassword,
-    "database": "dataBaseName",
+    "password": null,
+    "database": "p2tec",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "define":{ //no hace busqueda de create y data_id
@@ -27,4 +26,3 @@ module.exports={
     "dialect": "mysql"
   }
 }
-```
