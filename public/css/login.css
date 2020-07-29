@@ -29,9 +29,15 @@ footer{
     MARGIN-TOP: 10px;
 }
 
-
 .field-group {
     width: 100%;
+}
+
+.loginForm input {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
 }
 
 .email {
@@ -108,9 +114,10 @@ footer{
     width: 120px;
 }
 .rememberMe {
-    margin-top: 9px;
+    margin-top: 15px;
     font-size: 20px;
     color: white;
+    display: inline-block;
 }
 
 .rememberMeCheckbox {
