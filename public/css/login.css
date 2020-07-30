@@ -34,12 +34,15 @@ footer{
 }
 
 .loginForm input,
-input:-internal-autofill-selected {
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
     background-color: transparent !important;
     box-shadow: none;
     border: none;
     border-bottom: 1px solid #ccc;
-    -webkit-box-shadow: 0 0 0 30px #000 inset !important;
     color: #fff !important;
 }
 
@@ -66,7 +69,7 @@ input:-internal-autofill-selected {
 
 .form-container {
     text-align: left;
-    background: rgba(0,0,0,.7);
+    background: rgba(0,0,0,0.7);
     min-width: 400px;
     max-width: 600px;
     height: 400px;
@@ -77,17 +80,14 @@ input:-internal-autofill-selected {
 } 
 .form-container i {
     align-items: center;
-    background-color: rgba(0,0,0,.7);
     border-radius: 60px;
 } 
 .form-container i {
     align-items: center;
-    background-color: rgba(0,0,0,.7);
     border-radius: 60px;
 } 
 .form-container2 i{
     align-items: center;
-    background-color: rgba(0,0,0,.7);
     border-radius: 60px;
     text-align: center;
 }
@@ -207,10 +207,6 @@ input#email{
 input.passwordInput {
     height: 40px;
     
-}
-
-.loginForm {
-    background-color: #000;
 }
 
 

@@ -840,14 +840,13 @@ hr{
 }
 .userData{
     background-color: white;
-    width: 60%;
+    width: 30%;
     margin: 0 auto;
     padding-left: 20px;
     margin-bottom: 40px;
 
 }
 .userData h3{
-    background-color: white;
     text-align: center;
     padding-top: 10px;
 }
@@ -858,9 +857,6 @@ hr{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.userPData h4{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
 .userAccount i{
     color: blue;
@@ -878,12 +874,7 @@ hr{
     margin-top: 20px;
     margin-bottom: 10px;
 }
-.profilePic{
-    width: 15%;
-    border-radius: 50%;
-    height: 130px;
-    border: 5px solid rgba(55, 142, 167, 1);
-}
+
 @media(min-width: 890px){
     .editar-eliminar{
         display: flex;

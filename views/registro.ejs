@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partial/head', {title: 'Formulario'}) %>
@@ -6,54 +9,46 @@
 <body>
     <!-- Header -->
     <%- include('./partial/header') %>
-    <!-- /Header -->
     <div class="encierro">
-        <div class="row no-wrap">
-            <main class="registerContainer row no-wrap">
-                <div class="registerCompleto">
-                    <div class="registerTitulo">Registrarse</div>
+        <div class="loginContainer row no-wrap">
+            <main class="login-publi row no-wrap">
+                <div class="loginCompleto">
+                   
                     
-                    <section class="form-container2">
-        
-                        <form class="registerForm" action="/register" method="POST" enctype="multipart/form-data">
-                            <div class="field-group"><br>
+                    <div class="form-container">
+                        <div class="loginTitulo">REGISTER</div>
+                        <form class="loginForm" action="/register/login" method="POST" autocomplete="off">
+                           
+                            <div class="field-group">
                                 <div class="username">
-                                    <label for="username">Nombre de usuario *</label>
                                     <input class="usernameInput" type="username" id="username" name="username"
                                         placeholder="Nombre de usuario" value=""
                                         required><%= typeof errors == 'undefined' ? null : errors.username ? errors.username.msg : null %>
                                     </p>
                                 </div>
-                                <div class="email">
-                                    <label for="email">Email *</label>
-                                    <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
+                                <div class="email"> 
+                                    <input class="emailInput" type="email" id="email" name="email" placeholder="Email" autocomplete="off"
                                         value="" required>
                                     <p class="error">
-                                        <% if (typeof errors != 'undefined' ) { %>
-                                        <% if (errors.email) { %>
-                                        <%= errors.email.msg %>
-                                        <% } %>
-                                        <% } %>
+                                        <%= typeof errors == 'undefined' ? null : errors.email ? errors.email.msg : null %>
                                     </p>
                                 </div>
                                 <div class="password">
-                                    <label for="password">Contraseña *</label>
-                                    <input class="passwordInput" type="password" id="passsword" name="password"
-                                        placeholder="Contraseña" value="">
-                                    <p class="error" required>
+                                    <input class="passwordInput" type="password" id="passsword" name="password" autocomplete="off"
+                                        placeholder="Contraseña" value="" required>
+                                    <p class="error">
                                         <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
                                     </p>
-                                    </p>
                                 </div>
                                 <div class="password">
-                                    <label for="retype">Repetir Contraseña *</label>
                                     <input class="passwordInput" type="password" id="retype" name="retype"
                                         placeholder="Repetir contraseña" value="">
                                     <p class="error" required>
                                         <%= typeof errors == 'undefined' ? null : errors.retype ? errors.retype.msg : null %>
                                     </p>
-                                </div>
-                                <div class="avatarCarga row">
+                                    
+                                     </div>
+                                   <div class="remember">
                                     <label for="image" class="form-label">Avatar:</label>
                                     <input type="file" id="image" name="image" class="avatarBotton">
                                     <div>
@@ -63,13 +58,19 @@
                                     </div>
                                 </div>
                                 <button class="registerButton" type="submit">Registrarse</button>
+                            </div>
                         </form>
-                    </section>
+                        <div class="logoFormulario">
+                            <img src="/img/numero.png" alt="logopP2Tec">
+                        </div>
+                    </div>
+                    
                 </div>
-            
+
             </main>
         </div>
     </div>
+
 
 
     <%- include('partial/footer') %>

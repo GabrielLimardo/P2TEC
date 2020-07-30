@@ -7,7 +7,7 @@ function round(val) {
 
 <html lang="en">
 <%- include('./partial/head', {title: 'Inicio'}) %>
-
+<link rel="stylesheet" href="/css/perfil.css">
 
 
 <body>
@@ -16,41 +16,50 @@ function round(val) {
     <!-- /Header -->
     <div class="perfilData">
         <div class="userData">
+               
+         <div class="infocuenta">
             <div class="userAccount">
                 <h3>Datos de la cuenta</h3>    
                 <hr>            
-                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
             </div>
-            <div class="userPData">
-                <h4> Foto de Perfil </h4>
-                <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePic">
-            </div>
-
+            <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePic">
             <% if(typeof user == 'undefined') { %>
             <div class="userPData">
-                <h4> Usuario </h4>
+                <h4> Usuario: </h4>
                 <h4> NO LOGIN </h4>
             </div>
             <% } else { %>
             <div class="userPData">
-                    <h4> Usuario </h4>
+                    <h4> Usuario: </h4>
                     <h4> <%= user.username  %> </h4>
                 </div>
             <% } %>
             
             <div class="userPData">
-                <h4> Password</h4>
-                <h4>**********</h4>
+                <h4> Password: </h4>
+                <h4> **********</h4>
             </div>
             <div class="userPData">
-                <h4> Email </h4>
-                <h4><%= user.email %> </h4>
+                <h4> Email: </h4>
+                <h4> <%= user.email %> </h4>
             </div>
+            <% if( user.rol === 1 ) { %>
             <div class="userPData">
-                <h4> Rol </h4>
-                <h4><%= user.rol %> </h4>
+                <h4> ROL: </h4>
+                <h4> ADMIN </h4>
             </div>
+            <% } else { %>
+            <div class="userPData">
+                <h4> ROL: </h4>
+                <h4> USER </h4>
+            </div>
+            <% } %>
+            
+          
         </div>
+       
+    </div>
+   
         <!-- <div class="userData">
             <div class="userAccount">
                 <h3>Datos de la cuenta</h3>
@@ -128,3 +137,5 @@ function round(val) {
     </div> -->
     <%- include('partial/footer') %>
 </body>
+
+

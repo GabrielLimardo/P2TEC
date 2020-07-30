@@ -1,65 +1,71 @@
+
 <!DOCTYPE html>
-<html lang="es">
-<!-- Include Head -->
-<%- include('./partial/head', {title: 'create'}) %>
+<html lang="en">
+<%- include('./partial/head', {title: 'Formulario'}) %>
+<link rel="stylesheet" href="/css/register.css">
+
 <body>
-	<!-- Header -->
-	<%- include('./partial/header', {user}) %>
-	<!-- /Header -->
+    <!-- Header -->
+    <%- include('./partial/header') %>
+    <div class="encierro">
+        <div class="loginContainer row no-wrap">
+            <main class="login-publi row no-wrap">
+                <div class="loginCompleto">
+                   
+                    
+                    <div class="form-container">
+                        <div class="loginTitulo">AGREGAR PRODUCTO</div>
+                        <form class="loginForm" action="/register/login" method="POST" autocomplete="off">
+                           
+                            <div class="field-group">
+                                <div class="username">
+									<label for="name" class="form-label">Nombre del producto:</label>
+									<input  class="name" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+                                    </p>
+                                </div>
+                                <div class="email"> 
+                                    <label for="price" class="form-label">Precio del producto:</label>
+									<input  class="emailInput" type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
+                                </div>
+                                <div class="password">
+									<label for="categoryId" class="form-label">Categoría:></label>
+									<select name="categoryId" id="categoryId" class="form-input">
+										<option value="">Elegí</option>
+										<% categories.forEach(function(category) {  %>  
+										<option value="<%=category.id%>"> <%=category.name%> </option>
+										<%})%>  
+									</select>
+                                </div>
+                                   <div class="remember">
+                                    <label for="image" class="form-label">Avatar:</label>
+                                    <input type="file" id="image" name="image" class="avatarBotton">
+                                    <div>
+                                        <p class="error">
+                                            <%= typeof errors == 'undefined' ? null : errors.image ? errors.image.msg : null %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col2">
+									<button type="submit" class="buy-now-button">Guardar producto</button>
+								</div>
+                            </div>
+                        </form>
+                        <div class="logoFormulario">
+                            <img src="/img/numero.png" alt="logopP2Tec">
+                        </div>
+                    </div>
+                    
+                </div>
 
-	<link rel="stylesheet" href="/css/create.css">
-	<div class="contenedorprincpaldecreate">
-		<div class="row">
-			<div class="col12">
-				<h2 class="products-title">Formulario de creación de productos</h2>
-			</div>
-		</div>
-		<div class="col-12">
-			<form action="/lista/create/" method="POST" enctype="multipart/form-data">
-				<div class="rowproduct-detail">
-					<div class="col-12 col-md-6">
-						<label for="name" class="form-label">Nombre del producto:</label>
-						<input  class="name" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
-					</div>
-					<div class="col-12 col-md-6">
-						<label for="price" class="form-label">Precio del producto:</label>
-						<input  class="emailInput" type="text" id="price" name="price" placeholder="Ej: 5678" class="form-input">
-					</div>
-					<div class="col-12 col-md-6">
-						<label for="categoryId" class="form-label">Categoría:></label>
-						<select name="categoryId" id="categoryId" class="form-input">
-							<option value="">Elegí</option>
-							<% categories.forEach(function(category) {  %>  
-							<option value="<%=category.id%>"> <%=category.name%> </option>
-							<%})%>  
-						
-						</select>
-					</div>
-					<div class="col2">
-						<label for="descripcion" class="form-label">Descipción: </label>
-						<textarea name="descripcion" id="descripcion" class="form-input"></textarea>
-					</div>
-					<div class="cargadeimagenproducto">
-						<label for="image" class="form-label">imagen:</label>
-						<input type="file" id="image" name="image" class="image">
-						<div>
-							<p class="error">
-								<%= typeof errors == 'undefined' ? null : errors.image ? errors.image.msg : null %>
-							</p>
-						</div>
-					<div>
-					<div class="col2">
-						<button type="submit" class="buy-now-button">Guardar producto</button>
-					</div>
-				</div>
-			</form>
-		</div>
+            </main>
+        </div>
+    </div>
 
-	</div>
-	<!-- /todos los productos -->
 
-	<!-- footer -->
-	<%- include('partial/footer') %>
-	<!-- /footer -->
-</body>	
+
+    <%- include('partial/footer') %>
+
+
+</body>
+
 </html>
