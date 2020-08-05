@@ -31,6 +31,7 @@ const controller = {
 			},
 		  }).then(function(products){
 			const user = req.session.user;
+			console.log(JSON.stringify(user))
 			return res.render('results', {products, busqueda, user})
         })
         .catch(e => console.log(e))

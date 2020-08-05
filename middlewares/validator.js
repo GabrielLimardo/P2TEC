@@ -1,6 +1,7 @@
 const { body } = require('express-validator');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const db = require("../database/models");
 
 // Middlewares propios
 
@@ -15,19 +16,11 @@ module.exports = {
       .withMessage("El campo username obligatorio")
       .bail()
       .custom((value, { req }) => {
-        const user = User.findBySomething((user) => user.username == value);
-
-        //ACTIVAR SQL // .custom((value) => {
-          // const respuesta = user.findone({
-          //   where: { 
-          //     username:value
-          //   }
-          // })
-          // .then((user) => { if (user){ return promise.reject() }; // lo que devuelve el return es un objeto de node
-          // })
-        // } //promesa tipo de dato que tiene metodos para resolverlo
-
-        return !user;
+        return db.User.findOne({ where: { username: value } }).then(
+          user => {
+            return user ? Promise.reject("Nombre de usuario ya utilizado") : Promise.resolve();
+          }
+        )
       })
       .withMessage("Usuario registrado"),
     // Email
@@ -39,20 +32,25 @@ module.exports = {
       .withMessage("Debes ingresar un email válido")
       .bail()
       .custom((value) => {
-        const user = User.findBySomething((user) => user.email === value);
-
-        return !user;
+        return db.User.findOne({ where: { email: value } }).then(
+          user => {
+            return user ? Promise.reject("Email ya utilizado") : Promise.resolve();
+          }
+        )
       })
-      .withMessage("Email registrado"),
+      .withMessage("Email ya utilizado"),
     // Image
     body("image")
       .custom((value, { req }) => {
-       return req.file
+        // TODO: Quedo roto, creo que no esta funcionando el hook de multer
+        return true;
+        //return req.file
       })
       .withMessage("Imagen obligatoria")
       .bail()
       .custom((value, { req }) => {
         if (req.file) {
+          return true;
           const acceptedExtensions = [".jpg", ".jpeg", ".png"];
 
           const ext = path.extname(req.file.originalname);
@@ -64,7 +62,7 @@ module.exports = {
           }
         } else {
           return true;
-        }        
+        }
       })
       .withMessage("Extension invalida"),
     // Password
@@ -88,17 +86,20 @@ module.exports = {
       .withMessage("El campo  email es obligatorio")
       .bail()
       .custom((value, { req }) => {
-        const user = User.findBySomething((user) => user.email == value);
-
-        if (user) {
-          return bcrypt.compareSync(req.body.password, user.password);
-        } else {
-          return false;
-        }
+        return db.User.findOne({ where: { email: value } }).then(
+          user => {
+            if (user) {
+              if (bcrypt.compareSync(req.body.password, user.password)) {
+                return Promise.resolve();
+              }
+            } else {
+              return Promise.reject("Email o contraseña invalidos");
+            }
+          }
+        )
       })
-    
       .withMessage("Email o contraseña inválidos"),
-    body("password").notEmpty().withMessage("Campo obligatorio"),
+    body("password").notEmpty().withMessage("Campo obligatorio")
   ],
 };
 
