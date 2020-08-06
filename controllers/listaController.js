@@ -1,9 +1,5 @@
 let db = require("../database/models");
-let sequelize = db.sequelize;
-
-const jsonModel = require('../models/jsonModel');
 const { promiseImpl } = require("ejs");
-const productModel = jsonModel('products');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -152,7 +148,6 @@ const listaController = {
             descripcion: req.body.descripcion,
             categoryId: req.body.categoryId,
             image: req.file.filename
-            
         })
             .then(() => {
                 return res.redirect('/');
@@ -165,11 +160,11 @@ const listaController = {
             db.Category.findAll()
                 .then((categories) => {
                     return db.Product.findByPk(req.params.id)
-                    .then(function (product) {
-                        return res.render("product-edit-form", { product: product, user, categories });
-                    }).catch(e => console.log(e));
+                        .then(function (product) {
+                            return res.render("product-edit-form", { product: product, user, categories });
+                        }).catch(e => console.log(e));
                 })
-                
+
 
         } else {
             return res.render('not-found', { user });
