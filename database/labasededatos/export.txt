@@ -1,0 +1,1 @@
+cd / && cd xampp/mysql/bin && mysqldump --single-transaction=true -h localhost -u root p2tec > /p2tec.sql
