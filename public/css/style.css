@@ -889,3 +889,11 @@ padding-top: 200px;
 .perfilData{
     padding-top: 250px;
 }
+
+.logo:hover{
+    transition: trasform .5s;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}

@@ -20,7 +20,7 @@ function round(val) {
                 </div>
                 <div class="imageContainer">
                     <div class="vertical-center">
-                        <img src="/img/<%= product.image %>" alt="imagen" class="fotoProductoDetalle">
+                        <img src="/img/<%= product.image %>" alt="imagen" class="fotoProductoDetalle" data="/img/<%= product.image %>" >
                     </div>
                 </div>
                 <div class="descrip">
@@ -53,7 +53,10 @@ function round(val) {
             </div>
         </div>
     </div>
+
     <%- include('partial/footer') %>
+
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 
 </html>
