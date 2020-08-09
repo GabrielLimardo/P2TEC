@@ -19,7 +19,7 @@ module.exports = {
           username: req.body.username,
           email: req.body.email,
           password: req.body.password,
-          image: req.body.image,
+          image: req.file.filename,
           rol: 0
       }).then(() => {
         return res.redirect('./register/login');
