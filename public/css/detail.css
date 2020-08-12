@@ -84,10 +84,15 @@
 	background: rgba(0,0,0,.8);
 	display: flex;
 	justify-content: center;
-	align-items: center;
+    align-items: center;
+}
+
+img#zoom_mw {
+    width: 500px;
 }
 
 .btn-close{
+    margin-top: 250px;
 	width: 70px;
 	height: 70px;
 	background: #AE4545;
