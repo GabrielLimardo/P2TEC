@@ -139,7 +139,7 @@ img.carrito {
     margin: 20px;
     padding: 3px;
     width: 285px;
-    height: 328px;
+    height: 338px;
 }
 
 .fotoProducto {
@@ -896,4 +896,12 @@ padding-top: 200px;
 
 .logo:hover{
     transform: scale(1.1);
+}
+
+img.imagenportada {
+    height: 600px;
+}
+
+a{
+    color: white !important;
 }
