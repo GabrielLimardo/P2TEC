@@ -173,7 +173,7 @@ img.carrito {
 }
 
 footer {
-    background-color: black;
+    
     color: white;
     text-align: center;
     height: 100px;
@@ -355,7 +355,7 @@ ul {
 }
 
 footer {
-    background-color: black;
+    
     color: white;
     text-align: center;
     margin-top: 100px;
@@ -901,4 +901,81 @@ padding-top: 200px;
 img.imagenportada {
     height: 600px;
 }
+.footer{
+    background: #222;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.izquierda{
+    text-align: center;
+}
 
+.centro{
+    text-align: center;
+    margin-left: 10%;
+}
+
+.derecha{
+    text-align: center;
+    margin-left: 10%;
+}
+
+@media (max-width: 768px){
+.footer {
+    margin-top: 30px!important;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.containerredessociales{
+    display: block !important;
+    text-align: center;
+    
+}
+.col-1 col-md-2 footer-col redesfooter{
+    text-align: center;
+}
+.containertodoelresto{
+    display: none
+}
+
+}
+.containerredessociales{
+    display: none
+}
+.footer h3{
+  background-color: #222 !important;
+   
+}
+.imagenfooter{
+    height: 150px;
+    width: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.redesfooter5{
+    margin-left: 5%;
+}
+
+.redesfooter1{
+    margin-left: 5%;
+}
+
+.redesfooter0{
+    margin-left: 5%;
+}
+.redesfooter2{
+    margin-left: 5%;
+}
+.redesfooter3{
+    margin-left: 5%;
+}
+.redesfooter4{
+    margin-left: 5%;
+}
+.imagenfooter1{
+    height: 250px;
+    width: 15%;
+}
