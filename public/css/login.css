@@ -1,6 +1,3 @@
-body{
-    background-image: url(https://img9.uploadhouse.com/fileuploads/15106/1510695497e20abcff408a9fb57449b624af6d64.jpg);
-}
 footer{
     height: 200px;
     margin-top: 300px;
@@ -45,8 +42,6 @@ input:-webkit-autofill:active  {
     border-bottom: 1px solid #ccc;
     color: #fff !important;
 }
-
-
 .email {
     display: flex;
     flex-direction: column;

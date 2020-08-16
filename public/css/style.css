@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-.encierro{
+.encierro {
     padding-top: 200px;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .bodys {
-    background-color: rgb(246,246,246);
+    background-color: rgb(246, 246, 246);
 }
 
 .vertical-center {
@@ -173,7 +173,7 @@ img.carrito {
 }
 
 footer {
-    
+
     color: white;
     text-align: center;
     height: 100px;
@@ -355,7 +355,7 @@ ul {
 }
 
 footer {
-    
+
     color: white;
     text-align: center;
     margin-top: 100px;
@@ -655,7 +655,7 @@ ul {
 @media (min-width: 1366px) {}
 
 /* index */
-.products-title{
+.products-title {
     text-align: center;
 }
 
@@ -692,6 +692,7 @@ ul {
 
 a:link {
     text-decoration: none;
+    margin-top: 15px;
 }
 
 .product-box {
@@ -716,39 +717,45 @@ a:link {
         margin-right: 30px;
         margin-top: 30px;
     }
-    .imagenus img{
-    padding-top: 100px;
+
+    .imagenus img {
+        padding-top: 100px;
     }
+
     .carritoContainer {
         padding-top: 250px;
-       
+
     }
+
     .cartHeaders {
         font-size: 13px;
     }
 
 }
+
 @media (max-width: 1300px) {
     .imgC {
-        width: 60% ;
+        width: 60%;
         margin-left: 10px;
         margin-right: 30px;
         margin-top: 30px;
-}
+    }
 
 }
+
 @media (max-width: 900px) {
-.carritoContainer {
-    padding-top: 150px;
-   
+    .carritoContainer {
+        padding-top: 150px;
+
+    }
 }
-}
+
 .imgC {
-    width: 30% ;
+    width: 30%;
     margin-left: 30px;
     margin-top: 30px;
 }
-    
+
 
 .imgbuilder a {
     margin: 0 auto;
@@ -764,16 +771,18 @@ a:link {
 img {
     display: inline-block;
 }
+
 /* .imga {
     width: 100% !important;
     height: 250px;
     margin-top: 20px;
 } */
 
-.centrameesto{
+.centrameesto {
     text-align: center;
 }
-.loginCompleto{
+
+.loginCompleto {
     display: flex;
     padding-top: 20px;
     justify-content: center;
@@ -781,19 +790,21 @@ img {
     width: 40%;
 }
 
-.imgB{
+.imgB {
     width: 50%;
     border-radius: 20px;
     border: #000;
-    border-width:30px;
+    border-width: 30px;
     max-height: 200px;
     margin-top: 15px;
 }
+
 @media (min-width: 700px) {
     .imagenus img {
-        margin-top: 190px;  
+        margin-top: 190px;
     }
 }
+
 @media (min-width: 1300px) {
     .imagenus img {
         width: 100%;
@@ -804,10 +815,12 @@ img {
         height: 500px;
     }
 }
-.contenedorprincpaldecreate{
+
+.contenedorprincpaldecreate {
     padding-top: 300px;
 }
-.editar-eliminar a{
+
+.editar-eliminar a {
     text-decoration: none;
     margin: 0 auto;
     width: 150px;
@@ -821,7 +834,8 @@ img {
     border-radius: 6px;
     border: 2px solid #707070;
 }
-button.action-buttom.delete{
+
+button.action-buttom.delete {
     text-decoration: none;
     padding: 10px;
     font-weight: 600;
@@ -834,11 +848,12 @@ button.action-buttom.delete{
 
 /* Perfil */
 
-hr{
+hr {
     border: 0;
     border-bottom: 1px solid #eaeaea;
 }
-.userData{
+
+.userData {
     background-color: white;
     width: 30%;
     margin: 0 auto;
@@ -846,23 +861,24 @@ hr{
     margin-bottom: 40px;
 
 }
-.userData h3{
+
+.userData h3 {
     text-align: center;
     padding-top: 10px;
 }
 
-.userAccount{
+.userAccount {
     display: flex;
     justify-content: space-between;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
-.userAccount i{
+.userAccount i {
     color: blue;
 }
 
-.userPData{
+.userPData {
     display: flex;
     justify-content: space-between;
     padding-right: 20px;
@@ -870,38 +886,40 @@ hr{
     padding-bottom: 50px;
 }
 
-.editar-eliminar{
+.editar-eliminar {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-@media(min-width: 890px){
-    .editar-eliminar{
+@media(min-width: 890px) {
+    .editar-eliminar {
         display: flex;
         align-items: center;
-      
+
     }
 }
 
-.productoparaeditar{
-padding-top: 200px;
+.productoparaeditar {
+    padding-top: 200px;
 }
-.perfilData{
+
+.perfilData {
     padding-top: 250px;
 }
 
-.logo:hover{
+.logo:hover {
     transition: trasform .5s;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
 img.imagenportada {
     height: 600px;
 }
-.footer{
+
+.footer {
     background: #222;
     padding-left: 0px;
     margin-bottom: 0px;
@@ -909,73 +927,95 @@ img.imagenportada {
     text-align: center;
     justify-content: center;
 }
-.izquierda{
+
+.izquierda {
     text-align: center;
 }
 
-.centro{
-    text-align: center;
-    margin-left: 10%;
-}
-
-.derecha{
+.centro {
     text-align: center;
     margin-left: 10%;
 }
 
-@media (max-width: 768px){
-.footer {
-    margin-top: 30px!important;
-    padding-top: 10px;
-    padding-bottom: 15px;
-}
-.containerredessociales{
-    display: block !important;
+.derecha {
     text-align: center;
-    
+    margin-left: 10%;
 }
-.col-1 col-md-2 footer-col redesfooter{
-    text-align: center;
+
+.containertodoelresto {
+    width: 100%;
+
 }
-.containertodoelresto{
+
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 30px !important;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .containerredessociales {
+        display: block !important;
+        text-align: center;
+
+    }
+
+    .col-1 col-md-2 footer-col redesfooter {
+        text-align: center;
+    }
+
+    .containertodoelresto {
+        display: none
+    }
+
+}
+
+.containerredessociales {
     display: none
 }
 
+.footer h3 {
+    background-color: #222 !important;
+
 }
-.containerredessociales{
-    display: none
-}
-.footer h3{
-  background-color: #222 !important;
-   
-}
-.imagenfooter{
-    height: 150px;
-    width: 15%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.redesfooter5{
+
+
+.redesfooter {
     margin-left: 5%;
 }
 
-.redesfooter1{
+.redesfooter3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.redesfooter4 {
     margin-left: 5%;
 }
 
-.redesfooter0{
-    margin-left: 5%;
+.imagenfooter {
+    width: 210px;
+    height: 110px;
+    margin: 0;
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin-top: 40px;
+    /* margin-right: 196px;*/
 }
-.redesfooter2{
-    margin-left: 5%;
+
+.imagenfooter1 {
+    width: 210px;
+    height: 210px;
+    margin: 0;
+    display: block;
 }
-.redesfooter3{
-    margin-left: 5%;
+
+.footer-nav {
+    justify-content: space-around;
+    flex-wrap: nowrap!important;
 }
-.redesfooter4{
-    margin-left: 5%;
-}
-.imagenfooter1{
-    height: 250px;
-    width: 15%;
+.pie-footer{
+    display: flex;
+    justify-content: space-evenly;
 }
