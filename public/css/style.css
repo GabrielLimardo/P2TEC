@@ -1017,3 +1017,12 @@ img.imagenportada {
     display: flex;
     justify-content: space-evenly;
 }
+
+
+
+
+a:not([href]):not([tabindex]) {
+    color: #007bff !important;
+    text-decoration: none;
+   
+}

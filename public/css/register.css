@@ -223,3 +223,7 @@ input#image {
 button.registerButton {
     background: linear-gradient(0deg, rgba(8, 117, 155, 1) 0%, rgba(55, 142, 167, 1) 50%, rgba(58, 170, 203, 1) 100%);
 }
+
+.descripcion {
+    margin-top: 15px;
+}
