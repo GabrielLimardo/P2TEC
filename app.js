@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 var cookieParser = require('cookie-parser');
-const log = require('./middlewares/log');
 const homeRoutes = require('./routes/home');
 const listaRoutes = require("./routes/lista.js");
 const carritoRoutes = require("./routes/carrito.js");

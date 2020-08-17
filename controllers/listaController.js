@@ -156,7 +156,6 @@ const listaController = {
     edit: (req, res) => {
         const user = req.session.user;
         if (typeof user !== 'undefined' && user.rol === 1) {
-            // Do the magic
             db.Category.findAll()
                 .then((categories) => {
                     return db.Product.findByPk(req.params.id)
