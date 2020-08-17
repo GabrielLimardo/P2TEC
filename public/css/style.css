@@ -1024,5 +1024,5 @@ img.imagenportada {
 a:not([href]):not([tabindex]) {
     color: #007bff !important;
     text-decoration: none;
-   
+    padding-top: 15px;
 }
