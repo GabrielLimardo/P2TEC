@@ -135,6 +135,10 @@ input:-webkit-autofill:active  {
     background: linear-gradient(0deg, rgba(24, 138, 172, 1) 0%, rgba(60, 160, 190, 1) 50%, rgba(89, 204, 238, 1) 100%);
 }
 
+body{
+    background-image: url("https://images8.alphacoders.com/377/377803.jpg");
+}    
+
 .form-container button {
     width: 120px;
     height: 22px;

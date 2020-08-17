@@ -1,6 +1,4 @@
-body{
-    background-color: yellow;
-}
+
 
 .perfilDatafoto{
     text-align: center;
@@ -8,8 +6,9 @@ body{
 
 
 body{
-    background-image: url(https://img9.uploadhouse.com/fileuploads/15106/1510695497e20abcff408a9fb57449b624af6d64.jpg);
-}
+    background-image: url("https://images8.alphacoders.com/377/377803.jpg");
+}    
+
 
 
 .userData {
@@ -42,7 +41,7 @@ img.profilePic {
    margin-bottom: 20px;
    margin-top: 50px;
 }
-}
+
 .userPData h4{
     margin-right: 10px;
     padding-right: 10px;
@@ -70,4 +69,7 @@ footer {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-right: 10px;
     padding-left: 10px;
+}
+h3{
+    background-color: none !important;
 }
