@@ -101,5 +101,10 @@ module.exports = {
       .withMessage("Email o contraseña inválidos"),
     body("password").notEmpty().withMessage("Campo obligatorio")
   ],
+  addToCart: [
+    body("quantity")
+      .custom((value) => value > 0)
+      .withMessage("Debe agregar al menos 1 producto al carrito"),
+  ],
 };
 
