@@ -5,10 +5,10 @@ const carritoController = require("../controllers/carritoController")
 const validator = require('../middlewares/validator');
 const authMiddleware = require('../middlewares/auth');
 
-router.get("/", carritoController.index);
+// router.get("/", carritoController.index);
 
 //faltan los middleware
-router.get('/cart',authMiddleware, carritoController.cart);
+router.get('/',authMiddleware, carritoController.cart);
 router.post('/addToCart',authMiddleware,validator.addToCart, carritoController.addToCart);
 router.get('/history',authMiddleware,  carritoController.history);
 router.post('/shop',authMiddleware, carritoController.shop);

@@ -42,7 +42,7 @@ module.exports = {
     // Image
     body("image")
       .custom((value, { req }) => {
-        // TODO: Quedo roto, creo que no esta funcionando el hook de multer
+       
         return true;
         //return req.file
       })

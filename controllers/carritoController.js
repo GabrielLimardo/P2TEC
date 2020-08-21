@@ -16,17 +16,18 @@ const {
 const carritoController = {
   
 
-    index: function(req, res){
-        const arrayIds = cartModel.leerJson();
-        let products = [];
+    // index: function(req, res){
+    //     const arrayIds = cartModel.leerJson();
+    //     let products = [];
 
-        arrayIds.forEach(id => {
-            products.push(productsModel.findById(id))            
-        });
-        const user = req.session.user;
-        return res.render('carrito', {data:  products, removeFromCart: this.removeFromCart, user});          
-    },
+    //     arrayIds.forEach(id => {
+    //         products.push(productsModel.findById(id))            
+    //     });
+    //     const user = req.session.user;
+    //     return res.render('carrito', {data:  products, removeFromCart: this.removeFromCart, user});          
+    // },
     cart(req, res) {
+      const user = req.session.user;
         Item.findAll({
           where: {
             userId: req.session.user.id,
@@ -34,7 +35,7 @@ const carritoController = {
           },
           include: ['product'],
         }).then((items) => {
-          return res.render("users/cart", { items })
+          return res.render("cart", { items, user })
         });
       },
     
@@ -43,36 +44,25 @@ const carritoController = {
     
         if (errors.isEmpty()) {
           // Busco el producto que voy a agregar como Item.
-          Product.findByPk(req.body.productId, {
-            include: ["user"],
+          Product.findByPk(req.body.productId, {  
           })
             .then((product) => {
-              // Saco el valor del producto, teniendo en cuenta el descuento.
-    
-              let price =
-                Number(product.discount) > 0
-                  ? product.price - (product.price * product.discount) / 100
-                  : product.price;
-    
               // Creo el Item de compra
               return Item.create({
-                salePrice: price,
+                salePrice: product.price,
                 quantity: req.body.quantity,
-                subTotal: price * req.body.quantity,
+                subTotal: product.price * req.body.quantity,
                 state: 1,
                 userId: req.session.user.id,
-                sellerId: product.user.id,
                 productId: product.id,
               });
             })
-            .then((item) => res.redirect("/users/cart"))
+            .then((item) => res.redirect("/carrito"))
             .catch((e) => console.log(e));
         } else {
-           Product.findByPk(req.body.productId, {
-             include: ["user"],
-           })
+           Product.findByPk(req.body.productId, {  })
              .then(product => {
-                return res.render('products/detail', {product, errors: errors.mapped()})
+                return res.render('/lista/detail', {product, errors: errors.mapped()})
              })
         }
       },
@@ -84,7 +74,7 @@ const carritoController = {
           },
           force: true,
         })
-          .then((response) => res.redirect("/users/cart"))
+          .then((response) => res.redirect("/carrito"))
           .catch((e) => console.log(e));
       },
     
@@ -125,7 +115,7 @@ const carritoController = {
             return Item.assignItems(req.session.user.id, cart.id);
           })
           // redirect
-          .then(() => res.redirect("/users/history"))
+          .then(() => res.redirect("/carrito/history"))
           .catch((e) => console.log(e));
       },
     
@@ -142,7 +132,7 @@ const carritoController = {
           order: [["createdAt", "DESC"]],
         })
           .then((carts) => {
-            res.render("users/history", { carts });
+            res.render("/carrito/history", { carts });
           })
           .catch((e) => console.log(e));
       },
@@ -154,7 +144,7 @@ const carritoController = {
             nested: true,
             paranoid: false,
           },
-        }).then((cart) => res.render("users/buyDetail", { cart }));
+        }).then((cart) => res.render("/carrito/buyDetail", { cart }));
       },
 
 }
