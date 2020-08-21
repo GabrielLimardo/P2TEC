@@ -4,7 +4,17 @@ const { validationResult } = require("express-validator");
 const jsonModel = require('../models/jsonModel');
 const cartModel = jsonModel('cart');
 const productsModel = jsonModel('products');
+const {
+  User,
+  Product,
+  Cart,
+  Item,
+  sequelize,
+} = require("../database/models");
+
+
 const carritoController = {
+  
 
     index: function(req, res){
         const arrayIds = cartModel.leerJson();

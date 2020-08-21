@@ -6,6 +6,7 @@ module.exports = (sequelize, dataTypes) => {
         password: dataTypes.STRING,
         image: dataTypes.STRING,
         rol: dataTypes.INTEGER
+        
     }
     const User = sequelize.define(alias, cols);
     return User;

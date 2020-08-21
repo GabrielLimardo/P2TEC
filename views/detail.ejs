@@ -36,9 +36,6 @@ function round(val) {
                             <i class="fab fa-cc-amex fa-2x "></i>
                         </div>
                     </div>
-                    <div class="voton">
-                        <h4>AÑADIR AL CARRITO</h4>
-                    </div>
                     <% if (typeof user !== 'undefined' && user.rol === 1) {%>
                     <div class="editar-eliminar">
                         <a href="/lista/edit/<%= product.id %>" class="editButton">EDIT</a>
@@ -48,6 +45,15 @@ function round(val) {
                             </form>
                         </a>
                     </div>
+                    <% } else { %>
+                        <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
+                            <label for="quantity" style="font-size: 14px;">Cantidad</label>
+                            <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                            <p class="error"><%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %></p>
+                            <input type="hidden" name="productId" value="<%= product.id %>">
+                            <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                        </form>
+                        <hr>
                     <% } %>
                 </div>
             </div>
