@@ -28,7 +28,9 @@
                      </figure>
                      <section class="col-6 descCart">
                         <p><%= item.product.name %></p>
-
+                        <p class="product-detail-price">
+                           $<%= item.salePrice; %>
+                        </p>
                         <form action="/carrito/deleteFromCart" method="POST" class="mt-4">
                            <input type="hidden" name="itemId" value="<%= item.id %>">
                            <button type="submit" class="action-button delete">ELIMINAR</button>
@@ -37,9 +39,7 @@
                      </section>
                      <section class="">
                         <p>Cantidad: <%= item.quantity %></p>
-                        <p class="product-detail-price">
-                           $<%= item.salePrice; %>
-                        </p>
+
                      </section>
                   </section>
                </div>
