@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('../partials/head', {title: 'Detalle de compra: ' + cart.orderNumber, image: ''}) %>
+<%- include('./partial/head', {title: 'BuyDetail'}) %>
 
 <body>
    <!-- Header -->
-   <%- include('../partials/headerNavbar') %>
+   <%- include('./partial/header', {user}) %>
    <!-- /Header -->
 
    <div class="container products-wrapper">
