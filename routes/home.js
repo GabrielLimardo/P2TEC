@@ -2,7 +2,7 @@ const express= require("express")
 const router = express.Router();
 const homeController = require("../controllers/homeController")
 
-router.get("/", homeController.root);
+router.get("/",  homeController.root);
 router.get('/search', homeController.search);
 router.get("/perfil", homeController.perfil);
 

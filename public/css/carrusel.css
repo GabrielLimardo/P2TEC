@@ -1,0 +1,135 @@
+.productolista h3{
+	color: black !important;
+}
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.productos-recomendadas {
+	margin-bottom: 70px;
+}
+
+.productos-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.productos-recomendadas .contenedor-principal .flecha-izquierda,
+.productos-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.productos-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.productos-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.productos-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.productos-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.productos-recomendadas .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.productos-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.productos-recomendadas .contenedor-carousel .carousel .productos {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.productos-recomendadas .contenedor-carousel .carousel .productos.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.productos-recomendadas .contenedor-carousel .carousel .productos img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.productos-principal {
+		font-size: 14px;
+	}
+
+	.productos-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.productos-recomendadas .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.productos-recomendadas .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.productos-recomendadas .indicadores,
+	.productos-recomendadas .flecha-izquierda,
+	.productos-recomendadas .flecha-derecha {
+		display: none;
+	}
+}
