@@ -34,6 +34,8 @@
     display: flex;
     justify-content: space-between;
     padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 .descCart{
     align-content: center;
@@ -52,18 +54,23 @@
     margin-top: 1%;
     padding-right: 5%;
 }
+.itemPriceCart{
+    display: flex;
+    align-items: center;
+}
 hr{
     border: 0;
     border-bottom: 5px solid #ffffff;
 }
 .buy-now-button{
-    padding: 15px 30px;
+    padding: 10px 30px;
     margin-top: 1%;
 }
 .buy-now-cart{
     justify-content: flex-end;
     padding-right: 5%;
 }
+
 @media (max-width: 700px) {
 
     .logo img {
