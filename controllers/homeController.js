@@ -10,7 +10,7 @@ const controller = {
 		const user = req.session.user;
         db.Product.findAll({
             where: {
-                categoryId: "4"
+				categoryId: "4"
             }
         })
         .then(resultados => {

@@ -68,13 +68,8 @@
     font-size: 20px;
 }
 
-.fotoProductoDetalle:hover{
-    transition: trasform .5s;
-}
 
-.fotoProductoDetalle:hover{
-    transform: scale(1.5);
-}
+
 
 .ligthbox{
 	width: 100%;

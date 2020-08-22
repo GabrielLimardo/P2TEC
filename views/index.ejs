@@ -65,58 +65,19 @@ function round(val) {
 				<a href="/lista/PcStreamer"><img src="img/PC-Streaming-4_800.jpg" alt="" class="imgC"></a>
 				<a href="/lista/PcDiseno"><img src="img/PC-Diseño-8_800.jpg" alt="" class="imgC"></a>
 				<a href="/lista/Notebooks"><img src="img/notebook.jpg" alt="" class="imgC"></a>
-				<a href="/"><img src="img/numero.png" alt="" class="imgC"></a>
 				<a href="/"><img src="img/DEFINITIVO.jpg"" alt="" class=" imgC"></a>
 				<a href="/"><img src="img/ULTIMO.jpg" alt="" class="imgC"></a>
-				<a href="/"><img src="img/numero.png" alt="" class="imgC"></a>
 				
 			</div>
 		</div>
 	</div>
 
-	<br>
-	<br>
-	<div class="containerproducts-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">PRODUCTOS RECOMENDADOS :</h2>
-				<!-- Show the "visited" products -->
-				<div class="row wrap nostyle contProdRec">
-					<% data.forEach(p => { %>					
-						<div>
-							<a href="/lista/detail/<%- p.id %>">
-								<div class="producto producto-<%- p.id %>">
-									<img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
-									<div class="descripciones">
-										<h3 class="nombreProducto"><%- p.name %></h3>
-										<p class="detalleProducto"><%- p.descripcion %></p>
-										<h2 class="precioProducto">ARS <%- round(p.price) %></h2>
-									</div>
-								</div>
-							</a>
-						</div>
-					<% }) %>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
 	<main>
-		<div class="pelicula-principal">
-			<div class="contenedor">
-				<h3 class="titulo">Interestellar</h3>
-				<p class="descripcion">
-					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
-				</p>
-				<button role="button" class="boton"><i class="fas fa-play"></i>Reproducir</button>
-				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
-			</div>
-		</div>
-
-		<div class="peliculas-recomendadas contenedor">
+		<div class="productos-recomendadas contenedor">
 			<div class="contenedor-titulo-controles">
-				<h3>Películas Recomendadas</h3>
+				<div class="productolista"> <h3>PRODUCTOS RECOMENDADOS</h3></div>
 				<div class="indicadores"></div>
 			</div>
 
@@ -126,68 +87,8 @@ function round(val) {
 				<div class="contenedor-carousel">
 					<div class="carousel">
 						<% data.forEach(p => { %>
-						<div class="pelicula">
-							<a href="#"><img src="<%- "/img/" + p.image %>" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="<%- "/img/" + p.image %>" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="<%- "/img/" + p.image %>" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="<%- "/img/" + p.image %>" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="<%- "/img/" + p.image %>" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/6.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/7.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/4.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/5.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/6.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/7.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/1.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.png" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/4.png" alt=""></a>
+						<div class="productos">
+							<a href="/lista/detail/<%- p.id %>"><img src="<%- "/img/" + p.image %>" alt=""></a>
 						</div>
 						<% }) %>
 					</div>
@@ -198,9 +99,6 @@ function round(val) {
 		</div>
 	</main>
 
-
-
-	
 	<%- include('partial/footer') %>
 
 

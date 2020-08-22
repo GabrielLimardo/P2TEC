@@ -1,4 +1,6 @@
-
+.productolista h3{
+	color: black !important;
+}
 /* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
 .contenedor-titulo-controles {
 	display: flex;
@@ -27,18 +29,18 @@
 
 
 /* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
-.peliculas-recomendadas {
+.productos-recomendadas {
 	margin-bottom: 70px;
 }
 
-.peliculas-recomendadas .contenedor-principal {
+.productos-recomendadas .contenedor-principal {
 	display: flex;
 	align-items: center;
 	position: relative;
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+.productos-recomendadas .contenedor-principal .flecha-izquierda,
+.productos-recomendadas .contenedor-principal .flecha-derecha {
 	position: absolute;
 	border: none;
 	background: rgba(0,0,0,0.3);
@@ -53,44 +55,44 @@
 	transition: .2s ease all;
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+.productos-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.productos-recomendadas .contenedor-principal .flecha-derecha:hover {
 	background: rgba(0,0,0, .9);
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+.productos-recomendadas .contenedor-principal .flecha-izquierda {
 	left: 0;
 }
 
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+.productos-recomendadas .contenedor-principal .flecha-derecha {
 	right: 0;
 }
 
 /* ---- ----- ----- Carousel ----- ----- ----- */
-.peliculas-recomendadas .contenedor-carousel {
+.productos-recomendadas .contenedor-carousel {
 	width: 100%;
 	padding: 20px 0;
 	overflow: hidden;
 	scroll-behavior: smooth;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel {
+.productos-recomendadas .contenedor-carousel .carousel {
 	display: flex;
 	flex-wrap: nowrap;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
+.productos-recomendadas .contenedor-carousel .carousel .productos {
 	min-width: 20%;
 	transition: .3s ease all;
 	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+.productos-recomendadas .contenedor-carousel .carousel .productos.hover {
 	transform: scale(1.2);
 	transform-origin: center;
 }
 
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+.productos-recomendadas .contenedor-carousel .carousel .productos img {
 	width: 100%;
 	vertical-align: top;
 }
@@ -107,27 +109,27 @@
 		text-align: center;
 	}
 
-	.pelicula-principal {
+	.productos-principal {
 		font-size: 14px;
 	}
 
-	.pelicula-principal .descripcion {
+	.productos-principal .descripcion {
 		max-width: 100%;
 	}
 
-	.peliculas-recomendadas .contenedor-carousel {
+	.productos-recomendadas .contenedor-carousel {
 		overflow: visible;
 	}
 
-	.peliculas-recomendadas .contenedor-carousel .carousel {
+	.productos-recomendadas .contenedor-carousel .carousel {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 20px;
 	}
 
-	.peliculas-recomendadas .indicadores,
-	.peliculas-recomendadas .flecha-izquierda,
-	.peliculas-recomendadas .flecha-derecha {
+	.productos-recomendadas .indicadores,
+	.productos-recomendadas .flecha-izquierda,
+	.productos-recomendadas .flecha-derecha {
 		display: none;
 	}
 }
