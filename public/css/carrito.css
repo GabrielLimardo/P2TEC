@@ -1,4 +1,4 @@
-.cartSummaryButtons a {
+/* .cartSummaryButtons a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: medium;
     color: black;
@@ -46,7 +46,14 @@
         width: 80%;
     }
 
-}
+} */
 .product-detail{
     margin-top: 300px;
+}
+
+img.imagendeproducto {
+    width: 150px;
+}
+.Productosencarrito{
+    background-color: white;
 }
