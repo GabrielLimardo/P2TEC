@@ -1,141 +1,151 @@
+
 <!DOCTYPE html>
-<% 
-function round(val) {
-  return Math.round(val*100)/100;
-} 
-%>
 
 <html lang="en">
 <%- include('./partial/head', {title: 'Perfil'}) %>
-<link rel="stylesheet" href="/css/perfil.css">
-
 
 <body>
-    <!-- Header -->
+
     <%- include('./partial/header', {user})%> 
-    <!-- /Header -->
-    <div class="perfilData">
-        <div class="userData">
-               
-         <div class="infocuenta">
-            <div class="userAccount">
-                <h3>Datos de la cuenta</h3>    
-                <hr>            
-            </div>
-            <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePic">
-            <% if(typeof user == 'undefined') { %>
-            <div class="userPData">
-                <h4> Usuario: </h4>
-                <h4> NO LOGIN </h4>
-            </div>
-            <% } else { %>
-            <div class="userPData">
-                    <h4> Usuario: </h4>
-                    <h4> <%= user.username  %> </h4>
+
+<section class="slicebg-3">
+    <div class="w-section inverse shop">
+        <div class="containerperfil">
+        
+                        <div class="rowperfil">
+                <div class="col-md-3 mt-20">
+                    <h1 class="section-title mi_cuenta"><i class="fa fa-users-cog"></i>&nbsp;Mi Cuenta</h1>
+                    <div class="widget oculto-movil-">
+                        <ul class="categories">
+                            <% if (typeof user !== 'undefined' && user.rol === 1) {%>
+                            <li><a href="/perfil/cambiarcontra" class="continuar"><i class="fas fa-user-tag"></i>&nbsp;Panel de Control</a></li>
+                            <li><a href="/carrito/history" class="continuar"><i class="fa fa-shopping-cart "></i>&nbsp;Mis compras</a></li>
+                            <li><a href="/perfil/cambiarcontra" class="continuar"><i class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
+                            <% } else { %>
+                            <li><a href="/carrito/history" class="continuar"><i class="fa fa-shopping-cart "></i>&nbsp;Mis compras</a></li>
+                            <li><a href="/perfil/cambiarcontra" class="continuar"><i class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
+                            <% } %>
+                        </ul>
+                    </div>
                 </div>
-            <% } %>
+                <div class="col-md-8 ml-4 mt-20">
+                    <div class="w-section inverse">
+                        <h3><i class="fa fa-list-alt"></i>&nbsp; Mis datos</h3>
+                        <table class="table table-cart table-responsive">
+                            <tbody id="contentPedido">
+                            <form id="actualizarCuenta" name="actualizarCuenta" class="col-lg-12"> 
+                                <input name="email" class="form-control pl-2" value="email" type="hidden"/>                 											
+                                <div class="col-lg-6 col-xs-12 pull-left mt-0 mb-4"> 
+                                    <div class="col-lg-12 pl-0"><h5>Datos personales</h5></div>
+                                    <div class="col-lg-3 col-xs-12 pull-left mt-0 pl-0"> 
+                                    <label class="control-label w-100 mt-0">ID cliente:</label>
+                                    <input class="form-control pl-2" value="<%= user.id %> " disabled="disabled"/>
+                                    </div>
+                                    <div class="col-lg-9 col-xs-12 pull-left mt-0 pl-0"> 
+                                    <label class="control-label w-100 mt-0">Email:</label>
+                                    <input class="form-control pl-2" value="<%= user.email %>" disabled="disabled"/>
+                                    </div>         
+                                    
+                                    <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
+                                    <label class="control-label w-100 mt-0">Nombre de usuario:</label>
+                                    <input class="form-control pl-2" id="campo_cliNombre" name="cliNombre" value="<%= user.username %>"/>
+                                    </div>
+                                    <div class="col-lg-12 col-xs-12 mt-3 pl-0">
+                                      <button type="submit" class="btn btn-blue"><i class="fa fa-check" aria-hidden="true"></i> Actualizar mis datos</button>
+                                     </div>
+                                </div>                       
+                                
+                                
+                               <div class="col-lg-6 pull-left mt-0"> 
+                                    <div class="col-lg-12 pl-0"><h5>Dirección de envío</h5></div>                            
+                                    <div class="col-lg-12 col-xs-12 pull-left mt-0 pl-0"> 
+                                        <label class="control-label w-100 mt-0">Dirección:</label>
+                                        <input class="form-control pl-2" name="cliDireccion" value="" required="required"/>
+                                    </div>
+                                    <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
+                                    <label class="control-label w-100 mt-0">Piso / Depto:</label>
+                                     <input class="form-control pl-2" name="cliDireccion2" value=""/>
+                                    </div>                            
+                                    <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
+                                        <label class="control-label w-100 mt-0">Cod. postal:</label>
+                                        <input class="form-control pl-2" name="cliCodPostal" value="" required="required"/>
+                                    </div>                            
+                                    <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
+                                        <label class="control-label w-100 mt-0">Localidad:</label>
+                                        <input class="form-control pl-2" name="cliLocalidad" value="" required="required"/>
+                                    </div>
+                                    <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
+                                        <label class="control-label w-100 mt-0">Provincia:</label>
+                                                                                <select name="cliProvincia" class="form-control pl-2" placeholder="Provincia" required="required">
+            <option value="">Provincia</option>
+                <option value="34">
+            Buenos Aires        </option>
+            <option value="12">
+            CABA        </option>
+            <option value="25">
+            Catamarca        </option>
+            <option value="16">
+            Chaco	Chaco        </option>
+            <option value="26">
+            Chubut        </option>
+            <option value="15">
+            Corrientes        </option>
+            <option value="1">
+            Córdoba        </option>
+            <option value="10">
+            Entre Ríos        </option>
+            <option value="35">
+            Formosa        </option>
+            <option value="11">
+            Jujuy        </option>
+            <option value="6">
+            La Pampa        </option>
+            <option value="7">
+            La Rioja        </option>
+            <option value="22">
+            Mendoza        </option>
+            <option value="32">
+            Misiones        </option>
+            <option value="2">
+            Neuquén        </option>
+            <option value="23">
+            Río Negro        </option>
+            <option value="14">
+            Salta        </option>
+            <option value="29">
+            San Juan        </option>
+            <option value="8">
+            San Luis        </option>
+            <option value="21">
+            Santa Cruz        </option>
+            <option value="18">
+            Santa Fe        </option>
+            <option value="30">
+            Santiago del Estero        </option>
+            <option value="31">
+            Tierra del Fuego        </option>
+            <option value="19">
+            Tucumán        </option>
+            </select>                                    </div>
+                                    <div class="col-lg-12 col-xs-12 mt-3 pl-0">
+                                    <button type="submit" class="btn btn-blue"><i class="fa fa-check" aria-hidden="true"></i> Actualizar dirección</button>
+                                    </div>
+                                    
+                                </div> 
+                         </form>   
+                         
+                         </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
             
-            <div class="userPData">
-                <h4> Password: </h4>
-                <h4> **********</h4>
-            </div>
-            <div class="userPData">
-                <h4> Email: </h4>
-                <h4> <%= user.email %> </h4>
-            </div>
-            <% if( user.rol === 1 ) { %>
-            <div class="userPData">
-                <h4> ROL: </h4>
-                <h4> ADMIN </h4>
-            </div>
-            <% } else { %>
-            <div class="userPData">
-                <h4> ROL: </h4>
-                <h4> USER </h4>
-            </div>
-            <% } %>
             
-          
+                         
+            
         </div>
-       
     </div>
-   
-        <!-- <div class="userData">
-            <div class="userAccount">
-                <h3>Datos de la cuenta</h3>
-                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
-            </div>
-            <div class="userPData">
-                <h4>Nombre</h4>
-                <h4>Tobias </h4>
-            </div>
-            <div class="userPData">
-                <h4>Apellido</h4>
-                <h4>Vasquez</h4>
-            </div>
-            <div class="userPData">
-                <h4>Documento</h4>
-                <h4>41918000</h4>
-            </div>
-            <div class="userPData">
-                <h4>Telefono</h4>
-                <h4>1135004591</h4>
-            </div>
-        </div> -->
-        <!-- <div class="userData">
-            <div class="userAccount">
-                <h3>Datos de envio</h3>
-                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
-            </div>
-            <div class="userPData">
-                <h4>Calle</h4>
-                <h4>Riobamba</h4>
-            </div>
-            <div class="userPData">
-                <h4>Numero</h4>
-                <h4>820</h4>
-            </div>
-            <div class="userPData">
-                <h4>Piso</h4>
-                <h4> - </h4>
-            </div>
-            <div class="userPData">
-                <h4>Dpto</h4>
-                <h4> - </h4>
-            </div>
-            <div class="userPData">
-                <h4>Codigo Postal</h4>
-                <h4>1643</h4>
-            </div>
-            <div class="userPData">
-                <h4>Provincia</h4>
-                <h4>Buenos Aires</h4>
-            </div>
-            <div class="userPData">
-                <h4>Ciudad</h4>
-                <h4>Buenos Aires</h4>
-            </div>
-        </div>
-        <div class="userData">
-            <div class="userAccount">
-                <h3>Informacion de Pago</h3>
-                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
-            </div>
-            <div class="userPData">
-                <h4>Tarjeta de Credito</h4>
-                <h4>**** **** **01</h4>
-            </div>
-            <div class="userPData">
-                <h4>Nombre del Titular</h4>
-                <h4>Tobias Vasquez</h4>
-            </div>
-            <div class="userPData">
-                <h4>Direccion de Facturacion</h4>
-                <h4>Riobamba 820</h4>
-            </div>
-        </div>
-    </div> -->
-    <%- include('partial/footer') %>
+</section>
+
+<%- include('partial/footer') %>
 </body>
-
-

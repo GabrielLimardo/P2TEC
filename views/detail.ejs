@@ -46,6 +46,7 @@ function round(val) {
                         </a>
                     </div>
                     <% } else { %>
+                        <div class="cantidades">
                         <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
                             <label for="quantity" style="font-size: 14px;">Cantidad</label>
                             <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
@@ -53,6 +54,7 @@ function round(val) {
                             <input type="hidden" name="productId" value="<%= product.id %>">
                             <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
                         </form>
+                         </div>
                         <hr>
                     <% } %>
                 </div>

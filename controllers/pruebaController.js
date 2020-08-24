@@ -1,12 +1,14 @@
-const db= require("../database/models/index");
-const sequelize = db.sequelize;
-const Op = db.sequelize.op
+const db = require("../database/models");
+
+const bcrypt = require("bcryptjs");
+const { validationResult } = require("express-validator");
+
 
 const pruebaController = {
     root: (req, res) => {
-      res.render("nuevo")
-       
-    },
+      const user = req.session.user;
+                return res.render("pruebaperfil", { user })
+    }
 }
 
     module.exports = pruebaController;
