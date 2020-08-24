@@ -120,6 +120,7 @@ const carritoController = {
       },
     
       history(req, res) {
+        const user = req.session.user;
         Cart.findAll({
           where: {
             userId: req.session.user.id,
@@ -132,7 +133,7 @@ const carritoController = {
           order: [["createdAt", "DESC"]],
         })
           .then((carts) => {
-            res.render("/carrito/history", { carts });
+            res.render("history", { carts, user });
           })
           .catch((e) => console.log(e));
       },

@@ -14,9 +14,9 @@
             <h1 class="products-title">Carrito de compras</h1>
          </div>
       </div>
-      <div class="product-detail">
-         <div class="row">
-            <div class="col-12 col-lg-8 pt-4">
+      <div class="hystorial1">
+         <div class="hystorial2">
+            <div class="hystorial3">
                <% if(carts.length != 0){ %>
                <% carts.forEach(cart => { %>
                <a href="/users/buy-detail/<%= cart.id %>">
@@ -70,7 +70,7 @@
    </div>
 
    <!-- footer -->
-   <%- include('../partials/footer') %>
+   <%- include('partial/footer') %>
    <!-- /footer -->
 </body>
 
