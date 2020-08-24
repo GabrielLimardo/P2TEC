@@ -139,13 +139,14 @@ const carritoController = {
       },
     
       showBuyDetail(req, res) {
+        const user = req.session.user;
         Cart.findByPk(req.params.id, {
           include: {
             all: true,
             nested: true,
             paranoid: false,
           },
-        }).then((cart) => res.render("/carrito/buyDetail", { cart }));
+        }).then((cart) => res.render("buyDetail", { cart, user  }));
       },
 
 }

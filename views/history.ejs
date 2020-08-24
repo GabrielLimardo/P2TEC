@@ -19,7 +19,7 @@
             <div class="hystorial3">
                <% if(carts.length != 0){ %>
                <% carts.forEach(cart => { %>
-               <a href="/users/buy-detail/<%= cart.id %>">
+               <a href="/carrito/buy-detail/<%= cart.id %>">
                   <div class="col-12 mt-3">
                      <section class="row">
                         <h4 class="col-4"><%= new Date(cart.createdAt).toLocaleDateString() %> </h4>

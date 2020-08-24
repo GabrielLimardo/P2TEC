@@ -1041,3 +1041,8 @@ a:not([href]):not([tabindex]) {
 margin-top: 350px;
 background-color: #000;
 }
+
+img .productoimagen {
+    transform: scale(1.5);
+    
+}
