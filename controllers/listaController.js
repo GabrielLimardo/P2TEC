@@ -69,7 +69,7 @@ const listaController = {
             .catch(e => console.log(e))
 
     },
-    Perisfericos: (req, res) => {
+    Perifericos: (req, res) => {
 
         const user = req.session.user;
         db.Product.findAll({

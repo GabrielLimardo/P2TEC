@@ -49,7 +49,7 @@ router.post('/delete/:id', listaController.destroy);
 router.get('/Componentes', listaController.Componentes);
 router.get('/Notebooks', listaController.Notebooks);
 router.get('/Monitores', listaController.Monitores);
-router.get('/Perisfericos', listaController.Perisfericos);
+router.get('/Perifericos', listaController.Perifericos);
 router.get('/PcOffice', listaController.PcOffice);
 router.get('/PcStreamer', listaController.PcStreamer);
 router.get('/PcDiseno', listaController.PcDiseno);
