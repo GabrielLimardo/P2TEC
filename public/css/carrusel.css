@@ -95,6 +95,10 @@
 .productos-recomendadas .contenedor-carousel .carousel .productos img {
 	width: 100%;
 	vertical-align: top;
+	height: 100%;
+}
+.productos-recomendadas .contenedor-carousel .carousel .productos img:hover {
+	transform: scale(1.5);
 }
 
 /* ---- ----- ----- Media Queries ----- ----- ----- */

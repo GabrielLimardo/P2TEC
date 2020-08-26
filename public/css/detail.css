@@ -103,3 +103,10 @@ img#zoom_mw {
 	right: 30px;
 	cursor: pointer;
 }
+
+.cantidades{
+    margin-top: 5px;
+}
+ button.mt-4.buy-now-button {
+        background-image: linear-gradient(#45a7c5, #1D83A2, #0C485A ) !important;
+     }

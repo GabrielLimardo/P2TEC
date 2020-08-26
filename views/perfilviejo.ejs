@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<% 
+function round(val) {
+  return Math.round(val*100)/100;
+} 
+%>
+
+<html lang="en">
+<%- include('./partial/head', {title: 'Perfil'}) %>
+<link rel="stylesheet" href="/css/perfil.css">
+
+
+<body>
+    <!-- Header -->
+    <%- include('./partial/header', {user})%> 
+    <!-- /Header -->
+    <div class="perfilData">
+        <div class="userData">
+               
+         <div class="infocuenta">
+            <div class="userAccount">
+                <h3>Datos de la cuenta</h3>    
+                <hr>            
+            </div>
+            <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePic">
+            <% if(typeof user == 'undefined') { %>
+            <div class="userPData">
+                <h4> Usuario: </h4>
+                <h4> NO LOGIN </h4>
+            </div>
+            <% } else { %>
+            <div class="userPData">
+                    <h4> Usuario: </h4>
+                    <h4> <%= user.username  %> </h4>
+                </div>
+            <% } %>
+            
+            <div class="userPData">
+                <h4> Password: </h4>
+                <h4> **********</h4>
+            </div>
+            <div class="userPData">
+                <h4> Email: </h4>
+                <h4> <%= user.email %> </h4>
+            </div>
+            <% if( user.rol === 1 ) { %>
+            <div class="userPData">
+                <h4> ROL: </h4>
+                <h4> ADMIN </h4>
+            </div>
+            <% } else { %>
+            <div class="userPData">
+                <h4> ROL: </h4>
+                <h4> USER </h4>
+            </div>
+            <% } %>
+            
+          
+        </div>
+       
+    </div>
+   
+        <!-- <div class="userData">
+            <div class="userAccount">
+                <h3>Datos de la cuenta</h3>
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
+            </div>
+            <div class="userPData">
+                <h4>Nombre</h4>
+                <h4>Tobias </h4>
+            </div>
+            <div class="userPData">
+                <h4>Apellido</h4>
+                <h4>Vasquez</h4>
+            </div>
+            <div class="userPData">
+                <h4>Documento</h4>
+                <h4>41918000</h4>
+            </div>
+            <div class="userPData">
+                <h4>Telefono</h4>
+                <h4>1135004591</h4>
+            </div>
+        </div> -->
+        <!-- <div class="userData">
+            <div class="userAccount">
+                <h3>Datos de envio</h3>
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
+            </div>
+            <div class="userPData">
+                <h4>Calle</h4>
+                <h4>Riobamba</h4>
+            </div>
+            <div class="userPData">
+                <h4>Numero</h4>
+                <h4>820</h4>
+            </div>
+            <div class="userPData">
+                <h4>Piso</h4>
+                <h4> - </h4>
+            </div>
+            <div class="userPData">
+                <h4>Dpto</h4>
+                <h4> - </h4>
+            </div>
+            <div class="userPData">
+                <h4>Codigo Postal</h4>
+                <h4>1643</h4>
+            </div>
+            <div class="userPData">
+                <h4>Provincia</h4>
+                <h4>Buenos Aires</h4>
+            </div>
+            <div class="userPData">
+                <h4>Ciudad</h4>
+                <h4>Buenos Aires</h4>
+            </div>
+        </div>
+        <div class="userData">
+            <div class="userAccount">
+                <h3>Informacion de Pago</h3>
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></a></i>
+            </div>
+            <div class="userPData">
+                <h4>Tarjeta de Credito</h4>
+                <h4>**** **** **01</h4>
+            </div>
+            <div class="userPData">
+                <h4>Nombre del Titular</h4>
+                <h4>Tobias Vasquez</h4>
+            </div>
+            <div class="userPData">
+                <h4>Direccion de Facturacion</h4>
+                <h4>Riobamba 820</h4>
+            </div>
+        </div>
+    </div> -->
+    <%- include('partial/footer') %>
+</body>
+
+

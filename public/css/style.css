@@ -1036,3 +1036,18 @@ a:not([href]):not([tabindex]) {
    
     
 }
+
+.hystorial1{
+margin-top: 350px;
+background-color: #000;
+}
+
+img .productoimagen {
+    transform: scale(1.5);
+    
+}
+
+.containerperfil{
+   padding-top: 300px;
+   background-color: rgba(125, 125, 125, 0.5);
+}
