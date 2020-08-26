@@ -565,8 +565,9 @@ main {
 }
 
 .emptyCart{
-    padding-top: 300px; 
+    padding-top: 500px; 
     color: black;
+    margin-bottom: 258px;
 }
 
 /*EXTRAS*/
