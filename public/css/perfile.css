@@ -52,3 +52,7 @@ input:-webkit-autofill:active  {
     border-bottom: 1px solid #ccc;
     color: #fff !important;
 }
+
+img.profilePic {
+    width: 20%;
+}
