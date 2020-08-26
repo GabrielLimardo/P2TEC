@@ -1,3 +1,54 @@
-.w-sectioninverse{
+.containerperfil{
+    align-content: center;
+    text-align:center;
+    justify-items: center;
+    padding-top: 10px;
+}
+
+.misdatos{
     margin-top: 300px;
+    align-content: center;
+    text-align:center;
+    justify-items: center;
+    border: solid 2px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: rgba(0,0,0,0.7);
+    min-width: 250px;
+
+    
+}
+.misdatos div{
+    padding: 5px;
+  
+}
+body{
+    background-image: url("https://images8.alphacoders.com/377/377803.jpg");
+}    
+.misdatos h3{
+    color: white !important;
+}
+.misdatos label{
+    color: white !important;
+}
+.misdatos h5{
+    color: white !important;
+}
+.misdatos h1{
+    color: white !important;
+    font-size:30px;
+}
+
+
+.misdatos input,
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    background-color: transparent !important;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: #fff !important;
 }
