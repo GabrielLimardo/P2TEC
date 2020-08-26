@@ -63,10 +63,10 @@ INSERT INTO products VALUES
 (22,'JOYSTICK MARVO GT64 WIRELESS PS4 PC',6999,4,'marvojostick.jpg','GT-64 se recomienda para los entusiastas de los juegos de plataformas','2020-08-22 13:03:00',NULL,NULL),
 (23,'MOUSE TRUST KUDOS RGB GXT900',7373,4,'trustemouse.jpg','Gaming Designed for gaming yes Game type FPS, MOBA, RTS, RPG','2020-08-22 13:03:00',NULL,NULL),
 (24,'MOUSE GAMER RAZER VIPER AMBIDEXTROUS WIRED',9425,4,'razermopuse.jpg','Hasta 450 pulgadas por segundo (IPS)/50 G de aceleración','2020-08-22 13:03:00',NULL,NULL),
-(25,'MOUSE TRUST HERON RGB GXT 170',4560,4,'trustehero.jpg','Ratón para jugar, con LED RGB y sensor óptico avanzado.','2020-08-22 13:04:00',NULL,NULL);
+(25,'MOUSE TRUST HERON RGB GXT 170',4560,4,'trustehero.jpg','Ratón para jugar, con LED RGB y sensor óptico avanzado.','2020-08-22 13:04:00',NULL,NULL),
 (26,'PC Diseño',82768,7,'pcdiseno.jpg','Intel I5 9400 - B365 - 8GB - GTX 1650 S - 1TB','2020-07-15 11:34:38',NULL,NULL),
 (27,'PC Diseño',108012,7,'pcdiseno.jpg','Intel I5 9400 - B365 - 16GB - GTX 1660 Ti - 240GB SSD - 1TB','2020-07-15 11:34:38',NULL,NULL),
-(28,'PC Diseño',110554,7,'pcdiseno.jpg','AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T','2020-07-15 11:34:38',NULL,NULL),
+(28,'PC Diseño',110554,7,'pcdiseno.jpg','AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T','2020-07-15 11:34:38',NULL,NULL);
 CREATE TABLE roles (
   rol_id int(11) NOT NULL AUTO_INCREMENT,
   name varchar(45) DEFAULT NULL,

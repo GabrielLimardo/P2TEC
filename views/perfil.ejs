@@ -18,6 +18,7 @@
                 <div class="col-md-3 mt-20">
                     
                     <h1 class="section-title mi_cuenta"><i class="fa fa-users-cog"></i>&nbsp;Mi Cuenta</h1>
+                    <img src= <%= "/img/users/" + user.image %> alt="FotoPerfil" class="profilePic">
                     <div class="widget oculto-movil-">
                         <ul class="categories">
                             <% if (typeof user !== 'undefined' && user.rol === 1) {%>
