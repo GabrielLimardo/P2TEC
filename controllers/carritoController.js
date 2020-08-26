@@ -139,6 +139,7 @@ const carritoController = {
       },
     
       showBuyDetail(req, res) {
+        const user = req.session.user;
         Cart.findByPk(req.params.id, {
           include: {
             all: true,
