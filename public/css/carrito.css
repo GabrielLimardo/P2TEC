@@ -188,3 +188,25 @@ hr{
 
 }
 
+/* History Cart */
+
+.historyUsername{
+    text-align: right;
+    padding-right: 25px;
+}
+.history1{
+    margin: 350px auto;
+    margin-bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 80%;
+
+}
+.history2{
+    margin: 0 auto;
+}
+.historyDesc{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    color: black;
+}

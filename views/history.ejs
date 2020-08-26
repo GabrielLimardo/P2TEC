@@ -2,6 +2,7 @@
 <html lang="es">
 <!-- Include Head -->
 <%- include('./partial/head', {title: 'Hystory', image: '/img/numero.png'}) %>
+<link rel="stylesheet" href="/css/carrito.css">
 
 <body>
    <!-- Header -->
@@ -9,61 +10,52 @@
    <!-- /Header -->
 
    <div class="container products-wrapper">
-      <div class="row">
-         <div class="col-12">
+      <div class="">
+         <div class="">
             <h1 class="products-title">Carrito de compras</h1>
          </div>
       </div>
-      <div class="hystorial1">
-         <div class="hystorial2">
-            <div class="hystorial3">
+      <div class="history1">
+         <div class="history2">
+            <div class="history3">
                <% if(carts.length != 0){ %>
                <% carts.forEach(cart => { %>
                <a href="/carrito/buy-detail/<%= cart.id %>">
-                  <div class="col-12 mt-3">
-                     <section class="row">
-                        <h4 class="col-4"><%= new Date(cart.createdAt).toLocaleDateString() %> </h4>
-                        <section class="col-8 row info">
-                           <div class="col-6">
+                  <div class="historyDesc">
+                        <h4 class=""><%= new Date(cart.createdAt).toLocaleDateString() %> </h4>
+                           <div class="">
+                              <h5>Descripcion del producto</h5>
                               <ul>
                                  <% cart.items.forEach(item => { %>
                                     <li style="font-size: 12px;">
-                                       <small>
+                                       
                                           <%= item.product.name %> x<%= item.quantity %>
-                                       </small>
+                                       
                                     </li>
                                  <% }) %>
                               </ul>
                            </div>
-                           <div class="col-6">
+                           <div class="">
                               <p class="product-detail-price">
                                  $<%= cart.total %>
                               </p>
                            </div>
-                        </section>
-                        <section class="col-3">
-                           
-                        </section>
-                     </section>
                   </div>
                </a>
-               <hr>
+               
                <% }); %>
                
                <% } else { %>
-               <div class="col-12">
+               <div class="">
                   <h2 class="products-title" style="padding: 100px 0; color: tomato;">Aún no tienes compras</h2>
                </div>
                <% } %>
             </div>
-            <div class="col-12 col-lg-4">
-               <article class="product-detail-info">
-                  <h2 class="product-detail-title">
+            <div class="">
+                  <h2 class="historyUsername">
                      <%= locals.user.username %>
                   </h2>
                   <hr>
-                  
-               </article>
             </div>
          </div>
       </div>
