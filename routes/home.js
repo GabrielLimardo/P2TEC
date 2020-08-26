@@ -4,7 +4,7 @@ const homeController = require("../controllers/homeController")
 
 router.get("/",  homeController.root);
 router.get('/search', homeController.search);
-router.get("/perfil", homeController.perfil);
+
 
 router.get("/mostrarNumeroSession", function (req, res) {
     res.send("Session tiene el numero: " + req.session.numeroVisitas);

@@ -28,6 +28,7 @@
                               <ul>
                                  <% cart.items.forEach(item => { %>
                                     <li style="font-size: 12px;">
+                                       <img src="/img/<%= item.product.image %>" alt="imagen" class="fotoProductoDetalle" data="/img/<%= item.product.image %>" >
                                        
                                           <%= item.product.name %> x<%= item.quantity %>
                                        

@@ -38,10 +38,7 @@ const controller = {
 
 
 	},
-	perfil: (req, res) => {
-		const user = req.session.user;
-		return res.render('perfil', {user});
-},
+	
 };
 
 module.exports = controller;
