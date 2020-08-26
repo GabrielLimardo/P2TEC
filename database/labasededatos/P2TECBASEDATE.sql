@@ -14,7 +14,7 @@ CREATE TABLE categories (
 -- Dumping data for table categories
 --
 /*!40000 ALTER TABLE categories DISABLE KEYS */;
-INSERT INTO categories VALUES (1,'Componentes','2020-07-15 11:34:38',NULL,NULL),(2,'Notebook','2020-07-15 11:34:38',NULL,NULL),(3,'Monitores','2020-07-15 11:34:38',NULL,NULL),(4,'Perifericos','2020-07-15 11:34:38',NULL,NULL),(5,'PC Streaming','2020-07-15 11:34:38',NULL,NULL),(6,'PC Home Office','2020-07-15 11:34:38',NULL,NULL);
+INSERT INTO categories VALUES (1,'Componentes','2020-07-15 11:34:38',NULL,NULL),(2,'Notebook','2020-07-15 11:34:38',NULL,NULL),(3,'Monitores','2020-07-15 11:34:38',NULL,NULL),(4,'Perifericos','2020-07-15 11:34:38',NULL,NULL),(5,'PC Streaming','2020-07-15 11:34:38',NULL,NULL),(6,'PC Home Office','2020-07-15 11:34:38',NULL,NULL),(7,'PC diseno','2020-07-15 11:34:38',NULL,NULL);
 /*!40000 ALTER TABLE categories ENABLE KEYS */;
 --
 -- Table structure for table products
@@ -55,15 +55,18 @@ INSERT INTO products VALUES
 (14,'PC Home Office',39660,6,'PC-Oficina-2_800.jpg','Intel Core I3 9100F - H310 - 8GB - GT 210 - 240GB SS','2020-07-15 11:34:38',NULL,NULL),
 (15,'PC Home Office',32343,6,'PC-Oficina-2_800.jpg','Intel Pentium G5400 - H310 - 8GB - 240GB SSD','2020-07-15 11:34:38',NULL,NULL),
 (16,'ACCESS POINT',6954,4,'1 (18).jpg','Sistema Wi-Fi Mesh Tenda Nova MW3 2-pack AC1200','2020-07-15 11:34:38',NULL,NULL),
-(17,'PC Streaming',82768,5,'PC-Streaming-5_800.jpg','Intel I5 9400 - B365 - 8GB - GTX 1650 S - 1TB','2020-07-15 11:34:38',NULL,NULL),
-(18,'PC Streaming',108012,5,'PC-Streaming-5_800.jpg','Intel I5 9400 - B365 - 16GB - GTX 1660 Ti - 240GB SSD - 1TB','2020-07-15 11:34:38',NULL,NULL),
-(19,'PC Streaming',110554,5,'PC-Streaming-5_800.jpg','AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T','2020-07-15 11:34:38',NULL,NULL),
+(17,'PC Streaming',82768,5,'PCstremingultima.jpg','Intel I5 9400 - B365 - 8GB - GTX 1650 S - 1TB','2020-07-15 11:34:38',NULL,NULL),
+(18,'PC Streaming',108012,5,'PCstremingultima.jpg','Intel I5 9400 - B365 - 16GB - GTX 1660 Ti - 240GB SSD - 1TB','2020-07-15 11:34:38',NULL,NULL),
+(19,'PC Streaming',110554,5,'PCstremingultima.jpg','AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T','2020-07-15 11:34:38',NULL,NULL),
 (20,'Notebook Hp I5',111096,2,'1 (23).jpg','Notebook Hp I5 250 G7 8265U 8GB 1TB 15.6','2020-07-15 11:34:38',NULL,NULL),
 (21,'Notebook Hp I7',163224,2,'1 (40).jpg','Notebook Hp I7 10510U 8Gb !tb Windows 10 15,6 + GeForece MX 130','2020-07-15 11:34:38',NULL,NULL),
 (22,'JOYSTICK MARVO GT64 WIRELESS PS4 PC',6999,4,'marvojostick.jpg','GT-64 se recomienda para los entusiastas de los juegos de plataformas','2020-08-22 13:03:00',NULL,NULL),
 (23,'MOUSE TRUST KUDOS RGB GXT900',7373,4,'trustemouse.jpg','Gaming Designed for gaming yes Game type FPS, MOBA, RTS, RPG','2020-08-22 13:03:00',NULL,NULL),
 (24,'MOUSE GAMER RAZER VIPER AMBIDEXTROUS WIRED',9425,4,'razermopuse.jpg','Hasta 450 pulgadas por segundo (IPS)/50 G de aceleración','2020-08-22 13:03:00',NULL,NULL),
 (25,'MOUSE TRUST HERON RGB GXT 170',4560,4,'trustehero.jpg','Ratón para jugar, con LED RGB y sensor óptico avanzado.','2020-08-22 13:04:00',NULL,NULL);
+(26,'PC Diseño',82768,7,'pcdiseno.jpg','Intel I5 9400 - B365 - 8GB - GTX 1650 S - 1TB','2020-07-15 11:34:38',NULL,NULL),
+(27,'PC Diseño',108012,7,'pcdiseno.jpg','Intel I5 9400 - B365 - 16GB - GTX 1660 Ti - 240GB SSD - 1TB','2020-07-15 11:34:38',NULL,NULL),
+(28,'PC Diseño',110554,7,'pcdiseno.jpg','AMD Ryzen 5 3600 - B450 - 16GB - RX 5600 XT - 240GB SSD - 1T','2020-07-15 11:34:38',NULL,NULL),
 CREATE TABLE roles (
   rol_id int(11) NOT NULL AUTO_INCREMENT,
   name varchar(45) DEFAULT NULL,
@@ -95,7 +98,8 @@ CREATE TABLE users (
 --
 -- Dumping data for table users
 --
-INSERT INTO users VALUES ('belen@gmail.com','belen@gmail.com','$2a$10$SX6Qqs95QXRCeIDWwO236OQ','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,8);
+INSERT INTO users VALUES ('belen','belen@gmail.com','$2a$10$SX6Qqs95QXRCeIDWwO236OQ','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,8);
+INSERT INTO users VALUES ('mauro','mauro@gmail.com','$2a$10$SX6Qqs95QXRCeIDWwO236OQ','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,0,9);
 -- Dump completed on 2020-08-09 16:35:15
 CREATE TABLE items (
   id int(10) UNSIGNED NOT NULL,
