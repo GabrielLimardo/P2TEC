@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partial/head', {title: 'Formulario'}) %>
@@ -13,12 +10,13 @@
         <div class="loginContainer row no-wrap">
             <main class="login-publi row no-wrap">
                 <div class="loginCompleto">
-                   
-                    
+
+
                     <div class="form-container">
                         <div class="loginTitulo">REGISTER</div>
-                        <form class="loginForm" action="/register" method="POST" autocomplete="off" enctype="multipart/form-data" >
-                           
+                        <form class="loginForm" action="/register" method="POST" autocomplete="off"
+                            enctype="multipart/form-data">
+
                             <div class="field-group">
                                 <div class="username">
                                     <input class="usernameInput" type="username" id="username" name="username"
@@ -26,16 +24,16 @@
                                         required><%= typeof errors == 'undefined' ? null : errors.username ? errors.username.msg : null %>
                                     </p>
                                 </div>
-                                <div class="email"> 
-                                    <input class="emailInput" type="email" id="email" name="email" placeholder="Email" autocomplete="off"
-                                        value="" required>
+                                <div class="email">
+                                    <input class="emailInput" type="email" id="email" name="email" placeholder="Email"
+                                        autocomplete="off" value="" required>
                                     <p class="error">
                                         <%= typeof errors == 'undefined' ? null : errors.email ? errors.email.msg : null %>
                                     </p>
                                 </div>
                                 <div class="password">
-                                    <input class="passwordInput" type="password" id="passsword" name="password" autocomplete="off"
-                                        placeholder="Contraseña" value="" required>
+                                    <input class="passwordInput" type="password" id="passsword" name="password"
+                                        autocomplete="off" placeholder="Contraseña" value="" required>
                                     <p class="error">
                                         <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
                                     </p>
@@ -46,9 +44,9 @@
                                     <p class="error" required>
                                         <%= typeof errors == 'undefined' ? null : errors.retype ? errors.retype.msg : null %>
                                     </p>
-                                    
-                                     </div>
-                                   <div class="remember">
+
+                                </div>
+                                <div class="remember">
                                     <label for="image" class="form-label">Avatar:</label>
                                     <input type="file" id="image" name="image" class="avatarBotton">
                                     <div>
@@ -64,7 +62,7 @@
                             <img src="/img/numero.png" alt="logopP2Tec">
                         </div>
                     </div>
-                    
+
                 </div>
 
             </main>
