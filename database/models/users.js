@@ -5,7 +5,12 @@ module.exports = (sequelize, dataTypes) => {
         email: dataTypes.STRING,
         password: dataTypes.STRING,
         image: dataTypes.STRING,
-        rol: dataTypes.INTEGER
+        rol: dataTypes.INTEGER,
+        address : dataTypes.STRING,
+        floor : dataTypes.STRING,
+        PostalCode : dataTypes.STRING,
+        location : dataTypes.STRING,
+        Province: dataTypes.STRING
         
     }
     const User = sequelize.define(alias, cols);

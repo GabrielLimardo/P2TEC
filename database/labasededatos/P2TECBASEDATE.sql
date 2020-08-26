@@ -80,6 +80,11 @@ CREATE TABLE users (
   email varchar(30) DEFAULT NULL,
   password varchar(30) DEFAULT NULL,
   image varchar(30) DEFAULT NULL,
+  address varchar(30) DEFAULT NULL,
+  floor varchar(30) DEFAULT NULL,
+  PostalCode varchar(30) DEFAULT NULL,
+  location varchar(30) DEFAULT NULL,
+  Province varchar(30) DEFAULT NULL,
   createdAt datetime DEFAULT current_timestamp(),
   updatedAt datetime DEFAULT NULL ON UPDATE current_timestamp(),
   deletedAt datetime DEFAULT NULL,
@@ -90,7 +95,7 @@ CREATE TABLE users (
 --
 -- Dumping data for table users
 --
-INSERT INTO users VALUES ('belen@gmail.com','belen@gmail.com','$2a$10$SX6Qqs95QXRCeIDWwO236OQ','Grafico.png','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,8);
+INSERT INTO users VALUES ('belen@gmail.com','belen@gmail.com','$2a$10$SX6Qqs95QXRCeIDWwO236OQ','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,8);
 -- Dump completed on 2020-08-09 16:35:15
 CREATE TABLE items (
   id int(10) UNSIGNED NOT NULL,
