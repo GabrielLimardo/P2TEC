@@ -28,6 +28,7 @@
                   <section class="col-6 descCart">
                      <div class="product-detail-name">
                         <p><%= item.product.name %></p>
+                        <p style="font-size: 16px;"><%= item.product.descripcion%></p>
                         <div class="cart-options">
                            <form action="/carrito/deleteFromCart" method="POST" class="delete-cart-button">
                               <input type="hidden" name="itemId" value="<%= item.id %>">

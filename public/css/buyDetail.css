@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.orderInfo{
+    margin-top: 300px;
+}
+/* .detailProducts{
+    display:flex;
+    justify-content: center;
+} */
+p{
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+}
+hr{
+    border: 1px solid white;
+}
+.detailProducts{
+    margin-bottom: 2%;
+}
+.detailProducts ul{
+    text-align: center;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+.buyDetailInfo{
+    width: 95%;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.buyDetailInfo h2{
+    text-align: center;
+    margin-bottom: 5px;
+}

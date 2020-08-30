@@ -27,15 +27,16 @@
                   </div>
                   <div class="historyDescProd">
                      <ul>
-                        <h5 style="text-align: center; padding-top: 20px;">Detalles de la Compra</h5>
-                        <div>
+                        <h5 style="text-align: center; padding-top: 20px; font-size: 32px;">Detalles de la Compra</h5>
+                        <div class="historyContentProd">
                         <% cart.items.forEach(item => { %>
                         <div class="historyCartDetails">
                            <img src="/img/<%= item.product.image %>" alt="imagen" class="historyImgProd"
                               data="/img/<%= item.product.image %>">
 
                            <a href="/carrito/buy-detail/<%= cart.id %>" style="width: 100%; text-align: center;">
-                              <p style="color:black"> <%= item.product.name %> x<%= item.quantity %></p>
+                              <p style="color:blue"> <%= item.product.name %> x<%= item.quantity %></p>
+                              <!-- <p style="color: black;"> </p> -->
                               <p style="color:black"> $<%= item.product.price%> </p>
                            </a>
                         </div>

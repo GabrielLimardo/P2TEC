@@ -2,6 +2,7 @@
 <html lang="es">
 <!-- Include Head -->
 <%- include('./partial/head', {title: 'BuyDetail'}) %>
+<link rel="stylesheet" href="/css/buyDetail.css">
 
 <body>
    <!-- Header -->
@@ -9,34 +10,32 @@
    <!-- /Header -->
 
    <div class="container products-wrapper">
-      <div class="row">
-         <div class="col-12">
+      <div class="">
+         <div class="">
             <h1 class="products-title">Detalle de compra</h1>
          </div>
       </div>
-      <div class="product-detail">
-         <div class="row">
-            <div class="col-6 col-sm-12">
-               <article class="product-detail-info" style="font-size: 14px;">
-                  <h2 class="product-detail-title">
-                     <strong>Numero de orden: </strong><%= cart.orderNumber %>
-                  </h2>
-                  <hr class="mb-4">
-                  <strong>Total:</strong><p>$<%= cart.total %></p>
-                  <br>
-                  <strong>Productos:</strong>
-                  <ul>
-                     <% cart.items.forEach(item => { %>
-                     <li><p><%= item.product.name %> x<%= item.quantity %> - <strong><small><%= user.username %></small></strong></p></li>
-                     <% }) %>
-                  </ul>
-                  <br>
-                  <strong>Fecha de compra:</strong><p><%= new Date(cart.createdAt).toLocaleDateString()%></p>
-                  <hr>
+            <div class="orderInfo">
+               <div class="buyDetailInfo" style="font-size: 14px;">
+                  <div class="detailProducts"> 
+                     <h2 class="product-detail-title">
+                        <strong>Fecha de compra:</strong>
+                        <p><%= new Date(cart.createdAt).toLocaleDateString()%></p>
+                     </h2>
+                     <p style="text-align: center; font-size: 22px;">Total: $<%= cart.total %></p>
+                     <p style="text-align: center;">Productos:</p>
+                     <ul>
+                        <% cart.items.forEach(item => { %>
+                        <li>
+                           <p> <%= item.product.name %> x<%= item.quantity %></p>
+                        </li>
+                        <% }) %>
+                     </ul>
+                     <br>
+                     <p style="text-align: center; padding-bottom: 2%;">Numero de orden: <%= cart.orderNumber %></p>
 
-               </article>
-            </div>
-         </div>
+                  </div>
+               </div>
       </div>
    </div>
 
