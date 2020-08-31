@@ -36,8 +36,7 @@ const controller = {
         })
       })
       } else {
-
-        return res.render("perfil/"+ req.params.id, { errors: errors.mapped(), old: req.body});
+        return res.render("perfil", { errors: errors.mapped(), old: req.body});
       }
 
     },
@@ -57,7 +56,7 @@ const controller = {
      
      cambiarcontra: (req, res) => {
         const user = req.session.user;
-        if (typeof user !== 'undefined') {
+        if (user) {
         return res.render("cambiarcontra",{user})
       } else {
         return res.render('not-found', { user });
@@ -65,7 +64,26 @@ const controller = {
     },
       //tengo que cambiar la contraseña
       updatecontra: (req, res) => {
-       
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+          db.User.findByPk(req.params.id)
+          .then(function(user){
+            return db.User.update ({
+              password: req.body.newPassword != "" ? bcryptjs.hashSync(req.body.newPassword, 10) : user.password
+            }, {where: {
+              id: req.params.id}
+             })
+             
+           
+          })
+          .then(()=>{
+            return res.redirect('/'); 
+          })
+          
+    
+        } else{
+          return res.render('password', {errors: errors.mapped(), old: req.body} )
+        }
     }
 
 };
