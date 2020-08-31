@@ -7,8 +7,8 @@ router.get("/:id", perfilController.root);
 router.post("/edit/:id",validator.login, perfilController.edit);
 router.get("/controlarea", perfilController.controlarea);
 router.post("/updaterol", perfilController.updaterol);
-router.get("/cambiarcontra", perfilController.cambiarcontra);
-router.post("/updatecontra", perfilController.updatecontra);
+router.get("/editpas/:id", perfilController.editpas);
+router.post("/updatecontra",validator.password, perfilController.updatecontra);
 
 
 module.exports = router;

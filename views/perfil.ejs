@@ -24,10 +24,10 @@
                             <% if (typeof user !== 'undefined' && user.rol === 1) {%>
                             <li><a href="/perfil/cambiarcontra" class="continuar"><i class="fas fa-user-tag"></i>&nbsp;Panel de Control</a></li>
                             <li><a href="/carrito/history" class="continuar"><i class="fa fa-shopping-cart "></i>&nbsp;Mis compras</a></li>
-                            <li><a href="/perfil/cambiarcontra" class="continuar"><i class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
+                            <li><a href="/perfil/editpas/<%= user.id %>" class="continuar"><i class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
                             <% } else { %>
                             <li><a href="/carrito/history" class="continuar"><i class="fa fa-shopping-cart "></i>&nbsp;Mis compras</a></li>
-                            <li><a href="/perfil/cambiarcontra" class="continuar"><i class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
+                            <li><a href="/perfil/editpas/<%= user.id %>" class="continuar"><i class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
                             <% } %>
                         </ul>
                     </div>

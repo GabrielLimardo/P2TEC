@@ -19,6 +19,7 @@ const controller = {
     //tiene que cargar la nueva informacion a la base de datos
     edit: (req, res) => {
       const errors = validationResult(req);
+      
       if(errors.isEmpty()){
 
       db.User.update({
@@ -54,13 +55,15 @@ const controller = {
        
     },
      
-     cambiarcontra: (req, res) => {
-        const user = req.session.user;
-        if (user) {
-        return res.render("cambiarcontra",{user})
-      } else {
-        return res.render('not-found', { user });
+    editpas: (req, res) => {
+      const user = req.session.user;
+    
+      if (user) {
+        return res.render('cambiarcontra', {user})  
+    } else {
+      return res.render('not-found', {user });
     }
+    
     },
       //tengo que cambiar la contraseña
       updatecontra: (req, res) => {
@@ -77,7 +80,7 @@ const controller = {
            
           })
           .then(()=>{
-            return res.redirect('/'); 
+            return res.redirect('/login'); 
           })
           
     

@@ -107,5 +107,39 @@ module.exports = {
       .custom((value) => value > 0)
       .withMessage("Debe agregar al menos 1 producto al carrito"),
   ],
+  password: [
+
+    body("currentPassword")
+      .notEmpty()
+      .withMessage("Ingrese su contrasenia actual para cambiarla")
+      .bail()
+      .custom((value, {req}) => {
+        return db.Users.findByPk(req.session.user.id)
+        .then(function(user){
+          if(!bcryptjs.compareSync(req.body.currentPassword, user.password)){
+            return Promise.reject('Contrasenia invalida')
+          }
+        })
+      }),
+
+    body("newPassword") // Deberiamos ver otra manera de crear una dependencia entre el campo newP con el campo currentP
+      .notEmpty()
+      .withMessage('Ingrese su nueva contrasenia')
+      .bail()
+      .isLength({ min: 8 })
+      .withMessage("La contraseña debe tener como mínimo 8 caracteres")         
+      
+
+      // Validador
+      // Preguntar si el primer campo coincide con la contraseña de la DB
+
+      // Preguntar si las contraseñas nuevas coinciden
+
+
+      // Controlador
+      // Hasheas la password
+      // Update de tu usuario donde coincida el email con el que está en sesión. Updateas la password
+      
+  ],
 };
 
