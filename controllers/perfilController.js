@@ -3,6 +3,7 @@ const productModel = jsonModel('products');
 let db  = require("../database/models");
 const sequelize = require('sequelize');
 const Op = sequelize.Op;
+const { validationResult } = require("express-validator");
 
 
 const controller = {
@@ -17,8 +18,12 @@ const controller = {
     },
     //tiene que cargar la nueva informacion a la base de datos
     edit: (req, res) => {
+      const errors = validationResult(req);
+      if(errors.isEmpty()){
+
       db.User.update({
-        username: req.body.cliNombre
+        username: req.body.username,
+        // email: req.body.email
        }, {where: {
         id: req.params.id
        }  
@@ -30,6 +35,11 @@ const controller = {
           return res.redirect("/perfil/" + req.params.id)
         })
       })
+      } else {
+
+        return res.render("perfil/"+ req.params.id, { errors: errors.mapped(), old: req.body});
+      }
+
     },
      controlarea: (req, res) => {
       const user = req.session.user;
