@@ -89,12 +89,13 @@ module.exports = {
         return db.User.findOne({ where: { email: value } }).then(
           user => {
             if (user) {
+              console.log(req.body.password + " vs " + user.password)
+              console.log(bcrypt.hashSync(req.body.password) + " vs " + bcrypt.hashSync(user.password))
               if (bcrypt.compareSync(req.body.password, user.password)) {
                 return Promise.resolve();
               }
-            } else {
-              return Promise.reject("Email o contraseña invalidos");
             }
+            return Promise.reject("Email o contraseña invalidos");
           }
         )
       })
