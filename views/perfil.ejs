@@ -38,7 +38,7 @@
                         <h3><i class="fa fa-list-alt"></i>&nbsp; Mis datos</h3>
                         <table class="table table-cart table-responsive">
                             <tbody id="contentPedido">
-                            <form id="actualizarCuenta" name="actualizarCuenta" class="col-lg-12"> 
+                            <form id="actualizarCuenta" action="/perfil/edit/<%= user.id %>" method="POST" name="actualizarCuenta" class="col-lg-12"> 
                                 <input name="email" class="form-control pl-2" value="email" type="hidden"/>                 											
                                 <div class="col-lg-6 col-xs-12 pull-left mt-0 mb-4"> 
                                     <div class="col-lg-12 pl-0"><h5>Datos personales</h5></div>
@@ -72,7 +72,7 @@
                                     <div class="col-lg-12 pl-0"><h5>Dirección de envío</h5></div>                            
                                     <div class="col-lg-12 col-xs-12 pull-left mt-0 pl-0"> 
                                         <label class="control-label w-100 mt-0">Dirección:</label>
-                                        <input class="form-control pl-2" name="cliDireccion" value="" required="required"/>
+                                        <input class="form-control pl-2" name="cliDireccion" value="" =""/>
                                     </div>
                                     <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
                                     <label class="control-label w-100 mt-0">Piso / Depto:</label>
@@ -80,15 +80,15 @@
                                     </div>                            
                                     <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
                                         <label class="control-label w-100 mt-0">Cod. postal:</label>
-                                        <input class="form-control pl-2" name="cliCodPostal" value="" required="required"/>
+                                        <input class="form-control pl-2" name="cliCodPostal" value="" =""/>
                                     </div>                            
                                     <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
                                         <label class="control-label w-100 mt-0">Localidad:</label>
-                                        <input class="form-control pl-2" name="cliLocalidad" value="" required="required"/>
+                                        <input class="form-control pl-2" name="cliLocalidad" value="" =""/>
                                     </div>
                                     <div class="col-lg-6 col-xs-12 pull-left mt-4 pl-0"> 
                                         <label class="control-label w-100 mt-0">Provincia:</label>
-                                                                                <select name="cliProvincia" class="form-control pl-2" placeholder="Provincia" required="required">
+                                                                                <select name="cliProvincia" class="form-control pl-2" placeholder="Provincia" ="">
             <option value="">Provincia</option>
                 <option value="34">
             Buenos Aires        </option>

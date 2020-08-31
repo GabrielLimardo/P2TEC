@@ -8,17 +8,28 @@ const Op = sequelize.Op;
 const controller = {
 	root: (req, res) => {
         const user = req.session.user;
-
-        if (typeof user !== 'undefined') {
-        return res.render("perfil", {user})
-
+    
+        if (user) {
+          return res.render('perfil', {user})  
       } else {
         return res.render('not-found', {user });
     }
     },
     //tiene que cargar la nueva informacion a la base de datos
     edit: (req, res) => {
-        
+      db.User.update({
+        username: req.body.cliNombre
+       }, {where: {
+        id: req.params.id
+       }  
+
+      })
+      .then(()=>{
+        db.User.findByPk(req.params.id).then(function(user){
+          req.session.user = user
+          return res.redirect("/perfil/" + req.params.id)
+        })
+      })
     },
      controlarea: (req, res) => {
       const user = req.session.user;
