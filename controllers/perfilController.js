@@ -19,6 +19,7 @@ const controller = {
     //tiene que cargar la nueva informacion a la base de datos
     edit: (req, res) => {
       const errors = validationResult(req);
+      
       if(errors.isEmpty()){
         db.User.update({
           username: req.body.username,
@@ -53,17 +54,38 @@ const controller = {
        
     },
      
-     cambiarcontra: (req, res) => {
-        const user = req.session.user;
-        if (typeof user !== 'undefined') {
-        return res.render("cambiarcontra",{user})
-      } else {
-        return res.render('not-found', { user });
+    editpas: (req, res) => {
+      const user = req.session.user;
+    
+      if (user) {
+        return res.render('cambiarcontra', {user})  
+    } else {
+      return res.render('not-found', {user });
     }
+    
     },
       //tengo que cambiar la contraseña
       updatecontra: (req, res) => {
-       
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+          db.User.findByPk(req.params.id)
+          .then(function(user){
+            return db.User.update ({
+              password: req.body.newPassword != "" ? bcryptjs.hashSync(req.body.newPassword, 10) : user.password
+            }, {where: {
+              id: req.params.id}
+             })
+             
+           
+          })
+          .then(()=>{
+            return res.redirect('/login'); 
+          })
+          
+    
+        } else{
+          return res.render('password', {errors: errors.mapped(), old: req.body} )
+        }
     }
 
 };
