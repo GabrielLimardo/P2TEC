@@ -20,24 +20,22 @@ const controller = {
     edit: (req, res) => {
       const errors = validationResult(req);
       if(errors.isEmpty()){
+        db.User.update({
+          username: req.body.username,
+          // email: req.body.email
+        }, {where: {
+          id: req.params.id
+        }  
 
-      db.User.update({
-        username: req.body.username,
-        // email: req.body.email
-       }, {where: {
-        id: req.params.id
-       }  
-
-      })
-      .then(()=>{
-        db.User.findByPk(req.params.id).then(function(user){
-          req.session.user = user
-          return res.redirect("/perfil/" + req.params.id)
         })
-      })
+        .then(()=>{
+          db.User.findByPk(req.params.id).then(function(user){
+            req.session.user = user
+            return res.redirect("/perfil/" + req.params.id)
+          })
+        })
       } else {
-
-        return res.render("perfil/"+ req.params.id, { errors: errors.mapped(), old: req.body});
+        return res.render("perfil", { errors: errors.mapped(), old: req.body, user: req.session.user});
       }
 
     },
