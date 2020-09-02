@@ -47,12 +47,24 @@ const controller = {
     },
      controlarea: (req, res) => {
       const user = req.session.user;
-        //tiene que mostrar los emails con su nivel de admin
-        if (typeof user !== 'undefined' && user.rol === 1) {
-      return res.render("panelcontro",{data: user})
-    } else {
-      return res.render('not-found', { user });
-  }
+      if (typeof user !== 'undefined' && user.rol === 1) {
+          // Do the magic
+          db.User.findAll({
+            //  include: ['category']
+            include: {
+                all: true,
+                nested: true
+              }
+        })
+            .then(function (results) {
+                const UserAll = results;
+                return res.render("paneldecontrol", { data: UserAll, user })
+            })
+            .catch(e => console.log(e))
+             
+      } else {
+          return res.render('not-found', { user });
+      }
     },
      //tengo que cargar la nueva informacion de roles
      updaterol: (req, res) => {
