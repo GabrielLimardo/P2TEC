@@ -74,7 +74,7 @@ input:-webkit-autofill:active  {
     background: rgba(0,0,0,0.7);
     min-width: 400px;
     max-width: 600px;
-    height: 530px;
+    height: 600px;
     border-radius: 5px;
     min-height: 250px;
     color: white;
@@ -230,4 +230,24 @@ button.registerButton {
 
 input#Comentario {
     padding-top: 40px;
+}
+select {
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+
+button{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+textarea#descripcion {
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    color: white;
 }

@@ -13,7 +13,7 @@
     border: solid 2px;
     margin-left: 30%;
     margin-right: 30%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     min-width: 250px;
 
     
@@ -59,4 +59,19 @@ img.profilePic {
 
 p .error {
     color: white;
+}
+
+select {
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+
+button{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    padding: 5px;
+    margin: 5px;
 }
