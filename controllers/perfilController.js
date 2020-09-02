@@ -42,7 +42,7 @@ const controller = {
           })
         })
       } else {
-        return res.send(errors.mapped())
+       //no esta tirando los errores
         return res.render("perfil", { errors: errors.mapped(), old: req.body, user: req.session.user});
       }
 
@@ -52,7 +52,6 @@ const controller = {
       if (typeof user !== 'undefined' && user.rol === 1) {
           // Do the magic
           db.User.findAll({
-            //  include: ['category']
             include: {
                 all: true,
                 nested: true
@@ -103,6 +102,7 @@ const controller = {
           
     
         } else{
+          return res.send(errors.mapped())
           return res.render('password', {errors: errors.mapped(), old: req.body} )
         }
     },

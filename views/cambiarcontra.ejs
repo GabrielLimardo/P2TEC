@@ -28,10 +28,10 @@
                         <h3><i class="fa fa-list-alt"></i>&nbsp; Contraseña</h3>
                         <table class="table table-cart table-responsive">
                             <tbody id="contentPedido">
-                            <form id="actualizarCuenta" name="actualizarCuenta" class="col-lg-12"> 
+                            <form id="actualizarCuenta" name="actualizarCuenta" class="col-lg-12" action="/perfil/updatecontra" method="POST"> 
 
                                 <div class="password">
-                                    <input class="passwordInput" type="password" id="passsword" name="password" autocomplete="off"
+                                    <input class="passwordInput" type="password" id="passsword" name="currentPassword" autocomplete="off"
                                         placeholder="Contraseña" value=""  required >
                                     <p class="error">
                                         <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
@@ -46,14 +46,7 @@
                                     </p>
                                 </div>
 
-                                <div class="password">
-                                    <input class="passwordInput" type="password" id="retype" name="retype"
-                                        placeholder="Repetir contraseña" value="">
-                                    <p class="error" required>
-                                        <%= typeof errors == 'undefined' ? null : errors.retype ? errors.retype.msg : null %>
-                                    </p>
-                                    
-                                     </div>
+
 
                                     <div class="col-lg-12 col-xs-12 mt-3 pl-0">
                                       <button type="submit" class="btn btn-blue"><i class="fa fa-check" aria-hidden="true"></i> Actualizar mi contraseña</button>

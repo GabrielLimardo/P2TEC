@@ -112,9 +112,9 @@ module.exports = {
       .withMessage("Ingrese su contrasenia actual para cambiarla")
       .bail()
       .custom((value, {req}) => {
-        return db.Users.findByPk(req.session.user.id)
+        return db.User.findByPk(req.session.user.id)
         .then(function(user){
-          if(!bcryptjs.compareSync(req.body.currentPassword, user.password)){
+          if(!bcrypt.compareSync(req.body.currentPassword, user.password)){
             return Promise.reject('Contrasenia invalida')
           }
         })
@@ -124,8 +124,8 @@ module.exports = {
       .notEmpty()
       .withMessage('Ingrese su nueva contrasenia')
       .bail()
-      .isLength({ min: 8 })
-      .withMessage("La contraseña debe tener como mínimo 8 caracteres")         
+      .isLength({ min: 4 })
+      .withMessage("La contraseña debe tener como mínimo 4 caracteres")         
       
 
       // Validador
