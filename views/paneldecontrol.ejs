@@ -32,8 +32,15 @@
 
                                 <%  data.forEach(user => { %>                                         
                                                     <h2 style="color: white;"><%= user.username %></h2>
-                                                    <h3><%= user.rol %></h3>                          
-                                        <% }) %>
+                                                    <!-- <h3></h3>   -->
+                                                    <select name="categoryId" id="categoryId" class="form-input"></select>
+                                                    <option value="">Elegí</option>
+										            <% data.forEach(function(user) {  %>  
+                                                    <option value="<%= user.rol %>"> <%= user.rol %> </option>
+                                                    <%})%>  
+                                                    </select>                        
+                                <% }) %>
+                                                    
                                     <div class="col-lg-12 col-xs-12 mt-3 pl-0">
                                       <button type="submit" class="btn btn-blue"><i class="fa fa-check" aria-hidden="true"></i> Actualizar mi contraseña</button>
                                      </div>
