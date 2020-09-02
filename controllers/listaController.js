@@ -268,10 +268,15 @@ const listaController = {
             // Do the magic
             db.Category.findAll()
                 .then((categories) => {
-                    return res.render('product-create-form', {
-                        user,
-                        categories
-                    });
+                    db.Brand.findAll()
+                    .then((brands) => {
+                        return res.render('product-create-form', {
+                            user,
+                            categories,
+                            brands
+                        });
+                    })
+                    .catch(e => console.log(e));
                 })
                 .catch(e => console.log(e));
         } else {
@@ -287,6 +292,7 @@ const listaController = {
                 price: req.body.price,
                 descripcion: req.body.descripcion,
                 categoryId: req.body.categoryId,
+                brandId: req.body.brandId,
                 image: req.file.filename
             })
             .then(() => {
@@ -298,14 +304,19 @@ const listaController = {
         if (typeof user !== 'undefined' && user.rol === 1) {
             db.Category.findAll()
                 .then((categories) => {
-                    return db.Product.findByPk(req.params.id)
+                    db.Brand.findAll()
+                    .then((brands) => {
+                        return db.Product.findByPk(req.params.id)
                         .then(function (product) {
-                            return res.render("product-edit-form", {
-                                product: product,
+                            return res.render("product-edit-form", {                                    product: product,
                                 user,
-                                categories
+                                categories,
+                                brands
                             });
-                        }).catch(e => console.log(e));
+                        });
+                    })
+                    .catch(e => console.log(e));
+                 
                 })
 
 
@@ -322,6 +333,7 @@ const listaController = {
             price: req.body.price,
             descripcion: req.body.descripcion,
             category: req.body.categoryId,
+            brandId: req.body.brandId,
             image: req.body.image
         }, {
             where: {

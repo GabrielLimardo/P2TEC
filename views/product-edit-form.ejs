@@ -38,6 +38,15 @@
 										<%})%>   
 									</select>
                                 </div>
+                                <div class="password">
+									<label for="categoryId" class="form-label">Marca:</label>
+									<select name="brandId" id="brandId" class="form-input">
+										<option value="">Elegí</option>
+										<% brands.forEach(function(brands) {  %>  
+										<option value="<%=brands.id%>"> <%=brands.name%> </option>
+										<%})%>  
+									</select>
+                                </div>
                                    <div class="remember">
 									<label for="descripcion" class="form-label">Descipción:</label>
 									<textarea name="descripcion" id="descripcion" class="form-input"><%= product.descripcion %></textarea>
