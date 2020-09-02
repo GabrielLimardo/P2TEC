@@ -7,7 +7,11 @@ const listaController = {
     root: (req, res) => {
         const user = req.session.user;
         db.Product.findAll({
-            include: ['category']
+            //  include: ['category']
+            include: {
+                all: true,
+                nested: true
+              }
         })
             .then(function (results) {
                 const ProductosAll = results;
