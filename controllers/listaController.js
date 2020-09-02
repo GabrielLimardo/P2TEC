@@ -1,5 +1,7 @@
 let db = require("../database/models");
-const { promiseImpl } = require("ejs");
+const {
+    promiseImpl
+} = require("ejs");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -7,15 +9,18 @@ const listaController = {
     root: (req, res) => {
         const user = req.session.user;
         db.Product.findAll({
-            //  include: ['category']
-            include: {
-                all: true,
-                nested: true
-              }
-        })
+                //  include: ['category']
+                include: {
+                    all: true,
+                    nested: true
+                }
+            })
             .then(function (results) {
                 const ProductosAll = results;
-                return res.render("lista", { data: ProductosAll, user })
+                return res.render("lista", {
+                    data: ProductosAll,
+                    user
+                })
             })
             .catch(e => console.log(e))
 
@@ -25,7 +30,10 @@ const listaController = {
         const user = req.session.user;
         db.Product.findByPk(req.params.productId)
             .then(product => {
-                return res.render("detail", { product, user })
+                return res.render("detail", {
+                    product,
+                    user
+                })
             })
             .catch(e => console.log(e));
     },
@@ -33,13 +41,16 @@ const listaController = {
 
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "1"
-            }
-        })
+                where: {
+                    categoryId: "1"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
     },
@@ -47,13 +58,16 @@ const listaController = {
 
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "2"
-            }
-        })
+                where: {
+                    categoryId: "2"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
 
@@ -62,13 +76,16 @@ const listaController = {
 
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "3"
-            }
-        })
+                where: {
+                    categoryId: "3"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
 
@@ -77,13 +94,16 @@ const listaController = {
 
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "4"
-            }
-        })
+                where: {
+                    categoryId: "4"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
 
@@ -92,13 +112,16 @@ const listaController = {
 
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "6"
-            }
-        })
+                where: {
+                    categoryId: "6"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
 
@@ -107,13 +130,16 @@ const listaController = {
 
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "5"
-            }
-        })
+                where: {
+                    categoryId: "5"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
 
@@ -121,13 +147,118 @@ const listaController = {
     PcDiseno: (req, res) => {
         const user = req.session.user;
         db.Product.findAll({
-            where: {
-                categoryId: "7"
-            }
-        })
+                where: {
+                    categoryId: "7"
+                }
+            })
             .then(resultados => {
 
-                return res.render("lista", { data: resultados, user })
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Aorus: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "1"
+                }
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Asus: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "2"
+                }
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    AData: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "3"
+                }
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Seagate: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "4"
+                }
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Amd: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "5"
+                }
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Ballistix: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "6"
+                }
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
             })
             .catch(e => console.log(e))
     },
@@ -137,22 +268,27 @@ const listaController = {
             // Do the magic
             db.Category.findAll()
                 .then((categories) => {
-                    return res.render('product-create-form', { user, categories });
+                    return res.render('product-create-form', {
+                        user,
+                        categories
+                    });
                 })
                 .catch(e => console.log(e));
         } else {
-            return res.render('not-found', { user });
+            return res.render('not-found', {
+                user
+            });
         }
     },
 
     store: (req, res, next) => {
         db.Product.create({
-            name: req.body.name,
-            price: req.body.price,
-            descripcion: req.body.descripcion,
-            categoryId: req.body.categoryId,
-            image: req.file.filename
-        })
+                name: req.body.name,
+                price: req.body.price,
+                descripcion: req.body.descripcion,
+                categoryId: req.body.categoryId,
+                image: req.file.filename
+            })
             .then(() => {
                 return res.redirect('/');
             })
@@ -164,13 +300,19 @@ const listaController = {
                 .then((categories) => {
                     return db.Product.findByPk(req.params.id)
                         .then(function (product) {
-                            return res.render("product-edit-form", { product: product, user, categories });
+                            return res.render("product-edit-form", {
+                                product: product,
+                                user,
+                                categories
+                            });
                         }).catch(e => console.log(e));
                 })
 
 
         } else {
-            return res.render('not-found', { user });
+            return res.render('not-found', {
+                user
+            });
         }
     },
     update: (req, res) => { //lo actualiza
@@ -181,12 +323,11 @@ const listaController = {
             descripcion: req.body.descripcion,
             category: req.body.categoryId,
             image: req.body.image
-        },
-            {
-                where: {
-                    id: req.params.id
-                }
-            })
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
         res.redirect("/lista/detail/" + req.params.id)
     },
     destroy: (req, res) => {
@@ -199,12 +340,14 @@ const listaController = {
     },
     reseña: (req, res) => {
         const user = req.session.user;
-        if (user ) {
+        if (user) {
             return res.render('reseña')
         } else {
-            return res.render('not-found', { user });
+            return res.render('not-found', {
+                user
+            });
         }
-     
+
     },
     reseñaupdate: (req, res) => {
         res.render('reseña')

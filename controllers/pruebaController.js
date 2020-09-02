@@ -8,7 +8,10 @@ const pruebaController = {
     root: (req, res) => {
         const user = req.session.user;
         db.Product.findAll({
-            include: ['category']
+            include: {
+                all: true,
+                nested: true
+            }
         })
             .then(function (results) {
                 const ProductosAll = results;
