@@ -192,6 +192,18 @@ const listaController = {
             }
         })
         res.redirect("/lista");
+    },
+    reseña: (req, res) => {
+        const user = req.session.user;
+        if (user ) {
+            return res.render('reseña')
+        } else {
+            return res.render('not-found', { user });
+        }
+     
+    },
+    reseñaupdate: (req, res) => {
+        res.render('reseña')
     }
 };
 

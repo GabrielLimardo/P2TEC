@@ -11,4 +11,5 @@ router.get("/editpas/:id", perfilController.editpas);
 router.post("/updatecontra",validator.password, perfilController.updatecontra);
 
 
+
 module.exports = router;

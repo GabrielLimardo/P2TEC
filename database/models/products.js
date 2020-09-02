@@ -6,6 +6,7 @@ module.exports = (sequelize, dataTypes ) => {
         image: dataTypes.STRING,
         price: dataTypes.INTEGER,
         categoryId: dataTypes.INTEGER,
+        brandId: dataTypes.INTEGER,
         
     }
     const Product = sequelize.define(alias, cols);
@@ -13,6 +14,13 @@ module.exports = (sequelize, dataTypes ) => {
         Product.belongsTo(models.Category, {
                 as: "category",
                 foreingKey: "categoryId"
+            });
+            
+    },
+    Product.associate = function(models){
+        Product.belongsTo(models.Brand, {
+                as: "brand",
+                foreingKey: "brandId"
             });
             
     }

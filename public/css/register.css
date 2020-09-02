@@ -227,3 +227,7 @@ button.registerButton {
 .descripcion {
     margin-top: 15px;
 }
+
+input#Comentario {
+    padding-top: 40px;
+}

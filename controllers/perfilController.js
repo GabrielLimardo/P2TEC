@@ -21,10 +21,14 @@ const controller = {
       const errors = validationResult(req);
       
       if(errors.isEmpty()){
-
+        
       db.User.update({
         username: req.body.username,
-        // email: req.body.email
+        floor: req.body.Direccion2,
+        address: req.body.Direccion,
+        PostalCode: req.body.CodPostal,
+        location: req.body.Localidad,
+        Province: req.body.Provincia,
        }, {where: {
         id: req.params.id
        }  
@@ -33,7 +37,8 @@ const controller = {
       .then(()=>{
         db.User.findByPk(req.params.id).then(function(user){
           req.session.user = user
-          return res.redirect("/perfil/" + req.params.id)
+          return res.send(req.body)
+          // return res.redirect("/perfil/" + req.params.id)
         })
       })
       } else {
@@ -87,8 +92,8 @@ const controller = {
         } else{
           return res.render('password', {errors: errors.mapped(), old: req.body} )
         }
-    }
-
+    },
+    
 };
 
 module.exports = controller;

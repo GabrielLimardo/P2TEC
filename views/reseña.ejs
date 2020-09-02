@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head', {title: 'CreateProduct'}) %>
+<link rel="stylesheet" href="/css/register.css">
+
+<body>
+    <!-- Header -->
+    <%- include('./partial/header') %>
+    <div class="encierro">
+        <div class="loginContainer row no-wrap">
+            <main class="login-publi row no-wrap">
+                <div class="loginCompleto">
+                   
+                    
+                    <div class="form-container">
+                        <div class="loginTitulo">reseña</div>
+                        <form class="loginForm" action="/lista/resenaupdate" method="POST" autocomplete="off" enctype="multipart/form-data">
+                           
+                            <div class="field-group">
+                                <div class="username">
+									<label for="name" class="form-label">Comentario:</label>
+									<input  class="name" type="text" id="Comentario" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+                                    </p>
+                                </div>
+                                
+                                   <div class="remember">
+                                    <label for="image" class="form-label">adjuntar archivo:</label>
+                                    <input type="file" id="image" name="image" class="avatarBotton">
+                                    <div>
+                                        <p class="error">
+                                            <%= typeof errors == 'undefined' ? null : errors.image ? errors.image.msg : null %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col2">
+									<button type="submit" class="buy-now-button">Guardar producto</button>
+								</div>
+                            </div>
+                        </form>
+                        <div class="logoFormulario">
+                            <img src="/img/numero.png" alt="logopP2Tec">
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+
+
+    <%- include('partial/footer') %>
+
+
+</body>
+
+</html>

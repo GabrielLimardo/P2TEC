@@ -19,13 +19,24 @@ INSERT INTO categories VALUES (1,'Componentes','2020-07-15 11:34:38',NULL,NULL),
 --
 -- Table structure for table products
 --
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+
+CREATE TABLE brands (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(30) DEFAULT NULL,
+  createdAt datetime DEFAULT current_timestamp(),
+  updatedAt datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  deletedAt datetime DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO categories VALUES (1,'Aorus','2020-07-15 11:34:38',NULL,NULL),(2,'Asus','2020-07-15 11:34:38',NULL,NULL),(3,'Adata','2020-07-15 11:34:38',NULL,NULL),(4,'Seagate','2020-07-15 11:34:38',NULL,NULL),(5,'AMD','2020-07-15 11:34:38',NULL,NULL),(6,'Ballistix','2020-07-15 11:34:38',NULL,NULL);
+
 CREATE TABLE products (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
   name varchar(100) DEFAULT NULL,
   price int(11) DEFAULT NULL,
   categoryId int(10) unsigned DEFAULT NULL,
+  bradId int(10) unsigned DEFAULT NULL,
   image varchar(30) DEFAULT NULL,
   descripcion varchar(100) DEFAULT NULL,
   createdAt datetime DEFAULT current_timestamp(),
@@ -34,6 +45,7 @@ CREATE TABLE products (
   PRIMARY KEY (id),
   KEY categoryId (categoryId),
   CONSTRAINT products_ibfk_1 FOREIGN KEY (categoryId) REFERENCES categories (id)
+  CONSTRAINT products_ibfk_1 FOREIGN KEY (brandId) REFERENCES brands (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table products
@@ -98,9 +110,26 @@ CREATE TABLE users (
 --
 -- Dumping data for table users
 --
-INSERT INTO users VALUES ('belen','belen@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,8);
-INSERT INTO users VALUES ('mauro','mauro@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,0,9);
+INSERT INTO users VALUES ('belen','belen@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,1);
+INSERT INTO users VALUES ('mauro','mauro@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,0,2);
 -- Dump completed on 2020-08-09 16:35:15
+CREATE TABLE comments (
+  id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  name varchar(30) DEFAULT NULL,
+  userId int(10) unsigned DEFAULT NULL,
+  productId int(10) unsigned DEFAULT NULL,
+  createdAt datetime DEFAULT current_timestamp(),
+  updatedAt datetime DEFAULT NULL ON UPDATE current_timestamp(),
+  deletedAt datetime DEFAULT NULL,
+  PRIMARY KEY (id)
+  CONSTRAINT products_ibfk_1 FOREIGN KEY (userId) REFERENCES users (id)
+  CONSTRAINT products_ibfk_1 FOREIGN KEY (productId) REFERENCES products (id)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO categories VALUES (1,'Me sirvio un monto muchas gracias',2,1,'2020-07-15 11:34:38',NULL,NULL),(2,'Me gusto mucho el diseño',2,1,'2020-07-15 11:34:38',NULL,NULL);
+
+
+
 CREATE TABLE items (
   id int(10) UNSIGNED NOT NULL,
   salePrice decimal(10,0) NOT NULL,
