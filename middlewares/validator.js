@@ -139,5 +139,38 @@ module.exports = {
       // Update de tu usuario donde coincida el email con el que está en sesión. Updateas la password
       
   ],
+  
+  profile: [
+        
+    body("username")
+      .notEmpty()
+      .withMessage("*Este Campo es obligatorio")
+      .bail()
+      .isLength({ min: 3 })
+      .withMessage("*El usuario debe tener como mínimo 3 caracteres")
+      .bail()
+      .custom((value, {req}) => {
+        return db.User.findOne({
+          where: {
+            username: value
+          }
+        })
+        .then(function(user){
+          if(user){
+            
+            if(user.username != req.session.user.username){
+
+              return Promise.reject('Usuario existente');
+            }
+          }
+        })
+      }),
+      body("email")
+          .notEmpty()
+          .withMessage("*Este campo es obligatorio")
+          .bail()
+          .isEmail()
+          .withMessage("*El campo debe ser un email"),
+    ]
 };
 
