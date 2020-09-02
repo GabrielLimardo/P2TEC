@@ -69,7 +69,16 @@ const controller = {
     },
      //tengo que cargar la nueva informacion de roles
      updaterol: (req, res) => {
-       
+      db.User.update({
+        username: req.body.username,
+        rol: req.body.rol
+       }, {where: {
+        username: req.body.username
+       }})
+       .then(()=> {
+        return res.redirect("/perfil/controlarea/")
+       })     
+        
     },
      
     editpas: (req, res) => {
