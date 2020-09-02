@@ -1,38 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partial/head', {title: "Productos"}) %>
+<%- include('./partial/head', {title: "Prueba"}) %>
 <% 
 function round(val) {
   return Math.round(val*100)/100;
 } 
 %>
+<link rel="stylesheet" href="/css/prueba.css">
 <link rel="stylesheet" href="/css/lista.css">
 
 <body>
-    <%- include('./partial/header', {user}) %>
-
-
+    <%- include('./partial/header') %>
     <div class="encierro">
         <div class="centradoLista row wrap nostyle">
-            <%  data.forEach(p => { %>
-            <div class="producto producto-<%- p.id %>">
-                <a href="/lista/detail/<%- p.id %>">
-                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
-                    <div class="descripciones">
-                        <h3 class="nombreProducto"><%- p.name %></h3>
-                        <p class="detalleProducto"><%- p.descripcion %></p>
-                        <h2 class="precioProducto">ARS <%- round(p.price) %></h2>
+            <aside class="a">
+                <h1>Categorias</h1>
+                <ul class="brands">
+                    <h4>Tipos de marcas</h4>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="Aorus">Aorus</label>
+                        <br>
                     </div>
-                </a>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="Asus">Asus</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="AData">Adata</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="Seagate">Seagate</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="Ballistix">Ballistix</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="AMD">AMD</label>
+                        <br>
+                    </div>
+                </ul>
+                <ul class="products">
+                    <h4>Tipos de Categorias</h4>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="auriculares">Auriculares</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="teclados">Teclados</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="monitores">Monitores</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="mouse">Mouse</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="notebook">Notebook</label>
+                        <br>
+                    </div>
+                </ul>
+                <ul class="products">
+                    <h4>Tipos de PC</h4>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="pcHomeOffice">PC Home Office</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="pcStreamer">PC Steamer</label>
+                        <br>
+                    </div>
+                    <div class="prod">
+                        <input type="checkbox">
+                        <label for="pcDiseno">PC Diseño</label>
+                        <br>
+                    </div>
+                    
+                </ul>
+            </aside>
+            <div class="prodList">
+                <%  data.forEach(p => { %>
+
+                
+                    <div class="producto productoTest producto-<%- p.id %>">
+                        <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                        <div class="descripcionesTest">
+                            <a href="/lista/detail/<%- p.id %>">
+                            <h3 class="nombreProducto"><%- p.name %></h3>
+                        </a>
+                            <p class="detalleProducto"><%- p.descripcion %></p>
+                            
+
+                            <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
+                                <label for="quantity" style="font-size: 14px;">Cantidad</label>
+                                <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                                <p class="error"><%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %></p>
+                                <input type="hidden" name="productId" value="<%= p.id %>">
+                                <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                            </form>
+                            <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
+                        </div>
+                    </div>
+                    <hr>
+                
+                <% }) %>
             </div>
-            </a>
-            <% }) %>
         </div>
-    </div>
-
-
-    <div class="cybersale">
-        <a href="/lista"><img src="/img/gamingday.jpg" alt="" class="imgB"></a>
     </div>
 
     <%- include('partial/footer') %>

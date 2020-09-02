@@ -53,6 +53,15 @@ router.get('/Perifericos', listaController.Perifericos);
 router.get('/PcOffice', listaController.PcOffice);
 router.get('/PcStreamer', listaController.PcStreamer);
 router.get('/PcDiseno', listaController.PcDiseno);
-router.get("/resena", listaController.reseña);
-router.post("/resenaupdate", listaController.reseñaupdate);
+router.get('/resena', listaController.reseña);
+router.post('/resenaupdate', listaController.reseñaupdate);
+
+
+router.get('/aorus', listaController.Aorus);
+router.get('/asus', listaController.Asus);
+router.get('/adata', listaController.AData);
+router.get('/seagate', listaController.Seagate);
+router.get('/ballistix', listaController.Ballistix);
+router.get('/amd', listaController.Amd);
+
 module.exports = router;
