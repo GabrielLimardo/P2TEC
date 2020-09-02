@@ -34,15 +34,14 @@ const controller = {
        }  
 
       })
-      .then(()=>{
-        db.User.findByPk(req.params.id).then(function(user){
-          req.session.user = user
-          return res.send(req.body)
-          // return res.redirect("/perfil/" + req.params.id)
+        .then(()=>{
+          db.User.findByPk(req.params.id).then(function(user){
+            req.session.user = user
+            return res.redirect("/perfil/" + req.params.id)
+          })
         })
-      })
       } else {
-        return res.render("perfil", { errors: errors.mapped(), old: req.body});
+        return res.render("perfil", { errors: errors.mapped(), old: req.body, user: req.session.user});
       }
 
     },
