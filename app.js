@@ -8,6 +8,9 @@ const registerRoutes = require("./routes/register");
 const pruebaRoutes = require("./routes/prueba");
 const perfilRoutes = require("./routes/perfil");
 const session = require("express-session");
+const apiInfoRouter = require('./routes/api/apiInfo');
+const apiUsersRouter = require('./routes/api/apiUsers');
+const apiProductsRouter = require('./routes/api/apiProducts');
 
 
 app.set('view engine', 'ejs');
@@ -33,3 +36,6 @@ app.use("/carrito", carritoRoutes);
 app.use('/register', registerRoutes);
 app.use("/prueba", pruebaRoutes);
 app.use("/perfil", perfilRoutes);
+app.use('/api/info', apiInfoRouter);
+app.use('/api/users', apiUsersRouter);
+app.use('/api/products', apiProductsRouter);
