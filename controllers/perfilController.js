@@ -115,6 +115,26 @@ const controller = {
           return res.render('password', {errors: errors.mapped(), old: req.body} )
         }
     },
+    comentario: (req, res) => {
+      const user = req.session.user;
+    
+      if (user) {
+        return res.render('reseña', {user})  
+    } else {
+      return res.render('not-found', {user});
+    }
+    
+    },
+    updatecomentario: (req, res) => {
+      const user = req.session.user;
+    
+      if (user) {
+        return res.render('reseña', {user})  
+    } else {
+      return res.render('not-found', {user });
+    }
+    
+    },
     
 };
 

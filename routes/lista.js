@@ -53,8 +53,7 @@ router.get('/Perifericos', listaController.Perifericos);
 router.get('/PcOffice', listaController.PcOffice);
 router.get('/PcStreamer', listaController.PcStreamer);
 router.get('/PcDiseno', listaController.PcDiseno);
-router.get('/resena', listaController.reseña);
-router.post('/resenaupdate', listaController.reseñaupdate);
+
 
 
 router.get('/aorus', listaController.Aorus);
