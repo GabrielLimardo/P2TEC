@@ -38,7 +38,7 @@
                         <h3><i class="fa fa-list-alt"></i>&nbsp; Mis datos</h3>
                         <table class="table table-cart table-responsive">
                             <tbody id="contentPedido">
-                            <form id="actualizarCuenta" action="/perfil/edit/<%= user.id %>" method="POST" name="actualizarCuenta" class="col-lg-12"> 
+                            <form id="actualizarCuenta" action="/perfil/<%= user.id %>" method="POST" name="actualizarCuenta" class="col-lg-12"> 
                                 <input name="email" class="form-control pl-2" value="email" type="hidden"/>                 											
                                 <div class="col-lg-6 col-xs-12 pull-left mt-0 mb-4"> 
                                     <div class="col-lg-12 pl-0"><h5>Datos personales</h5></div>
@@ -59,7 +59,7 @@
                                     <label class="control-label w-100 mt-0">Contraseña:</label>
                                     <input class="passwordInput" type="password" id="passsword" name="password" autocomplete="off" placeholder="Contraseña" value=""  required >
                                     <p class="error">
-                                        <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                        <%= typeof errors == 'undefined' ? null : (errors.email ? errors.email.msg : null) %>
                                     </p>
                                     </div>
                                     <div class="col-lg-12 col-xs-12 mt-3 pl-0">
