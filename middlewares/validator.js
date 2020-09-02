@@ -42,7 +42,7 @@ module.exports = {
     // Image
     body("image")
       .custom((value, { req }) => {
-       
+
         return true;
         //return req.file
       })
@@ -106,42 +106,48 @@ module.exports = {
       .withMessage("Debe agregar al menos 1 producto al carrito"),
   ],
   password: [
-
+// Validador
+    // Preguntar si el primer campo coincide con la contraseña de la DB
     body("currentPassword")
       .notEmpty()
-      .withMessage("Ingrese su contrasenia actual para cambiarla")
+      .withMessage("Ingrese su contraseña actual para cambiarla")
       .bail()
-      .custom((value, {req}) => {
+      .custom((value, { req }) => {
         return db.User.findByPk(req.session.user.id)
-        .then(function(user){
-          if(!bcrypt.compareSync(req.body.currentPassword, user.password)){
-            return Promise.reject('Contrasenia invalida')
-          }
-        })
+          .then(function (user) {
+            if (!bcrypt.compareSync(req.body.currentPassword, user.password)) {
+              return Promise.reject('Contraseña invalida')
+            }
+          })
       }),
 
     body("newPassword") // Deberiamos ver otra manera de crear una dependencia entre el campo newP con el campo currentP
       .notEmpty()
-      .withMessage('Ingrese su nueva contrasenia')
+      .withMessage('Ingrese su nueva contraseña')
       .bail()
-      .isLength({ min: 4 })
-      .withMessage("La contraseña debe tener como mínimo 4 caracteres")         
-      
+      .isLength({ min: 3 })
+      .withMessage("La contraseña debe tener como mínimo 3 caracteres")
 
-      // Validador
-      // Preguntar si el primer campo coincide con la contraseña de la DB
+/*    body("retype")
+      .notEmpty()
+      .withMessage("El campo reescribir contraseña es obligatorio")
+      .bail()
+      .custom((value, { req }) => req.body.newPassword === value)
+      .withMessage("Las contraseñas no coinciden") */
 
-      // Preguntar si las contraseñas nuevas coinciden
+    
+
+    // Preguntar si las contraseñas nuevas coinciden
 
 
-      // Controlador
-      // Hasheas la password
-      // Update de tu usuario donde coincida el email con el que está en sesión. Updateas la password
-      
+    // Controlador
+    // Hasheas la password
+    // Update de tu usuario donde coincida el email con el que está en sesión. Updateas la password
+
   ],
-  
+
   profile: [
-        
+
     body("username")
       .notEmpty()
       .withMessage("*Este Campo es obligatorio")
@@ -149,28 +155,28 @@ module.exports = {
       .isLength({ min: 3 })
       .withMessage("*El usuario debe tener como mínimo 3 caracteres")
       .bail()
-      .custom((value, {req}) => {
+      .custom((value, { req }) => {
         return db.User.findOne({
           where: {
             username: value
           }
         })
-        .then(function(user){
-          if(user){
-            
-            if(user.username != req.session.user.username){
+          .then(function (user) {
+            if (user) {
 
-              return Promise.reject('Usuario existente');
+              if (user.username != req.session.user.username) {
+
+                return Promise.reject('Usuario existente');
+              }
             }
-          }
-        })
+          })
       }),
-      body("email")
-          .notEmpty()
-          .withMessage("*Este campo es obligatorio")
-          .bail()
-          .isEmail()
-          .withMessage("*El campo debe ser un email"),
-    ]
+    body("email")
+      .notEmpty()
+      .withMessage("*Este campo es obligatorio")
+      .bail()
+      .isEmail()
+      .withMessage("*El campo debe ser un email"),
+  ]
 };
 

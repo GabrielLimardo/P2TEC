@@ -287,4 +287,57 @@ div.cybersale {
   {
     background: rgba(0,0,0,0.2);
   }
-  
+
+
+label,h1,h3,h4,p,button{
+    font-family: 'Rubik', sans-serif!important;
+}
+.products label{
+    margin-bottom: 10%;
+}
+.prodList{
+    width: 50%;
+}
+.prod{
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+.centradoLista{
+    margin-top: 100px;
+}
+.productoTest{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.producto img{
+    margin: 0px;
+    margin-left: 40px;
+}
+.descripcionesTest{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.a{
+    margin-right: 10%;
+}
+.buyOptions{
+  width: 100%;
+  margin-top: 5%!important;
+}
+.nombreProducto{
+  margin-top: 5%!important;
+}
+p.detalleProducto{
+  margin-top: 5%!important;
+}
+.precioProducto{
+  margin-top: 5%!important;
+}

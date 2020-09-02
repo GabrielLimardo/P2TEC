@@ -6,7 +6,7 @@ function round(val) {
   return Math.round(val*100)/100;
 } 
 %>
-<link rel="stylesheet" href="/css/prueba.css">
+<!-- <link rel="stylesheet" href="/css/prueba.css"> -->
 <link rel="stylesheet" href="/css/lista.css">
 
 <body>
@@ -93,34 +93,40 @@ function round(val) {
                         <label for="pcDiseno">PC Diseño</label>
                         <br>
                     </div>
-                    
+
                 </ul>
             </aside>
             <div class="prodList">
                 <%  data.forEach(p => { %>
 
-                
-                    <div class="producto productoTest producto-<%- p.id %>">
-                        <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
-                        <div class="descripcionesTest">
-                            <a href="/lista/detail/<%- p.id %>">
+
+                <div class="producto productoTest producto-<%- p.id %>">
+                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    <div class="descripcionesTest">
+                        <a href="/lista/detail/<%- p.id %>">
                             <h3 class="nombreProducto"><%- p.name %></h3>
                         </a>
-                            <p class="detalleProducto"><%- p.descripcion %></p>
-                            
+                        <p class="detalleProducto"><%- p.descripcion %></p>
 
-                            <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
-                                <label for="quantity" style="font-size: 14px;">Cantidad</label>
-                                <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
-                                <p class="error"><%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %></p>
-                                <input type="hidden" name="productId" value="<%= p.id %>">
-                                <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
-                            </form>
-                            <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
-                        </div>
+
+                        <form action="/lista/detail/<%- p.id %>" method="GET">
+                            <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
+                            <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                            <p class="error">
+                                <%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %>
+                            </p>
+                            <input type="hidden" name="productId" value="<%= p.id %>">
+                            <div class="buyOptions">
+                                <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                                <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
+                            </div>
+                        </form>
+
+                        <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
                     </div>
-                    <hr>
-                
+                </div>
+                <hr>
+
                 <% }) %>
             </div>
         </div>
