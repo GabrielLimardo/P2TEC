@@ -367,5 +367,13 @@ aside .a {
 }
 .pointer:hover{
   font-size: 26px!important;
-  color: white;
+  
+}
+
+aside.a {
+  margin-right: 0px !important;
+  background: white;
+  height: 950px;
+  padding-left: 2%;
+  padding-right: 2%;
 }
