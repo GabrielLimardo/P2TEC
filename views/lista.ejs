@@ -99,9 +99,11 @@ function round(val) {
             <div class="prodList">
                 <%  data.forEach(p => { %>
 
-
+                <div class="listadeproductoscompleto">
                 <div class="producto productoTest producto-<%- p.id %>">
+                    <a href="/lista/detail/<%- p.id %>"></a>
                     <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    </a>
                     <div class="descripcionesTest">
                         <a href="/lista/detail/<%- p.id %>">
                             <h3 class="nombreProducto"><%- p.name %></h3>

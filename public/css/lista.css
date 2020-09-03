@@ -341,3 +341,13 @@ p.detalleProducto{
 .precioProducto{
   margin-top: 5%!important;
 }
+
+aside.a {
+  background: white;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.prodList{
+  margin-left: -100px;
+}
