@@ -101,7 +101,9 @@ function round(val) {
 
 
                 <div class="producto productoTest producto-<%- p.id %>">
-                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    <a href="/lista/detail/<%- p.id %>">
+                        <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    </a>
                     <div class="descripcionesTest">
                         <a href="/lista/detail/<%- p.id %>">
                             <h3 class="nombreProducto"><%- p.name %></h3>

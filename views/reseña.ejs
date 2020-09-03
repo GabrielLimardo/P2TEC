@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partial/head', {title: 'CreateProduct'}) %>
@@ -11,22 +10,24 @@
         <div class="loginContainer row no-wrap">
             <main class="login-publi row no-wrap">
                 <div class="loginCompleto">
-                   
-                    
+
+
                     <div class="form-container">
-                        <div class="loginTitulo">reseña</div>
-                        <form class="loginForm" action="/lista/resenaupdate" method="POST" autocomplete="off" enctype="multipart/form-data">
-                           
+                        <div class="loginTitulo">Reseña</div>
+                        <form class="loginForm" action="/lista/resenaupdate" method="POST" autocomplete="off"
+                            enctype="multipart/form-data">
+
                             <div class="field-group">
                                 <div class="username">
-									<label for="name" class="form-label">Comentario:</label>
-									<input  class="name" type="text" id="Comentario" name="name" placeholder="Ej: Zapatillas Reebok" class="form-input">
+                                    <label for="name"> Nombre: <%= user.username %> </label>
+                                    <br><br><br>
+                                    <label for="comment" class="form-label">Comentario:</label>
+                                    <input class="Comentario" type="text" id="Comentario" name="name"
+                                        placeholder="Ej: Zapatillas Reebok" style="text-align: center;">
                                     </p>
                                 </div>
-                                
-                                   <div class="remember">
-                                    <label for="image" class="form-label">adjuntar archivo:</label>
-                                    <input type="file" id="image" name="image" class="avatarBotton">
+
+                                <div class="remember">
                                     <div>
                                         <p class="error">
                                             <%= typeof errors == 'undefined' ? null : errors.image ? errors.image.msg : null %>
@@ -34,15 +35,15 @@
                                     </div>
                                 </div>
                                 <div class="col2">
-									<button type="submit" class="buy-now-button">Guardar producto</button>
-								</div>
+                                    <button type="submit" class="buy-now-button">Enviar Reseña</button>
+                                </div>
                             </div>
                         </form>
                         <div class="logoFormulario">
                             <img src="/img/numero.png" alt="logopP2Tec">
                         </div>
                     </div>
-                    
+
                 </div>
 
             </main>

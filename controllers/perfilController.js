@@ -125,10 +125,16 @@ const controller = {
     }
     
     },
-    updatecomentario: (req, res) => {
+    createComentario: (req, res) => {
       const user = req.session.user;
-    
       if (user) {
+        db.Comment.create({
+          name: req.body.name, 
+          comment: req.body.Comentario,  
+      })
+      .then(() => {
+        return res.redirect('/');
+    })
         return res.render('reseña', {user})  
     } else {
       return res.render('not-found', {user });

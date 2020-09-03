@@ -269,14 +269,14 @@ const listaController = {
             db.Category.findAll()
                 .then((categories) => {
                     db.Brand.findAll()
-                    .then((brands) => {
-                        return res.render('product-create-form', {
-                            user,
-                            categories,
-                            brands
-                        });
-                    })
-                    .catch(e => console.log(e));
+                        .then((brands) => {
+                            return res.render('product-create-form', {
+                                user,
+                                categories,
+                                brands
+                            });
+                        })
+                        .catch(e => console.log(e));
                 })
                 .catch(e => console.log(e));
         } else {
@@ -305,18 +305,19 @@ const listaController = {
             db.Category.findAll()
                 .then((categories) => {
                     db.Brand.findAll()
-                    .then((brands) => {
-                        return db.Product.findByPk(req.params.id)
-                        .then(function (product) {
-                            return res.render("product-edit-form", {                                    product: product,
-                                user,
-                                categories,
-                                brands
-                            });
-                        });
-                    })
-                    .catch(e => console.log(e));
-                 
+                        .then((brands) => {
+                            return db.Product.findByPk(req.params.id)
+                                .then(function (product) {
+                                    return res.render("product-edit-form", {
+                                        product: product,
+                                        user,
+                                        categories,
+                                        brands
+                                    });
+                                });
+                        })
+                        .catch(e => console.log(e));
+
                 })
 
 
@@ -350,7 +351,7 @@ const listaController = {
         })
         res.redirect("/lista");
     },
-   
+
 };
 
 module.exports = listaController;
