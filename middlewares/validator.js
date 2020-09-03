@@ -106,7 +106,7 @@ module.exports = {
       .withMessage("Debe agregar al menos 1 producto al carrito"),
   ],
   password: [
-// Validador
+    // Validador
     // Preguntar si el primer campo coincide con la contraseña de la DB
     body("currentPassword")
       .notEmpty()
@@ -126,16 +126,17 @@ module.exports = {
       .withMessage('Ingrese su nueva contraseña')
       .bail()
       .isLength({ min: 3 })
-      .withMessage("La contraseña debe tener como mínimo 3 caracteres")
+      .withMessage("La contraseña debe tener como mínimo 3 caracteres"),
 
-/*    body("retype")
+    body("retype")
       .notEmpty()
       .withMessage("El campo reescribir contraseña es obligatorio")
       .bail()
       .custom((value, { req }) => req.body.newPassword === value)
-      .withMessage("Las contraseñas no coinciden") */
+      .withMessage("Las contraseñas no coinciden")
+      
 
-    
+
 
     // Preguntar si las contraseñas nuevas coinciden
 
@@ -177,6 +178,18 @@ module.exports = {
       .bail()
       .isEmail()
       .withMessage("*El campo debe ser un email"),
+    body("password")
+      .notEmpty()
+      .withMessage("Ingrese su contraseña")
+      .bail()
+      .custom((value, { req }) => {
+        return db.User.findByPk(req.session.user.id)
+          .then(function (user) {
+            if (!bcrypt.compareSync(req.body.password, user.password)) {
+              return Promise.reject('Contraseña invalida')
+            }
+          })
+      })
   ]
 };
 

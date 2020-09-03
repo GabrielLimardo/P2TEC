@@ -31,14 +31,14 @@
                                 <table class="table table-cart table-responsive">
                                     <tbody id="contentPedido">
                                         <form id="actualizarCuenta" name="actualizarCuenta" class="col-lg-12"
-                                            action="/perfil/updatecontra" method="POST">
+                                            action="/perfil/editpas/<%= user.id %>" method="POST">
 
                                             <div class="password">
                                                 <input class="passwordInput" type="password" id="passsword"
                                                     name="currentPassword" autocomplete="off" placeholder="Contraseña"
                                                     value="" required>
                                                 <p class="error">
-                                                    <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                                    <%= typeof errors == 'undefined' ? null : errors.currentPassword ? errors.currentPassword.msg : null %>
                                                 </p>
                                             </div>
 
@@ -47,7 +47,7 @@
                                                     name="newPassword" autocomplete="off" placeholder="Contraseña Nueva"
                                                     value="" required>
                                                 <p class="error">
-                                                    <%= typeof errors == 'undefined' ? null : errors.password ? errors.password.msg : null %>
+                                                    <%= typeof errors == 'undefined' ? null : errors.newPassword ? errors.newPassword.msg : null %>
                                                 </p>
                                             </div>
                                             <div class="password">
