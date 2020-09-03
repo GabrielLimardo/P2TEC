@@ -18,79 +18,79 @@ function round(val) {
                 <ul class="brands">
                     <h4>Tipos de marcas</h4>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Aorus">Aorus</label>
+                      
+                        <a href="/lista/aorus"><label for="Aorus">Aorus</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Asus">Asus</label>
+                        
+                        <a href="/lista/asus"><label for="Asus">Asus</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="AData">Adata</label>
+                        
+                        <a href="/lista/adata"><label for="AData">Adata</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Seagate">Seagate</label>
+                       
+                        <a href="/lista/seagate"><label for="Seagate">Seagate</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Ballistix">Ballistix</label>
+                        
+                        <a href="/lista/ballistix"><label for="Ballistix">Ballistix</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="AMD">AMD</label>
+                       
+                        <a href="/lista/amd"><label for="AMD">AMD</label>   </a>
                         <br>
                     </div>
                 </ul>
                 <ul class="products">
                     <h4>Tipos de Categorias</h4>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="auriculares">Auriculares</label>
+                        
+                        <a href="/lista/Componentes"><label for="auriculares">Componentes</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="teclados">Teclados</label>
+                        
+                        <a href="/lista/Notebooks"><label for="teclados">Notebooks</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="monitores">Monitores</label>
+                        
+                        <a href="/lista/Monitores"><label for="monitores">Monitores</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="mouse">Mouse</label>
+                        
+                        <a href="/lista/Perifericos"><label for="mouse">Perifericos</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="notebook">Notebook</label>
+                        
+                        <a href="/lista/Notebooks"><label for="notebook">Notebook</label>   </a>
                         <br>
                     </div>
                 </ul>
                 <ul class="products">
                     <h4>Tipos de PC</h4>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="pcHomeOffice">PC Home Office</label>
+                        
+                        <a href="/lista/PcOffice"> <label for="pcHomeOffice">PC Home Office</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="pcStreamer">PC Steamer</label>
+                        
+                        <a href="/lista/PcStreamer"><label for="pcStreamer">PC Steamer</label>   </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="pcDiseno">PC Diseño</label>
+                        
+                        <a href="/lista/PcDiseno"><label for="pcDiseno">PC Diseño</label>    </a>
                         <br>
                     </div>
 
@@ -99,10 +99,11 @@ function round(val) {
             <div class="prodList">
                 <%  data.forEach(p => { %>
 
-
+                <div class="listadeproductoscompleto">
                 <div class="producto productoTest producto-<%- p.id %>">
                     <a href="/lista/detail/<%- p.id %>">
                         <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
+                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
                     </a>
                     <div class="descripcionesTest">
                         <a href="/lista/detail/<%- p.id %>">
