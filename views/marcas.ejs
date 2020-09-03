@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head', {title: marcas.name }) %>
+<% 
+function round(val) {
+  return Math.round(val*100)/100;
+}
+%>
+<link rel="stylesheet" href="/css/detail.css">
+
+<body class="bodyProducto">
+    <%- include('./partial/header', {user}) %>
+    <div class="encierro">
+        <div class="especificado">
+            <div class="division row no-wrap">
+                <div class="cerraruno">
+                    <a href="/lista">
+                        <i class="fas fa-times-circle fa-2x"></i>
+                    </a>
+                </div>
+                <div class="imageContainer">
+                    <div class="vertical-center">
+                        <img src="/img/<%= marcas.image %>" alt="imagen" class="fotoProductoDetalle" data="/img/<%= marcas.image %>" >
+                    </div>
+                </div>
+                <div class="descrip">
+                    <h2 class="nombreProducto fontsize-xlarge"> <%=marcas.name %> </h2>
+                    <ul>
+                        <li class="detalleProducto fontsize-medium"> <%=marcas.descripcion %> </li>
+                    </ul>
+                    <div class="precioProducto">ARS <%- round(marcas.price) %></div>
+                    <div class="metododepago">
+                        <div class="restodemetodos">
+                            <i class="fab fa-cc-visa fa-2x "></i>
+                            <i class="fab fa-cc-mastercard fa-2x "></i>
+                            <i class="fab fa-cc-amex fa-2x "></i>
+                        </div>
+                    </div>
+                    <% if (typeof user !== 'undefined' && user.rol === 1) {%>
+                    <div class="editar-eliminar">
+                        <a href="/lista/edit/<%= marcas.id %>" class="editButton">EDIT</a>
+                        <a>
+                            <form action="/lista/delete/<%= marcas.id %>" method="POST" style="display: inline-flex">
+                                <button class="delete" type="submit" class="action-button delete">DELETE</button>
+                            </form>
+                        </a>
+                    </div>
+                    <% } else { %>
+                        <div class="cantidades">
+                        <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
+                            <label for="quantity" style="font-size: 14px;">Cantidad</label>
+                            <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                            <p class="error"><%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %></p>
+                            <input type="hidden" name="productId" value="<%= marcas.id %>">
+                            <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                        </form>
+                         </div>
+                        <hr>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partial/footer') %>
+
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.elevatezoom.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    
+</body>
+
+</html>
