@@ -18,79 +18,79 @@ function round(val) {
                 <ul class="brands">
                     <h4>Tipos de marcas</h4>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Aorus">Aorus</label>
+
+                        <a href="/lista/aorus"><label for="Aorus">Aorus</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Asus">Asus</label>
+
+                        <a href="/lista/asus"><label for="Asus">Asus</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="AData">Adata</label>
+
+                        <a href="/lista/adata"><label for="AData">Adata</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Seagate">Seagate</label>
+
+                        <a href="/lista/seagate"><label for="Seagate">Seagate</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="Ballistix">Ballistix</label>
+
+                        <a href="/lista/ballistix"><label for="Ballistix">Ballistix</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="AMD">AMD</label>
+
+                        <a href="/lista/amd"><label for="AMD">AMD</label> </a>
                         <br>
                     </div>
                 </ul>
                 <ul class="products">
                     <h4>Tipos de Categorias</h4>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="auriculares">Auriculares</label>
+
+                        <a href="/lista/Componentes"><label for="auriculares">Componentes</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="teclados">Teclados</label>
+
+                        <a href="/lista/Notebooks"><label for="teclados">Notebooks</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="monitores">Monitores</label>
+
+                        <a href="/lista/Monitores"><label for="monitores">Monitores</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="mouse">Mouse</label>
+
+                        <a href="/lista/Perifericos"><label for="mouse">Perifericos</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="notebook">Notebook</label>
+
+                        <a href="/lista/Notebooks"><label for="notebook">Notebook</label> </a>
                         <br>
                     </div>
                 </ul>
                 <ul class="products">
                     <h4>Tipos de PC</h4>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="pcHomeOffice">PC Home Office</label>
+
+                        <a href="/lista/PcOffice"> <label for="pcHomeOffice">PC Home Office</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="pcStreamer">PC Steamer</label>
+
+                        <a href="/lista/PcStreamer"><label for="pcStreamer">PC Steamer</label> </a>
                         <br>
                     </div>
                     <div class="prod">
-                        <input type="checkbox">
-                        <label for="pcDiseno">PC Diseño</label>
+
+                        <a href="/lista/PcDiseno"><label for="pcDiseno">PC Diseño</label> </a>
                         <br>
                     </div>
 
@@ -99,33 +99,36 @@ function round(val) {
             <div class="prodList">
                 <%  data.forEach(p => { %>
 
-
-                <div class="producto productoTest producto-<%- p.id %>">
-                    <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
-                    <div class="descripcionesTest">
+                <div class="listadeproductoscompleto">
+                    <div class="producto productoTest producto-<%- p.id %>">
                         <a href="/lista/detail/<%- p.id %>">
-                            <h3 class="nombreProducto"><%- p.name %></h3>
+                            <img src="<%- "/img/" + p.image %>" alt="" class="fotoProducto">
                         </a>
-                        <p class="detalleProducto"><%- p.descripcion %></p>
+                        <div class="descripcionesTest">
+                            <a href="/lista/detail/<%- p.id %>">
+                                <h3 class="nombreProducto"><%- p.name %></h3>
+                            </a>
+                            <p class="detalleProducto"><%- p.descripcion %></p>
 
 
-                        <form action="/lista/detail/<%- p.id %>" method="GET">
-                            <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
-                            <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
-                            <p class="error">
-                                <%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %>
-                            </p>
-                            <input type="hidden" name="productId" value="<%= p.id %>">
-                            <div class="buyOptions">
-                                <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
-                                <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
-                            </div>
-                        </form>
+                            <form action="/lista/detail/<%- p.id %>" method="GET">
+                                <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
+                                <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                                <p class="error">
+                                    <%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %>
+                                </p>
+                                <input type="hidden" name="productId" value="<%= p.id %>">
+                                <div class="buyOptions">
+                                    <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                                    <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
+                                </div>
+                            </form>
 
-                        <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
+                            <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
+                        </div>
                     </div>
+                    <hr>
                 </div>
-                <hr>
 
                 <% }) %>
             </div>

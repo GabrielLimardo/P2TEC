@@ -307,13 +307,14 @@ label,h1,h3,h4,p,button{
 }
 .productoTest{
     width: 100%;
-    height: 220px;
+    height: 240px;
     display: flex;
     background-color: white;
     border: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
+    min-width: 400px;
 }
 .producto img{
     margin: 0px;
@@ -324,7 +325,10 @@ label,h1,h3,h4,p,button{
     margin: 0 auto;
     text-align: center;
 }
-
+button{
+  border: none;
+  background-color: transparent;
+}
 .a{
     margin-right: 10%;
 }
@@ -340,4 +344,21 @@ p.detalleProducto{
 }
 .precioProducto{
   margin-top: 5%!important;
+}
+button.mt-4.buy-now-button{
+    color: blue;
+    cursor: pointer;
+    background-color: #d9d9d9;
+    padding: 10px;
+    border-radius: 5px;
+
+aside.a {
+  background: white;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 950px;
+}
+
+.encierro h4{
+  font-size:20px;
 }
