@@ -30,6 +30,7 @@ label,h1,h4{
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
+    min-width: 400px;
 }
 .producto img{
     margin: 0px;
