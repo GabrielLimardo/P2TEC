@@ -16,14 +16,13 @@ module.exports = (sequelize, dataTypes ) => {
                 foreingKey: "categoryId"
             });
             
-    },
-    Product.associate = function(models){
+    
         Product.belongsTo(models.Brand, {
                 as: "brand",
                 foreingKey: "brandId"
             });
             
+    
     }
-
     return Product;
 }

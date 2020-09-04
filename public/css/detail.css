@@ -99,9 +99,9 @@ img#zoom_mw {
 	text-align: center;
 	padding-top: 12px;
 	position: absolute;
-	top: 30px;
-	right: 30px;
-	cursor: pointer;
+    cursor: pointer;
+    top: -50px;
+    left: 100px;
 }
 
 .cantidades{

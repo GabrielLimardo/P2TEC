@@ -51,7 +51,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "1"
-                }
+                },
+                include: [{association: "category"}],
             })
             .then(resultados => {
 
