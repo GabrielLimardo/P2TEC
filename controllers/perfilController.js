@@ -167,7 +167,7 @@ const controller = {
               where: {
                 state: 0
               },
-              include: [{association: "category"}],
+              include: [{association: "product"}],
               
             })
               .then((item) => {
