@@ -67,8 +67,10 @@ function round(val) {
     <%  comentarios.forEach(comentarios => { %>
         <div class="comentariocontainerarriba">
                 <div class="comentariocontainer">
-                    <h1> NUMERO DE COMENTARIO: #<%= comentarios.id %> </h1>
+                    <h1>NUMERO DE COMENTARIO: #<%= comentarios.id %> </h1>
                     <h1>NOMBRE DE USUARIO: <%=  comentarios.user.username %> </h1>
+                    <img src="/img/users/<%= comentarios.user.image %>" alt="imagenPerfil" class="fotoProductoDetalle"></img>
+                    
                     <h1>COMENTARIO: <%= comentarios.name %> </h1>
                     
                 </div>
