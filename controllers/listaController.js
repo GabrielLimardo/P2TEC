@@ -30,10 +30,21 @@ const listaController = {
         const user = req.session.user;
         db.Product.findByPk(req.params.productId)
             .then(product => {
-                return res.render("detail", {
-                    product,
-                    user
-                })
+                db.Comment.findAll({
+                    where: {
+                        productId: req.params.productId
+                    }
+                }).then((comentarios) => {
+                    db.User.findAll({
+                    }).then((usuario) => {
+                        return res.render("detail", {
+                            product,
+                            user,
+                            comentarios,
+                            usuario
+                        })
+                    }).catch(e => console.log(e));
+                }).catch(e => console.log(e));
             })
             .catch(e => console.log(e));
     },

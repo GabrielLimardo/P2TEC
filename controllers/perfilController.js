@@ -3,22 +3,28 @@ const productModel = jsonModel('products');
 let db = require("../database/models");
 const sequelize = require('sequelize');
 const Op = sequelize.Op;
-const { validationResult } = require("express-validator");
+const {
+  validationResult
+} = require("express-validator");
 const bcrypt = require("bcryptjs");
 
 const controller = {
   root: (req, res) => {
     db.User.findByPk(req.session.user.id)
-    .then(function (user) {
-      req.session.user = user
-      const currentUser = req.session.user;
+      .then(function (user) {
+        req.session.user = user
+        const currentUser = req.session.user;
 
-      if (currentUser) {
-        return res.render('perfil', { user: currentUser })
-      } else {
-        return res.render('not-found', { user: currentUser });
-      }
-    })
+        if (currentUser) {
+          return res.render('perfil', {
+            user: currentUser
+          })
+        } else {
+          return res.render('not-found', {
+            user: currentUser
+          });
+        }
+      })
   },
   //tiene que cargar la nueva informacion a la base de datos
   edit: (req, res) => {
@@ -27,14 +33,14 @@ const controller = {
     if (errors.isEmpty()) {
 
       db.User.update({
-        username: req.body.username,
-        email: req.body.email
-      }, {
-        where: {
-          id: req.params.id
-        }
+          username: req.body.username,
+          email: req.body.email
+        }, {
+          where: {
+            id: req.params.id
+          }
 
-      })
+        })
         .then(() => {
           db.User.findByPk(req.params.id).then(function (user) {
             req.session.user = user
@@ -42,23 +48,28 @@ const controller = {
           })
         })
     } else {
-      return res.render("perfil", { errors: errors.mapped(), old: req.body, user: req.session.user });
+      return res.render("perfil", {
+        errors: errors.mapped(),
+        old: req.body,
+        user: req.session.user
+      });
     }
 
   },
   datos: (req, res) => {
     db.User.update({
-      address: req.body.Direccion,
-      floor: req.body.Direccion2,
-      PostalCode: req.body.CodPostal,
-      location: req.body.Localidad,
-      Province: req.body.Provincia,
-    },{
-      where: {
-        id: req.session.user.id
-      }})
-      .then(()=>{
-      return res.redirect("/perfil");
+        address: req.body.Direccion,
+        floor: req.body.Direccion2,
+        PostalCode: req.body.CodPostal,
+        location: req.body.Localidad,
+        Province: req.body.Provincia,
+      }, {
+        where: {
+          id: req.session.user.id
+        }
+      })
+      .then(() => {
+        return res.redirect("/perfil");
       })
   },
 
@@ -68,31 +79,36 @@ const controller = {
     if (typeof user !== 'undefined' && user.rol === 1) {
       // Do the magic
       db.User.findAll({
-        include: {
-          all: true,
-          nested: true
-        }
-      })
+          include: {
+            all: true,
+            nested: true
+          }
+        })
         .then(function (results) {
           const UserAll = results;
-          return res.render("paneldecontrol", { data: UserAll, user })
+          return res.render("paneldecontrol", {
+            data: UserAll,
+            user
+          })
         })
         .catch(e => console.log(e))
 
     } else {
-      return res.render('not-found', { user });
+      return res.render('not-found', {
+        user
+      });
     }
   },
   //tengo que cargar la nueva informacion de roles
   updaterol: (req, res) => {
     db.User.update({
-      username: req.body.username,
-      rol: req.body.rol
-    }, {
-      where: {
-        username: req.body.username
-      }
-    })
+        username: req.body.username,
+        rol: req.body.rol
+      }, {
+        where: {
+          username: req.body.username
+        }
+      })
       .then(() => {
         return res.redirect("/perfil/controlarea/")
       })
@@ -102,9 +118,13 @@ const controller = {
   editpas: (req, res) => {
     const user = req.session.user;
     if (user) {
-      return res.render('cambiarcontra', { user })
+      return res.render('cambiarcontra', {
+        user
+      })
     } else {
-      return res.render('not-found', { user });
+      return res.render('not-found', {
+        user
+      });
     }
   },
 
@@ -131,35 +151,51 @@ const controller = {
     } else {
       console.log(JSON.stringify(errors));
       console.log(errors.mapped())
-      return res.render('cambiarcontra', { user: req.session.user, errors: errors.mapped(), old: req.body })
+      return res.render('cambiarcontra', {
+        user: req.session.user,
+        errors: errors.mapped(),
+        old: req.body
+      })
     }
   },
   comentario: (req, res) => {
     const user = req.session.user;
 
     if (user) {
-      return res.render('reseña', { user })
+          db.Product.findAll()
+              .then((product) => {
+                  return res.render('reseña', {
+                      user,
+                      product
+                  });
+              })
+              .catch(e => console.log(e));
     } else {
-      return res.render('not-found', { user });
-    }
-    
-    },
-    createComentario: (req, res) => {
-      const user = req.session.user;
-      if (user) {
-        db.Comment.create({
-          name: req.body.name, 
-          comment: req.body.Comentario,  
-      })
-      .then(() => {
-        return res.redirect('/');
-    })
-        return res.render('reseña', {user})  
-    } else {
-      return res.render('not-found', { user });
+      return res.render('not-found', {
+        user
+      });
     }
 
   },
+  createComentario: (req, res) => {
+    const user = req.session.user;
+    if (user) {
+      db.Comment.create({
+        name: req.body.name,
+        userId: req.body.userId,
+        productId: req.body.productId,
+      })
+      .then(() => {
+        return res.send(req.body)
+         return res.render('reseña', {user})
+      })
+    } else {
+      return res.render('not-found', {
+        user
+      });
+    }
+
+  }
 
 };
 
