@@ -64,7 +64,7 @@ input:-webkit-autofill:active  {
 
 .form-container {
     text-align: left;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.9);
     min-width: 400px;
     max-width: 600px;
     height: 400px;

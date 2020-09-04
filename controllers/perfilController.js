@@ -162,11 +162,18 @@ const controller = {
     const user = req.session.user;
 
     if (user) {
-          db.Product.findAll()
-              .then((product) => {
+          db.Item.findAll(
+            {
+              where: {
+                state: 0
+              },
+              include: [{association: "product"}],
+              
+            })
+              .then((item) => {
                   return res.render('reseña', {
                       user,
-                      product
+                      item
                   });
               })
               .catch(e => console.log(e));
@@ -182,7 +189,7 @@ const controller = {
     if (user) {
       db.Comment.create({
         name: req.body.name,
-        userId: req.body.userId,
+        userId: req.session.user.id,
         productId: req.body.productId,
       })
       .then(() => {
