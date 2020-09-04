@@ -394,3 +394,6 @@ button.delete {
   width: 30%;
   justify-content: center;
 }
+.encierroarriba{
+ background-color: none;
+}

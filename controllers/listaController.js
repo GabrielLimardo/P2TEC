@@ -52,10 +52,9 @@ const listaController = {
                 where: {
                     categoryId: "1"
                 },
-                include: [{association: "category"}],
+                
             })
             .then(resultados => {
-
                 return res.render("lista", {
                     data: resultados,
                     user
@@ -69,7 +68,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "2"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -87,7 +87,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "3"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -105,7 +106,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "4"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -123,7 +125,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "6"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -141,7 +144,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "5"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -158,7 +162,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     categoryId: "7"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -175,7 +180,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "1"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -192,7 +198,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "2"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -209,7 +216,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "3"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -226,7 +234,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "4"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -243,7 +252,8 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "5"
-                }
+                },
+                
             })
             .then(resultados => {
 
@@ -260,7 +270,7 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "6"
-                }
+                },
             })
             .then(resultados => {
 
