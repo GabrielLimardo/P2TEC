@@ -281,6 +281,159 @@ const listaController = {
             })
             .catch(e => console.log(e))
     },
+    HyperX: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "7"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Samsung: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "8"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Alienware: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "9"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Corsair: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "10"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Logitech: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "11"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    AOC: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "12"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Kingston: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "13"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    CoolerMaster: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "14"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Intel: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "15"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
     create: (req, res) => { //te llava a la pagina de creacion
         const user = req.session.user;
         if (typeof user !== 'undefined' && user.rol === 1) {

@@ -62,5 +62,15 @@ router.get('/adata', listaController.AData);
 router.get('/seagate', listaController.Seagate);
 router.get('/ballistix', listaController.Ballistix);
 router.get('/amd', listaController.Amd);
+router.get('/hyperx', listaController.HyperX);
+router.get('/samsung', listaController.Samsung);
+router.get('/coolermaster', listaController.CoolerMaster);
+router.get('/alienware', listaController.Alienware);
+router.get('/corsair', listaController.Corsair);
+router.get('/logitech', listaController.Logitech);
+router.get('/aoc', listaController.AOC);
+router.get('/kingston', listaController.Kingston);
+router.get('/intel', listaController.Intel);
+
 
 module.exports = router;

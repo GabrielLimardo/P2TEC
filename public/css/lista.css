@@ -23,15 +23,7 @@ div.cybersale {
     text-align: center;
 }
 
-@media (max-width: 900px) {
-    .centradoLista {
-        justify-content: center;
-        margin-top: 0px; 
-    }
-    .encierro {
-        padding-top: 280px;
-    }
-}
+
 
 @media (max-width: 545px) {
     .encierro {
@@ -371,9 +363,8 @@ aside .a {
 }
 
 aside.a {
-  margin-right: 0px !important;
+  margin-right: 55px !important;
   background: white;
-  height: 950px;
   padding-left: 2%;
   padding-right: 2%;
 }
@@ -396,4 +387,20 @@ button.delete {
 }
 .encierroarriba{
  background-color: none;
+}
+@media (max-width: 900px) {
+  .centradoLista {
+      justify-content: center;
+      margin-top: 0px; 
+  }
+  .encierro {
+      padding-top: 280px;
+  }
+  aside{
+    display: none;
+  }
+  .prodList{
+    width: 80%;
+    margin-top: 5%;
+  }
 }

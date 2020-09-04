@@ -20,7 +20,8 @@ function round(val) {
                 </div>
                 <div class="imageContainer">
                     <div class="vertical-center">
-                        <img src="/img/<%= product.image %>" alt="imagen" class="fotoProductoDetalle" data="/img/<%= product.image %>" >
+                        <img src="/img/<%= product.image %>" alt="imagen" class="fotoProductoDetalle"
+                            data="/img/<%= product.image %>">
                     </div>
                 </div>
                 <div class="descrip">
@@ -46,16 +47,19 @@ function round(val) {
                         </a>
                     </div>
                     <% } else { %>
-                        <div class="cantidades">
+                    <div class="cantidades">
                         <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
                             <label for="quantity" style="font-size: 14px;" class="cantidad">Cantidad</label>
                             <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
-                            <p class="error"><%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %></p>
+                            <p class="error">
+                                <%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %>
+                            </p>
                             <input type="hidden" name="productId" value="<%= product.id %>">
-                            <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                            <button style="display: inline-block; width: 100%;" type="submit"
+                                class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
                         </form>
-                         </div>
-                        <hr>
+                    </div>
+                    <hr>
                     <% } %>
                 </div>
             </div>
@@ -63,27 +67,31 @@ function round(val) {
     </div>
 
 
- 
-    <%  comentarios.forEach(comentarios => { %>
-        <div class="comentariocontainerarriba">
-                <div class="comentariocontainer">
-                    <h1>NUMERO DE COMENTARIO: #<%= comentarios.id %> </h1>
-                    <h1>NOMBRE DE USUARIO: <%=  comentarios.user.username %> </h1>
-                    <img src="/img/users/<%= comentarios.user.image %>" alt="imagenPerfil" class="fotoProductoDetalle"></img>
-                    
-                    <h1>COMENTARIO: <%= comentarios.name %> </h1>
-                    
-                </div>
-            </div>
 
-        <% }) %>
+    <%  comentarios.forEach(comentarios => { %>
+    <div class="comentariocontainer">
+        <div class="imgUser">
+            <img src="/img/users/<%= comentarios.user.image %>" alt="imagenPerfil" class="fotoProductoDetalle"></img>
+        </div>
+        <div class="commentData">
+            <!-- <h1>NUMERO DE COMENTARIO: #<%# comentarios.id %> </h1> -->
+            <div class="dataUser">
+                <h2 class="commentUsername"><%= comentarios.user.username %> </h2>
+                <h5 class="createdAt"><%= comentarios.createdAt %></h5>
+            </div>
+            <p class="commentText"><%= comentarios.name %> </p>
+
+        </div>
+    </div>
+
+    <% }) %>
 
     <%- include('partial/footer') %>
 
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.elevatezoom.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    
+
 </body>
 
 </html>

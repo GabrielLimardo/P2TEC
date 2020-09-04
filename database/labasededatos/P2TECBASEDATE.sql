@@ -23,7 +23,7 @@ CREATE TABLE brands (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO brands VALUES (1,'Aorus','2020-07-15 11:34:38',NULL,NULL),(2,'Asus','2020-07-15 11:34:38',NULL,NULL),(3,'Adata','2020-07-15 11:34:38',NULL,NULL),(4,'Seagate','2020-07-15 11:34:38',NULL,NULL),(5,'AMD','2020-07-15 11:34:38',NULL,NULL),(6,'Ballistix','2020-07-15 11:34:38',NULL,NULL);
+INSERT INTO brands VALUES (1,'Aorus','2020-07-15 11:34:38',NULL,NULL),(2,'Asus','2020-07-15 11:34:38',NULL,NULL),(3,'Adata','2020-07-15 11:34:38',NULL,NULL),(4,'Seagate','2020-07-15 11:34:38',NULL,NULL),(5,'AMD','2020-07-15 11:34:38',NULL,NULL),(6,'Ballistix','2020-07-15 11:34:38',NULL,NULL),(7,'HyperX','2020-09-04 19:01:38',NULL,NULL),(8,'Samsung','2020-09-04 19:02:38',NULL,NULL),(9,'AlienWare','2020-09-04 19:17:38',NULL,NULL),(10,'Corsair','2020-09-04 19:17:38',NULL,NULL),(11,'Logitech','2020-09-04 19:18:38',NULL,NULL),(12,'AOC','2020-09-04 19:18:38',NULL,NULL),(13,'Kingston','2020-09-04 19:18:38',NULL,NULL),(14,'CoolerMaster','2020-09-04 19:22:38',NULL,NULL),(15,'Intel','2020-09-04 19:22:38',NULL,NULL);
 
 CREATE TABLE products (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -102,7 +102,7 @@ INSERT INTO users VALUES ('mauro','mauro@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3U
 
 CREATE TABLE comments (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
-  name varchar(100) DEFAULT NULL,
+  name varchar(500) DEFAULT NULL,
   userId int(10) unsigned DEFAULT NULL,
   productId int(10) unsigned DEFAULT NULL,
   createdAt datetime DEFAULT current_timestamp(),
