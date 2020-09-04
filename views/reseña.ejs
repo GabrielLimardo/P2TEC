@@ -20,22 +20,18 @@
                                 <div class="username">
                                     <label for="name" class="form-label">Comentario del producto:</label>
                                     <br><br><br>
-									<input  class="name" type="text" id="name" name="name" placeholder="Buen producto" class="form-input">
-                                    </p>
+									<input  class="name" type="text" id="name" name="name" placeholder="Buen producto" class="form-input"
                                 </div>
                                 <div class="field-group">
                                     <div class="username">
                                         <label for="name" class="form-label">Usuario: <%= user.username %></label>
-                                        <br><br><br>
-                                        <input class="user" type="text" id="userId" name="userId" placeholder="User" class="form-input" value="<%= user.id %>">
-                                        </p>
                                     </div>
                                 <div class="password">
-                                    <label for="productId" class="form-label">Categoría:</label>
+                                    <label for="productId" class="form-label">Producto:</label>
                                     <select name="productId" id="productId" class="form-input">
                                         <option value="">Elegí</option>
-                                        <% product.forEach(function(product) {  %>
-                                        <option value="<%=product.id%>"> <%=product.name%> </option>
+                                        <% item.forEach(item => {  %>
+                                        <option value="<%=item.product.id%>"> <%=item.product.name%> </option>
                                         <%})%>
                                     </select>
                                 </div>

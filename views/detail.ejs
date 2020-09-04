@@ -48,7 +48,7 @@ function round(val) {
                     <% } else { %>
                         <div class="cantidades">
                         <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
-                            <label for="quantity" style="font-size: 14px;">Cantidad</label>
+                            <label for="quantity" style="font-size: 14px;" class="cantidad">Cantidad</label>
                             <input type="number" style="font-size: 14px;" id="quantity" name="quantity" value="1">
                             <p class="error"><%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %></p>
                             <input type="hidden" name="productId" value="<%= product.id %>">
