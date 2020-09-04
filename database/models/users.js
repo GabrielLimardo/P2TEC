@@ -1,6 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "User";
-    const cols = {
+    const User = sequelize.define('User', {
         username: dataTypes.STRING,
         email: dataTypes.STRING,
         password: dataTypes.STRING,
@@ -12,7 +11,15 @@ module.exports = (sequelize, dataTypes) => {
         location : dataTypes.STRING,
         Province: dataTypes.STRING
         
+    });
+    User.associate = function(models) {
+        User.hasMany(
+            models.Comment,
+            {
+              as: 'Comment',
+              foreignKey: 'userId'
+            }
+          );
     }
-    const User = sequelize.define(alias, cols);
     return User;
 }

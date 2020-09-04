@@ -68,8 +68,9 @@ function round(val) {
         <div class="comentariocontainerarriba">
                 <div class="comentariocontainer">
                     <h1> NUMERO DE COMENTARIO: #<%= comentarios.id %> </h1>
-                    <h1>NOMBRE DE USUARIO:<%= comentarios.userId %></h1> 
+                    <h1>NOMBRE DE USUARIO: <%=  comentarios.user.username %> </h1>
                     <h1>COMENTARIO: <%= comentarios.name %> </h1>
+                    
                 </div>
             </div>
 

@@ -13,14 +13,11 @@ module.exports = (sequelize, dataTypes ) => {
                 foreingKey: "userId"
             });
             
-    },
-    Comment.associate = function(models){
+    
         Comment.belongsTo(models.Product, {
                 as: "product",
                 foreingKey: "productId"
             });
-            
     }
-
     return Comment;
 }

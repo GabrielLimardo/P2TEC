@@ -33,20 +33,17 @@ const listaController = {
                 db.Comment.findAll({
                     where: {
                         productId: req.params.productId
-                    }
+                    },
+                    include: [{association: "user"}],
                 }).then((comentarios) => {
-                    db.User.findByPk(comentarios.userid, 
-                        ).then((usuario) => {
+                        // return res.send(comentarios);
                         return res.render("detail", {
                             product,
                             user,
-                            comentarios,
-                            usuario
-                        })
-                    }).catch(e => console.log(e));
+                            comentarios
+                    });      
                 }).catch(e => console.log(e));
-            })
-            .catch(e => console.log(e));
+            }).catch(e => console.log(e));
     },
     Componentes: (req, res) => {
 
