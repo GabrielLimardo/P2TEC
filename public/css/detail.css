@@ -107,9 +107,6 @@ img#zoom_mw {
 .cantidades{
     margin-top: 5px;
 }
- button.mt-4.buy-now-button {
-        background-image: linear-gradient(#45a7c5, #1D83A2, #0C485A ) !important;
-     }
 
 .comentariocontainer{
     background-color: white;
@@ -119,4 +116,18 @@ img#zoom_mw {
 }
 .comentariocontainerarriba{
     text-align: center;
+}
+
+button.mt-4.buy-now-button {
+    color: blue;
+    cursor: pointer;
+    background-color: #d9d9d9;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30% !important;
+    margin-left: 5px;
+    font-family: 'Rubik', sans-serif!important;
+}
+.cantidad{
+    margin-right: 2px;
 }
