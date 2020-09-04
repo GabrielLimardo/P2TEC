@@ -110,20 +110,29 @@ function round(val) {
                             </a>
                             <p class="detalleProducto"><%- p.descripcion %></p>
 
-
-                            <form action="/lista/detail/<%- p.id %>" method="GET">
-                                <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
-                                <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
-                                <p class="error">
-                                    <%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %>
-                                </p>
-                                <input type="hidden" name="productId" value="<%= p.id %>">
-                                <div class="buyOptions">
-                                    <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
-                                    <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
-                                </div>
-                            </form>
-
+                            <% if (typeof user !== 'undefined' && user.rol === 1) {%>
+                                <div class="editarproductoslista">
+                                            <form action="/lista/edit/<%= p.id %>" method="GET" style="display: inline-flex">
+                                                <button class="delete" type="submit" class="mt-4EDIT-now-button">EDIT</button>
+                                            </form>
+                                            <form action="/lista/delete/<%= p.id %>" method="POST" style="display: inline-flex">
+                                                <button class="delete" type="submit" class="mt-4DELETE-now-button">DELETE</button>
+                                            </form>
+                                </div>       
+                                <% } else { %>
+                                <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
+                                    <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
+                                    <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                                    <p class="error">
+                                        <%= typeof errors == 'undefined' ? '' : errors.quantity ? errors.quantity.msg : '' %>
+                                    </p>
+                                    <input type="hidden" name="productId" value="<%= p.id %>">
+                                    <div class="buyOptions">
+                                        <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                                        <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
+                                    </div>
+                                </form>
+                                <% } %>
                             <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
                         </div>
                     </div>

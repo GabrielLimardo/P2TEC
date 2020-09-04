@@ -186,7 +186,7 @@ const controller = {
         productId: req.body.productId,
       })
       .then(() => {
-        return res.send(req.body)
+      
          return res.render('reseña', {user})
       })
     } else {

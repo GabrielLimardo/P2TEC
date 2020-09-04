@@ -377,3 +377,20 @@ aside.a {
   padding-left: 2%;
   padding-right: 2%;
 }
+
+button.delete {
+  color: blue;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  padding: 10px;
+  border-radius: 5px;
+}
+.editarproductoslista {
+  display: flex;
+  margin-top: 5px;
+  justify-content: center;
+}
+.editarproductoslista form {
+  width: 30%;
+  justify-content: center;
+}

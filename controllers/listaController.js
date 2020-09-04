@@ -35,8 +35,8 @@ const listaController = {
                         productId: req.params.productId
                     }
                 }).then((comentarios) => {
-                    db.User.findAll({
-                    }).then((usuario) => {
+                    db.User.findByPk(comentarios.userid, 
+                        ).then((usuario) => {
                         return res.render("detail", {
                             product,
                             user,
