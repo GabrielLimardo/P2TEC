@@ -186,8 +186,7 @@ const controller = {
         productId: req.body.productId,
       })
       .then(() => {
-      
-         return res.render('reseña', {user})
+        return res.redirect('/lista');
       })
     } else {
       return res.render('not-found', {
