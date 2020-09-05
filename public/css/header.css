@@ -74,7 +74,7 @@ a {
     }
 
     input.buscadore {
-        width: 75%;
+        width: 65%;
         height: 30px;
         margin-top: 60px;
         border-radius: 5px;
@@ -96,7 +96,7 @@ a {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 30%;
+        width: 45%;
         padding-left: 10px;
     }
 
