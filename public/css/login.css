@@ -209,3 +209,13 @@ input.passwordInput {
 }
 
 
+@media (max-width: 375px) {
+    .form-container {
+        width: 80%;
+        height: 90%;
+        margin-top: 100px;
+        margin-right: 10%;
+        margin-left: 10%;
+        min-width: 300px;
+    }
+    }

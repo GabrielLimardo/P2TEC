@@ -74,3 +74,10 @@ footer {
 h3{
     background-color: none !important;
 }
+@media (max-width: 375px) {
+.misdatos {
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    
+}
+}
