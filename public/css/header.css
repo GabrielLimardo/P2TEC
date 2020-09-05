@@ -165,17 +165,15 @@ a {
     input.buscadore {
         width: 80%;
         text-align: center;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 5% !important;
+        margin-right: 5% !important;
+        margin: 0px;
     }
     
     .logo {
         display: block;
         height: 150px;
         margin-left: 20%;
-    }
-    .carousel {
-        margin-right: 20px;
     }
     img.imagenportada {
         height: 250px;

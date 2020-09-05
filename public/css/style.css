@@ -1047,3 +1047,7 @@ img .productoimagen {
 p.error {
     color: lightcoral;
 }
+
+.productos-recomendadas contenedor{
+    width: 100%;
+}
