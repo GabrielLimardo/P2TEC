@@ -10,6 +10,8 @@ const bcrypt = require("bcryptjs");
 
 const controller = {
   root: (req, res) => {
+    const user = req.session.user;
+    if (user) {
     db.User.findByPk(req.session.user.id)
       .then(function (user) {
         req.session.user = user
@@ -25,6 +27,11 @@ const controller = {
           });
         }
       })
+    } else {
+      return res.render('not-found', {
+        user
+      });
+    }
   },
   //tiene que cargar la nueva informacion a la base de datos
   edit: (req, res) => {
