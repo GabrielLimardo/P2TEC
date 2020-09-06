@@ -364,14 +364,22 @@ footer {
 
 body {
     /* background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Cubes-Grey-Seamless-Pattern-For-Website-Background.jpg"); */
-    background: rgba(2,83,150,1);
+    /* background: rgba(2,83,150,1);
     background: -moz-linear-gradient(top, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(2,83,150,1)), color-stop(100%, rgba(161,210,255,1)));
     background: -webkit-linear-gradient(top, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
     background: -o-linear-gradient(top, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
     background: -ms-linear-gradient(top, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
     background: linear-gradient(to bottom, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#025396', endColorstr='#a1d2ff', GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#025396', endColorstr='#a1d2ff', GradientType=0 ); */
+    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(55,128,191,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(55,128,191,1)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(55,128,191,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(55,128,191,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(55,128,191,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(55,128,191,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#3780bf', GradientType=0 );
 }
 
 main {
