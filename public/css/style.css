@@ -352,6 +352,7 @@ footer {
     color: white;
     text-align: center;
     width: 100%;
+    margin-top: 100px;
 }
 
 .Realizar {
@@ -361,7 +362,7 @@ footer {
 
 /* formulario */
 
-html {
+body {
     /* background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Cubes-Grey-Seamless-Pattern-For-Website-Background.jpg"); */
     background: rgba(2,83,150,1);
     background: -moz-linear-gradient(top, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
