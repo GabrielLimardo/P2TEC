@@ -157,10 +157,10 @@ function round(val) {
 
                             <% if (typeof user !== 'undefined' && user.rol === 1) {%>
                                 <div class="editarproductoslista">
-                                            <form action="/lista/edit/<%= p.id %>" method="GET" style="display: inline-flex">
+                                            <form action="/lista/edit/<%= p.id %>" method="GET">
                                                 <button class="delete" type="submit" class="mt-4EDIT-now-button">EDIT</button>
                                             </form>
-                                            <form action="/lista/delete/<%= p.id %>" method="POST" style="display: inline-flex">
+                                            <form action="/lista/delete/<%= p.id %>" method="POST">
                                                 <button class="delete" type="submit" class="mt-4DELETE-now-button">DELETE</button>
                                             </form>
                                 </div>       

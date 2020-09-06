@@ -12,7 +12,7 @@
    <div class="productoscarrito">
       <% if(items.length != 0){ %>
       <div class="productoscarrito1">
-         <div class="">
+         <div class="cartTitle">
             <h1 class="products-title">Carrito de compras</h1>
          </div>
       </div>
@@ -21,7 +21,7 @@
             <div class="fullCart">
                <% items.forEach(item => { %>
                <section class="itemCart">
-                  <div>
+                  <div class="cartImg">
                      <img class="imgWidthCart" style='border: 1px solid grey' src="/img/<%= item.product.image %>"
                         alt="<%= item.product.name %>">
                   </div>
@@ -51,6 +51,7 @@
                      </section>
                   </section>
                </section>
+               <hr>
                <!-- <hr> -->
 
                <% }); %>
@@ -66,11 +67,11 @@
                      </form>
                      <form action="/carrito/shop" method="POST" class="buy-now-cart">
                         <input type="hidden" name="userId" value="<%= locals.user.id %>">
-                        <button type="submit" class="mt-4 buy-now-button">Vaciar Carrito</button>
+                        <button type="submit" class="mt-4 buy-now-button">Vaciar  Carrito</button>
                      </form>
                      <form action="/carrito/shop" method="POST" class="buy-now-cart">
                         <input type="hidden" name="userId" value="<%= locals.user.id %>">
-                        <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
+                        <button type="submit" class="mt-4 buy-now-button">Comprar ahora</button>
                      </form>
                   </div>
 

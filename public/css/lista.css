@@ -334,9 +334,7 @@ button{
 p.detalleProducto{
   margin-top: 5%!important;
 }
-.precioProducto{
-  margin-top: 5%!important;
-}
+
 button.mt-4.buy-now-button{
     color: blue;
     cursor: pointer;
@@ -367,6 +365,9 @@ aside.a {
   background: white;
   padding-left: 2%;
   padding-right: 2%;
+  height: 1350px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 button.delete {
@@ -382,13 +383,17 @@ button.delete {
   justify-content: center;
 }
 .editarproductoslista form {
-  width: 30%;
+  width: 50%;
   justify-content: center;
+}
+.editarproductoslista button{
+  width: 50%;
 }
 .encierroarriba{
  background-color: none;
 }
-@media (max-width: 900px) {
+@media (max-width: 994px) {
+  /* Vista de usuario*/
   .centradoLista {
       justify-content: center;
       margin-top: 0px; 
@@ -403,4 +408,102 @@ button.delete {
     width: 80%;
     margin-top: 5%;
   }
+  /* Vista de Admin */
+  .editarproductoslista form{
+      width: 50%;
+      margin-top: 5%;
+  }
+  .editarproductoslista button{
+    width: 50%
+  }
+}
+
+@media (max-width: 622px) {
+    .buyOptions button{
+      width: 80%;
+      margin-top: 1%;
+    }
+    .fotoProducto{
+      width: 110px;
+      height: 110px;
+      margin-top: 40px;
+    }
+    .producto img{
+      margin-top: 30%;
+      margin-left: 40px;
+    }
+    .nombreProducto{
+      font-size: 16px;
+    }
+    .precioProducto{
+      font-size: 14px;
+    }
+    .editarproductoslista{
+      display: inline-block;
+      width: 100%;
+    }
+    .editarproductoslista form{
+      width: 100%;
+      margin-top: 5%;
+    }
+    .editarproductoslista button{
+      width: 50%;
+    }
+    .precioProducto{
+      font-size: 20px;
+    }
+}
+@media (max-width: 450px) {
+  /* Vista de usuario */
+    .prodList{
+      width: 100%;
+    }
+    .nombreProducto{
+      font-size: 14px;
+    }
+    .detalleProducto{
+      font-size: 12px;
+      width: 85%;
+      margin-left: 10%;
+    }
+    .fotoProducto{
+      width: 110px;
+      height: 110px;
+      display: block;
+    }
+    .precioProducto{
+      font-size: 16px;
+    }
+    .buyOptions button{
+      width: 80%;
+      margin-top: 1%;
+    }
+    .descripcionesTest{
+      margin-left: 0px;
+      margin: 0 auto;
+      width: 60%;
+    }
+    .nombreProducto{
+      width: 81%;
+      margin: 0 auto;
+    }
+    .producto img{
+      margin-left: 35%;
+      margin-top: 38%;
+    }
+    a{
+      font-family: 'Rubik', sans-serif;
+    }
+    /* Vista de admin */
+    .editarproductoslista{
+      display: inline-block;
+      width: 100%;
+    }
+    .editarproductoslista form{
+      width: 100%;
+      margin-top: 5%;
+    }
+    .editarproductoslista button{
+      width: 50%;
+    }
 }
