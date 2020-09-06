@@ -173,7 +173,7 @@ footer {
     color: white;
     text-align: center;
     height: 100px;
-    margin-top: 300px;
+
 }
 
 #header {
@@ -352,8 +352,6 @@ footer {
 
     color: white;
     text-align: center;
-    margin-top: 100px;
-    position: absolute;
     width: 100%;
 }
 
@@ -364,7 +362,7 @@ footer {
 
 /* formulario */
 
-body {
+html {
     /* background-image: url("https://www.designbolts.com/wp-content/uploads/2013/02/Cubes-Grey-Seamless-Pattern-For-Website-Background.jpg"); */
     background: rgba(2,83,150,1);
     background: -moz-linear-gradient(top, rgba(2,83,150,1) 0%, rgba(161,210,255,1) 100%);
@@ -952,7 +950,6 @@ img.imagenportada {
 
 @media (max-width: 768px) {
     .footer {
-        margin-top: 30px !important;
         padding-top: 10px;
         padding-bottom: 15px;
     }
