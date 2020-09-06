@@ -299,7 +299,7 @@ label,h1,h3,h4,p,button{
 }
 .productoTest{
     width: 100%;
-    height: 240px;
+    height: 250px;
     display: flex;
     background-color: white;
     border: none;
@@ -517,18 +517,6 @@ label.pointer {
 }
 
 .producto.productoTest.producto-2 {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.producto.productoTest.producto-3 {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.producto.productoTest.producto-11 {
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-}
-.producto.productoTest.producto-5 {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
