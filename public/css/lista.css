@@ -330,6 +330,7 @@ button{
 }
 .nombreProducto{
   margin-top: 5%!important;
+  color: black;
 }
 p.detalleProducto{
   margin-top: 5%!important;
@@ -347,6 +348,7 @@ aside .a {
   padding-right: 50px;
   padding-left: 50px;
   height: 950px;
+ 
 }
 
 .encierro h4{
@@ -368,6 +370,7 @@ aside.a {
   border-radius: 5px;
   text-align: center;
   height: 1700px;
+  border-radius: 20px;
 
 }
 
@@ -507,4 +510,25 @@ button.delete {
     .editarproductoslista button{
       width: 50%;
     }
+}
+
+label.pointer {
+  color: black;
+}
+
+.producto.productoTest.producto-2 {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.producto.productoTest.producto-3 {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.producto.productoTest.producto-11 {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.producto.productoTest.producto-5 {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
