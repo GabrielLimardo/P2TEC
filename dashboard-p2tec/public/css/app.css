@@ -8903,7 +8903,7 @@ a:focus {
 
 #wrapper #content-wrapper #content {
     background-color: #f8f9fc;
-    background-image: linear-gradient(180deg, #1a1a1a 10%, #3f3f3f 100%);
+    background-image: linear-gradient(180deg, #000000 10%, #3780bf 100%);
     
     flex: 1 0 auto
 }

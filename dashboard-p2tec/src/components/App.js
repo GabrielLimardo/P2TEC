@@ -3,6 +3,9 @@ import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import Card from './Card';
 import UltimoProducto from './UltimoProducto';
+import Categories from './Categories';
+import ButtonStateFull from './ButtonStateFull';
+import ProductList from './ProductList'
 
 const cardData = [
   {
@@ -54,8 +57,11 @@ function App() {
               )}
             </div>
             <div class="row">
-              <UltimoProducto />
+              <UltimoProducto/>
+              <Categories />
+              <ProductList />
             </div>
+            <ButtonStateFull />
           </div>
         </div>
       </div>
