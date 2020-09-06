@@ -119,12 +119,12 @@ const listaController = {
             .catch(e => console.log(e))
 
     },
-    PcOffice: (req, res) => {
+    PcStreamer: (req, res) => {
 
         const user = req.session.user;
         db.Product.findAll({
                 where: {
-                    categoryId: "6"
+                    categoryId: "5"
                 },
                 
             })
@@ -136,14 +136,15 @@ const listaController = {
                 })
             })
             .catch(e => console.log(e))
+        },
 
-    },
-    PcStreamer: (req, res) => {
+
+    PcOffice: (req, res) => {
 
         const user = req.session.user;
         db.Product.findAll({
                 where: {
-                    categoryId: "5"
+                    categoryId: "6"
                 },
                 
             })
@@ -423,6 +424,91 @@ const listaController = {
         db.Product.findAll({
                 where: {
                     brandId: "15"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Tenda: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "16"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Hp: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "17"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Marvo: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "18"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Trust: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "19"
+                },
+            })
+            .then(resultados => {
+
+                return res.render("lista", {
+                    data: resultados,
+                    user
+                })
+            })
+            .catch(e => console.log(e))
+    },
+    Razer: (req, res) => {
+
+        const user = req.session.user;
+        db.Product.findAll({
+                where: {
+                    brandId: "20"
                 },
             })
             .then(resultados => {

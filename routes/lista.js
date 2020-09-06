@@ -71,6 +71,11 @@ router.get('/logitech', listaController.Logitech);
 router.get('/aoc', listaController.AOC);
 router.get('/kingston', listaController.Kingston);
 router.get('/intel', listaController.Intel);
+router.get('/tenda', listaController.Tenda);
+router.get('/hp', listaController.Hp);
+router.get('/marvo', listaController.Marvo);
+router.get('/trust', listaController.Trust);
+router.get('/razer', listaController.Razer);
 
 
 module.exports = router;
