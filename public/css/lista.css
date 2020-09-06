@@ -367,9 +367,9 @@ aside.a {
   background: white;
   padding-left: 2%;
   padding-right: 2%;
-  height: 1350px;
   border-radius: 5px;
   text-align: center;
+  height: 1600px;
 }
 
 button.delete {
