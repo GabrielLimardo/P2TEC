@@ -60,12 +60,12 @@
     .imageContainer {
         position: relative;
         background-color: white;
-        border: 2px solid #707070;
         align-items: center;
         max-height: 350px;
         width: 83%;
         margin: 0px;
         border-radius: 50px;
+        box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
     }
 
     img.fotoProductoDetalle {
@@ -84,6 +84,7 @@
         background-color: white;
         border-radius: 5px;
         border: 2px solid #707070;
+        box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
     }
 }
 
@@ -147,13 +148,13 @@ img#zoom_mw {
 .comentariocontainer {
     background-color: white;
     width: 80%;
-    border: solid;
     text-align: center;
     display: flex;
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 2%;
     min-height: 160px;
+    box-shadow: 11px 11px 1px rgba(0, 0, 0, 0.3);
 }
 
 .commentData {

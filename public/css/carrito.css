@@ -176,7 +176,6 @@ hr {
     justify-content: space-evenly;
     align-content: center;
     color: black;
-    border: 3px solid #ffffff;
     margin-top: 10px;
 }
 
@@ -208,6 +207,8 @@ hr {
 .historyContentProd {
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 10px;
 }
 
 .buyDate {
