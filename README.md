@@ -1,4 +1,4 @@
-# grupo8-P2TEC-8-P2TEC
+P2TEC
 p2tec
 
 https://trello.com/b/v6yHEHVB/p2-tec
