@@ -24,13 +24,23 @@ const apiInfoController = {
 
                         metrics: [
                             {
+                                borderColor: "border-left-primary",
                                 title: "Products in Database",
-                                value: products.length
+                                value: products.length,
+                                icon: "fa-clipboard-list"
+                            },
+                            {
+                                borderColor: "border-left-success",
+                                title: "Amount in Products",
+                                value: "$200",
+                                icon: "fa-dollar-sign"
                             },
                             
                             {
-                                title: "Users quantity",
-                                value: users.length
+                                borderColor: "border-left-warning",
+                                title: "Total Users",
+                                value: users.length,
+                                icon: "fa-user-check"
                             }
 
                         ],
