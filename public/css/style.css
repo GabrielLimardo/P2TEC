@@ -1026,6 +1026,7 @@ img.imagenportada {
 .pie-footer{
     display: flex;
     justify-content: space-evenly;
+    background-color:  rgba(55,128,191,1);
 }
 
 
