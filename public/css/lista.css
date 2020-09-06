@@ -334,9 +334,7 @@ button{
 p.detalleProducto{
   margin-top: 5%!important;
 }
-.precioProducto{
-  margin-top: 5%!important;
-}
+
 button.mt-4.buy-now-button{
     color: blue;
     cursor: pointer;
