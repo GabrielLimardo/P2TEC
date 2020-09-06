@@ -299,7 +299,7 @@ label,h1,h3,h4,p,button{
 }
 .productoTest{
     width: 100%;
-    height: 250px;
+    height: 280px;
     display: flex;
     background-color: white;
     border: none;
