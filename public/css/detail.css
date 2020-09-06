@@ -1,41 +1,48 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
 }
+
 @media (max-width: 900px) {
     .division {
         display: flex;
         flex-direction: column;
     }
+
     .descrip {
         margin-top: 20px;
         border-radius: 20px;
         border: 2px solid #707070;
     }
-    .cerraruno a{
+
+    .cerraruno a {
         color: black;
         padding-left: 50px;
         position: relative;
         top: 10px;
         left: -290px;
     }
-    .createdAt{
+
+    .createdAt {
         margin-left: 10%;
     }
 }
+
 @media (max-width: 576px) {
     .division {
         display: flex;
         flex-direction: column;
     }
+
     .descrip {
         width: 80%;
         margin-top: 20px;
         border-radius: 20px;
         border: 2px solid #707070;
     }
+
     .cerraruno {
         margin-bottom: 10px;
         width: 100%;
@@ -44,7 +51,7 @@
         justify-content: left;
     }
 
-    .cerraruno a{
+    .cerraruno a {
         padding-left: 20px;
         position: relative;
         left: 0;
@@ -68,7 +75,18 @@
     .vertical-center {
         height: 90%;
     }
+
+    .descrip {
+        padding: 10px;
+        text-align: center;
+        width: 80%;
+        max-height: 500px;
+        background-color: white;
+        border-radius: 5px;
+        border: 2px solid #707070;
+    }
 }
+
 .delete {
     background-color: transparent;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,14 +98,14 @@
 
 
 
-.ligthbox{
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	background: rgba(0,0,0,.8);
-	display: flex;
-	justify-content: center;
+.ligthbox {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -95,53 +113,57 @@ img#zoom_mw {
     width: 500px;
 }
 
-.btn-close{
+.btn-close {
     margin-top: 250px;
-	width: 70px;
-	height: 70px;
-	background: #AE4545;
-	border: 3px solid #fff;
-	border-radius: 100%;
-	color: #fff;
-	font-size: 30px;
-	font-weight: bold;
-	text-align: center;
-	padding-top: 12px;
-	position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #AE4545;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 12px;
+    position: absolute;
     cursor: pointer;
     top: -50px;
     left: 100px;
 }
 
-.cantidades{
+.cantidades {
     margin-top: 5px;
 }
 
-.comentariocontainer{
+.comentariocontainer {
     background-color: white;
-    width: 70%;
+    width: 80%;
     border: solid;
     text-align: center;
     display: flex;
     border-radius: 5px;
-    margin-left: 19%;
+    margin: 0 auto;
     margin-bottom: 2%;
     min-height: 160px;
 }
-.commentData{
+
+.commentData {
     width: 80%;
 }
-.commentData h2{
+
+.commentData h2 {
     text-align: left;
     margin-left: 3%;
     width: 10%;
     display: inline-block;
 }
-.commentData p{
+
+.commentData p {
     text-align: left;
     margin-left: 3%;
 }
-.comentariocontainerarriba{
+
+.comentariocontainerarriba {
     text-align: center;
 }
 
@@ -151,26 +173,32 @@ button.mt-4.buy-now-button {
     background-color: #d9d9d9;
     padding: 10px;
     border-radius: 5px;
-    width: 30% !important;
+    width: 100%;
     margin-left: 5px;
-    font-family: 'Rubik', sans-serif!important;
+    margin-top: 5%;
+    font-family: 'Rubik', sans-serif !important;
 }
-.cantidad{
+
+.cantidad {
     margin-right: 2px;
 }
-.imgUser{
+
+.imgUser {
     width: 15%;
 }
-.imgUser img{
+
+.imgUser img {
     width: 70%;
     margin-top: 4%;
     min-width: 70%;
 }
-.dataUser{
+
+.dataUser {
     display: flex;
     align-items: center;
     margin-bottom: 1%;
 }
-.createdAt{
+
+.createdAt {
     color: gray;
 }
