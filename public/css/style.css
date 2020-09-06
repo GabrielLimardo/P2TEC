@@ -265,6 +265,7 @@ ol {
     width: 500px;
     margin: 0px;
     border-radius: 50px;
+    box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
 }
 
 img.fotoProductoDetalle {

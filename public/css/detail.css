@@ -148,13 +148,13 @@ img#zoom_mw {
 .comentariocontainer {
     background-color: white;
     width: 80%;
-    border: solid;
     text-align: center;
     display: flex;
     border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 2%;
     min-height: 160px;
+    box-shadow: 11px 11px 1px rgba(0, 0, 0, 0.3);
 }
 
 .commentData {
