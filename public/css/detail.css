@@ -87,16 +87,25 @@
     }
 }
 
-.delete {
-    background-color: transparent;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    border: none;
-    font-size: 20px;
+.editar-eliminar a {
+    color: blue;
+    cursor: pointer;
+    background-color: #d9d9d9!important;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 5px;
+    margin-top: 5%;
+    font-family: 'Rubik', sans-serif !important;
+    background-image: none;
+    font-weight: normal;
 }
-
-
-
+.delete{
+    background-color: transparent;
+    border: none;
+    color: blue;
+    padding-top: 5%;
+}
 
 .ligthbox {
     width: 100%;
