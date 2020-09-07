@@ -342,6 +342,7 @@ button.mt-4.buy-now-button{
     background-color: #d9d9d9;
     padding: 10px;
     border-radius: 5px;
+    width: 50%;
 }
 aside .a {
   background: white;

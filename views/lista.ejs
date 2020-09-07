@@ -188,6 +188,7 @@ function round(val) {
                                             </form>
                                 </div>       
                                 <% } else { %>
+                                    <div>
                                 <form action="/carrito/addToCart" method="POST" style="display: inline-bock">
                                     <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
                                     <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
@@ -210,6 +211,7 @@ function round(val) {
                                        
                                     </div>
                                 </form>
+                            </div>
                                 <% } %>
                             <h2 class="precioProducto">ARS$ <%- round(p.price) %></h2>
                         </div>
