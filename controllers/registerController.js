@@ -7,7 +7,6 @@ const { validationResult } = require("express-validator");
 
 module.exports = {
   register: function (req, res) { //llega a registro
-    console.log("Render");
     return res.render("registro");
   },
   processRegister: function (req, res) {  // hace el registro
