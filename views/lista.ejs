@@ -196,8 +196,18 @@ function round(val) {
                                     </p>
                                     <input type="hidden" name="productId" value="<%= p.id %>">
                                     <div class="buyOptions">
-                                        <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                                      
                                         <button type="submit" class="mt-4 buy-now-button">COMPRAR</button>
+                                    </div>
+                                </form>
+
+                                <form action="/carrito/addCart" method="POST" style="display: inline-bock">
+                                    <!-- <label for="quantity" style="font-size: 14px; width: 100%;">Cantidad</label> -->
+                                    <input type="hidden" style="font-size: 14px;" id="quantity" name="quantity" value="1">
+                                    <input type="hidden" name="productId" value="<%= p.id %>">
+                                    <div class="buyOptions">
+                                        <button type="submit" class="mt-4 buy-now-button">AGREGAR AL CARRITO</button>
+                                       
                                     </div>
                                 </form>
                                 <% } %>

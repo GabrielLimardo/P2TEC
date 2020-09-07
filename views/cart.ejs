@@ -30,7 +30,7 @@
                         <p><%= item.product.name %></p>
                         <p style="font-size: 16px;"><%= item.product.descripcion%></p>
                         <div class="cart-options">
-                           <form action="/carrito/deleteFromCart" method="POST" class="delete-cart-button">
+                           <form action="/lista/" method="GET" class="delete-cart-button">
                               <input type="hidden" name="itemId" value="<%= item.id %>">
                               <button type="submit" class="action-button delete">Guardar</button>
                            </form>
@@ -65,7 +65,7 @@
                         <input type="hidden" name="userId" value="<%= locals.user.id %>">
                         <button type="submit" class="mt-4 buy-now-button">Seguir comprando</button>
                      </form>
-                     <form action="/carrito/shop" method="POST" class="buy-now-cart">
+                     <form action="/carrito/deleteallFromCart" method="POST" class="buy-now-cart">
                         <input type="hidden" name="userId" value="<%= locals.user.id %>">
                         <button type="submit" class="mt-4 buy-now-button">Vaciar  Carrito</button>
                      </form>

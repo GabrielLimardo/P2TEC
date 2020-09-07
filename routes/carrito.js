@@ -10,9 +10,11 @@ const authMiddleware = require('../middlewares/auth');
 //faltan los middleware
 router.get('/',authMiddleware, carritoController.cart);
 router.post('/addToCart',authMiddleware,validator.addToCart, carritoController.addToCart);
+router.post('/addCart',authMiddleware,validator.addToCart, carritoController.addCart);
 router.get('/history',authMiddleware,  carritoController.history);
 router.post('/shop',authMiddleware, carritoController.shop);
 router.post('/deleteFromCart',authMiddleware, carritoController.deleteFromCart);
+router.post('/deleteallFromCart',authMiddleware, carritoController.deleteallFromCart);
 router.get('/buy-detail/:id',authMiddleware, carritoController.showBuyDetail);
 
 
