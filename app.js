@@ -10,7 +10,9 @@ const perfilRoutes = require("./routes/perfil");
 const session = require("express-session");
 const apiInfoRouter = require('./routes/api/apiInfo');
 const apiUsersRouter = require('./routes/api/apiUsers');
+const apiCategoriesRouter = require('./routes/api/apiCategories');
 const apiProductsRouter = require('./routes/api/apiProducts');
+const cors = require('cors');
 
 
 app.set('view engine', 'ejs');
@@ -19,6 +21,7 @@ app.use(session({secret: 'miapp'}));
 app.use(express.urlencoded({ extended: false}))
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 
 
@@ -39,3 +42,4 @@ app.use("/perfil", perfilRoutes);
 app.use('/api/info', apiInfoRouter);
 app.use('/api/users', apiUsersRouter);
 app.use('/api/products', apiProductsRouter);
+app.use('/api/categories', apiCategoriesRouter);
