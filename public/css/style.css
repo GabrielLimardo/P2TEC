@@ -1066,3 +1066,21 @@ p.error {
 .productos-recomendadas contenedor{
     width: 100%;
 }
+
+.swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    width: 32em;
+    max-width: 100%;
+    padding: 1.25em;
+    border: none;
+    border-radius: .3125em;
+    font-family: inherit;
+    font-size: 1rem;
+    background-image: linear-gradient(0deg, #000000 95%, #f2295b 100%) !important;
+    border: solid white !important;
+    color: white !important;
+}

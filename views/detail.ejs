@@ -42,8 +42,8 @@ function round(val) {
                     <div class="editar-eliminar">
                         <a href="/lista/edit/<%= product.id %>" class="editButton">EDIT</a>
                         <a class="delete">
-                            <form action="/lista/delete/<%= product.id %>" method="POST" style="display: inline-flex">
-                                <button class="delete" type="submit" class="action-button delete">DELETE</button>
+                            <form id= "trash" action="/lista/delete/<%= product.id %>" method="POST" style="display: inline-flex">
+                                <button  class="delete" type="submit" class="action-button delete">DELETE</button>
                             </form>
                         </a>
                     </div>
@@ -94,6 +94,8 @@ function round(val) {
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.elevatezoom.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>		
+	<script src= "/js/sweetAlerts.js"></script>
 
 </body>
 

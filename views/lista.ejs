@@ -183,7 +183,7 @@ function round(val) {
                                             <form action="/lista/edit/<%= p.id %>" method="GET">
                                                 <button class="delete" type="submit" class="mt-4EDIT-now-button">EDIT</button>
                                             </form>
-                                            <form action="/lista/delete/<%= p.id %>" method="POST">
+                                            <form id= "trash" action="/lista/delete/<%= p.id %>" method="POST">
                                                 <button class="delete" type="submit" class="mt-4DELETE-now-button">DELETE</button>
                                             </form>
                                 </div>       
@@ -213,6 +213,8 @@ function round(val) {
     </div>
 
     <%- include('partial/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>		
+	<script src= "/js/sweetAlerts.js"></script>
 
 </body>
 
