@@ -50,7 +50,6 @@ module.exports = {
       .bail()
       .custom((value, { req }) => {
         if (req.file) {
-          return true;
           const acceptedExtensions = [".jpg", ".jpeg", ".png"];
 
           const ext = path.extname(req.file.originalname);
@@ -61,7 +60,7 @@ module.exports = {
             return false;
           }
         } else {
-          return true;
+          return false;
         }
       })
       .withMessage("Extension invalida"),
