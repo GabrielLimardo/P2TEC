@@ -23,6 +23,8 @@
                                     <% if (typeof user !== 'undefined' && user.rol === 1) {%>
                                     <li><a href="/perfil/controlarea" class="continuar"><i
                                                 class="fas fa-user-tag"></i>&nbsp;Panel de Control</a></li>
+                                    <li><a href="http://localhost:3000" class="continuar"><i
+                                                class="far fa-clipboard"></i>&nbsp;Dashboard</a></li>
                                     <li><a href="/carrito/history" class="continuar"><i
                                                 class="fa fa-shopping-cart "></i>&nbsp;Mis compras</a></li>
                                     <li><a href="/perfil/editpas/<%= user.id %>" class="continuar"><i
@@ -32,7 +34,8 @@
                                                 class="fa fa-shopping-cart "></i>&nbsp;Mis compras</a></li>
                                     <li><a href="/perfil/editpas/<%= user.id %>" class="continuar"><i
                                                 class="fa fa-key"></i>&nbsp;Cambiar mi contraseña</a></li>
-                                    <li><a href="/perfil/comentario" class="continuar"><i class="far fa-star"></i>Crear una reseña del producto</a></li>            
+                                    <li><a href="/perfil/comentario" class="continuar"><i class="far fa-star"></i>Crear
+                                            una reseña del producto</a></li>
                                     <% } %>
                                 </ul>
                             </div>
@@ -81,7 +84,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <form action="/perfil/datos" method="POST" id="datosSecundarios" name="datosSecundarios">
+                                        <form action="/perfil/datos" method="POST" id="datosSecundarios"
+                                            name="datosSecundarios">
                                             <div class="col-lg-6 pull-left mt-0">
                                                 <div class="col-lg-12 pl-0">
                                                     <h5>Dirección de envío</h5>

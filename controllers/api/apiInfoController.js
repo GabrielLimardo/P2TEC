@@ -32,7 +32,7 @@ const apiInfoController = {
                             {
                                 borderColor: "border-left-success",
                                 title: "Amount in Products",
-                                value: "$200",
+                                value: "$" + products.map(p => p.price).reduce((prev, actual) => prev + actual),
                                 icon: "fa-dollar-sign"
                             },
                             
@@ -46,11 +46,11 @@ const apiInfoController = {
                         ],
 
                         lastProduct: {
-                            name: lastProduct.title,
-                            descripcion: lastProduct.description,
+                            name: lastProduct.name,
+                            descripcion: lastProduct.descripcion,
                             image: lastProduct.image
                         },
-                        categories: categories                 
+                        categories: categories.map(c => c.name)            
                         
                     }
                 }

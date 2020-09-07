@@ -2,20 +2,11 @@ import React, {Component} from 'react';
 
 class ButtonStateFull extends Component {
 
-    cambiarColor(){
-            document.querySelector('body').style.background = "#dcdcdc"
-    }
-
-    volverABlanco(){
-        document.querySelector('body').style.background = "#fff"
-    }
-
     render(){
         return (
-            <button className="btn btn-info mb-3"
-            onClick={ () => { this.cambiarColor() } }
-            onDoubleClick= {() => { this.volverABlanco() }}>
-            Cambiar el fondo
+            <button className="btn btn-info mb-3">
+                <a href="localhost:3030/perfil">Volver al Perfil</a>
+
             </button>
         )
     }

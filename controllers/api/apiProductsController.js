@@ -19,12 +19,12 @@ const apiProductsController = {
                         products: products.map(product => {
                             return ({
                                 id: product.id,
-                                name: product.title,
-                                descripcion: product.description,
+                                name: product.name,
+                                descripcion: product.descripcion,
                                 price: product.price,
                                 image: product.image,
-                                category: product.category.title, 
-                                brand: product.brand.title,
+                                category: product.category.name, 
+                                brand: product.brand.name,
                                 
                             })                   
                             
