@@ -138,6 +138,7 @@ hr {
 .action-button {
     color: blue;
     border: none;
+    background: none;
 }
 
 .action-button:hover {
@@ -177,6 +178,7 @@ hr {
     align-content: center;
     color: black;
     margin-top: 10px;
+    border-bottom: 1px solid #ffffff;
 }
 
 .historyCartDetails {
@@ -184,7 +186,7 @@ hr {
     align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
-    width: 85%;
+    width: 100%;
 }
 
 .historyDescProd {
@@ -207,7 +209,6 @@ hr {
 .historyContentProd {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid #ffffff;
     margin-bottom: 10px;
 }
 
@@ -315,7 +316,8 @@ hr {
     }
 
     .historyImgProd {
-        margin-left: 40px;
+        margin: 0 auto;
+        display: block;
     }
 
     .historyPriceProd {
