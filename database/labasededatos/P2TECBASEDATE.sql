@@ -97,8 +97,8 @@ CREATE TABLE users (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO users VALUES ('belen','belen@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,1);
-INSERT INTO users VALUES ('mauro','mauro@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,0,2);
+INSERT INTO users VALUES ('Admin','admin@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,1,1);
+INSERT INTO users VALUES ('Client','client@gmail.com','$2a$10$1w4Xolwa8wn5kTl32G3UiuqzcG2aoyAPdhnYlbeRgIoRNFzXc2sZ.','Grafico.png','','','','','','2020-08-05 22:27:39','2020-08-05 19:28:05',NULL,0,2);
 
 CREATE TABLE comments (
   id int(10) unsigned NOT NULL AUTO_INCREMENT,
